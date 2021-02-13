@@ -19,13 +19,8 @@ This class will allow us to export preferences in DOT format.
 |Contract
 |Relevance
 
-|isUrlValid(String url)
-|@return if the URL passed is valid or not
-|To do
-
-|downloadProfile(String url, String folderPath)
-|This method will download the file at a valid URL passed in parameter to the folder chosen by the user.
-@return the file path of the downloaded file
+|export(Graph Preference)
+|This method will export preferences in DOT format.
 |To do
 
 |===

@@ -6830,16 +6830,14 @@ Voter's preferences : AntiSymmetric</body>
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d5bmEG4nEeueuKV0xi7dBA"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dCpvEG4nEeueuKV0xi7dBA" value="*"/>
             </ownedAttribute>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_71na4G4EEeuXEN3YjgEwOw" name="Export"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_71na4G4EEeuXEN3YjgEwOw" name="Export" concurrency="guarded">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_ve65QG4rEeueuKV0xi7dBA" name="Preference" type="_PR_wEGbSEeqrtc6dy-mPpg"/>
+            </ownedOperation>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_DURl0G36EeuXEN3YjgEwOw" name="Preference">
             <ownedOperation xmi:type="uml:Operation" xmi:id="_Y5NRcG37EeuXEN3YjgEwOw" name="AsGraph"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_B8-e4G3-EeuXEN3YjgEwOw" name="GraphView">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_gY8qYW4EEeuXEN3YjgEwOw" name="uses" type="_3rlrcG35EeuXEN3YjgEwOw" association="_gY7cQG4EEeuXEN3YjgEwOw">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wVHzMG4EEeuXEN3YjgEwOw"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wVXq0G4EEeuXEN3YjgEwOw" value="*"/>
-            </ownedAttribute>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_rzgJgG4BEeuXEN3YjgEwOw" name="nodes"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_Qq9ukG4EEeuXEN3YjgEwOw" name="edges"/>
           </packagedElement>
@@ -6859,6 +6857,10 @@ Voter's preferences : AntiSymmetric</body>
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gY8qYG4EEeuXEN3YjgEwOw" key="nature" value="UML_Nature"/>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_gY9Rcm4EEeuXEN3YjgEwOw" type="_B8-e4G3-EeuXEN3YjgEwOw" association="_gY7cQG4EEeuXEN3YjgEwOw"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_gY8qYW4EEeuXEN3YjgEwOw" name="uses" type="_3rlrcG35EeuXEN3YjgEwOw" association="_gY7cQG4EEeuXEN3YjgEwOw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wVHzMG4EEeuXEN3YjgEwOw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wVXq0G4EEeuXEN3YjgEwOw" value="*"/>
+          </ownedEnd>
         </packagedElement>
       </packagedElement>
     </packagedElement>
