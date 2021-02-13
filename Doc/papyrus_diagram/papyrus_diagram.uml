@@ -6819,6 +6819,51 @@ Voter's preferences : AntiSymmetric</body>
           </packagedElement>
         </packagedElement>
       </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_F6OGoG31EeuXEN3YjgEwOw" name="ExportPreferences">
+        <packagedElement xmi:type="uml:Package" xmi:id="_0oYZIG35EeuXEN3YjgEwOw" name="Objects">
+          <packagedElement xmi:type="uml:Class" xmi:id="_3rlrcG35EeuXEN3YjgEwOw" name="ExportToDOT">
+            <generalization xmi:type="uml:Generalization" xmi:id="_gDZ1AG4AEeuXEN3YjgEwOw" general="_7m6cEG36EeuXEN3YjgEwOw"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_tQPcAG37EeuXEN3YjgEwOw" name="GraphPreference" visibility="private" type="_PR_wEGbSEeqrtc6dy-mPpg" aggregation="shared"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_0vdxMG38EeuXEN3YjgEwOw" name="NodeList" visibility="private"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_n-gREG4FEeuXEN3YjgEwOw" name="EdgeList" visibility="private"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_71na4G4EEeuXEN3YjgEwOw" name="exportToDOT"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DURl0G36EeuXEN3YjgEwOw" name="Preference">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Y5NRcG37EeuXEN3YjgEwOw" name="AsGraph"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_7m6cEG36EeuXEN3YjgEwOw" name="IExport">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2-jlUG4EEeuXEN3YjgEwOw" name="export"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_B8-e4G3-EeuXEN3YjgEwOw" name="GraphView">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_rzgJgG4BEeuXEN3YjgEwOw" name="nodes"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_Qq9ukG4EEeuXEN3YjgEwOw" name="edges"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_lpc3gG4AEeuXEN3YjgEwOw" memberEnd="_lpiXEG4AEeuXEN3YjgEwOw _lpjlMW4AEeuXEN3YjgEwOw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lphI8G4AEeuXEN3YjgEwOw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lphI8W4AEeuXEN3YjgEwOw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_lpjlMW4AEeuXEN3YjgEwOw" type="_DURl0G36EeuXEN3YjgEwOw" association="_lpc3gG4AEeuXEN3YjgEwOw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0YtkcG4EEeuXEN3YjgEwOw"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_lpiXEG4AEeuXEN3YjgEwOw" name="import" type="_3rlrcG35EeuXEN3YjgEwOw" association="_lpc3gG4AEeuXEN3YjgEwOw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lpi-IG4AEeuXEN3YjgEwOw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lpjlMG4AEeuXEN3YjgEwOw" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_gY7cQG4EEeuXEN3YjgEwOw" visibility="package" memberEnd="_gY8qYW4EEeuXEN3YjgEwOw _gY9Rcm4EEeuXEN3YjgEwOw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gY8DUG4EEeuXEN3YjgEwOw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gY8qYG4EEeuXEN3YjgEwOw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_gY9Rcm4EEeuXEN3YjgEwOw" type="_B8-e4G3-EeuXEN3YjgEwOw" association="_gY7cQG4EEeuXEN3YjgEwOw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_njp9kG4EEeuXEN3YjgEwOw"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_gY8qYW4EEeuXEN3YjgEwOw" name="used" type="_3rlrcG35EeuXEN3YjgEwOw" association="_gY7cQG4EEeuXEN3YjgEwOw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wVHzMG4EEeuXEN3YjgEwOw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wVXq0G4EEeuXEN3YjgEwOw" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_cIIGcHqFEeqm79lOJbMtXA" name="UseCaseDiagram" visibility="public">
       <packagedElement xmi:type="uml:Package" xmi:id="_wnPZgHqGEeqm79lOJbMtXA" name="GUI ">
