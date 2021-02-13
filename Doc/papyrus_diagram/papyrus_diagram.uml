@@ -6824,8 +6824,10 @@ Voter's preferences : AntiSymmetric</body>
           <packagedElement xmi:type="uml:Class" xmi:id="_3rlrcG35EeuXEN3YjgEwOw" name="ExportToDOT">
             <generalization xmi:type="uml:Generalization" xmi:id="_gDZ1AG4AEeuXEN3YjgEwOw" general="_7m6cEG36EeuXEN3YjgEwOw"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_tQPcAG37EeuXEN3YjgEwOw" name="GraphPreference" visibility="private" type="_PR_wEGbSEeqrtc6dy-mPpg" aggregation="shared"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_0vdxMG38EeuXEN3YjgEwOw" name="NodeList" visibility="private"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_n-gREG4FEeuXEN3YjgEwOw" name="EdgeList" visibility="private"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_0vdxMG38EeuXEN3YjgEwOw" name="NodeList" visibility="private">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-opZ0G4dEeuXEN3YjgEwOw" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_n-gREG4FEeuXEN3YjgEwOw" name="EdgeList" visibility="private" aggregation="shared"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_71na4G4EEeuXEN3YjgEwOw" name="exportToDOT"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_DURl0G36EeuXEN3YjgEwOw" name="Preference">
@@ -6835,6 +6837,10 @@ Voter's preferences : AntiSymmetric</body>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_2-jlUG4EEeuXEN3YjgEwOw" name="export"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_B8-e4G3-EeuXEN3YjgEwOw" name="GraphView">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_gY8qYW4EEeuXEN3YjgEwOw" name="uses" type="_3rlrcG35EeuXEN3YjgEwOw" association="_gY7cQG4EEeuXEN3YjgEwOw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wVHzMG4EEeuXEN3YjgEwOw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wVXq0G4EEeuXEN3YjgEwOw" value="*"/>
+            </ownedAttribute>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_rzgJgG4BEeuXEN3YjgEwOw" name="nodes"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_Qq9ukG4EEeuXEN3YjgEwOw" name="edges"/>
           </packagedElement>
@@ -6843,25 +6849,17 @@ Voter's preferences : AntiSymmetric</body>
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lphI8G4AEeuXEN3YjgEwOw" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lphI8W4AEeuXEN3YjgEwOw" key="nature" value="UML_Nature"/>
           </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_lpjlMW4AEeuXEN3YjgEwOw" type="_DURl0G36EeuXEN3YjgEwOw" association="_lpc3gG4AEeuXEN3YjgEwOw">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0YtkcG4EEeuXEN3YjgEwOw"/>
-          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_lpjlMW4AEeuXEN3YjgEwOw" type="_DURl0G36EeuXEN3YjgEwOw" association="_lpc3gG4AEeuXEN3YjgEwOw"/>
           <ownedEnd xmi:type="uml:Property" xmi:id="_lpiXEG4AEeuXEN3YjgEwOw" name="import" type="_3rlrcG35EeuXEN3YjgEwOw" association="_lpc3gG4AEeuXEN3YjgEwOw">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lpi-IG4AEeuXEN3YjgEwOw"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lpjlMG4AEeuXEN3YjgEwOw" value="*"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_gY7cQG4EEeuXEN3YjgEwOw" visibility="package" memberEnd="_gY8qYW4EEeuXEN3YjgEwOw _gY9Rcm4EEeuXEN3YjgEwOw">
+        <packagedElement xmi:type="uml:Association" xmi:id="_gY7cQG4EEeuXEN3YjgEwOw" visibility="public" memberEnd="_gY8qYW4EEeuXEN3YjgEwOw _gY9Rcm4EEeuXEN3YjgEwOw">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gY8DUG4EEeuXEN3YjgEwOw" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gY8qYG4EEeuXEN3YjgEwOw" key="nature" value="UML_Nature"/>
           </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_gY9Rcm4EEeuXEN3YjgEwOw" type="_B8-e4G3-EeuXEN3YjgEwOw" association="_gY7cQG4EEeuXEN3YjgEwOw">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_njp9kG4EEeuXEN3YjgEwOw"/>
-          </ownedEnd>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_gY8qYW4EEeuXEN3YjgEwOw" name="used" type="_3rlrcG35EeuXEN3YjgEwOw" association="_gY7cQG4EEeuXEN3YjgEwOw">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wVHzMG4EEeuXEN3YjgEwOw"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wVXq0G4EEeuXEN3YjgEwOw" value="*"/>
-          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_gY9Rcm4EEeuXEN3YjgEwOw" type="_B8-e4G3-EeuXEN3YjgEwOw" association="_gY7cQG4EEeuXEN3YjgEwOw"/>
         </packagedElement>
       </packagedElement>
     </packagedElement>

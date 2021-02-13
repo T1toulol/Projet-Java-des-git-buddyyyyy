@@ -4904,7 +4904,7 @@
       <element xmi:type="uml:Association" href="papyrus_diagram.uml#_lpc3gG4AEeuXEN3YjgEwOw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lpvycm4AEeuXEN3YjgEwOw" points="[960, 260, -643984, -643984]$[819, 240, -643984, -643984]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lqQIwG4AEeuXEN3YjgEwOw" id="(0.0,0.17543859649122806)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lqQIwW4AEeuXEN3YjgEwOw" id="(1.0,0.12903225806451613)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lqQIwW4AEeuXEN3YjgEwOw" id="(1.0,0.12777777777777777)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_gZGbYG4EEeuXEN3YjgEwOw" type="Association_Edge" source="_DTkeYG3-EeuXEN3YjgEwOw" target="_5eWCgG35EeuXEN3YjgEwOw">
       <children xmi:type="notation:DecorationNode" xmi:id="_gZHCcG4EEeuXEN3YjgEwOw" type="Association_StereotypeLabel">
