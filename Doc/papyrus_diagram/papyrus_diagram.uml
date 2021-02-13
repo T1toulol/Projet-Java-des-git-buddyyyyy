@@ -6822,19 +6822,18 @@ Voter's preferences : AntiSymmetric</body>
       <packagedElement xmi:type="uml:Package" xmi:id="_F6OGoG31EeuXEN3YjgEwOw" name="ExportPreferences">
         <packagedElement xmi:type="uml:Package" xmi:id="_0oYZIG35EeuXEN3YjgEwOw" name="Objects">
           <packagedElement xmi:type="uml:Class" xmi:id="_3rlrcG35EeuXEN3YjgEwOw" name="ExportToDOT">
-            <generalization xmi:type="uml:Generalization" xmi:id="_gDZ1AG4AEeuXEN3YjgEwOw" general="_7m6cEG36EeuXEN3YjgEwOw"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_tQPcAG37EeuXEN3YjgEwOw" name="GraphPreference" visibility="private" type="_PR_wEGbSEeqrtc6dy-mPpg" aggregation="shared"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_0vdxMG38EeuXEN3YjgEwOw" name="NodeList" visibility="private">
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-opZ0G4dEeuXEN3YjgEwOw" value="*"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_n-gREG4FEeuXEN3YjgEwOw" name="EdgeList" visibility="private" aggregation="shared"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_71na4G4EEeuXEN3YjgEwOw" name="exportToDOT"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_n-gREG4FEeuXEN3YjgEwOw" name="EdgeList" visibility="private" aggregation="shared">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d5bmEG4nEeueuKV0xi7dBA"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dCpvEG4nEeueuKV0xi7dBA" value="*"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_71na4G4EEeuXEN3YjgEwOw" name="Export"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_DURl0G36EeuXEN3YjgEwOw" name="Preference">
             <ownedOperation xmi:type="uml:Operation" xmi:id="_Y5NRcG37EeuXEN3YjgEwOw" name="AsGraph"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Interface" xmi:id="_7m6cEG36EeuXEN3YjgEwOw" name="IExport">
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_2-jlUG4EEeuXEN3YjgEwOw" name="export"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_B8-e4G3-EeuXEN3YjgEwOw" name="GraphView">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_gY8qYW4EEeuXEN3YjgEwOw" name="uses" type="_3rlrcG35EeuXEN3YjgEwOw" association="_gY7cQG4EEeuXEN3YjgEwOw">
