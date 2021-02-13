@@ -2,7 +2,7 @@
 
 ====== link:../README.adoc[Summary]
 
-=== Export in DOT Format Diagram
+=== Export Preference in DOT Format Diagram
 
 image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format Diagram]
 
@@ -11,7 +11,7 @@ image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format Diagram]
 This class will allow us to export preferences in DOT format. 
 
 
-== External Profile methods analysis +
+== Export Preference in DOT format methods analysis +
 
 [cols="1,1,2", options="header"] 
 |===
