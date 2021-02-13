@@ -1,18 +1,24 @@
-= DOT FORMAT
+== DOT FORMAT
 
-== PRESENTATION:
+
+=== PRESENTATION:
+
 The DOT format is a simple file format which describes graphs. This type of file is used by graph visualization applications.
 The DOT format describes three types of objects: graphs, nodes and edges.
 Graphs can be directed (indicated by the keyword digraph) or undirected (graph).
 
-== SYNTAX:
+
+=== SYNTAX:
+
 The DOT’s syntax is quite simple. The first line indicates the type of the graph and its name.
 Then, the following lines, which are between brackets, represent vertices and edges.
 A vertex is created when its name appears for the first time in the list.
 An edge is created when the vertices are connected by an edge operator: - - for an undirected graph and - > for a directed one.
 We can also create a subgraph which is a subset of edges.
 
-== ATTRIBUTES:
+
+=== ATTRIBUTES:
+
 The DOT format also allows to specify attributes in order to modify the graph representation and the arrangement of vertices and edges. The attributes are indicated between [] after the vertex or the edge they refer to.
 Here are some attributes:
 - size, to set the size of the graph (in inches)
@@ -23,7 +29,10 @@ Here are some attributes:
 The keyword edge allows to define attributes associated to all the edges at the same time. Like-wise, for the keyword node for the vertices.
 Finally, the DOT format represents a graph in different layers.
 
-== EXAMPLE :
+
+=== EXAMPLE :
+
+----
 digraph G {
 	bgcolor=azure;
         	node [shape=box, color=lightblue2, style=filled];
@@ -34,5 +43,6 @@ digraph G {
         	"two" -> "twenty";
 	A -> {B C} ;
 }
+----
 
 For more details: http://www.graphviz.org/doc/info/lang.html
