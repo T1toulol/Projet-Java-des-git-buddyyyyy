@@ -4760,6 +4760,17 @@
           <element xmi:type="uml:Operation" href="papyrus_diagram.uml#_7ymkkIN4Eeujf5wyvBodWw"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_7zhKkYN4Eeujf5wyvBodWw"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_v8CQIIOBEeujf5wyvBodWw" type="Operation_ClassOperationLabel" fontHeight="7">
+          <styles xmi:type="notation:StringListValueStyle" xmi:id="_9_6akIOBEeujf5wyvBodWw" name="maskLabel">
+            <stringListValue>parametersName</stringListValue>
+            <stringListValue>visibility</stringListValue>
+            <stringListValue>name</stringListValue>
+            <stringListValue>parametersType</stringListValue>
+            <stringListValue>returnType</stringListValue>
+          </styles>
+          <element xmi:type="uml:Operation" href="papyrus_diagram.uml#_v72C4IOBEeujf5wyvBodWw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_v8CQIYOBEeujf5wyvBodWw"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_5eZs4W35EeuXEN3YjgEwOw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_5eZs4m35EeuXEN3YjgEwOw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_5eZs4235EeuXEN3YjgEwOw"/>

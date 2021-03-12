@@ -32,4 +32,8 @@ The static method of the ExportToDOT class makes sure that the provided graph is
 |This is a private method which @return true when the argument is a directed graph.  
 |To do
 
+|convertToDoT(DirectedGraph g)
+|It is a private method which @return the directed graph in DOT Format as String.
+|To do
+
 |===

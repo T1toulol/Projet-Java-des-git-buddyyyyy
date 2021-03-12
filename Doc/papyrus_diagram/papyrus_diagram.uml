@@ -6832,6 +6832,10 @@ Voter's preferences : AntiSymmetric</body>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
               </ownedParameter>
             </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_v72C4IOBEeujf5wyvBodWw" name="convertToDot" visibility="private">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_4w9pcIOBEeujf5wyvBodWw" name="g" type="_PR_wEGbSEeqrtc6dy-mPpg"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_75x0gIOBEeujf5wyvBodWw" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
+            </ownedOperation>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_G9iQQIHqEeuXBtDohaXwsg" memberEnd="_G9kFcYHqEeuXBtDohaXwsg _G9mhsIHqEeuXBtDohaXwsg">
