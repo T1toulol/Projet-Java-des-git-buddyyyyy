@@ -6821,7 +6821,7 @@ Voter's preferences : AntiSymmetric</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_F6OGoG31EeuXEN3YjgEwOw" name="ExportPreferences" visibility="public">
         <packagedElement xmi:type="uml:Package" xmi:id="_0oYZIG35EeuXEN3YjgEwOw" name="Objects">
-          <packagedElement xmi:type="uml:Class" xmi:id="_3rlrcG35EeuXEN3YjgEwOw" name="ExportToDOT">
+          <packagedElement xmi:type="uml:Class" xmi:id="_3rlrcG35EeuXEN3YjgEwOw" name="ExportDOT">
             <ownedOperation xmi:type="uml:Operation" xmi:id="_71na4G4EEeuXEN3YjgEwOw" name="Export" isStatic="true">
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_ve65QG4rEeueuKV0xi7dBA" name="pref" type="_PR_wEGbSEeqrtc6dy-mPpg"/>
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_ogGLgIHrEeuXBtDohaXwsg" name="writer"/>
