@@ -25,7 +25,7 @@ The static method of the ExportToDOT class makes sure that the provided graph is
 |Relevance
 
 |Export(DirectedGraph pref, Writer w)
-|This is a static void method which takes two argument. A directed graph that represents a preference and a Writer (to write flows of characters) which export it in DOT format. It would be useful to make sure that the export method receives a directed graph using the isDirectedGraph() method. 
+|This is a static void method which takes two argument. A directed graph that represents a preference and a Writer (to write flows of characters) which export it in DOT format. It would be useful to make sure that the export method receives a directed graph using the isDirectedGraph() method, and convert it in DOT format by convertToDoT() method. 
 |To do
 
 |isDirectedGraph(DirectedGraph g)
