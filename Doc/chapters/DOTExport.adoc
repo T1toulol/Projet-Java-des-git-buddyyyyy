@@ -19,8 +19,8 @@ This class will allow us to export preferences in DOT format.
 |Contract
 |Relevance
 
-|export(Graph Preference)
-|This method will export preferences in DOT format.
+|Export(DirectedGraph pref, Writer w)
+|This is a void method which takes two argument. A directed graph that represents a preference and a link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer] which export it in DOT format. 
 |To do
 
 |===
