@@ -20,7 +20,11 @@ This class will allow us to export preferences in DOT format.
 |Relevance
 
 |Export(DirectedGraph pref, Writer w)
-|This is a void method which takes two argument. A directed graph that represents a preference and a link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer] which export it in DOT format. 
+|This is a void method which takes two argument. A directed graph that represents a preference and a link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer (to write flows of characters)] which export it in DOT format. 
+|To do
+
+|isDirectedGraph(DirectedGraph g)
+|This is a private method which @return true when the argument is a directed graph. It would be useful to make sure that the export method receives a directed graph. 
 |To do
 
 |===
