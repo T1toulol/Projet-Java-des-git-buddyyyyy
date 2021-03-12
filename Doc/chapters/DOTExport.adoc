@@ -8,7 +8,12 @@ image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format Diagram]
 
 
 === What will do this class +
-This class will allow us to export preferences in DOT format. 
+
+The goal of the ExportToDOT class is to export a preference in link:./DOTformat.adoc[DOT format]. 
+
+A preference must be represented by a directed graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a directed graph.
+
+The static method of the ExportToDOT class makes sure that the provided graph is a directed graph and then converts it to DOT format. Finally, thanks to the java class PrintWriter (which is an heir class of Writer), it is possible to export the character stream.
 
 
 == Export Preference in DOT format methods analysis +
@@ -20,11 +25,11 @@ This class will allow us to export preferences in DOT format.
 |Relevance
 
 |Export(DirectedGraph pref, Writer w)
-|This is a void method which takes two argument. A directed graph that represents a preference and a link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer (to write flows of characters)] which export it in DOT format. 
+|This is a void method which takes two argument. A directed graph that represents a preference and a link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer (to write flows of characters)] which export it in DOT format. It would be useful to make sure that the export method receives a directed graph using the isDirectedGraph() method. 
 |To do
 
 |isDirectedGraph(DirectedGraph g)
-|This is a private method which @return true when the argument is a directed graph. It would be useful to make sure that the export method receives a directed graph. 
+|This is a private method which @return true when the argument is a directed graph.  
 |To do
 
 |===
