@@ -13,11 +13,9 @@ The goal of the ExportDOT class is to export a preference in link:./DOTformat.ad
 
 A preference can be represented by a *directed* graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a directed graph. So all preferences can be converted into a directed graph and given to the Export() method of the ExportDOT class.
 
-The Export() method of the ExportDOT class makes sure that the provided graph is a directed graph and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer] given as argument provides an output stream to a file. We can create a link:https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html[PrintWriter] on this stream and write in the file. 
+The Export() method of the ExportDOT class makes sure that the provided graph is a directed graph and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer] given as argument provides an output stream to a file. We can create a link:https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html[PrintWriter] on this stream and write in the file (see the next example). 
 
 ----
-*Example of Writer use :*
-
 //Create an instance to manipulate/create a file from a path
 File fichier =  new File("./bonjour.txt") ;
 
