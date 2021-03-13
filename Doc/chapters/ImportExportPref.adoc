@@ -39,12 +39,12 @@ PrintWriter pw =  new PrintWriter(writer);
 |This is a static void method which takes two argument : a directed graph that represents a preference and a Writer (provides an output stream to a file) which export it in DOT format. It would be useful to make sure that the export method receives a directed graph by using the isDirectedGraph() method. Then convertToDot() converts the oriented graph and sends the string to the print() method of the PrintWritter to write in the ouput file. 
 |To do
 
-|isDirectedGraph(DirectedGraph g)
+|isDirectedGraph(Graph g)
 |This is a static method which returns true when the argument is a directed graph.  
 |To do
 
 |convertToDoT(DirectedGraph g)
-|It is a static method which returns the directed graph in DOT Format as String.
+|This is a static method which returns the directed graph in DOT Format as String.
 |To do
 
 |===
