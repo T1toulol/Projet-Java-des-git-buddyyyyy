@@ -6,6 +6,7 @@
 The DOT format is a simple file format which describes graphs. This type of file is used by graph visualization applications.
 The DOT format describes three types of objects: graphs, nodes and edges.
 Graphs can be directed (indicated by the keyword digraph) or undirected (graph).
+In the case of a link:./README.adoc[Preference], the graph will be necessarily oriented, because a preference is a ranking of alternatives.
 
 
 === SYNTAX:
