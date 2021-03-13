@@ -26,7 +26,8 @@ We can also create a subgraph which is a subset of edges.
 === ATTRIBUTES:
 
 The DOT format also allows to specify attributes in order to modify the graph representation and the arrangement of vertices and edges. The attributes are indicated between [] after the vertex or the edge they refer to.
-[]Here are some attributes:
+Here are some attributes:
+[]
 * size, to set the size of the graph (in inches)
 * shape, to set the shape of the edge
 * style, to set the style of the vertex
