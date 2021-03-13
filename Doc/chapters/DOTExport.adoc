@@ -17,10 +17,11 @@ The Export() method of the ExportDOT class makes sure that the provided graph is
 
 ----
 //Create an instance to manipulate/create a file from a path
-File fichier =  new File("./bonjour.txt") ;
+String pathname = "./doc.txt";
+File f =  new File(pathname) ;
 
 //Create an ouput stream to the previous file
-Writer writer =  new FileWriter(fichier);
+Writer writer =  new FileWriter(f);
 		   
 // Create a PrintWriter to write in this file
 PrintWriter pw =  new PrintWriter(writer);
