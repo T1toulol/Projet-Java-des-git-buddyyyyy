@@ -8,7 +8,7 @@ The DOT format describes three types of objects: graphs, nodes and edges.
 Graphs can be directed (indicated by the keyword digraph) or undirected (graph).
 
 A graph can be used to represent a classification between elements (link:https://hal.archives-ouvertes.fr/hal-01526540/document[here] for more informations : _Philippe Vincke, La modélisation des préférences, Institut de mathématiques économiques (IME). 1985, 24 p., figures, bibliographie. ffhal-01526540_).
-In the case of a link:./preferenceInterfaces.adoc[Preference], the graph will be necessarily oriented, because a Preference is a ranking of Alternatives.
+In the case of a link:./preferenceInterfaces.adoc[Preference], the graph will be necessarily oriented, because a Preference is a ranking of Alternatives. Each vertex represents an alternative, the orientation of the edge indicates the ranking.
 
 *Example of element ranking with graph :*
 
