@@ -13,7 +13,7 @@ The goal of the ExportDOT class is to export a preference in link:./DOTformat.ad
 
 A preference can be represented by a *directed* graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a directed graph. So all preferences can be converted into a directed graph and given to the Export() method of the ExportDOT class.
 
-The Export() method of the ExportDOT class makes sure that the provided graph is a directed graph and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer] given as argument provides an output stream to a file. We can create a link:https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html[PrintWriter] on this stream and write in the file (see the next example). 
+The Export() method of the ExportDOT class makes sure that the provided graph is a directed graph and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer] given as argument provides an output stream to a file. We can create a link:https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html[PrintWriter] on this stream and write in the file (see the next example for more informations about write stream). 
 
 ----
 //Create an instance to manipulate/create a file from a path
@@ -39,11 +39,11 @@ PrintWriter pw =  new PrintWriter(writer);
 |To do
 
 |isDirectedGraph(DirectedGraph g)
-|This is a static method which @return true when the argument is a directed graph.  
+|This is a static method which returns true when the argument is a directed graph.  
 |To do
 
 |convertToDoT(DirectedGraph g)
-|It is a static method which @return the directed graph in DOT Format as String.
+|It is a static method which returns the directed graph in DOT Format as String.
 |To do
 
 |===
