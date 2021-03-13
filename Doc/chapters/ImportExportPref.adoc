@@ -36,7 +36,7 @@ PrintWriter pw =  new PrintWriter(writer);
 |Relevance
 
 |Export(DirectedGraph pref, Writer w)
-|This is a static void method which takes two argument : a directed graph that represents a preference and a Writer (provides an output stream to a file) which export it in DOT format. It would be useful to make sure that the export method receives a directed graph using the isDirectedGraph() method. Then converToDot() converts the oriented graph and sends the string to the print() method of the PrintWritter to write in the ouput file. 
+|This is a static void method which takes two argument : a directed graph that represents a preference and a Writer (provides an output stream to a file) which export it in DOT format. It would be useful to make sure that the export method receives a directed graph by using the isDirectedGraph() method. Then convertToDot() converts the oriented graph and sends the string to the print() method of the PrintWritter to write in the ouput file. 
 |To do
 
 |isDirectedGraph(DirectedGraph g)
