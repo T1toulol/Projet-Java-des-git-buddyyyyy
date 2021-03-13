@@ -155,7 +155,6 @@ link:../../src/test/resources/io/github/oliviercailloux/j_voting/profiles/manage
 |=========
 
 
-***************
 
 
 == DOT FORMAT
