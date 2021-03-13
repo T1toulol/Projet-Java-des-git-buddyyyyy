@@ -41,11 +41,13 @@ Finally, the DOT format represents a graph in different layers.
 
 Here we imagine a Preference between the Alternatives "Superman", "Batman", and "Spiderman".
 
+image:../assets/Graph_pref_superheros.png[width=35%, align="center"]
+
 The above graph is produced by the code below. It expresses the Preference of voter #37.
 
 ----
 graph Votant_37 {
-        bgcolor=azure;
+        bgcolor=white;
         node [shape=circle, color=green, style=filled];
         edge [arrowsize=1, color=red];
         "Superman" -> "Batman";
