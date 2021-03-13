@@ -736,7 +736,10 @@
       <children xmi:type="notation:DecorationNode" xmi:id="_38PaIYRAEeuxH--JmIdV2g" type="Interface_FloatingNameLabel">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_38PaIoRAEeuxH--JmIdV2g" y="15"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_38QBMIRAEeuxH--JmIdV2g" type="Interface_AttributeCompartment">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_38QBMIRAEeuxH--JmIdV2g" visible="false" type="Interface_AttributeCompartment">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eiRVoIRKEeuUeqm4uO2GnA" source="PapyrusCSSForceValue">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eiRVoYRKEeuUeqm4uO2GnA" key="collapsed" value="true"/>
+        </eAnnotations>
         <styles xmi:type="notation:TitleStyle" xmi:id="_38QBMYRAEeuxH--JmIdV2g"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_38QBMoRAEeuxH--JmIdV2g"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_38QBM4RAEeuxH--JmIdV2g"/>
@@ -760,7 +763,7 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_38QBOIRAEeuxH--JmIdV2g"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_38QBOYRAEeuxH--JmIdV2g"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_38QBOoRAEeuxH--JmIdV2g" type="Interface_NestedClassifierCompartment">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_38QBOoRAEeuxH--JmIdV2g" visible="false" type="Interface_NestedClassifierCompartment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_38QBO4RAEeuxH--JmIdV2g"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_38QBPIRAEeuxH--JmIdV2g"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_38QBPYRAEeuxH--JmIdV2g"/>
