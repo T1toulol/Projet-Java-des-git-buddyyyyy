@@ -6,7 +6,8 @@
 The DOT format is a simple file format which describes graphs. This type of file is used by graph visualization applications.
 The DOT format describes three types of objects: graphs, nodes and edges.
 Graphs can be directed (indicated by the keyword digraph) or undirected (graph).
-In the case of a link:./README.adoc[Preference], the graph will be necessarily oriented, because a preference is a ranking of alternatives.
+A graph can be used to represent a classification between elements.
+In the case of a link:./preferenceInterfaces.adoc[Preference], the graph will be necessarily oriented, because a Preference is a ranking of Alternatives.
 
 
 === SYNTAX:
@@ -33,16 +34,17 @@ Finally, the DOT format represents a graph in different layers.
 
 === EXAMPLE :
 
+Here we imagine a Preference between the Alternatives "The X-Files", "The Punisher", and "Shreck".
+
+The above graph is produced by the code below. It expresses the Preference of voter #37.
+
 ----
-digraph G {
-	bgcolor=azure;
-        	node [shape=box, color=lightblue2, style=filled];
-        	edge [arrowsize=2, color=gold];
-        	"zero" -> "ten";
-        	"one" -> "ten";
-        	"zero" -> "twenty";
-        	"two" -> "twenty";
-	A -> {B C} ;
+graph Votant_37 {
+        bgcolor=azure;
+        node [shape=box, color=blue, style=filled];
+        edge [arrowsize=2, color=red];
+        "The X-Files" -> "The Punisher";
+        "The Punisher" -> "Shreck";
 }
 ----
 
