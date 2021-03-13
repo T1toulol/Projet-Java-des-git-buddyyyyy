@@ -9,7 +9,7 @@ Graphs can be directed (indicated by the keyword digraph) or undirected (graph).
 A graph can be used to represent a classification between elements.
 In the case of a link:./preferenceInterfaces.adoc[Preference], the graph will be necessarily oriented, because a Preference is a ranking of Alternatives.
 
-image:../assets/exempleGraphPref.png[width=50%]
+image:../assets/exempleGraphPref.png[width=10%]
 
 === SYNTAX:
 
