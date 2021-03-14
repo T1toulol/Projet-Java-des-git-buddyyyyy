@@ -6,9 +6,9 @@
 
 
 
-== SOC file
+== SOC (Strict Orders - Complete List) file
 
-Each file with a soc extension contains a profile consisting of a complete, transitive, and asymmetric relation over a group of objects.
+SOC file allow to represent a Complete link:./profileInterfaces.adoc[Profile]. Each file with a soc extension contains a profile consisting of a complete, transitive, and asymmetric relation over a group of objects.
 
 If you want to create your own one, you have to imagine a profile and to follow some writing rules.
 Here is an example of a .soc file and its meaning.
@@ -46,6 +46,46 @@ Here is an example of a .soc file and its meaning.
 |3,2,3,1,4
 |3 voters chose this order : Alternative 2 > Alternative 3 > Alternative 1 > Alternative 4
 |===
+
+== SOI (Strict Orders - Incomplete List) file 
+
+SOI files are derived from SOC files, but they allow to represent incomplete profiles.
+
+Using the previous example, SOI files allow to have voters with different preferences : 1 voter ordered 3 alternatives, 3 others ordered 2, although there are 4 alternatives.
+
+[cols="1,1", options="header"] 
+|===
+|What to write
+|What it means
+
+|4
+|Number of alternatives
+
+|1
+|Alternative 1
+
+|2
+|Alternative 2
+
+|3
+|Alternative 3
+
+|4
+|Alternative 4
+
+|6,6,3
+|Number of voters, Number of voters who actually voted, Number of different orders 
+
+|2,1,2,3,4
+|2 voters chose this order : Alternative 1 > Alternative 2 > Alternative 3 > Alternative 4
+
+|1,4,2,1
+|1 voter chose this order : Alternative 4 > Alternative 2 > Alternative 1 
+
+|3,2,3
+|3 voters chose this order : Alternative 2 > Alternative 3 
+|===
+
 
 
 Some other formats exist *as below*
