@@ -2,9 +2,9 @@
 
 ====== link:../README.adoc[Summary]
 
-=== Export Preference in DOT Format Diagram
+=== Export Preference in DOT Format
 
-image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format Diagram]
+image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format - Diagram]
 
 
 === What will do this class +
