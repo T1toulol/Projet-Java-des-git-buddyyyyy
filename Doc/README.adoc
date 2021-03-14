@@ -22,6 +22,7 @@ image:./assets/j-voting-example.png[InterfacesProfilesDiagram]
 === Graphical User Interface (GUI)
 ==== link:chapters/NewGUI.adoc[2.1 Edition GUI implementation]
 ==== link:chapters/GUIInputFiles.adoc[2.2 Input/Output Files]
+==== link:chapters/ImportExportPref.adoc[2.3 Import/Export Methods]
 
 === Annexes
 ==== link:chapters/OldGUI.adoc[Vizualisation GUI understanding]
