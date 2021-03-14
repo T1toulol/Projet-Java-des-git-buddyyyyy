@@ -49,4 +49,4 @@ PrintWriter pw =  new PrintWriter(writer);
 
 |===
 
-_(*) Be carefull, currently the asGraph() method of the Preference interface returns a Graph. We can't be sure that the returned Graph is a link:https://jgrapht.org/javadoc-1.0.0/org/jgrapht/DirectedGraph.html[DirectedGraph] (which inherits from Graph class). This can be a problem because usually a connection between two vertices of a graph is represented by "--" and by "->" for a directed graph in DOT._
+_(*) Be carefull, currently the asGraph() method of the Preference interface returns a Graph. We can't be sure that the returned Graph is a link:https://jgrapht.org/javadoc-1.0.0/org/jgrapht/DirectedGraph.html[DirectedGraph] (which inherits from Graph class). This can be a problem because usually a connection between two vertices of a graph is represented by "--" and by "->" for a directed graph in DOT format. Thus the conversion might not be good._
