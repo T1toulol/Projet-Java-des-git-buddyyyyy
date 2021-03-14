@@ -11,11 +11,10 @@ image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format - Diagra
 
 The goal of the ExportDOT class is to export a preference in link:./GUIInputFiles.adoc[DOT format]. 
 
-A preference can be represented by a *directed* graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a link:https://jgrapht.org/javadoc/org.jgrapht.core/org/jgrapht/Graph.html[Graph] (*). So all preferences can be converted into a graph and given to the Export() method of the ExportDOT class.
+A preference can be represented by a *directed* graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a link:https://jgrapht.org/javadoc/org.jgrapht.core/org/jgrapht/Graph.html[Graph] _(*see the end of the page)_. So all preferences can be converted into a graph and given to the Export() method of the ExportDOT class.
 
-The Export() method of the ExportDOT class verify that the provided graph is a directed or not graph and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer] given as argument provides an output stream to a file. We can create a link:https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html[PrintWriter] on this stream and write in the file (see the next example for more informations about write stream). 
+The Export() method of the ExportDOT class verify that the provided graph is a directed graph or not and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer] given as argument provides an output stream to a file. We can create a link:https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html[PrintWriter] on this stream and write in the file (see the next example for more informations about write stream). 
 
-_(*) Be carefull, currently the asGraph() method of the Preference interface returns a Graph. We can't be sure that the returned Graph is a link:https://jgrapht.org/javadoc-1.0.0/org/jgrapht/DirectedGraph.html[DirectedGraph] (which inherits from Graph class). This can be a problem because usually a connection between two vertices of a graph is represented by "--" and by "->" for a directed graph in DOT._
 ----
 //Create an instance to manipulate/create a file from a path
 String pathname = "./doc.txt";
@@ -49,3 +48,5 @@ PrintWriter pw =  new PrintWriter(writer);
 |To do
 
 |===
+
+_(*) Be carefull, currently the asGraph() method of the Preference interface returns a Graph. We can't be sure that the returned Graph is a link:https://jgrapht.org/javadoc-1.0.0/org/jgrapht/DirectedGraph.html[DirectedGraph] (which inherits from Graph class). This can be a problem because usually a connection between two vertices of a graph is represented by "--" and by "->" for a directed graph in DOT._
