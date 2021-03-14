@@ -11,7 +11,7 @@ image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format - Diagra
 
 The goal of the ExportDOT class is to export a preference in link:./GUIInputFiles.adoc[DOT format]. 
 
-A preference can be represented by a *directed* graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a link:https://jgrapht.org/javadoc/org.jgrapht.core/org/jgrapht/Graph.html[Graph] _( * )_. So all preferences can be converted into a graph and given to the Export() method of the ExportDOT class.
+A preference can be represented by a *directed* graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a link:https://jgrapht.org/javadoc/org.jgrapht.core/org/jgrapht/Graph.html[Graph] _(*)_. So all preferences can be converted into a graph and given to the Export() method of the ExportDOT class.
 
 The Export() method of the ExportDOT class verify that the provided graph is a directed graph or not and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer] given as argument provides an output stream to a file. We can create a link:https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html[PrintWriter] on this stream and write in the file (see the next example for more informations about write stream). 
 
