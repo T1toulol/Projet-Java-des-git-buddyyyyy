@@ -49,7 +49,7 @@ Here is an example of a .soc file and its meaning.
 
 == SOI file 
 
-SOI (Strict Orders - Incomplete List) files are derived from SOC files, but they allow to represent incomplete profiles.
+SOI (Strict Orders - Incomplete List) files are derived from SOC files, but they allow to represent an Incomplete link:./profileInterfaces.adoc[Profile].
 
 Using the previous example, SOI files allow to have voters with different preferences : 1 voter ordered 3 alternatives, 3 others ordered 2, although there are 4 alternatives.
 
