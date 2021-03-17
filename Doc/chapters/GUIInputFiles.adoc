@@ -213,8 +213,6 @@ In the case of a link:./preferenceInterfaces.adoc[Preference], the graph will be
 
 image:../assets/exempleGraphPref.png[width=35%, align="center"]
 
-_To indicate the indifference between two alternatives, we will use this second representation, always with directed graphs._
-
 === SYNTAX:
 
 The DOT’s syntax is quite simple. The first line indicates the type of the graph and its name.
