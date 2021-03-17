@@ -197,10 +197,10 @@ link:../../src/test/resources/io/github/oliviercailloux/j_voting/profiles/manage
 
 
 
-== DOT FORMAT
+== DOT format
 
 
-=== PRESENTATION:
+=== Presentation
 
 The DOT format is a simple file format which describes graphs. This type of file is used by graph visualization applications.
 The DOT format describes three types of objects: graphs, nodes and edges.
@@ -213,7 +213,7 @@ In the case of a link:./preferenceInterfaces.adoc[Preference], the graph will be
 
 image:../assets/exempleGraphPref.png[width=35%, align="center"]
 
-=== SYNTAX:
+=== Syntax
 
 The DOT’s syntax is quite simple. The first line indicates the type of the graph and its name.
 Then, the following lines, which are between brackets, represent vertices and edges.
@@ -222,7 +222,7 @@ An edge is created when the vertices are connected by an edge operator: - - for 
 We can also create a subgraph which is a subset of edges.
 
 
-=== ATTRIBUTES:
+=== Attributes
 
 The DOT format also allows to specify attributes in order to modify the graph representation and the arrangement of vertices and edges. The attributes are indicated between [] after the vertex or the edge they refer to.
 Here are some attributes:
@@ -236,7 +236,7 @@ The keyword edge allows to define attributes associated to all the edges at the 
 Finally, the DOT format represents a graph in different layers.
 
 
-=== EXAMPLE :
+=== Example
 
 Here we imagine a Preference between the Alternatives "Superman", "Batman", and "Spiderman".
 
