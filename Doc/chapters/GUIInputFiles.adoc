@@ -256,5 +256,5 @@ digraph Votant_37 {
 }
 ----
 
-For more details: http://www.graphviz.org/doc/info/lang.html
+For more details: https://www.graphviz.org/doc/info/lang.html
 
