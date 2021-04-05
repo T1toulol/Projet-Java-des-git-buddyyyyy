@@ -16,15 +16,16 @@ A preference can be represented by a *directed* graph. The preference interface 
 The export() method of the ExportDOT class verify that the provided graph is a directed graph or not and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer] given as argument provides an output stream to a file. We can create a link:https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html[PrintWriter] on this stream and write in the file (see the next example for more informations about write stream). 
 
 ----
-//Create an instance to manipulate/create a file from a path
-String pathname = "./doc.txt";
-File f =  new File(pathname) ;
+String MyData = "This is my data";
 
-//Create an ouput stream to the previous file
-Writer writer =  new FileWriter(f);
+//Create a file in a FileOutputStream
+FileOutputStream f =new FileOutputStream(new File(file_name));
+
+//Converts MyData in byte format
+byte[] bytesData = MyData.getBytes();
 		   
-// Create a PrintWriter to write in this file
-PrintWriter pw =  new PrintWriter(writer);
+//Write the output file 
+f.write(bytesData)
 ----
 
 == Export Preference in DOT format methods analysis +
@@ -35,8 +36,8 @@ PrintWriter pw =  new PrintWriter(writer);
 |Contract
 |Relevance
 
-|export(Graph pref, Writer w)
-|This is a static void method which takes two argument : a graph that represents a preference and a Writer (provides an output stream to a file) which export it in DOT format. It would be useful to verify that the export method receives a directed graph or not by using the isDirectedGraph() method. Then convertToDot() converts the graph and sends the string to the print() method of the PrintWritter to write in the output file. 
+|export(Graph pref, OutputStream stream)
+|This is a static void method which takes two argument : a graph that represents a preference and a OutputStream (provides an output stream to a file) which export it in DOT format. It would be useful to verify that the export method receives a directed graph or not by using the isDirectedGraph() method. Then convertToDot() converts the graph and sends the string to the write() method of the FileOutputStream to write in the output file. 
 |To do
 
 |isDirectedGraph(Graph g)
@@ -49,4 +50,4 @@ PrintWriter pw =  new PrintWriter(writer);
 
 |===
 
-_(*) Be carefull, currently the asGraph() method of the Preference interface returns a Graph. We can't be sure that the returned Graph is a link:https://jgrapht.org/javadoc-1.0.0/org/jgrapht/DirectedGraph.html[DirectedGraph] (which inherits from Graph class). This can be a problem because usually a connection between two vertices of a graph is represented by "--" and by "->" for a directed graph in DOT format. Thus the conversion might not be good._
+_(*) Be carefull, currently the asGraph() method of the Preference interface returns a Graph. We can't be sure that the returned Graph is a directed graph. This can be a problem because usually a connection between two vertices of a graph is represented by "--" and by "->" for a directed graph in DOT format. Thus the conversion might not be good._
