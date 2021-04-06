@@ -19,7 +19,7 @@ The export() method of the ExportDOT class verify that the provided graph is a d
 String MyData = "This is my data";
 
 //Create a file in a FileOutputStream
-FileOutputStream f =new FileOutputStream(new File(file_name));
+OutputStream f =new FileOutputStream(new File(file_name));
 
 //Converts MyData in byte format
 byte[] bytesData = MyData.getBytes();
@@ -37,7 +37,7 @@ f.write(bytesData)
 |Relevance
 
 |export(Graph pref, OutputStream stream)
-|This is a static void method which takes two argument : a graph that represents a preference and a OutputStream (provides an output stream to a file) which export it in DOT format. It would be useful to verify that the export method receives a directed graph or not by using the isDirectedGraph() method. Then convertToDot() converts the graph and sends the string to the write() method of the FileOutputStream to write in the output file. 
+|This is a static void method which takes two argument : a graph that represents a preference and a OutputStream (provides an output stream to a file) which export it in DOT format. It would be useful to verify that the export method receives a directed graph or not by using the isDirectedGraph() method. Then convertToDot() converts the graph and sends the string to the write() method of the OutputStream to write in the output file. 
 |To do
 
 |isDirectedGraph(Graph g)
