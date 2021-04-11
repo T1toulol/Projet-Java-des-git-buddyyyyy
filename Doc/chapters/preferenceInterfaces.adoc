@@ -255,7 +255,7 @@ Graph is rearranged : a transitive closure is applied to it
 | To do
 
 |addAlternative(Alternative a)
-| Because the preference is modifiable, it must be possible to add an alternative, but for the preference to remain complete, the inter relation of this alternative with all others have to be defined. By default, the added alternative will be positioned at the end of the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
+| Because the preference is mutable, it must be possible to add an alternative, but for the preference to remain complete, the inter relation of this alternative with all others have to be defined. By default, the added alternative will be positioned at the end of the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
 | To do
 
 |deleteAlternative(Alternative a)
