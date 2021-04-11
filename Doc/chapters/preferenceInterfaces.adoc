@@ -43,6 +43,14 @@ A linear preference is an antisymmetric complete preference. A linear preference
 
 image:../assets/LinearPreferenceScheme.PNG[LinearPreferenceScheme]
 
+=== MutableCompletePreference +
+A MutableCompletePreference is both complete and modifiable. An alternative can be added or deleted.
+But for the preference to remain complete, the inter relation of the added alternative with all others have to be defined.
+Be careful, unlike a "simple" modifiable preference, you can not relate two alternatives because all the relation are already defined. 
+You can just change their direction: "Alternative1 > Alternative2" to "Alternative1 < Alternative2".  You can also make the alternatives equivalent "Alternative1 > or < Alternative2" to "Alternative1 = Alternative2". 
+
+
+
 == Preferences methods analysis +
 
 === *Preference*
