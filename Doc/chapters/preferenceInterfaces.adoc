@@ -106,6 +106,10 @@ Reflexive and transitive.
 | Adds an edge from an alternative a1 to an alternative a2, so that a1 is asleast as good as a2 (a1 >= a2). 
 | Similarly, the method does not deal with the fact that when an alternative is not in the graph it must be added. 
 
+|deleteAlternative(Alternative a)
+| Delete an alternative to the Preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
+| To do
+
 |===
 
 === *MutableAntiSymmetricPreference*
