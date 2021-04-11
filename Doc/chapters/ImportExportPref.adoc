@@ -59,6 +59,9 @@ _(*) Be carefull, currently the asGraph() method of the Preference interface ret
 
 === Import Profile from several data formats by ReadProfile
 
+The ReadProfile class allows to create and display Profiles from different ressources (InputStream, link:https://docs.oracle.com/javase/7/docs/api/java/net/URL.html[URL], or Table).
+To do this, it uses the ProfileBuilder and StrictProfileBuilder classes.
+
 image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 
 [cols="1,1,2", options="header"] 
@@ -67,9 +70,45 @@ image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 |Contract
 |Relevance
 
+|createProfileFromStream(InputStream in)
+|This method takes an input stream in argument which provides voting informations and it returns a link:./profileInterfaces.doc[IProfile] by using the buildProfile method.
+|Ok
+
+|createProfileFromColumnsTable(Table table)
+|This method takes a Table (a kind of spreadsheet) with Voters in columns and returns a ProfileI providing by the ProfileBuilder class.
+|Ok
+
+|createProfileFromRowsTable(Table table)
+|This method takes a Table with Voters in rows and returns a ProfileI providing by the ProfileBuilder class.
+|Ok
+
+|createProfileFromURL(URL url)
+|This method takes an URL in argument and returns a ProfileI providing by the createProfileFromStream() method of this class.
+|Ok
+
+|displayProfileFromstream(InputStream in)
+|This method takes an input stream in argument and print the input file by a link:http://www.slf4j.org/apidocs/org/slf4j/Logger.html[Logger]
+|Ok
+
+|getAlternatives(List ListofStrings)
 |
+|Ok
+
+|getStatsVoters(String s)
+|This method takes a string which contains voters statistics (number,sum of count, number of unique alternatives). The string is converted in list of integer, and it is returned.
+|Ok
+
+|getPreferences(OldLinearPreferenceImpl alternative, String s)
 |
+|Ok
+
+|createStrictPreferenceFrom(String stringPreference)
 |
+|Ok
+
+|buildProfile(List<String> file, OldLinearPreferenceImpl listAlternative, int nbVoters)
+|This method takes a List which represents the number of votes for each preference, an OldLinearPreferenceImpl which represents a list of alternatives, and the number of Voters. By using the StrictProfileBuilder class, this method return a ProfileI. 
+|Ok
 
 |===
 
@@ -78,7 +117,7 @@ image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 
 ODS files are worksheet files that are used in OpenOffice, for example. 
 link:./GUIInputFiles.adoc[Here] we have defined several data formats for ODS files: RanksFormat, VotersToRanking, and CountOfRanking.
-The ReadODS class allows to read and describe profiles from these data formats, and import set of ImmutableCompletePreference.  
+The ReadODS class allows to read and describe profiles from these data formats, and create Set of link:./preferenceInterfaces.adoc[ImmutableCompletePreference].  
 
 image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagram]
 
@@ -90,7 +129,7 @@ image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagr
 |Relevance
 
 |checkFormatandPrint(InputStream in)
-|This is a static method wich check the data format of the input stream (RanksFormat or VotersToRanking or CountOfRanking) and return a string with voting information by using on of the next printFormat method.
+|This is a static method wich check the data format of the input stream (RanksFormat or VotersToRanking or CountOfRanking). It returns a string with voting information by using the most suitable printFormat method (see next methods descriptions).
 |Ok 
 
 |printFormatCountOfRanking(Table table)
@@ -114,7 +153,7 @@ image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagr
 |Ok
 
 |checkFormatandReturnCompletePreference(InputStream in)
-|This is a static method which takes an input stream in argument. This method uses the following two methods (completeFormatRanksFormat() & completeFormatVotersToRankings()) after checking the input format (RanksFormat or VotersToRanking). And finally, it returns an ImmutableSet of ImmutableCompletePreference. 
+|This is a static method which takes an input stream in argument. This method uses the following two methods (completeFormatRanksFormat() and completeFormatVotersToRankings()) after checking the input format (RanksFormat or VotersToRanking). And finally, it returns an ImmutableSet of ImmutableCompletePreference. 
 |Ok
 
 |completeFormatRanksFormat(Table table)
