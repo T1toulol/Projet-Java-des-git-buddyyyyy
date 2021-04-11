@@ -61,12 +61,20 @@ _(*) Be carefull, currently the asGraph() method of the Preference interface ret
 
 image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 
+[cols="1,1,2", options="header"] 
+|===
+|Method name
+|Contract
+|Relevance
 
-=== Read/describe Profile from ODS files
+
+
+
+=== Read Profile from ODS files
 
 ODS files are worksheet files that are used in OpenOffice, for example. 
 link:./GUIInputFiles.adoc[Here] we have defined several data formats for ODS files: RanksFormat, VotersToRanking, and CountOfRanking.
-The ReadODS class allows to read and describe profiles from these data formats.  
+The ReadODS class allows to read and describe profiles from these data formats, and import set of ImmutableCompletePreference.  
 
 image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagram]
 
@@ -82,15 +90,15 @@ image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagr
 |Ok 
 
 |printFormatCountOfRanking(Table table)
-|This is a string static method which takes an ods table containing voting information in argument, and return a string with voting information. It is used to describe the information contained.
+|This is a string static method which takes an ods table containing voting information in CountOfRanking format in argument. And it returns a string with voting information. It is used to describe the information contained.
 |Ok
 
 |printFormatRanksFormat(Table table)
-|This is a string static method which takes an ods table containing voting information in argument, and return a string with voting information. It is used to describe the information contained.
+|This is a string static method which takes an ods table containing voting information in RanksFormat format in argument. And it returns a string with voting information. It is used to describe the information contained.
 |Ok
 
 |printFormatVotersToRanking(Table table)
-|This is a string static method which takes an ods table containing voting information in argument, and return a string with voting information. It is used to describe the information contained.
+|This is a string static method which takes an ods table containing voting information in VotersToRanking format in argument. And it returns a string with voting information. It is used to describe the information contained.
 |Ok
 
 |getAlternatives(Table table)
@@ -102,13 +110,15 @@ image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagr
 |Ok
 
 |checkFormatandReturnCompletePreference(InputStream in)
-|
+|This is a static method which takes an input stream in argument. This method uses the following two methods (completeFormatRanksFormat() & completeFormatVotersToRankings()) after checking the input format (RanksFormat or VotersToRanking). And finally, it returns an ImmutableSet of ImmutableCompletePreference. 
 |Ok
 
 |completeFormatRanksFormat(Table table)
-|
+|This is a static method which takes an ods table containing voting information in argument (in RanksFormat format) and returns an ImmutableSet of ImmutableCompletePreference.
 |Ok
 
 |completeFormatVotersToRankings(Table table)
-|
+|This is a static method which takes an ods table containing voting information in argument (in VotersToRanking format) and returns an ImmutableSet of ImmutableCompletePreference.
 |Ok
+
+|===
