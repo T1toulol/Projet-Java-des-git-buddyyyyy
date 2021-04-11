@@ -4,7 +4,7 @@
 
 === Export Preference in DOT Format
 
-image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format - Diagram]
+image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format - Class Diagram]
 
 
 === What will do this class +
@@ -16,16 +16,15 @@ A preference can be represented by a *directed* graph. The preference interface 
 The export() method of the ExportDOT class verify that the provided graph is a directed graph or not and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html[Writer] given as argument provides an output stream to a file. We can create a link:https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html[PrintWriter] on this stream and write in the file (see the next example for more informations about write stream). 
 
 ----
-String MyData = "This is my data";
+//Create a string by using StringBuilder by preference
+StringBuilder dot = new StringBuilder();
+dot.append("inputString-DOTformat");
 
-//Create a file in a FileOutputStream
-OutputStream f =new FileOutputStream(new File(file_name));
+//Create a Writer from the OutputStream - the output is the destination
+Writer writer =new BufferedWritter(new OutputStream(output));
 
-//Converts MyData in byte format
-byte[] bytesData = MyData.getBytes();
-		   
-//Write the output file 
-f.write(bytesData)
+//Give the String to the Writer
+writer.write(dot)
 ----
 
 == Export Preference in DOT format methods analysis +
@@ -37,7 +36,7 @@ f.write(bytesData)
 |Relevance
 
 |export(Graph pref, OutputStream stream)
-|This is a static void method which takes two argument : a graph that represents a preference and a OutputStream (provides an output stream to a file) which export it in DOT format. It would be useful to verify that the export method receives a directed graph or not by using the isDirectedGraph() method. Then convertToDot() converts the graph and sends the string to the write() method of the OutputStream to write in the output file. 
+|This is a static void method which takes two argument : a graph that represents a preference and a OutputStream (provides an output stream to a file) which export it in DOT format. It would be useful to verify that the export method receives a directed graph or not by using the isDirectedGraph() method. Then convertToDot() converts the graph and sends the string to the Writer given by the OutputStream to write in the output file. 
 |To do
 
 |isDirectedGraph(Graph g)
@@ -53,4 +52,9 @@ f.write(bytesData)
 _(*) Be carefull, currently the asGraph() method of the Preference interface returns a Graph. We can't be sure that the returned Graph is a directed graph. This can be a problem because usually a connection between two vertices of a graph is represented by "--" and by "->" for a directed graph in DOT format. Thus the conversion might not be good._
 
 
-= Import 
+= Import Profile
+
+=== Import Profile
+
+
+image:../assets/readods_diag_class.PNG[Import profile readODS - Class Diagram]

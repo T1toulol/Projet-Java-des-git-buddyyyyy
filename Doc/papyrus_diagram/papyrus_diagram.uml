@@ -67,6 +67,9 @@ Voter's preferences : AntiSymmetric</body>
             <packagedElement xmi:type="uml:Package" xmi:id="_O-Q7wGbSEeqrtc6dy-mPpg" name="slf4j">
               <packagedElement xmi:type="uml:Class" xmi:id="_O-SJ4GbSEeqrtc6dy-mPpg" name="Logger"/>
             </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_CzPgMJr7Eeu-Z_X4sBTjZA" name="odftoolkit">
+              <packagedElement xmi:type="uml:Class" xmi:id="_F52EwJr7Eeu-Z_X4sBTjZA" name="Table"/>
+            </packagedElement>
           </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="_PMIYoGbSEeqrtc6dy-mPpg" name="com">
             <packagedElement xmi:type="uml:Package" xmi:id="_PMLb8GbSEeqrtc6dy-mPpg" name="collect">
@@ -6895,6 +6898,45 @@ Voter's preferences : AntiSymmetric</body>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_F6OGoG31EeuXEN3YjgEwOw" name="ExportPreferences" visibility="public"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_MtKoIJr6Eeu-Z_X4sBTjZA" name="ImportProfile">
+        <packagedElement xmi:type="uml:Class" xmi:id="_ba19gJr6Eeu-Z_X4sBTjZA" name="ReadODS">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_k9HlAJr6Eeu-Z_X4sBTjZA" name="checkFormatandPrint" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_svJ98Jr6Eeu-Z_X4sBTjZA" name="in" type="_SyD9gGbSEeqrtc6dy-mPpg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ulUOUJr6Eeu-Z_X4sBTjZA" name="printFormatCountOfRankings" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_deJckJr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_egdOIJr7Eeu-Z_X4sBTjZA" name="printFormatRanksFormat" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_mP8CUJr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_p3NrAJr7Eeu-Z_X4sBTjZA" name="printFormatVotersToRankings" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_p3NrAZr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_z4qh0Jr7Eeu-Z_X4sBTjZA" name="getAlternatives" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_z4qh0Zr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_7wFxEJr7Eeu-Z_X4sBTjZA" name="Alternative" type="_PPpmsGbSEeqrtc6dy-mPpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_BFUJUJr8Eeu-Z_X4sBTjZA" name="getnbTotVoters" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BFUJUZr8Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_HAIh8Jr8Eeu-Z_X4sBTjZA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_MrsWkJr8Eeu-Z_X4sBTjZA" name="checkFormatandReturnCompletePreference" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_MrsWkZr8Eeu-Z_X4sBTjZA" name="in" type="_SyD9gGbSEeqrtc6dy-mPpg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_UzhZUJr8Eeu-Z_X4sBTjZA" name="ImmutableCompletePreference" type="_PMMDAGbSEeqrtc6dy-mPpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Y4NWwJr8Eeu-Z_X4sBTjZA" name="completeFormatRanksFormat" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y4NWwZr8Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y4NWwpr8Eeu-Z_X4sBTjZA" name="ImmutableCompletePreference" type="_PMMDAGbSEeqrtc6dy-mPpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rjlQwJr8Eeu-Z_X4sBTjZA" name="completeFormatVotersToRankings" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rjlQwZr8Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rjlQwpr8Eeu-Z_X4sBTjZA" name="ImmutableCompletePreference" type="_PMMDAGbSEeqrtc6dy-mPpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_1IcSMJr8Eeu-Z_X4sBTjZA" name="createAlternativeFromCellRange"/>
+        </packagedElement>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_cIIGcHqFEeqm79lOJbMtXA" name="UseCaseDiagram" visibility="public">
       <packagedElement xmi:type="uml:Package" xmi:id="_wnPZgHqGEeqm79lOJbMtXA" name="GUI ">
