@@ -1964,6 +1964,9 @@ Voter's preferences : AntiSymmetric</body>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_i3yN0JrGEeuTt-dpoglhDQ" name="addAlternative" visibility="public">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3yN0ZrGEeuTt-dpoglhDQ" name="alternative" type="_PFRisGbSEeqrtc6dy-mPpg"/>
               </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_vh1MoJrIEeuTt-dpoglhDQ" name="deleteAlternative">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_vh1MoZrIEeuTt-dpoglhDQ" name="a" type="_PFRisGbSEeqrtc6dy-mPpg"/>
+              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_PTKNsGbSEeqrtc6dy-mPpg" name="ImmutableAntiSymmetricPreference" visibility="public">
               <generalization xmi:type="uml:Generalization" xmi:id="_QPn19mbSEeqrtc6dy-mPpg" general="_PR8FsGbSEeqrtc6dy-mPpg"/>
@@ -1997,6 +2000,9 @@ Voter's preferences : AntiSymmetric</body>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_PtgnYGbSEeqrtc6dy-mPpg" name="setAsLeastAsGood" visibility="public">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_PvY2sGbSEeqrtc6dy-mPpg" name="a1" type="_PFRisGbSEeqrtc6dy-mPpg"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_Px1twGbSEeqrtc6dy-mPpg" name="a2" type="_PFRisGbSEeqrtc6dy-mPpg"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_xPhdgJrIEeuTt-dpoglhDQ" name="deleteAlternative">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_xPhdgZrIEeuTt-dpoglhDQ" name="a" type="_PFRisGbSEeqrtc6dy-mPpg"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_P0h1YGbSEeqrtc6dy-mPpg" name="AntiSymmetricPreference" visibility="public">
