@@ -56,9 +56,59 @@ _(*) Be carefull, currently the asGraph() method of the Preference interface ret
 
 = Import Profile
 
-=== Import Profile from ODS files
+
+=== Import Profile from several data formats by ReadProfile
+
+image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
+
+
+=== Read/describe Profile from ODS files
 
 ODS files are worksheet files that are used in OpenOffice, for example. 
-link:./GUIInputFiles.adoc[Here] we have defined several data formats for ODS files: RanksFormat, VotersToRanking, and CountOfRanking. 
+link:./GUIInputFiles.adoc[Here] we have defined several data formats for ODS files: RanksFormat, VotersToRanking, and CountOfRanking.
+The ReadODS class allows to read and describe profiles from these data formats.  
 
-image:../assets/readods_diag_class.PNG[Import profile readODS - Class Diagram]
+image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagram]
+
+
+[cols="1,1,2", options="header"] 
+|===
+|Method name
+|Contract
+|Relevance
+
+|checkFormatandPrint(InputStream in)
+|This is a static method wich check the data format of the input stream (RanksFormat or VotersToRanking or CountOfRanking) and return a string with voting information by using on of the next printFormat method.
+|Ok 
+
+|printFormatCountOfRanking(Table table)
+|This is a string static method which takes an ods table containing voting information in argument, and return a string with voting information. It is used to describe the information contained.
+|Ok
+
+|printFormatRanksFormat(Table table)
+|This is a string static method which takes an ods table containing voting information in argument, and return a string with voting information. It is used to describe the information contained.
+|Ok
+
+|printFormatVotersToRanking(Table table)
+|This is a string static method which takes an ods table containing voting information in argument, and return a string with voting information. It is used to describe the information contained.
+|Ok
+
+|getAlternatives(Table table)
+|This is a static method which takes an ods table containing voting information in argument and returns an list of Alternatives.
+|Ok
+
+|getnbToVoters(Table table)
+|This is a static method which takes an ods table containing voting information in argument and returns the number (integer) of voters.
+|Ok
+
+|checkFormatandReturnCompletePreference(InputStream in)
+|
+|Ok
+
+|completeFormatRanksFormat(Table table)
+|
+|Ok
+
+|completeFormatVotersToRankings(Table table)
+|
+|Ok

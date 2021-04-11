@@ -102,6 +102,9 @@ Voter's preferences : AntiSymmetric</body>
             <packagedElement xmi:type="uml:Class" xmi:id="_SyD9gGbSEeqrtc6dy-mPpg" name="InputStream"/>
             <packagedElement xmi:type="uml:Class" xmi:id="_DkAIcIQ2EeuxH--JmIdV2g" name="Writer"/>
           </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_5mQ1cJsJEeu-Z_X4sBTjZA" name="net">
+            <packagedElement xmi:type="uml:Class" xmi:id="_6u21MJsJEeu-Z_X4sBTjZA" name="URL"/>
+          </packagedElement>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_3EAygGz6Eeqxlu-Q2xgkvw" name="Resources">
@@ -4451,6 +4454,44 @@ Voter's preferences : AntiSymmetric</body>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_SzSFgGbSEeqrtc6dy-mPpg" name="prefRange"/>
               </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_k9HlAJr6Eeu-Z_X4sBTjZA" name="checkFormatandPrint" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_svJ98Jr6Eeu-Z_X4sBTjZA" name="in" type="_SyD9gGbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JCuZ4Jr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_ulUOUJr6Eeu-Z_X4sBTjZA" name="printFormatCountOfRankings" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_deJckJr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_OL-LoJr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_egdOIJr7Eeu-Z_X4sBTjZA" name="printFormatRanksFormat" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_mP8CUJr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_RLJ5kJr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_p3NrAJr7Eeu-Z_X4sBTjZA" name="printFormatVotersToRankings" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_p3NrAZr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_T6zWsJr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_z4qh0Jr7Eeu-Z_X4sBTjZA" name="getAlternatives" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_z4qh0Zr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_7wFxEJr7Eeu-Z_X4sBTjZA" name="Alternative" type="_PPpmsGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_BFUJUJr8Eeu-Z_X4sBTjZA" name="getnbTotVoters" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_BFUJUZr8Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_HAIh8Jr8Eeu-Z_X4sBTjZA" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_MrsWkJr8Eeu-Z_X4sBTjZA" name="checkFormatandReturnCompletePreference" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_MrsWkZr8Eeu-Z_X4sBTjZA" name="in" type="_SyD9gGbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_UzhZUJr8Eeu-Z_X4sBTjZA" name="ImmutableCompletePreference" type="_PMMDAGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_Y4NWwJr8Eeu-Z_X4sBTjZA" name="completeFormatRanksFormat" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y4NWwZr8Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y4NWwpr8Eeu-Z_X4sBTjZA" name="ImmutableCompletePreference" type="_PMMDAGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_rjlQwJr8Eeu-Z_X4sBTjZA" name="completeFormatVotersToRankings" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_rjlQwZr8Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_rjlQwpr8Eeu-Z_X4sBTjZA" name="ImmutableCompletePreference" type="_PMMDAGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_SzeSwGbSEeqrtc6dy-mPpg" name="ReadProfile" visibility="public">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_Szfg4GbSEeqrtc6dy-mPpg" name="LOGGER" visibility="private" isLeaf="true" isStatic="true" type="_O-SJ4GbSEeqrtc6dy-mPpg" isUnique="false">
@@ -4745,6 +4786,50 @@ Voter's preferences : AntiSymmetric</body>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_S1QbcGbSEeqrtc6dy-mPpg" name="args" type="_PF7qAGbSEeqrtc6dy-mPpg">
                   <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S1RpkGbSEeqrtc6dy-mPpg"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S1SQoGbSEeqrtc6dy-mPpg" value="*"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_XOZC0JsIEeu-Z_X4sBTjZA" name="createProfileFromStream" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_dPj7EJsIEeu-Z_X4sBTjZA" name="is" type="_SyD9gGbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_j1HSwJsIEeu-Z_X4sBTjZA" type="_QrQpEGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_s_ILQJsIEeu-Z_X4sBTjZA" name="createProfileFromColumnsTable" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_xd9uEJsIEeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_0K-G4JsIEeu-Z_X4sBTjZA" type="_QrQpEGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_eGqswJsJEeu-Z_X4sBTjZA" name="createProfileFromRowsTable" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_eGqswZsJEeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_eGqswpsJEeu-Z_X4sBTjZA" type="_QrQpEGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_nPf5gJsJEeu-Z_X4sBTjZA" name="createProfileFromURL" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_nPf5gZsJEeu-Z_X4sBTjZA" name="url" type="_6u21MJsJEeu-Z_X4sBTjZA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_nPf5gpsJEeu-Z_X4sBTjZA" type="_QrQpEGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_r4fBYJsKEeu-Z_X4sBTjZA" name="displayProfileFromStream" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_r4fBYZsKEeu-Z_X4sBTjZA" name="is" type="_SyD9gGbSEeqrtc6dy-mPpg"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_zYnyAJsKEeu-Z_X4sBTjZA" name="getAlternatives" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_7UVEUJsKEeu-Z_X4sBTjZA" name="ListOfStrings" type="_PPpmsGbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_A6yWgJsLEeu-Z_X4sBTjZA" type="_PIU2sGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_PZSncJsLEeu-Z_X4sBTjZA" name="getStatsVoters" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_SUa70JsLEeu-Z_X4sBTjZA" name="s" type="_PF7qAGbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WgX-4JsLEeu-Z_X4sBTjZA" type="_PPpmsGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_bGa88JsLEeu-Z_X4sBTjZA" name="getPreferences" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_bGa88ZsLEeu-Z_X4sBTjZA" name="alt" type="_PIU2sGbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_bGa88psLEeu-Z_X4sBTjZA" type="_PIU2sGbSEeqrtc6dy-mPpg" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_r_vqgJsLEeu-Z_X4sBTjZA" name="s" type="_PF7qAGbSEeqrtc6dy-mPpg"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_KNZ78JsMEeu-Z_X4sBTjZA" name="createStrictPreferenceFrom" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_KNZ78ZsMEeu-Z_X4sBTjZA" name="stringPreference" type="_PF7qAGbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_KNZ78psMEeu-Z_X4sBTjZA" type="_PIU2sGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_m2zlUJsMEeu-Z_X4sBTjZA" name="buildProfile" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_m2zlUZsMEeu-Z_X4sBTjZA" name="file" type="_PPpmsGbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_m2zlUpsMEeu-Z_X4sBTjZA" type="_QrQpEGbSEeqrtc6dy-mPpg" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_1G0HQJsMEeu-Z_X4sBTjZA" name="listAlternatives" type="_PIU2sGbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_5Ee2sJsMEeu-Z_X4sBTjZA" name="nbVoters">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
               </ownedOperation>
             </packagedElement>
@@ -6898,49 +6983,7 @@ Voter's preferences : AntiSymmetric</body>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_F6OGoG31EeuXEN3YjgEwOw" name="ExportPreferences" visibility="public"/>
-      <packagedElement xmi:type="uml:Package" xmi:id="_MtKoIJr6Eeu-Z_X4sBTjZA" name="ImportProfile">
-        <packagedElement xmi:type="uml:Class" xmi:id="_ba19gJr6Eeu-Z_X4sBTjZA" name="ReadODS">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_k9HlAJr6Eeu-Z_X4sBTjZA" name="checkFormatandPrint" isStatic="true">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_svJ98Jr6Eeu-Z_X4sBTjZA" name="in" type="_SyD9gGbSEeqrtc6dy-mPpg"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_JCuZ4Jr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_ulUOUJr6Eeu-Z_X4sBTjZA" name="printFormatCountOfRankings" isStatic="true">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_deJckJr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_OL-LoJr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_egdOIJr7Eeu-Z_X4sBTjZA" name="printFormatRanksFormat" isStatic="true">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_mP8CUJr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_RLJ5kJr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_p3NrAJr7Eeu-Z_X4sBTjZA" name="printFormatVotersToRankings" isStatic="true">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_p3NrAZr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_T6zWsJr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_z4qh0Jr7Eeu-Z_X4sBTjZA" name="getAlternatives" isStatic="true">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_z4qh0Zr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_7wFxEJr7Eeu-Z_X4sBTjZA" name="Alternative" type="_PPpmsGbSEeqrtc6dy-mPpg" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_BFUJUJr8Eeu-Z_X4sBTjZA" name="getnbTotVoters" isStatic="true">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BFUJUZr8Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_HAIh8Jr8Eeu-Z_X4sBTjZA" direction="return">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-            </ownedParameter>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_MrsWkJr8Eeu-Z_X4sBTjZA" name="checkFormatandReturnCompletePreference" isStatic="true">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_MrsWkZr8Eeu-Z_X4sBTjZA" name="in" type="_SyD9gGbSEeqrtc6dy-mPpg"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_UzhZUJr8Eeu-Z_X4sBTjZA" name="ImmutableCompletePreference" type="_PMMDAGbSEeqrtc6dy-mPpg" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_Y4NWwJr8Eeu-Z_X4sBTjZA" name="completeFormatRanksFormat" isStatic="true">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y4NWwZr8Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y4NWwpr8Eeu-Z_X4sBTjZA" name="ImmutableCompletePreference" type="_PMMDAGbSEeqrtc6dy-mPpg" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_rjlQwJr8Eeu-Z_X4sBTjZA" name="completeFormatVotersToRankings" isStatic="true">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rjlQwZr8Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rjlQwpr8Eeu-Z_X4sBTjZA" name="ImmutableCompletePreference" type="_PMMDAGbSEeqrtc6dy-mPpg" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_1IcSMJr8Eeu-Z_X4sBTjZA" name="createAlternativeFromCellRange"/>
-        </packagedElement>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_MtKoIJr6Eeu-Z_X4sBTjZA" name="ProfileManagement"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_cIIGcHqFEeqm79lOJbMtXA" name="UseCaseDiagram" visibility="public">
       <packagedElement xmi:type="uml:Package" xmi:id="_wnPZgHqGEeqm79lOJbMtXA" name="GUI ">
