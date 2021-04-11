@@ -247,7 +247,7 @@ Graph is rearranged : a transitive closure is applied to it
 | To do
 
 |invertDirection(Alternative a1, Alternative a2)
-| Invert the direction of the two alternatives.
+| Invert the direction of the two alternatives : if a1 > a2 then a1 < a2, in the case of a1=a2, nothing changes.
 | To do
 
 |toEquivalence(Alternative a1, Alternative a2)
