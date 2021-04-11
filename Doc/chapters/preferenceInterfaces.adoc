@@ -194,19 +194,64 @@ Graph is rearranged : a transitive closure is applied to it
 |===
 |Method name
 |Contract
+|Relevance
 
-|public void changeOrder(Alternative a, Int position)
+|changeOrder(Alternative a, Int position)
 |This method will reorder the Set<Alternative> and the MutableGraph<Alternative> according to parameters.
+|OK.
 
-|public void reverse(Alternative a1, Alternative a2) 
+|reverse(Alternative a1, Alternative a2) 
 |This method will switch place between 2 alternatives in the Set<Alternative> and the MutableGraph<Alternative>.
+|OK.
 
-|public void deleteAlternative(Alternative a)
+|deleteAlternative(Alternative a)
 |Delete an alternative from the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
+|OK.
 
-|public void addAlternative(Alternative a)
+|addAlternative(Alternative a)
 |Add an alternative at the end of the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
+|OK.
 
+|===
 
+=== *MutableCompletePreference*
+
+[cols="1,1,2", options="header"] 
+|===
+|Method name
+|Contract
+|Relevance
+
+|asMutableGraph()
+| Returns the Graph corresponding to the Preference. This graph is not necessarily transitive and not necessarily reflexive.
+| To do
+
+|getRank(Alternative a)
+| Returns the rank of this alternative (a number between 1 and n) where n is the total number of Alternative instances.
+| To do
+
+|getAlternatives(int rank)
+| Returns the Alternative set at this rank. Empty set id there is no alternative at this rank.
+| To do
+
+|asEquivalenceClasses()
+| Returns the same data but in an list object. A set of alternative is strictly prefered to next sets. All the alternatives in a set are considered ex-aequo.
+| To do
+
+|invertDirection(Alternative a1, Alternative a2)
+| Invert the direction of the two alternatives.
+| To do
+
+|toEquivalence(Alternative a1, Alternative a2)
+| Put the two alternatives ex-aequo.
+| To do
+
+|addAlternative(Alternative a)
+| Add an alternative at the end of the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
+| To do
+
+|deleteAlternative(Alternative a)
+| Delete an alternative from the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
+| To do
 
 |===
