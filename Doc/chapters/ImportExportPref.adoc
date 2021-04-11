@@ -67,7 +67,11 @@ image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 |Contract
 |Relevance
 
+|
+|
+|
 
+|===
 
 
 === Read Profile from ODS files
