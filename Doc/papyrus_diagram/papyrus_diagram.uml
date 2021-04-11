@@ -6902,15 +6902,19 @@ Voter's preferences : AntiSymmetric</body>
         <packagedElement xmi:type="uml:Class" xmi:id="_ba19gJr6Eeu-Z_X4sBTjZA" name="ReadODS">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_k9HlAJr6Eeu-Z_X4sBTjZA" name="checkFormatandPrint" isStatic="true">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_svJ98Jr6Eeu-Z_X4sBTjZA" name="in" type="_SyD9gGbSEeqrtc6dy-mPpg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_JCuZ4Jr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_ulUOUJr6Eeu-Z_X4sBTjZA" name="printFormatCountOfRankings" isStatic="true">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_deJckJr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_OL-LoJr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_egdOIJr7Eeu-Z_X4sBTjZA" name="printFormatRanksFormat" isStatic="true">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_mP8CUJr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_RLJ5kJr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_p3NrAJr7Eeu-Z_X4sBTjZA" name="printFormatVotersToRankings" isStatic="true">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_p3NrAZr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_T6zWsJr-Eeu-Z_X4sBTjZA" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_z4qh0Jr7Eeu-Z_X4sBTjZA" name="getAlternatives" isStatic="true">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_z4qh0Zr7Eeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>

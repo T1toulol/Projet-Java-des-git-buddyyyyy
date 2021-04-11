@@ -5323,7 +5323,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ba8ELpr6Eeu-Z_X4sBTjZA"/>
       </children>
       <element xmi:type="uml:Class" href="papyrus_diagram.uml#_ba19gJr6Eeu-Z_X4sBTjZA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ba3ysZr6Eeu-Z_X4sBTjZA" x="300" y="160" width="561" height="241"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ba3ysZr6Eeu-Z_X4sBTjZA" x="300" y="160" width="561" height="221"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_TqBskZr6Eeu-Z_X4sBTjZA" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_TqBskpr6Eeu-Z_X4sBTjZA"/>
