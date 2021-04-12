@@ -4788,43 +4788,43 @@ Voter's preferences : AntiSymmetric</body>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S1SQoGbSEeqrtc6dy-mPpg" value="*"/>
                 </ownedParameter>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_XOZC0JsIEeu-Z_X4sBTjZA" name="createProfileFromStream" isStatic="true">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_XOZC0JsIEeu-Z_X4sBTjZA" name="createProfileFromStream">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_dPj7EJsIEeu-Z_X4sBTjZA" name="is" type="_SyD9gGbSEeqrtc6dy-mPpg"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_j1HSwJsIEeu-Z_X4sBTjZA" type="_QrQpEGbSEeqrtc6dy-mPpg" direction="return"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_s_ILQJsIEeu-Z_X4sBTjZA" name="createProfileFromColumnsTable" isStatic="true">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_s_ILQJsIEeu-Z_X4sBTjZA" name="createProfileFromColumnsTable">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_xd9uEJsIEeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_0K-G4JsIEeu-Z_X4sBTjZA" type="_QrQpEGbSEeqrtc6dy-mPpg" direction="return"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_eGqswJsJEeu-Z_X4sBTjZA" name="createProfileFromRowsTable" isStatic="true">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_eGqswJsJEeu-Z_X4sBTjZA" name="createProfileFromRowsTable">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_eGqswZsJEeu-Z_X4sBTjZA" name="table" type="_F52EwJr7Eeu-Z_X4sBTjZA"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_eGqswpsJEeu-Z_X4sBTjZA" type="_QrQpEGbSEeqrtc6dy-mPpg" direction="return"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_nPf5gJsJEeu-Z_X4sBTjZA" name="createProfileFromURL" isStatic="true">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_nPf5gJsJEeu-Z_X4sBTjZA" name="createProfileFromURL">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_nPf5gZsJEeu-Z_X4sBTjZA" name="url" type="_6u21MJsJEeu-Z_X4sBTjZA"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_nPf5gpsJEeu-Z_X4sBTjZA" type="_QrQpEGbSEeqrtc6dy-mPpg" direction="return"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_r4fBYJsKEeu-Z_X4sBTjZA" name="displayProfileFromStream" isStatic="true">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_r4fBYJsKEeu-Z_X4sBTjZA" name="displayProfileFromStream">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_r4fBYZsKEeu-Z_X4sBTjZA" name="is" type="_SyD9gGbSEeqrtc6dy-mPpg"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_zYnyAJsKEeu-Z_X4sBTjZA" name="getAlternatives" isStatic="true">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_zYnyAJsKEeu-Z_X4sBTjZA" name="getAlternatives">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_7UVEUJsKEeu-Z_X4sBTjZA" name="ListOfStrings" type="_PPpmsGbSEeqrtc6dy-mPpg"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_A6yWgJsLEeu-Z_X4sBTjZA" type="_PIU2sGbSEeqrtc6dy-mPpg" direction="return"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_PZSncJsLEeu-Z_X4sBTjZA" name="getStatsVoters" isStatic="true">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_PZSncJsLEeu-Z_X4sBTjZA" name="getStatsVoters">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_SUa70JsLEeu-Z_X4sBTjZA" name="s" type="_PF7qAGbSEeqrtc6dy-mPpg"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_WgX-4JsLEeu-Z_X4sBTjZA" type="_PPpmsGbSEeqrtc6dy-mPpg" direction="return"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_bGa88JsLEeu-Z_X4sBTjZA" name="getPreferences" isStatic="true">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_bGa88JsLEeu-Z_X4sBTjZA" name="getPreferences">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_bGa88ZsLEeu-Z_X4sBTjZA" name="alt" type="_PIU2sGbSEeqrtc6dy-mPpg"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_bGa88psLEeu-Z_X4sBTjZA" type="_PIU2sGbSEeqrtc6dy-mPpg" direction="return"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_r_vqgJsLEeu-Z_X4sBTjZA" name="s" type="_PF7qAGbSEeqrtc6dy-mPpg"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_KNZ78JsMEeu-Z_X4sBTjZA" name="createStrictPreferenceFrom" isStatic="true">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_KNZ78JsMEeu-Z_X4sBTjZA" name="createStrictPreferenceFrom">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_KNZ78ZsMEeu-Z_X4sBTjZA" name="stringPreference" type="_PF7qAGbSEeqrtc6dy-mPpg"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_KNZ78psMEeu-Z_X4sBTjZA" type="_PIU2sGbSEeqrtc6dy-mPpg" direction="return"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_m2zlUJsMEeu-Z_X4sBTjZA" name="buildProfile" isStatic="true">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_m2zlUJsMEeu-Z_X4sBTjZA" name="buildProfile">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_m2zlUZsMEeu-Z_X4sBTjZA" name="file" type="_PPpmsGbSEeqrtc6dy-mPpg"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_m2zlUpsMEeu-Z_X4sBTjZA" type="_QrQpEGbSEeqrtc6dy-mPpg" direction="return"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_1G0HQJsMEeu-Z_X4sBTjZA" name="listAlternatives" type="_PIU2sGbSEeqrtc6dy-mPpg"/>
