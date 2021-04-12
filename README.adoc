@@ -32,21 +32,3 @@ Hugo and Nicolas => Export in DOT format
 
 Lucas and Sylvain => Set URL preflib
 
-== Iteration 3
-
-=== Scrum-Master
-
-Firas
-
-=== Duo 1 and task
-
-Lucas and Chahid => Preference librairies
-
-=== Duo 2 and task
-
-Sylvain and Nicolas => Export in DOT format
-
-=== Duo 3 and task
-
-Maxime and Hugo => Decorator
-
