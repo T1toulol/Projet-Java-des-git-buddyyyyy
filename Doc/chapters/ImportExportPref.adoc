@@ -133,7 +133,7 @@ image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagr
 |Relevance
 
 |checkFormatandPrint(InputStream in)
-|This is a static method wich check the data format of the input stream (RanksFormat or VotersToRanking or CountOfRanking). It returns a string with voting information by using the most suitable printFormat method (see next methods descriptions).
+|This is a static method which check the data format of the input stream (RanksFormat or VotersToRanking or CountOfRanking). It returns a string with voting information by using the most suitable printFormat method (see next methods descriptions).
 |Ok 
 
 |printFormatCountOfRanking(Table table)
