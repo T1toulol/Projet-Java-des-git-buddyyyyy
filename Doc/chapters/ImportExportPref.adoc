@@ -80,7 +80,7 @@ image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 
 |createProfileFromRowsTable(Table table)
 |This method takes a Table with Voters in rows and returns a ProfileI providing by the ProfileBuilder class.
-|Ok
+|It looks like there's something wrong with the "if" in the second "for" loop. !altText.equals("") instead of altText.equals("")?
 
 |createProfileFromURL(URL url)
 |This method takes an URL in argument and returns a ProfileI providing by the createProfileFromStream() method of this class.
