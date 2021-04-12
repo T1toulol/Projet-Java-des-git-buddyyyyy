@@ -194,7 +194,28 @@ link:../../src/test/resources/io/github/oliviercailloux/j_voting/profiles/manage
 |11 Voters chose this preference :|3|2|1
 |=========
 
+=== RowsTable format
 
+The RowsTable format allows to represent a Profile.
+In the RowsTable format, each row represents a voter with his alternatives in order of preference.
+Unlike the previous formats, the first row and column do not provide any aggregate or identifying information.
+The voter is identified by the *row's index*.
+
+.Example of RowsTable format
+[options="header"]
+|==============
+|1|2|4|3|5|6
+|1|2|4|5|2|1
+|3|5|2|1|3|4
+|==============
+
+.Meaning of RowsTable format
+[options="header"]
+|==============
+|Alternative 1|2|4|Alternative 3|5|6
+|Alternative 1|2|4|Alternative 5|2|1
+|Alternative 3|5|2|Alternative 1|3|4
+|==============
 
 
 == DOT format

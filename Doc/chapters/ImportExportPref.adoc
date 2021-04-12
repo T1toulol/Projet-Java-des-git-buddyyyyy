@@ -78,11 +78,11 @@ NB : Currently, the ReadProfile class still uses the old Preference version (Old
 |Ok
 
 |createProfileFromColumnsTable(Table table)
-|This method takes a Table with Voters in columns: each rows contains an alternative in preference order for a Voter, and the Voter is identified by its column number. Finally, the method returns a ProfileI providing by the ProfileBuilder class.
+|This method takes a Table with Voters in columns: each rows contains an alternative in preference order for a Voter, and the Voter is identified by the column index (like link:./GUIInputFiles.adoc[VotersToRankings format] without the first row and column that lists the alternatives and identifies the Voters). Finally, the method returns a ProfileI providing by the ProfileBuilder class.
 |Ok
 
 |createProfileFromRowsTable(Table table)
-|This method takes a Table with Voters in rows: each columns contains an alternative in preference order for a Voter, and the Voter is identified by its row number. Finally, the method returns a ProfileI providing by the ProfileBuilder class.
+|This method takes a Table with Voters in rows: each columns contains an alternative in preference order for a Voter, and the Voter is identified by the link:./GUIInputFiles.adoc[row index]. Finally, the method returns a ProfileI providing by the ProfileBuilder class.
 |It looks like there's something wrong with the "if" in the second "for" loop. !altText.equals("") instead of altText.equals("")?
 
 |createProfileFromURL(URL url)
