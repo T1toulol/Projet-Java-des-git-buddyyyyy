@@ -83,7 +83,7 @@ It should be changed to a LinearPreference. +
 |Ok
 
 |createProfileFromRowsTable(Table table)
-|This method takes a Table with Voters in rows: each columns contains an alternative in preference order for a Voter, and the Voter is identified by the link:./GUIInputFiles.adoc[row index]. Finally, the method returns a ProfileI providing by the ProfileBuilder class.
+|This method takes a Table with Voters in rows: each columns contains an alternative in preference order for a Voter, and the Voter is identified by the row index (link:./GUIInputFiles.adoc[more information]). Finally, the method returns a ProfileI providing by the ProfileBuilder class.
 |It looks like there's something wrong with the "if" in the second "for" loop. !altText.equals("") instead of altText.equals("")?
 
 |createProfileFromURL(URL url)
