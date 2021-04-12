@@ -103,7 +103,7 @@ image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 |Ok
 
 |createStrictPreferenceFrom(String stringPreference)
-|
+|A string of the format "Alternative1,Alternative2,Alternative3..." is given as an argument to the method and it returns an OldLinearPreferenceImpl.
 |Ok
 
 |buildProfile(List<String> file, OldLinearPreferenceImpl listAlternative, int nbVoters)
