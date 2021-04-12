@@ -78,11 +78,11 @@ NB : Currently, the ReadProfile class still uses the old Preference version (Old
 |Ok
 
 |createProfileFromColumnsTable(Table table)
-|This method takes a Table (a kind of spreadsheet) with Voters in columns and returns a ProfileI providing by the ProfileBuilder class.
+|This method takes a Table with Voters in columns: each rows contains an alternative in preference order for a Voter, and the Voter is identified by its column number. Finally, the method returns a ProfileI providing by the ProfileBuilder class.
 |Ok
 
 |createProfileFromRowsTable(Table table)
-|This method takes a Table with Voters in rows and returns a ProfileI providing by the ProfileBuilder class.
+|This method takes a Table with Voters in rows: each columns contains an alternative in preference order for a Voter, and the Voter is identified by its row number. Finally, the method returns a ProfileI providing by the ProfileBuilder class.
 |It looks like there's something wrong with the "if" in the second "for" loop. !altText.equals("") instead of altText.equals("")?
 
 |createProfileFromURL(URL url)
@@ -106,7 +106,7 @@ NB : Currently, the ReadProfile class still uses the old Preference version (Old
 |Ok
 
 |createStrictPreferenceFrom(String stringPreference)
-|A string of the format "Alternative1,Alternative2,Alternative3..." is given as an argument to the method and it returns an Preference (OldLinearPreferenceImpl).
+|A string of the format "Alternative1,Alternative2,Alternative3..." is given as an argument to the method and it returns a Preference (OldLinearPreferenceImpl).
 |Ok
 
 |buildProfile(List<String> file, OldLinearPreferenceImpl listAlternative, int nbVoters)
