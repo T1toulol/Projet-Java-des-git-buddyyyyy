@@ -61,9 +61,11 @@ _(*) Be carefull, currently the asGraph() method of the Preference interface ret
 
 The ReadProfile class allows to create and display Profiles from different ressources (InputStream, link:https://docs.oracle.com/javase/7/docs/api/java/net/URL.html[URL], or link:https://www.ibm.com/docs/en/z-open-unit-test/2.0.x?topic=SSZHNR_2.0.0/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Table.html[Table]).
 To do this, it uses the ProfileBuilder and StrictProfileBuilder classes. +
-NB : Currently, the ReadProfile class still uses the old Preference version (OldLinearPreferenceImpl) of the project.
 
 image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
+
+NB : Currently, the ReadProfile class still uses the old Preference version (OldLinearPreferenceImpl) of the project. +
+
 
 [cols="1,1,2", options="header"] 
 |===
