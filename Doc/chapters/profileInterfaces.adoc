@@ -171,7 +171,7 @@ Factorisation might be possible.
 
 | writeToSOC(OutputStream output)
 | Writes the strict and complete profile into a new file with the link:./GUIInputFiles.adoc[SOC format].
-| Again, for us, the name "destination" would be more approriate for the parameter.
+| Again, for us, the name "destination" would be more appropriate for the parameter.
 
 
 |===
