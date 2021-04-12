@@ -122,7 +122,7 @@ public class ReadProfile {
 		LOGGER.debug("createProfileFromRowsTable : ");
 		Preconditions.checkNotNull(table);
 		ProfileBuilder profileBuilder = ProfileBuilder.createProfileBuilder();
-		int nbItems = table.getItemCount();
+		int nbItems = table.getItemCount(); //number of rows
 		int nbColumns = table.getColumnCount();
 		for (int item = 0; item < nbItems; item++) {// browse columns
 			StringBuilder newPrefString = new StringBuilder(table.getItem(item).getText(0));

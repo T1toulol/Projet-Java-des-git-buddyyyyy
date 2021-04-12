@@ -71,7 +71,7 @@ image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 |Relevance
 
 |createProfileFromStream(InputStream in)
-|This method takes an input stream in argument which provides voting informations and it returns a link:./profileInterfaces.doc[IProfile] by using the buildProfile method.
+|This method takes an input stream in argument which provides voting informations and it returns a link:./profileInterfaces.adoc[ProfileI] by using the buildProfile method.
 |Ok
 
 |createProfileFromColumnsTable(Table table)
@@ -87,7 +87,7 @@ image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 |Ok
 
 |displayProfileFromstream(InputStream in)
-|This method takes an input stream in argument and print the input file by a link:http://www.slf4j.org/apidocs/org/slf4j/Logger.html[Logger]
+|This method takes an input stream in argument and print the input file by a link:http://www.slf4j.org/apidocs/org/slf4j/Logger.html[Logger].
 |Ok
 
 |getAlternatives(List ListofStrings)
