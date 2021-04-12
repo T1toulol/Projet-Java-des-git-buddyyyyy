@@ -64,7 +64,8 @@ To do this, it uses the ProfileBuilder and StrictProfileBuilder classes. +
 
 image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 
-NB : Currently, the ReadProfile class still uses the old Preference version (OldLinearPreferenceImpl) of the project. +
+NB : Currently, the ReadProfile class still uses the old Preference implementation (OldLinearPreferenceImpl) of the project.
+It should be changed to a LinearPreference. +
 
 
 [cols="1,1,2", options="header"] 
@@ -93,8 +94,8 @@ NB : Currently, the ReadProfile class still uses the old Preference version (Old
 |This method takes an input stream in argument and print the input file by a link:http://www.slf4j.org/apidocs/org/slf4j/Logger.html[Logger].
 |Ok
 
-|getAlternatives(List ListofStrings)
-|
+|getAlternatives(List<String> ListofStrings)
+|This method takes as argument a list of strings that represent alternatives. It returns a OldLinearPreferenceImpl. 
 |Ok
 
 |getStatsVoters(String s)
@@ -102,7 +103,7 @@ NB : Currently, the ReadProfile class still uses the old Preference version (Old
 |Ok
 
 |getPreferences(OldLinearPreferenceImpl alternative, String s)
-|
+|This method takes an OldLinearPreferenceImpl and a string in argument and returns an OldLinearPreferenceImpl. The string represents alternatives separates by a comma, this alternatives are added to the OldLinearPreferenceImpl.
 |Ok
 
 |createStrictPreferenceFrom(String stringPreference)

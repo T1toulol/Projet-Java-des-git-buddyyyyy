@@ -202,7 +202,6 @@ Unlike the previous formats, the first row and column do not provide any aggrega
 The voter is identified by the *row's index*.
 
 .Example of RowsTable format
-[options="header"]
 |==============
 |1|2|4|3|5|6
 |1|2|4|5|2|1
@@ -210,7 +209,6 @@ The voter is identified by the *row's index*.
 |==============
 
 .Meaning of RowsTable format
-[options="header"]
 |==============
 |Alternative 1|2|4|Alternative 3|5|6
 |Alternative 1|2|4|Alternative 5|2|1
