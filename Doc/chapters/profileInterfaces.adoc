@@ -144,7 +144,7 @@ An empty string in the list means that the voter doesn't have an alternative at 
 
 |writeToSOI(OutputStream output)
 | Writes the strict and incomplete profile into a new file with the link:./GUIInputFiles.adoc[SOI format].
-| Thus the name "destination" would be more approriate for the parameter.
+| Thus the name "destination" would be more appropriate for the parameter.
 |===
 
 
