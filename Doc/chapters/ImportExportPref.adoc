@@ -107,7 +107,7 @@ It should be changed to a LinearPreference. +
 |Ok
 
 |createStrictPreferenceFrom(String stringPreference)
-|A string of the format "Alternative1,Alternative2,Alternative3..." is given as an argument to the method and it returns a Preference (OldLinearPreferenceImpl).
+|A string with "Alternative1,Alternative2,Alternative3..." format is given as an argument to the method and it returns a Preference (OldLinearPreferenceImpl).
 |Ok
 
 |buildProfile(List<String> file, OldLinearPreferenceImpl listAlternative, int nbVoters)
