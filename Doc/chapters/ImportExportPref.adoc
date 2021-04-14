@@ -64,7 +64,7 @@ To do this, it uses the ProfileBuilder and StrictProfileBuilder classes. +
 
 image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 
-NB : Currently, the ReadProfile class still uses the old Preference implementation (OldLinearPreferenceImpl) of the project.
+*NB :* Currently, the ReadProfile class still uses the old Preference implementation (OldLinearPreferenceImpl) of the project.
 It should be changed to a LinearPreference. +
 
 
