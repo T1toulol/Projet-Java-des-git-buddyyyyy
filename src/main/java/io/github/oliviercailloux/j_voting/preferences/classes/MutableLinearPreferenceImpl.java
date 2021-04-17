@@ -160,7 +160,8 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 		LOGGER.debug("MutablePreferenceImpl Swap");
 		Preconditions.checkNotNull(alternative1);
 		Preconditions.checkNotNull(alternative2);
-
+		checkArgument(list.contains(alternative1) && list.contains(alternative2), "Impossible to swap these two alternatives. One of them is not in the graph.");
+		checkArgument(alternative1.equals(alternative2), "Impossible to swap these two alternatives. These are the same");
 		if (alternative1.equals(alternative2) || !(alternatives.contains(alternative1))
 				|| !(alternatives.contains(alternative2))) {
 			return false;
