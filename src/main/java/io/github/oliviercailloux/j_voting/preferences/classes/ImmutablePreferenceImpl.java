@@ -50,6 +50,7 @@ public class ImmutablePreferenceImpl implements ImmutablePreference {
 	 * 
 	 * @param voter <code> not null </code>
 	 * @param graph <code> not null </code> graph with ordered Alternatives
+	 * cacheHashCode is calculated just one time, because it's an Immutable class. So that will not change in the futur.
 	 */
 	protected ImmutablePreferenceImpl(Voter voter, Graph<Alternative> graph) {
 		LOGGER.debug("ImmutablePreferenceImpl constructor from graph");
@@ -134,7 +135,11 @@ public class ImmutablePreferenceImpl implements ImmutablePreference {
 		return this.cacheHashCode;
 		
 	}
-	
+	/**
+	 * Used to calculate a unique Hashcode.
+	 * 
+	 * @return a calculated integer corresponding to the HashCode
+	 */
 	private int calculerHashCode() {
 		final int prime = 31;
 		int result = 1;
