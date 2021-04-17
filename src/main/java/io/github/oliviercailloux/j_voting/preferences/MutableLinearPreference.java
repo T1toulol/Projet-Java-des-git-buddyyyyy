@@ -39,6 +39,7 @@ public interface MutableLinearPreference extends Preference {
 	 * not already present.
 	 *
 	 * @param alternative to be added to this preference
+	 * @exception if alternative is already in the graph. it like if alternative is in the list.
 	 * @return true if this preference did not already contain the specified
 	 *         alternative
 	 */

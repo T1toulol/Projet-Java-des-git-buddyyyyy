@@ -11,6 +11,7 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import com.google.common.base.MoreObjects;
@@ -101,7 +102,7 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 	public boolean removeAlternative(Alternative a) {
 		LOGGER.debug("MutableLinearPreferenceImpl deleteAlternative");
 		Preconditions.checkNotNull(a);
-		checkNotNull(list.contains(a));
+		checkArgument(list.contains(a), "Impossible to delete an alternative that is not in the graph");
 		if (alternatives.contains(a)) {
 			graph.removeNode(a);
 			list.remove(a);
@@ -114,7 +115,7 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 	public boolean addAlternative(Alternative a) {
 		LOGGER.debug("MutablePreferenceImpl addAlternative");
 		Preconditions.checkNotNull(a);
-
+		checkArgument(!list.contains(a), "The alternative is already in the graph");
 		if (alternatives.contains(a)) {
 			return false;
 		}
