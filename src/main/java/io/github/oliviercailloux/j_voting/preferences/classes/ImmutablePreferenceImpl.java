@@ -76,4 +76,12 @@ public class ImmutablePreferenceImpl implements ImmutablePreference {
 	public Voter getVoter() {
 		return this.voter;
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(o == alternatives) {
+			return true;
+		}
+		return false;
+	}
 }
