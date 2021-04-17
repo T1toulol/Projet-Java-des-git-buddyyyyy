@@ -29,6 +29,7 @@ public interface MutableLinearPreference extends Preference {
 	 * Removes the specified alternative from this preference if it is present.
 	 *
 	 * @param alternative to be removed from this preference, if present
+	 * @exception if alternative is not in the graph, it's like if a is not in list.
 	 * @return true if this set contained the specified alternative
 	 */
 	public boolean removeAlternative(Alternative alternative);

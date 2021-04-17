@@ -11,6 +11,8 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
 import com.google.common.base.VerifyException;
@@ -94,17 +96,17 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 		}
 		return true;
 	}
-
+	
 	@Override
 	public boolean removeAlternative(Alternative a) {
 		LOGGER.debug("MutableLinearPreferenceImpl deleteAlternative");
 		Preconditions.checkNotNull(a);
-
 		if (alternatives.contains(a)) {
 			graph.removeNode(a);
 			list.remove(a);
 			return true;
 		}
+		checkNotNull(list.contains(a));
 		return false;
 	}
 
