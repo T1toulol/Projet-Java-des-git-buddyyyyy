@@ -38,6 +38,19 @@ class ImmutablePreferenceImplTest {
 		graph.putEdge(a5, a3);
 		return ImmutablePreferenceImpl.asImmutablePreference(v1, graph);
 	}
+	static ImmutablePreference getDifferentPreference() {
+		MutableGraph<Alternative> graph = GraphBuilder.directed().allowsSelfLoops(true).build();
+		graph.putEdge(a1, a1);
+		graph.putEdge(a2, a2);
+		graph.putEdge(a3, a3);
+		graph.putEdge(a4, a4);
+		graph.putEdge(a5, a5);
+		graph.putEdge(a1, a4);
+		graph.putEdge(a3, a2);
+		graph.putEdge(a4, a1);
+		graph.putEdge(a4, a3);
+		return ImmutablePreferenceImpl.asImmutablePreference(v1, graph);
+	}
 
 	@Test
 	void getAlternativesImmutablePreferenceTest() {
@@ -84,5 +97,17 @@ class ImmutablePreferenceImplTest {
 		assertTrue(toTestImmutableGraph.successors(a4).size() == 4);
 		assertTrue(toTestImmutableGraph.successors(a5).size() == 3);
 		assertTrue(toTestImmutableGraph.successors(a3).size() == 2);
+	}
+	
+	@Test
+	void equals() {
+		ImmutablePreferenceImpl toTest = (ImmutablePreferenceImpl) getApreference();
+		assertTrue(toTest.equals(toTest));
+		ImmutablePreferenceImpl toTestT = (ImmutablePreferenceImpl) getApreference();
+		assertTrue(toTest.equals(toTestT));
+		assertTrue(toTestT.equals(toTest));
+		ImmutablePreferenceImpl toTestF = (ImmutablePreferenceImpl) getDifferentPreference();
+		assertFalse(toTest.equals(toTestF));
+		assertFalse(toTestF.equals(toTest));
 	}
 }
