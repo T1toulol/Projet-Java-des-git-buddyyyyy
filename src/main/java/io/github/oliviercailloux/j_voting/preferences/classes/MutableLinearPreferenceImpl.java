@@ -101,12 +101,12 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 	public boolean removeAlternative(Alternative a) {
 		LOGGER.debug("MutableLinearPreferenceImpl deleteAlternative");
 		Preconditions.checkNotNull(a);
+		checkNotNull(list.contains(a));
 		if (alternatives.contains(a)) {
 			graph.removeNode(a);
 			list.remove(a);
 			return true;
 		}
-		checkNotNull(list.contains(a));
 		return false;
 	}
 
