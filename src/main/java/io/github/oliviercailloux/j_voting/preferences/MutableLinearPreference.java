@@ -52,7 +52,7 @@ public interface MutableLinearPreference extends Preference {
 	 * 
 	 * @param alternative1 that will change places with alternative2
 	 * @param alternative2 that will change places with alternative1
-	 * @exception if an alternative is not in the graph or if they are equals.
+	 * @exception if an alternative is not in the graph.
 	 * @return true if the preference has changed after this call (and, thus, the
 	 *         alternatives are contained in this preference). Or equivalently,
 	 *         false if the specified alternatives are equal and contained in this

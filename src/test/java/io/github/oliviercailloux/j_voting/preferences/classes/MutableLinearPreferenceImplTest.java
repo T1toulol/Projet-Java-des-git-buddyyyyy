@@ -37,6 +37,7 @@ import static io.github.oliviercailloux.j_voting.AlternativeHelper.a54321list;
 import static io.github.oliviercailloux.j_voting.AlternativeHelper.a56;
 import static io.github.oliviercailloux.j_voting.AlternativeHelper.a6;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -129,6 +130,13 @@ public class MutableLinearPreferenceImplTest {
 		MutableLinearPreference prefExpected1 = MutableLinearPreferenceImpl.given(v, toTestList);
 		toTestPref.addAlternative(a5);
 		assertEquals(prefExpected1, toTestPref);
+		
+		try {
+			toTestPref.addAlternative(a5);
+			fail("Should throw exception when adding an existing alternative");
+		}catch(IllegalArgumentException iae) {
+			assert(iae.getMessage().contains("already in the graph"));
+		}
 
 		// Test if modifying the list after passing it to the constructor does not
 		// change the structure of the preference.
@@ -154,16 +162,34 @@ public class MutableLinearPreferenceImplTest {
 	void testRemoveAlternative() {
 		Voter v = Voter.withId(1);
 		MutableLinearPreference toTestPref = MutableLinearPreferenceImpl.given(v, a12345list);
-
+		
 		MutableLinearPreference prefExpected1 = MutableLinearPreferenceImpl.given(v, a1345list);
+		try {
+			prefExpected1.removeAlternative(a2);
+			fail("Should throw exception when trying to remove a non existing alternative 1");
+		}catch(IllegalArgumentException iae1){
+			assert(iae1.getMessage().contains("delete an alternative that is not in the graph"));
+		}
 		toTestPref.removeAlternative(a2);
 		assertEquals(prefExpected1, toTestPref);
 
 		MutableLinearPreference prefExpected2 = MutableLinearPreferenceImpl.given(v, a345list);
+		try {
+			prefExpected2.removeAlternative(a1);
+			fail("Should throw exception when trying to remove a non existing alternative 2");
+		}catch(IllegalArgumentException iae2){
+			assert(iae2.getMessage().contains("delete an alternative that is not in the graph"));
+		}
 		toTestPref.removeAlternative(a1);
 		assertEquals(prefExpected2, toTestPref);
 
 		MutableLinearPreference prefExpected3 = MutableLinearPreferenceImpl.given(v, a34list);
+		try {
+			prefExpected3.removeAlternative(a5);
+			fail("Should throw exception when trying to remove a non existing alternative 3");
+		}catch(IllegalArgumentException iae3){
+			assert(iae3.getMessage().contains("delete an alternative that is not in the graph"));
+		}
 		toTestPref.removeAlternative(a5);
 		assertEquals(prefExpected3, toTestPref);
 	}
@@ -218,7 +244,8 @@ public class MutableLinearPreferenceImplTest {
 	 * head -> middle -> middle -> middle -> end <br/>
 	 * swap(head,end), swap(head,middle), swap(middle,middle), swap(middle,head),
 	 * swap(middle,end), swap(end,head), swap(end,middle) <br/>
-	 * We have to test 3 additional cases about the neighbours alternatives
+	 * We have to test 3 additional cases about the neighbours alternatives<br/>
+	 * And a final test if we try to swap an alternative who's not in the list.
 	 */
 	@Test
 	void testSwap() {
@@ -269,6 +296,19 @@ public class MutableLinearPreferenceImplTest {
 		MutableLinearPreference prefExpected11 = MutableLinearPreferenceImpl.given(v, a21list);
 		toTestPref1.swap(a1, a2); // swap(head,end) neighbour
 		assertEquals(prefExpected11, toTestPref1);
+		
+		try {
+			prefExpected11.swap(a1, a6);
+			fail("Should throw an IllegalArgumentException when trying to swap an non existing alternatives 1");
+		}catch(IllegalArgumentException iae) {
+			assert(iae.getMessage().contains("One of them is not in the graph."));
+		}
+		try {
+			prefExpected11.swap(a6, a1);
+			fail("Should throw an IllegalArgumentException when trying to swap an non existing alternatives 2");
+		}catch(IllegalArgumentException iae) {
+			assert(iae.getMessage().contains("One of them is not in the graph."));
+		}
 
 		Graph<Alternative> expected = toTestPref.asGraph();
 		toTestPref.addAlternative(a6);
