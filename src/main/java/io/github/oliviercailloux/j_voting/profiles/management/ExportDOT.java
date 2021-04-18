@@ -38,7 +38,7 @@ public class ExportDOT {
 	/**
 	 * Take the graph and convert it to a DOT format String.
 	 * 
-	 * @param graph can't be null and does not contain an isolated vertex
+	 * @param graph can't be null
 	 * @return the graph in DOT format
 	 */
 	public static String convertToDot(Graph<String> graph) {
