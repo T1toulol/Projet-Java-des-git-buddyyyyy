@@ -19,7 +19,7 @@ public class ExportDOT {
 	 * Exports the graph from the parameters, converts it to DOT format and writes
 	 * it to the stream from the parameters.
 	 * 
-	 * @param graph  can't be null
+	 * @param graph can't be null
 	 * @param stream can't be null
 	 * @throws IOException
 	 */
@@ -37,7 +37,7 @@ public class ExportDOT {
 
 	/**
 	 * Take the graph and convert it to a DOT format String.
-	 * 
+	 * For more informations about DOT format : http://www.graphviz.org/doc/info/lang.html
 	 * @param graph can't be null
 	 * @return the graph in DOT format
 	 */
