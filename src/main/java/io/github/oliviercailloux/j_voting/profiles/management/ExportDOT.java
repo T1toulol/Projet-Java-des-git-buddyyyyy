@@ -13,7 +13,7 @@ import com.google.common.graph.Graph;
 
 public class ExportDOT {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(ExportDOT.class.getName());
+	//private static final Logger LOGGER = LoggerFactory.getLogger(ExportDOT.class.getName());
 
 	/**
 	 * Exports the graph from the parameters, converts it to DOT format and writes
@@ -31,7 +31,7 @@ public class ExportDOT {
 			throw new IllegalArgumentException("The output stream can't be null");
 		}
 		String graphDotFormatString = convertToDot(graph);
-		LOGGER.debug("export DOT - OutputStream :");
+		//LOGGER.debug("export DOT - OutputStream :");
 		stream.write(graphDotFormatString.getBytes(StandardCharsets.UTF_8));
 	}
 
@@ -42,7 +42,7 @@ public class ExportDOT {
 	 * @return the graph in DOT format
 	 */
 	public static String convertToDot(Graph<String> graph) {
-		LOGGER.debug("Convert to DOT :");
+		//LOGGER.debug("Convert to DOT :");
 		if (graph == null) {
 			throw new IllegalArgumentException("The graph can't be null.");
 		}
@@ -85,7 +85,7 @@ public class ExportDOT {
 			}
 		}
 		graphDotString.append("}");
-		LOGGER.debug("DOT graph : {}", graphDotString);
+		//LOGGER.debug("DOT graph : {}", graphDotString);
 		return graphDotString.toString();
 	}
 
