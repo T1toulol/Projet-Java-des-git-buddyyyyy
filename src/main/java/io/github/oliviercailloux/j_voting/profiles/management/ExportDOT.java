@@ -5,6 +5,7 @@ import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Set;
 
+import com.google.common.base.Objects;
 import com.google.common.graph.Graph;
 
 public class ExportDOT {
@@ -14,19 +15,18 @@ public class ExportDOT {
 	 * it to the stream from the parameters.
 	 * 
 	 * @param graph  can't be null
-	 * @param stream
+	 * @param stream can't be null
 	 * @throws IOException
 	 */
 	public static void export(Graph<String> graph, OutputStream stream) throws IOException {
-
 		if (graph == null) {
 			throw new IllegalArgumentException("The graph can't be null.");
 		}
-
+		if(stream==null) {
+			throw new IllegalArgumentException("The output stream can't be null");
+		}
 		String graphDotFormatString = convertToDot(graph);
-
 		stream.write(graphDotFormatString.getBytes(StandardCharsets.UTF_8));
-
 	}
 
 	/**
@@ -36,11 +36,9 @@ public class ExportDOT {
 	 * @return the graph in DOT format
 	 */
 	public static String convertToDot(Graph<String> graph) {
-
 		if (graph == null) {
 			throw new IllegalArgumentException("The graph can't be null.");
 		}
-
 		if (!checkFormatVertex(graph.nodes())) {
 			throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format.");
 		}
@@ -61,7 +59,6 @@ public class ExportDOT {
 		// End of inspiration
 
 		StringBuilder graphDotString = new StringBuilder();
-
 		graphDotString.append(header + System.lineSeparator());
 
 		for (String parentNode : graph.nodes()) {
@@ -80,9 +77,7 @@ public class ExportDOT {
 				}
 			}
 		}
-
 		graphDotString.append("}");
-
 		return graphDotString.toString();
 	}
 
