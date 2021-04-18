@@ -22,6 +22,10 @@ public class ExportDOTTest {
 		String graphDotFormat = ExportDOT.convertToDot(graph);
 
 		String result = "digraph G {" + System.lineSeparator();
+		result += "  a1;"+ System.lineSeparator();;
+		result += "  a2;"+ System.lineSeparator();;
+		result += "  a4;"+ System.lineSeparator();;
+		result += "  a3;"+ System.lineSeparator();;
 		result += "  a1 -> a2;" + System.lineSeparator();
 		result += "  a1 -> a4;" + System.lineSeparator();
 		result += "  a2 -> a3;" + System.lineSeparator();
@@ -45,6 +49,10 @@ public class ExportDOTTest {
 		String graphDotFormat = ExportDOT.convertToDot(graph);
 
 		String result = "graph G {" + System.lineSeparator();
+		result += "  a1;"+ System.lineSeparator();;
+		result += "  a2;"+ System.lineSeparator();;
+		result += "  a4;"+ System.lineSeparator();;
+		result += "  a3;"+ System.lineSeparator();;
 		result += "  a1 -- a2;" + System.lineSeparator();
 		result += "  a1 -- a4;" + System.lineSeparator();
 		result += "  a2 -- a3;" + System.lineSeparator();

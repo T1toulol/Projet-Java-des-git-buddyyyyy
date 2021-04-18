@@ -68,10 +68,10 @@ public class ExportDOT {
 		StringBuilder graphDotString = new StringBuilder();
 		graphDotString.append(header + System.lineSeparator());
 
+		for(String node : graph.nodes()) {
+			graphDotString.append(indentation + node + ";"+ System.lineSeparator());
+		}
 		for (String parentNode : graph.nodes()) {
-			if (graph.successors(parentNode).size() == 0 && graph.predecessors(parentNode).size() == 0) {
-				throw new IllegalArgumentException("The graph must not have an isolated vertex.");
-			}
 			for (String successorNode : graph.successors(parentNode)) {
 				if (graph.isDirected()) {
 					graphDotString.append(
