@@ -5,10 +5,15 @@ import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.google.common.base.Objects;
 import com.google.common.graph.Graph;
 
 public class ExportDOT {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(ExportDOT.class.getName());
 
 	/**
 	 * Exports the graph from the parameters, converts it to DOT format and writes
@@ -26,6 +31,7 @@ public class ExportDOT {
 			throw new IllegalArgumentException("The output stream can't be null");
 		}
 		String graphDotFormatString = convertToDot(graph);
+		LOGGER.debug("export DOT - OutputStream :");
 		stream.write(graphDotFormatString.getBytes(StandardCharsets.UTF_8));
 	}
 
@@ -36,13 +42,14 @@ public class ExportDOT {
 	 * @return the graph in DOT format
 	 */
 	public static String convertToDot(Graph<String> graph) {
+		LOGGER.debug("Convert to DOT :");
 		if (graph == null) {
 			throw new IllegalArgumentException("The graph can't be null.");
 		}
 		if (!checkFormatVertex(graph.nodes())) {
 			throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format.");
 		}
-
+		
 		String connector = "";
 		String header = "";
 		String indentation = "  ";
@@ -78,6 +85,7 @@ public class ExportDOT {
 			}
 		}
 		graphDotString.append("}");
+		LOGGER.debug("DOT graph : {}", graphDotString);
 		return graphDotString.toString();
 	}
 
@@ -102,7 +110,6 @@ public class ExportDOT {
 	 * @return if the ids are in the good format or not
 	 */
 	private static boolean checkFormatVertex(Set<String> myNodes) {
-
 		for (String aNode : myNodes) {
 			boolean isAlphaDig = aNode.matches("[a-zA-Z]+([\\w_]*)?");
 			boolean isDoubleQuoted = aNode.matches("\".*\"");
@@ -112,7 +119,6 @@ public class ExportDOT {
 				return false;
 			}
 		}
-
 		return true;
 	}
 }
