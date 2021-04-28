@@ -14,6 +14,25 @@ The code is hereby published under the MIT License, with the permission of the c
 
 The project documentation is link:Doc/README.adoc[here].
 
+== Iteration 1
+
+=== Scrum-Master
+
+Maxime
+
+=== Duo 1 and task
+
+Firas ans Chahid => Documentation of bugs
+
+=== Duo 2 and task
+
+Hugo and Nicolas => Export in DOT format
+
+=== Duo 3 and task
+
+Lucas and Sylvain => Set URL preflib
+
+
 == Iteration 4
 
 === Scrum-Master
