@@ -32,6 +32,41 @@ Hugo and Nicolas => Export in DOT format
 
 Lucas and Sylvain => Set URL preflib
 
+== Iteration 2
+
+=== Scrum-Master
+
+Chahid
+
+=== Duo 1 and task
+
+Firas and Hugo  => Implementation of a class and sequence diagram (Decorator)
+
+=== Duo 2 and task
+
+Lucas and Nicolas => Adjustments and export in DOT format 
+
+=== Duo 3 and task
+
+Maxime and Sylvain => Import an external profile via an url (preflib)
+
+== Iteration 3
+
+=== Scrum-Master
+
+Firas
+
+=== Duo 1 and task
+
+Maxime and Hugo  => Complete the class diagram and correct the sequence diagram (Decorator)
+
+=== Duo 2 and task
+
+Nicloas and Sylvain => Documentation package management and MutableCompletePreference 
+
+=== Duo 3 and task
+
+Chahid and Lucas => Improvement of the new GUI and modification of the profile doc
 
 == Iteration 4
 
