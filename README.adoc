@@ -14,7 +14,7 @@ The code is hereby published under the MIT License, with the permission of the c
 
 The project documentation is link:Doc/README.adoc[here].
 
-== Iteration 1
+== Iteration UML 1
 
 === Scrum-Master
 
@@ -32,7 +32,7 @@ Hugo and Nicolas => Export in DOT format
 
 Lucas and Sylvain => Set URL preflib
 
-== Iteration 2
+== Iteration UML 2
 
 === Scrum-Master
 
@@ -50,7 +50,7 @@ Lucas and Nicolas => Adjustments and export in DOT format
 
 Maxime and Sylvain => Import an external profile via an url (preflib)
 
-== Iteration 3
+== Iteration UML 3
 
 === Scrum-Master
 
@@ -68,7 +68,7 @@ Nicloas and Sylvain => Documentation package management and MutableCompletePrefe
 
 Chahid and Lucas => Improvement of the new GUI and modification of the profile doc
 
-== Iteration 4
+== Iteration UML 4
 
 === Scrum-Master
 
