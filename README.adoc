@@ -138,9 +138,9 @@ And test the asGraph () method and implement the asStrictGraph () method.
 
 === Duo 2 and task
 
-Chahid et Firas => Continue to work on the GUI.
+Chahid et Firas => Continue to work on the GUI, PR #20 : https://github.com/oliviercailloux-org/projet-j-voting/pull/20#pullrequestreview-641453976
 
 
 === Duo 3 and task
 
-Nicolas et Maxime => ExportDOT, work requested in PR # 19 : https://github.com/oliviercailloux-org/projet-j-voting/pull/19#pullrequestreview-641378958 
+Nicolas et Maxime => ExportDOT, work requested in PR #19 : https://github.com/oliviercailloux-org/projet-j-voting/pull/19#pullrequestreview-641378958 
