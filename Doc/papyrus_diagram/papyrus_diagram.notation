@@ -4782,7 +4782,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5eZs6W35EeuXEN3YjgEwOw"/>
       </children>
       <element xmi:type="uml:Class" href="papyrus_diagram.uml#_3rlrcG35EeuXEN3YjgEwOw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5eWCgW35EeuXEN3YjgEwOw" x="300" y="160" width="381" height="141"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5eWCgW35EeuXEN3YjgEwOw" x="300" y="160" width="421" height="141"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_XWS78W31EeuXEN3YjgEwOw" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_XWS78m31EeuXEN3YjgEwOw"/>

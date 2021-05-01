@@ -24,7 +24,7 @@ The export() method of the ExportDOT class verify that the provided graph is a d
 |Contract
 |Relevance
 
-|export(Graph pref, OutputStream stream)
+|export(Graph<String> pref, OutputStream stream)
 |This is a static void method which takes two argument : a graph that represents a preference and a OutputStream (provides an output stream to a file) which export it in DOT format. It would be useful to verify that the export method receives a directed graph or not by using the isDirectedGraph() method. Then convertToDot() converts the graph and sends the string to the Writer given by the OutputStream to write in the output file. 
 |To do
 
