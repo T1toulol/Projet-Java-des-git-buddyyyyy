@@ -4180,12 +4180,6 @@ Voter's preferences : AntiSymmetric</body>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_ve65QG4rEeueuKV0xi7dBA" name="pref" type="_oggs8IQ1EeuxH--JmIdV2g"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_ogGLgIHrEeuXBtDohaXwsg" name="stream" type="_QsG9oWbSEeqrtc6dy-mPpg"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_7ymkkIN4Eeujf5wyvBodWw" name="isDirectedGraph" visibility="public" isStatic="true">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LYn3MIN5Eeujf5wyvBodWw" name="g" type="_oggs8IQ1EeuxH--JmIdV2g"/>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JHNYwIN6Eeujf5wyvBodWw" direction="return">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-                </ownedParameter>
-              </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_v72C4IOBEeujf5wyvBodWw" name="convertToDot" visibility="public" isStatic="true">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_4w9pcIOBEeujf5wyvBodWw" name="g" type="_PR_wEGbSEeqrtc6dy-mPpg"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_75x0gIOBEeujf5wyvBodWw" type="_PF7qAGbSEeqrtc6dy-mPpg" direction="return"/>

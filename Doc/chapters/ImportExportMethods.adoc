@@ -11,23 +11,10 @@ image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format - Class 
 
 The goal of the ExportDOT class is to export a preference in link:./GUIInputFiles.adoc[DOT format]. 
 
-A preference can be represented by a *directed* graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a link:https://jgrapht.org/javadoc/org.jgrapht.core/org/jgrapht/Graph.html[Graph] _(*)_. So all preferences can be converted into a graph and given to the export() method of the ExportDOT class.
+A preference can be represented by a *directed* graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a link:https://guava.dev/releases/23.0/api/docs/com/google/common/graph/Graph.html[Graph] _(*)_. So all preferences can be converted into a graph and given to the export() method of the ExportDOT class.
 
-The export() method of the ExportDOT class verify that the provided graph is a directed graph or not and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html[OutputStream] given as argument provides an output stream to a file. We can create a link:https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html[Writer] on this stream and write in the file (see the next example for more informations about write stream). 
+The export() method of the ExportDOT class verify that the provided graph is a directed graph or not and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html[OutputStream] given as argument provides an output stream to a file. We can write on this stream with the OutputStream's write() method. 
 
-----
-//Create a string by using StringBuilder by preference
-StringBuilder dot = new StringBuilder();
-dot.append("inputString-DOTformat");
-
-//Create a Writer from the OutputStream - the output is the destination
-Writer writer =new BufferedWritter(new OutputStream(output));
-
-//Give the String to the Writer
-writer.write(dot)
-//You can also use the append() method of the Writer
-writer.append(dot)
-----
 
 == Export Preference in DOT format methods analysis +
 
@@ -39,10 +26,6 @@ writer.append(dot)
 
 |export(Graph pref, OutputStream stream)
 |This is a static void method which takes two argument : a graph that represents a preference and a OutputStream (provides an output stream to a file) which export it in DOT format. It would be useful to verify that the export method receives a directed graph or not by using the isDirectedGraph() method. Then convertToDot() converts the graph and sends the string to the Writer given by the OutputStream to write in the output file. 
-|To do
-
-|isDirectedGraph(Graph g)
-|This is a static method which returns true when the argument is a directed graph.  
 |To do
 
 |convertToDoT(DirectedGraph g)
