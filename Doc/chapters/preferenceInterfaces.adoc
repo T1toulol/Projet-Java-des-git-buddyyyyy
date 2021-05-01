@@ -43,13 +43,6 @@ A linear preference is an antisymmetric complete preference. A linear preference
 
 image:../assets/LinearPreferenceScheme.PNG[LinearPreferenceScheme]
 
-=== MutableCompletePreference +
-A MutableCompletePreference is both complete and mutable. An alternative can be added or deleted.
-But for the preference to remain complete, the inter relation of the added alternative with all others have to be defined. +
-Be careful, unlike a "simple" mutable preference, you can not relate two alternatives because all the relation are already defined. 
-You can just change their direction: "Alternative1 > Alternative2" to "Alternative1 < Alternative2".  You can also make the alternatives equivalent "Alternative1 > or < Alternative2" to "Alternative1 = Alternative2". 
-
-
 
 == Preferences methods analysis +
 
@@ -105,10 +98,6 @@ Reflexive and transitive.
 |setAsLeastAsGood(Alternative a1, Alternative a2)
 | Adds an edge from an alternative a1 to an alternative a2, so that a1 is asleast as good as a2 (a1 >= a2). 
 | Similarly, the method does not deal with the fact that when an alternative is not in the graph it must be added. 
-
-|deleteAlternative(Alternative a)
-| Delete an alternative to the Preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
-| To do
 
 |===
 
@@ -226,44 +215,3 @@ Graph is rearranged : a transitive closure is applied to it
 
 |===
 
-=== *MutableCompletePreference*
-
-[cols="1,1,2", options="header"] 
-|===
-|Method name
-|Contract
-|Relevance
-
-|asMutableGraph()
-| Returns the Graph corresponding to the Preference. This graph is not necessarily transitive and not necessarily reflexive.
-| To do
-
-|getRank(Alternative a)
-| Returns the rank of this alternative (a number between 1 and n) where n is the total number of Alternative instances.
-| To do
-
-|getAlternatives(int rank)
-| Returns the Alternative set at this rank. Empty set id there is no alternative at this rank.
-| To do
-
-|asEquivalenceClasses()
-| Returns the same data but in an list object. A set of alternative is strictly prefered to next sets. All the alternatives in a set are considered ex-aequo.
-| To do
-
-|invertDirection(Alternative a1, Alternative a2)
-| Invert the direction of the two alternatives : if a1 > a2 then a1 < a2, in the case of a1=a2, nothing changes.
-| To do
-
-|toEquivalence(Alternative a1, Alternative a2)
-| Put the two alternatives ex-aequo.
-| To do
-
-|addAlternative(Alternative a)
-| Because the preference is mutable, it must be possible to add an alternative, but for the preference to remain complete, the inter relation of this alternative with all others have to be defined. By default, the added alternative will be positioned at the end of the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
-| To do
-
-|deleteAlternative(Alternative a)
-| Delete an alternative from the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
-| To do
-
-|===

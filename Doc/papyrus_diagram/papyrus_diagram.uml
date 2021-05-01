@@ -2007,9 +2007,6 @@ Voter's preferences : AntiSymmetric</body>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_PvY2sGbSEeqrtc6dy-mPpg" name="a1" type="_PFRisGbSEeqrtc6dy-mPpg"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_Px1twGbSEeqrtc6dy-mPpg" name="a2" type="_PFRisGbSEeqrtc6dy-mPpg"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_xPhdgJrIEeuTt-dpoglhDQ" name="deleteAlternative">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_xPhdgZrIEeuTt-dpoglhDQ" name="a" type="_PFRisGbSEeqrtc6dy-mPpg"/>
-              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_P0h1YGbSEeqrtc6dy-mPpg" name="AntiSymmetricPreference" visibility="public">
               <generalization xmi:type="uml:Generalization" xmi:id="_S1oB8IRCEeuxH--JmIdV2g" general="_AY5IQIQ_EeuxH--JmIdV2g"/>
