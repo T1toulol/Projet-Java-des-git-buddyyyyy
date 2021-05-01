@@ -70,7 +70,7 @@ It should be changed to a LinearPreference. +
 |It looks like there's something wrong with the "if" in the second "for" loop. !altText.equals("") instead of altText.equals("")?
 
 |createProfileFromURL(URL url)
-|A link:https://docs.oracle.com/javaee/7/api/javax/ws/rs/client/Client.html[Client] is created, it permit to build a new web resource target by giving URL at his target() method. The link:https://docs.oracle.com/javaee/7/api/javax/ws/rs/client/WebTarget.html[WebTarget] obtained build and invoke the get request in a single step (by using request().get()). +
+|A link:https://docs.oracle.com/javaee/7/api/javax/ws/rs/client/Client.html[Client] is created, it permit to build a new web resource target by giving URL at his target() method. The link:https://docs.oracle.com/javaee/7/api/javax/ws/rs/client/WebTarget.html[WebTarget] obtained build and invoke the get request in a single step (by using request().get()) to the URL. +
 Finally the given link:https://docs.oracle.com/javaee/7/api/javax/ws/rs/core/Response.html[Response] is casting to ImputStream, and the InputStram is given to the createProfileFromStream() method which provide a ProfileI.
 |Ok
 
