@@ -1,13 +1,13 @@
-= Export a preference in DOT format
+= Import/Export methods
 
 ====== link:../README.adoc[Summary]
 
-=== Export Preference in DOT Format
+== Export Preference in DOT Format
 
 image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format - Class Diagram]
 
 
-=== What will do this class +
+== What will do this class +
 
 The goal of the ExportDOT class is to export a preference in link:./GUIInputFiles.adoc[DOT format]. 
 
@@ -37,7 +37,7 @@ The export() method of the ExportDOT class verify that the provided graph is a d
 _(*) Be carefull, currently the asGraph() method of the Preference interface returns a Graph. We can't be sure that the returned Graph is a directed graph. This can be a problem because usually a connection between two vertices of a graph is represented by "--" and by "->" for a directed graph in DOT format. Thus the conversion might not be good._
 
 
-= Import Profile
+== Import Profile
 
 
 === Import Profile from several data formats by ReadProfile
