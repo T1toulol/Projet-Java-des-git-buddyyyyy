@@ -43,7 +43,7 @@ _(*) Be carefull, currently the asGraph() method of the Preference interface ret
 === Import Profile from several data formats by ReadProfile
 
 The ReadProfile class allows to create and display link:./profileInterfaces.adoc[Profiles] from different ressources (InputStream, link:https://docs.oracle.com/javase/7/docs/api/java/net/URL.html[URL], or link:https://www.ibm.com/docs/en/z-open-unit-test/2.0.x?topic=SSZHNR_2.0.0/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Table.html[Table]).
-To do this, it uses the link:chapters/BuildProfileMethods.adoc[ProfileBuilder] and link:chapters/BuildProfileMethods.adoc[StrictProfileBuilder] classes. +
+To do this, it uses the link:./BuildProfileMethods.adoc[ProfileBuilder] and link:./BuildProfileMethods.adoc[StrictProfileBuilder] classes. +
 
 image:../assets/readprofile_diag_class.PNG[Import profile - Class Diagram]
 
