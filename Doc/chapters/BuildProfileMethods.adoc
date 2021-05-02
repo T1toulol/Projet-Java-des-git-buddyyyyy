@@ -2,7 +2,9 @@
 
 ====== link:../README.adoc[Summary]
 
-== Profile Builder
+== ProfileBuilder
+
+The ProfileBuilder class allows to create a Profile (composed of Voters and their Preference). It is used by the data import methods.
 
 image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
@@ -15,7 +17,7 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
 
 |castMapExtendsToRegularVoterPref(Map<Voter, ? extends OldCompletePreferenceImpl>)
-|this static method has a Map as argument which contains a Voter and an extends of OldcompletePreferenceImpl. It checks if this map is not null and then it return a map that not extends OldCompletePreference.
+|This static method has a Map as argument which contains a Voter and an extends of OldcompletePreferenceImpl. It checks if this map is not null and then it return a map that not extends OldCompletePreference.
 
 
 |createProfileBuilder()
@@ -50,7 +52,7 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 |This method return an ImmutableStrictProfile from the builder if it is strict, else it throws an exception.
 |===
 
-== Strict Profile Builder
+== StrictProfileBuilder
 
 image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Class Diagram] 
 
@@ -58,9 +60,9 @@ image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Cla
 
 The goal of this class is to build strict profiles.
 
-A StrictProfile represents a complete StrictProfile. The preferences _(*)_ are strict. The preferences are about the same alternatives exactly.
+A StrictProfile is complete and strict (all the preferences_(*)_ linked to each voters are complete and strict).
 
-_(*) NB : Currently, the StrictProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
+_(*)_ NB : Currently, the StrictProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
 
 [cols="1,2", options="header"] 
 |===
