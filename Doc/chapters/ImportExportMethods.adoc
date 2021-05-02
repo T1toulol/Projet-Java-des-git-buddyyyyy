@@ -29,7 +29,7 @@ The export() method of the ExportDOT class verify that the provided graph is a d
 |In progress
 
 |export(Preference pref, OutputStream stream)
-|This is an overloaded version of the previous export() method which takes a Preference as argument. The Preference is transformed into a String Graph and computes its link:https://en.wikipedia.org/wiki/Transitive_reduction[transitive reduction]. From the obtained Graph, the method applies the same operations as the previous export() method.
+|This is an overloaded version of the previous export() method which takes a preference as argument. The preference is transformed into a String Graph and computes its link:https://en.wikipedia.org/wiki/Transitive_reduction[transitive reduction]. From the obtained Graph, the method applies the same operations as the previous export() method.
 |To do
 
 |===
