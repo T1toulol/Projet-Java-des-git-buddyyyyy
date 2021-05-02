@@ -13,6 +13,7 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 |Method name
 |Contract
 |Relevance
+|===
 
 == Strict Profile Builder
 
@@ -26,3 +27,4 @@ image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Cla
 |Method name
 |Contract
 |Relevance
+|===
