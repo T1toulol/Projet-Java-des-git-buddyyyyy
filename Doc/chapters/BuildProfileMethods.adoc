@@ -53,7 +53,7 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
 == Strict Profile Builder
 
- A StrictProfile represents a complete StrictProfile. The preferences are strict. The preferences are about the same alternatives exactly.
+A StrictProfile represents a complete StrictProfile. The preferences are strict. The preferences are about the same alternatives exactly.
 
 image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Class Diagram] 
  
