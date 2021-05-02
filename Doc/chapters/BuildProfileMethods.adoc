@@ -79,7 +79,7 @@ _(*)_ NB : Currently, the StrictProfileBuilder class still uses the old Preferen
 
 
 |addVote(Voter, OldCompletePreferenceImpl)
-|This method takes an Voter and a an OldCompletePreferenceImpl as argument. It checks if this arguments are not null and if the preference is strict. Then it put this vote in the map.
+|This method takes an Voter and a an OldCompletePreferenceImpl as argument. It checks if this arguments are not null and if the preference is strict. Then it put this vote in the map (attribute of the ProfileBuilder class).
 
 
 |createOneAlternativeProfile()
