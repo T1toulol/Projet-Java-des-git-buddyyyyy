@@ -59,7 +59,7 @@ image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Cla
 
 === What will do this class
 
-The StrictProfilBuilder class inherits from ProfilBuilder. The goal of this class is to build a StrictProfile.
+The StrictProfilBuilder class *inherits from ProfilBuilder*. The goal of this class is to build a StrictProfile.
 
 A StrictProfile is composed by preferences _(*)_ whose alternatives can not be equally ranked.
 
