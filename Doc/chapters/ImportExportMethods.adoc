@@ -113,42 +113,40 @@ image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagr
 |===
 |Method name
 |Contract
-|Relevance
 
 |checkFormatandPrint(InputStream in)
 |This is a static method which check the data format of the input stream (RanksFormat or VotersToRanking or CountOfRanking). It returns a string with voting information by using the most suitable printFormat method (see next methods descriptions).
-|Ok 
 
 |printFormatCountOfRanking(Table table)
 |This is a string static method which takes an ods table containing voting information in CountOfRanking format in argument. And it returns a string with voting information. It is used to describe the information contained.
-|Ok
+
 
 |printFormatRanksFormat(Table table)
 |This is a string static method which takes an ods table containing voting information in RanksFormat format in argument. And it returns a string with voting information. It is used to describe the information contained.
-|Ok
+
 
 |printFormatVotersToRanking(Table table)
 |This is a string static method which takes an ods table containing voting information in VotersToRanking format in argument. And it returns a string with voting information. It is used to describe the information contained.
-|Ok
+
 
 |getAlternatives(Table table)
 |This is a static method which takes an ods table containing voting information in argument and returns an list of Alternatives.
-|Ok
+
 
 |getnbToVoters(Table table)
 |This is a static method which takes an ods table containing voting information in argument and returns the number (integer) of voters.
-|Ok
+
 
 |checkFormatandReturnCompletePreference(InputStream in)
 |This is a static method which takes an input stream in argument. This method uses the following two methods (completeFormatRanksFormat() and completeFormatVotersToRankings()) after checking the input format (RanksFormat or VotersToRanking). And finally, it returns an ImmutableSet of ImmutableCompletePreference. 
-|Ok
+
 
 |completeFormatRanksFormat(Table table)
 |This is a static method which takes an ods table containing voting information in argument (in RanksFormat format) and returns an ImmutableSet of ImmutableCompletePreference.
-|Ok
+
 
 |completeFormatVotersToRankings(Table table)
 |This is a static method which takes an ods table containing voting information in argument (in VotersToRanking format) and returns an ImmutableSet of ImmutableCompletePreference.
-|Ok
+
 
 |===
