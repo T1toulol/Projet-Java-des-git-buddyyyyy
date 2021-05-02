@@ -1,1 +1,28 @@
-Build Profile
+= Build Profile methods
+
+====== link:../README.adoc[Summary]
+
+== Profile Builder
+
+image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
+
+
+
+[cols="1,1,2", options="header"] 
+|===
+|Method name
+|Contract
+|Relevance
+
+== Strict Profile Builder
+
+image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Class Diagram]
+
+
+
+
+[cols="1,1,2", options="header"] 
+|===
+|Method name
+|Contract
+|Relevance
