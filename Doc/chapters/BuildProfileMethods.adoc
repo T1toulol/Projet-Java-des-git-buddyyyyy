@@ -53,9 +53,15 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
 == Strict Profile Builder
 
-image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Class Diagram]
+ A StrictProfile represents a complete StrictProfile. The preferences are strict. The preferences are about the same alternatives exactly.
 
+image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Class Diagram] 
+ 
+ NB : Currently, the StrictProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
 
+=== What will do this class
+
+The goal of this class is to build strict profiles.
 
 
 [cols="1,1,2", options="header"] 
@@ -65,19 +71,19 @@ image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Cla
 |Relevance
 
 |createStrictProfileBuilder()
-|
-|
+|This is a static factory method which returns a new StrictProfileBuilder without parameters.
+|Ok
 
-|createStrictProfileBuilder(StrictProfileI)
-|
-|
+|createStrictProfileBuilder(StrictProfileI prof)
+|This is a static factory method which check if the argument prof is null or not. If prof is not null, it returns a new StrictProfileBuilder with the parameter prof. Else it calls createStrictProfileBuilder().
+|Ok
 
 |addVote(Voter, OldCompletePreferenceImpl)
-|
-|
+|This method takes an Voter and a an OldCompletePreferenceImpl as argument. It checks if this arguments are not null and if the preference is strict. Then it put this vote in the map.
+|Ok
 
 |createOneAlternativeProfile()
-|
-|
+|This method as no argument and it create an ImmutableStrictProfileI from a StrictProfileI where only the first alternative of each preference is taken into account.
+|Ok
 
 |===
