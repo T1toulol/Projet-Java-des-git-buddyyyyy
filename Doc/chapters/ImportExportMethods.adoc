@@ -9,7 +9,7 @@ image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format - Class 
 
 === What will do this class +
 
-The main goal of the ExportDOT class is to export all link:https://guava.dev/releases/23.0/api/docs/com/google/common/graph/Graph.html[Graph] in DOT format. 
+The main goal of the ExportDOT class is to export all link:https://guava.dev/releases/23.0/api/docs/com/google/common/graph/Graph.html[Graph] in link:./GUIInputFiles.adoc[DOT format]. 
 
 A preference can be represented by a *directed* graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a Graph. So all preferences can be converted into a graph and given to the export() method of the ExportDOT class.
 
