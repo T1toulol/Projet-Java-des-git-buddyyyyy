@@ -4867,7 +4867,7 @@
           <element xmi:type="uml:Operation" href="papyrus_diagram.uml#_BFUJUJr8Eeu-Z_X4sBTjZA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_BFWlkZr8Eeu-Z_X4sBTjZA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_MrvZ4Jr8Eeu-Z_X4sBTjZA" type="Operation_ClassOperationLabel">
+        <children xmi:type="notation:Shape" xmi:id="_MrvZ4Jr8Eeu-Z_X4sBTjZA" type="Operation_ClassOperationLabel" fontHeight="8">
           <styles xmi:type="notation:StringListValueStyle" xmi:id="_-KPC0Jr8Eeu-Z_X4sBTjZA" name="maskLabel">
             <stringListValue>parametersName</stringListValue>
             <stringListValue>visibility</stringListValue>
@@ -4878,7 +4878,7 @@
           <element xmi:type="uml:Operation" href="papyrus_diagram.uml#_MrsWkJr8Eeu-Z_X4sBTjZA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_MrvZ4Zr8Eeu-Z_X4sBTjZA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_Y4QaEJr8Eeu-Z_X4sBTjZA" type="Operation_ClassOperationLabel">
+        <children xmi:type="notation:Shape" xmi:id="_Y4QaEJr8Eeu-Z_X4sBTjZA" type="Operation_ClassOperationLabel" fontHeight="8">
           <styles xmi:type="notation:StringListValueStyle" xmi:id="_-p6ocJr8Eeu-Z_X4sBTjZA" name="maskLabel">
             <stringListValue>parametersName</stringListValue>
             <stringListValue>visibility</stringListValue>
@@ -4889,7 +4889,7 @@
           <element xmi:type="uml:Operation" href="papyrus_diagram.uml#_Y4NWwJr8Eeu-Z_X4sBTjZA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_Y4QaEZr8Eeu-Z_X4sBTjZA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_rjo7IJr8Eeu-Z_X4sBTjZA" type="Operation_ClassOperationLabel">
+        <children xmi:type="notation:Shape" xmi:id="_rjo7IJr8Eeu-Z_X4sBTjZA" type="Operation_ClassOperationLabel" fontHeight="8">
           <styles xmi:type="notation:StringListValueStyle" xmi:id="__GOxAJr8Eeu-Z_X4sBTjZA" name="maskLabel">
             <stringListValue>parametersName</stringListValue>
             <stringListValue>visibility</stringListValue>
@@ -4912,7 +4912,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c1IPnpsNEeu-Z_X4sBTjZA"/>
       </children>
       <element xmi:type="uml:Class" href="papyrus_diagram.uml#_Sx6MgGbSEeqrtc6dy-mPpg"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c1HogZsNEeu-Z_X4sBTjZA" x="360" y="160" height="221"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c1HogZsNEeu-Z_X4sBTjZA" x="280" y="100" width="761" height="261"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_TqBskZr6Eeu-Z_X4sBTjZA" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_TqBskpr6Eeu-Z_X4sBTjZA"/>
