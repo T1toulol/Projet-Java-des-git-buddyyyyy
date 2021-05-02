@@ -5171,7 +5171,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pvm9_qsrEeuA3-DMjDS8TA"/>
       </children>
       <element xmi:type="uml:Class" href="papyrus_diagram.uml#_S1YXQGbSEeqrtc6dy-mPpg"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pvlv0asrEeuA3-DMjDS8TA" x="440" y="20" width="221" height="201"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pvlv0asrEeuA3-DMjDS8TA" x="440" y="20" width="361" height="201"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_88Wz8asiEeuA3-DMjDS8TA" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_88Wz8qsiEeuA3-DMjDS8TA"/>
@@ -5186,6 +5186,7 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_SThsMasrEeuA3-DMjDS8TA"/>
       <element xmi:type="uml:Generalization" href="papyrus_diagram.uml#_S1ZlYGbSEeqrtc6dy-mPpg"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SThsMqsrEeuA3-DMjDS8TA" points="[440, 124, -643984, -643984]$[359, 126, -643984, -643984]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fuVRMKs7EeuA3-DMjDS8TA" id="(0.0,0.4975124378109453)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
