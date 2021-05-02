@@ -13,6 +13,42 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 |Method name
 |Contract
 |Relevance
+
+|castMapExtendsToRegularVoterPref(Map<Voter, ? extends OldCompletePreferenceImpl>)
+|
+|
+
+|createProfileBuilder()
+|
+|
+
+|createProfileBuilder(ProfileI)
+|
+|
+
+|addVote(Voter, OldCompletePreferenceImpl)
+|
+|
+
+|addVotes(OldCompletePreferenceIml, int)
+|
+|
+
+|createProfile()
+|
+|
+
+|createProfileI()
+|
+|
+
+|createStrictProfile()
+|
+|
+
+|createStrictProfileI()
+|
+|
 |===
 
 == Strict Profile Builder
@@ -27,4 +63,21 @@ image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Cla
 |Method name
 |Contract
 |Relevance
+
+|createStrictProfileBuilder()
+|
+|
+
+|createStrictProfileBuilder(StrictProfileI)
+|
+|
+
+|addVote(Voter, OldCompletePreferenceImpl)
+|
+|
+
+|createOneAlternativeProfile()
+|
+|
+
 |===
