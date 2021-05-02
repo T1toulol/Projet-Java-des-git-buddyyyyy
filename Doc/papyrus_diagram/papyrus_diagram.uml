@@ -4825,7 +4825,7 @@ Voter's preferences : AntiSymmetric</body>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_S1YXQGbSEeqrtc6dy-mPpg" name="StrictProfileBuilder" visibility="public">
-              <generalization xmi:type="uml:Generalization" xmi:id="_S1ZlYGbSEeqrtc6dy-mPpg" general="_SwzZQGbSEeqrtc6dy-mPpg"/>
+              <generalization xmi:type="uml:Generalization" xmi:id="_TXV8MKuEEeuF0OMk7K6hHQ" general="_SwzZQGbSEeqrtc6dy-mPpg"/>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_S1azgGbSEeqrtc6dy-mPpg" name="LOGGER" visibility="private" isLeaf="true" isStatic="true" type="_O-SJ4GbSEeqrtc6dy-mPpg" isUnique="false">
                 <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_S1cBoGbSEeqrtc6dy-mPpg" name="defaultValue">
                   <language>JAVA</language>
