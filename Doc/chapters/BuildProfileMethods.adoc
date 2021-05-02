@@ -29,27 +29,27 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
 
 |addVote(Voter, OldCompletePreferenceImpl)
-|This method has a Voter and an OldCompletePreferenceImpl as arguments. It checks if these arguments are not null. This method put the preference for the voter in a map.
+|This method has a Voter and an OldCompletePreferenceImpl as arguments. It checks if these arguments are not null. This method put the preference for the voter in the map (attribute of the ProfileBuilder class).
 
 
 |addVotes(OldCompletePreferenceIml, int)
-|This method accept an OldCompletePreferenceImpl and a number of voters as arguments. Then it checks if these arguments are not null. Finally it put for each number of voters a preference in the map.
+|This method accept an OldCompletePreferenceImpl and a number of voters as arguments. Then it checks if these arguments are not null. Finally it put for each number of voters a preference in the map (attribute of the ProfileBuilder class).
 
 
 |createProfile()
-|This method return an ImmutableProfile from the builder if it is complete, else it throws an exception.
+|This method return an ImmutableProfile from the "votes" (preference linked to the voter in a Map) in attribute of the ProfileBuilder, thanks to the createImmutableProfile() methode of ImmutableProfile class. We verify that the "votes" Map contains a complete profile, if it is not, it throws an exception. 
 
 
 |createProfileI()
-|This method return an ImmutableProfile from the builder.
+|This method return an ImmutableProfileI from the "votes" (preference linked to the voter in a Map) in attribute of the ProfileBuilder, thanks to the createImmutableProfile() methode of ImmutableProfileI class.
 
 
 |createStrictProfile()
-|This method return an ImmutableStrictProfile from the builder if it is strict and complete, else it throws an exception.
-
+This method return an ImmutableStrictProfile from the "votes" (preference linked to the voter in a Map) in attribute of the ProfileBuilder, thanks to the createImmutableStrictProfile() methode of ImmutableStrictProfile class. We verify that the "votes" Map contains a complete and strict profile, if it is not, it throws an exception.
 
 |createStrictProfileI()
-|This method return an ImmutableStrictProfile from the builder if it is strict, else it throws an exception.
+|This method return an ImmutableStrictProfile from the "votes" (preference linked to the voter in a Map) in attribute of the ProfileBuilder, thanks to the createImmutableStrictProfileI() methode of ImmutableStrictProfileI class. We verify that the "votes" Map contains a strict profile, if it is not, it throws an exception.
+
 |===
 
 == StrictProfileBuilder
