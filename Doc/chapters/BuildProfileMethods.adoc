@@ -8,47 +8,46 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
 
 
-[cols="1,1,2", options="header"] 
+[cols="1,2", options="header"] 
 |===
 |Method name
 |Contract
-|Relevance
+
 
 |castMapExtendsToRegularVoterPref(Map<Voter, ? extends OldCompletePreferenceImpl>)
 |this static method has a Map as argument which contains a Voter and an extends of OldcompletePreferenceImpl. It checks if this map is not null and then it return a map that not extends OldCompletePreference.
-|Ok
+
 
 |createProfileBuilder()
 |This static factory method create a new ProfileBuilder with no arguments.
-|Ok
+
 
 |createProfileBuilder(ProfileI)
 |This static factory method accept a ProfileI as argument and checks if it is not null. If this profileI is null, it calls createProfileBuilder() else it returns a new ProfileBuilder with this profileI as argument.
-|Ok
+
 
 |addVote(Voter, OldCompletePreferenceImpl)
 |This method has a Voter and an OldCompletePreferenceImpl as arguments. It checks if these arguments are not null. This method put the preference for the voter in a map.
-|Ok
+
 
 |addVotes(OldCompletePreferenceIml, int)
 |This method accept an OldCompletePreferenceImpl and a number of voters as arguments. Then it checks if these arguments are not null. Finally it put for each number of voters a preference in the map.
-|Ok
+
 
 |createProfile()
 |This method return an ImmutableProfile from the builder if it is complete, else it throws an exception.
-|Ok
+
 
 |createProfileI()
 |This method return an ImmutableProfile from the builder.
-|Ok
+
 
 |createStrictProfile()
 |This method return an ImmutableStrictProfile from the builder if it is strict and complete, else it throws an exception.
-|Ok
+
 
 |createStrictProfileI()
 |This method return an ImmutableStrictProfile from the builder if it is strict, else it throws an exception.
-|Ok
 |===
 
 == Strict Profile Builder
@@ -63,26 +62,26 @@ A StrictProfile represents a complete StrictProfile. The preferences _(*)_ are s
 
 _(*) NB : Currently, the StrictProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
 
-[cols="1,1,2", options="header"] 
+[cols="1,2", options="header"] 
 |===
 |Method name
 |Contract
-|Relevance
+
 
 |createStrictProfileBuilder()
 |This is a static factory method which returns a new StrictProfileBuilder without parameters.
-|Ok
+
 
 |createStrictProfileBuilder(StrictProfileI prof)
 |This is a static factory method which check if the argument prof is null or not. If prof is not null, it returns a new StrictProfileBuilder with the parameter prof. Else it calls createStrictProfileBuilder().
-|Ok
+
 
 |addVote(Voter, OldCompletePreferenceImpl)
 |This method takes an Voter and a an OldCompletePreferenceImpl as argument. It checks if this arguments are not null and if the preference is strict. Then it put this vote in the map.
-|Ok
+
 
 |createOneAlternativeProfile()
 |This method has not argument and it create an ImmutableStrictProfileI from a StrictProfileI where only the first alternative of each preference is taken into account.
-|Ok
+
 
 |===
