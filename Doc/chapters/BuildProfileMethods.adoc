@@ -53,16 +53,15 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
 == Strict Profile Builder
 
-A StrictProfile represents a complete StrictProfile. The preferences are strict. The preferences are about the same alternatives exactly.
-
 image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Class Diagram] 
- 
-_(*) NB : Currently, the StrictProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
 
 === What will do this class
 
 The goal of this class is to build strict profiles.
 
+A StrictProfile represents a complete StrictProfile. The preferences _(*)_ are strict. The preferences are about the same alternatives exactly.
+
+_(*) NB : Currently, the StrictProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
 
 [cols="1,1,2", options="header"] 
 |===
