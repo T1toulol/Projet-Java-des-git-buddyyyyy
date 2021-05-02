@@ -9,9 +9,9 @@ image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format - Class 
 
 === What will do this class +
 
-The goal of the ExportDOT class is to export a preference in link:./GUIInputFiles.adoc[DOT format]. 
+The main goal of the ExportDOT class is to export all link:https://guava.dev/releases/23.0/api/docs/com/google/common/graph/Graph.html[Graph] in DOT format. 
 
-A preference can be represented by a *directed* graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a link:https://guava.dev/releases/23.0/api/docs/com/google/common/graph/Graph.html[Graph] _(*)_. So all preferences can be converted into a graph and given to the export() method of the ExportDOT class.
+A preference can be represented by a *directed* graph. The preference interface has a method link:./preferenceInterfaces.adoc[asGraph()] which returns a preference as a Graph. So all preferences can be converted into a graph and given to the export() method of the ExportDOT class.
 
 The export() method of the ExportDOT class verify that the provided graph is a directed graph or not and then converts it to DOT format. Finally, the link:https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html[OutputStream] given as argument provides an output stream to a file. We can write on this stream with the OutputStream's write() method. 
 
@@ -25,16 +25,15 @@ The export() method of the ExportDOT class verify that the provided graph is a d
 |Relevance
 
 |export(Graph<String> pref, OutputStream stream)
-|This is a static void method which takes two argument : a graph that represents a preference and a OutputStream (provides an output stream to a file) which export it in DOT format. It would be useful to verify that the export method receives a directed graph or not by using the isDirectedGraph() method. Then convertToDot() converts the graph and sends the string to the Writer given by the OutputStream to write in the output file. 
-|To do
+|This is a static void method which takes two argument : a string graph that represents a preference and a OutputStream (provides an output stream to a file) which export it in DOT format. It would be useful to verify that the export() method receives a directed graph or not. Then the graph is converted and sent as a string to the writer() method of the OutputStream to write in the output file. 
+|In progress
 
-|convertToDoT(DirectedGraph g)
-|This is a static method which returns the directed graph in DOT Format as String.
+|export(Preference pref, OutputStream stream)
+|This is an overloaded version of the previous export() method which takes a Preference as argument. The Preference is transformed into a String Graph and computes its link:https://en.wikipedia.org/wiki/Transitive_reduction[transitive reduction]. From the obtained Graph, the method applies the same operations as the previous export() method.
 |To do
 
 |===
 
-_(*) Be carefull, currently the asGraph() method of the Preference interface returns a Graph. We can't be sure that the returned Graph is a directed graph. This can be a problem because usually a connection between two vertices of a graph is represented by "--" and by "->" for a directed graph in DOT format. Thus the conversion might not be good._
 
 
 == Import Profile
