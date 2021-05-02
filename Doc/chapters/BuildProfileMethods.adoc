@@ -10,7 +10,7 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
 
 
-[cols="1,4", options="header"] 
+[cols="1,2", options="header"] 
 |===
 |Method name
 |Contract
@@ -45,7 +45,7 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
 
 |createStrictProfile()
-This method return an ImmutableStrictProfile from the "votes" (preference linked to the voter in a Map) in attribute of the ProfileBuilder, thanks to the createImmutableStrictProfile() methode of ImmutableStrictProfile class. We verify that the "votes" Map contains a complete and strict profile, if it is not, it throws an exception.
+|This method return an ImmutableStrictProfile from the "votes" (preference linked to the voter in a Map) in attribute of the ProfileBuilder, thanks to the createImmutableStrictProfile() methode of ImmutableStrictProfile class. We verify that the "votes" Map contains a complete and strict profile, if it is not, it throws an exception.
 
 |createStrictProfileI()
 |This method return an ImmutableStrictProfile from the "votes" (preference linked to the voter in a Map) in attribute of the ProfileBuilder, thanks to the createImmutableStrictProfileI() methode of ImmutableStrictProfileI class. We verify that the "votes" Map contains a strict profile, if it is not, it throws an exception.
