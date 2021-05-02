@@ -10,7 +10,7 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
 
 
-[cols="1,2", options="header"] 
+[cols="1,4", options="header"] 
 |===
 |Method name
 |Contract
