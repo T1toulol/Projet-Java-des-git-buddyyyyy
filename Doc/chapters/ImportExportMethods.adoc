@@ -109,7 +109,7 @@ The ReadODS class allows to read and describe profiles from these data formats, 
 image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagram]
 
 
-[cols="1,1,2", options="header"] 
+[cols="1,1", options="header"] 
 |===
 |Method name
 |Contract
