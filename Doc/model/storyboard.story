@@ -3,13 +3,16 @@
   <panels id="ZJiCurDIJtrbeFGfQvVOnVNpwM4=" x="375" y="75">
     <screen href="screen/createProfile.screen#/"/>
   </panels>
+  <panels id="5fq2SK77dcc7ZvH9sE_-KkyCL7s=" x="75" y="675">
+    <screen href="screen/createProfileEmpty.screen#/"/>
+  </panels>
   <panels id="M2v2HT-iK6vbpBCoCbXu9M1Z-9g=" x="675" y="75">
     <screen href="screen/CreateProfileAddAlternative.screen#/"/>
   </panels>
   <panels id="HVMoH27izHsR9bAhHH1AYcPCI98=" x="975" y="75">
     <screen href="screen/CreateScreenAddVoter.screen#/"/>
   </panels>
-  <panels id="jrFybpJX_6bGKAHvpuOR2CbKso8=" x="75" y="375">
+  <panels id="jrFybpJX_6bGKAHvpuOR2CbKso8=" x="90" y="375">
     <screen href="screen/seeProfileColumns.screen#/"/>
   </panels>
   <panels id="a649yOu4BJcZEQyD99hevhu45I0=" x="375" y="375">
