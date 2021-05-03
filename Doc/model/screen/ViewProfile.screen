@@ -83,13 +83,10 @@
   <widgets xsi:type="model:TextField" id="94" x="304" y="117" width="241" text="Profile name" measuredWidth="241" measuredHeight="23">
     <font italic="true"/>
   </widgets>
-  <widgets xsi:type="model:Arrow" id="103" x="229" y="139" width="384" height="8" measuredWidth="384" measuredHeight="8"/>
-  <widgets xsi:type="model:Note" id="104" x="616" y="116" width="193" height="179" text="The Open/Save as box lets the user specify the drive directory, and the name of an url or a set of url  to open. Or lets the user specify the drive, directory, and name of a file to save the profile. &#xD;&#xA;&#xD;&#xA;Open by initializing an .soc file structure and passing the structure to the GetComposite() function." measuredWidth="193" measuredHeight="179">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:TextField" id="107" x="544" y="28" width="41" text=" 3/5" measuredWidth="41" measuredHeight="29" textAlignment="Center">
+  <widgets xsi:type="model:TextField" id="107" x="8" y="8" width="689" text="You can have 3 type of views by clicking on the visualisation tab (Wrapped, Columns and Rows)" measuredWidth="689" measuredHeight="29" textAlignment="Center">
     <font size="16px"/>
   </widgets>
+  <widgets xsi:type="model:Arrow" id="108" x="224" y="36" width="17" height="50" measuredWidth="17" measuredHeight="50" direction="bottom"/>
   <hRuler>
     <guides position="190"/>
     <guides position="214"/>

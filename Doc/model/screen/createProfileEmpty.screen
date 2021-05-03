@@ -15,7 +15,7 @@
   <widgets xsi:type="model:Button" id="93" x="139" y="115" width="102" text="Open/Save as" measuredWidth="102" measuredHeight="25">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="94" x="319" y="116" width="241" text="Profile name" measuredWidth="241" measuredHeight="23" background="#f00">
+  <widgets xsi:type="model:TextField" id="94" x="319" y="116" width="241" text="Profile name (empty)" measuredWidth="241" measuredHeight="23" background="#f00">
     <font italic="true"/>
   </widgets>
   <widgets xsi:type="model:Arrow" id="96" x="408" y="129" width="305" height="153" measuredWidth="305" measuredHeight="153"/>
@@ -32,6 +32,9 @@
   </widgets>
   <widgets xsi:type="model:TextArea" id="105" x="112" y="200" text="You can add a voter here" measuredWidth="180" measuredHeight="29" background="#ff0">
     <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="106" x="27" y="-10" measuredWidth="6" measuredHeight="67">
+    <font size="43px"/>
   </widgets>
   <hRuler>
     <guides position="190"/>
