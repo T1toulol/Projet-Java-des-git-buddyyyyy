@@ -209,10 +209,10 @@ Creation and display of the add button.
 |removeControl(Event e)
 |Delete window control
 
-|enterURL(url)
+|enterURL(String url)
 |Enterurl which is a function that will be triggered when the user will write a URL in the input box and press the Enter key.
 
-|enterURL(url)
+|openDialog(String)
 |function that will open a dialog box to the user after the exist and iswrittable functions is sent a real bolean, in the dialog box the user will be able to load the file or overwrite the profile, if the User Clics to overwrite the listener of button will then launch the OverwriteProfil function in the EdtionController Otherwise if it clicks on Load File The listener of the button will launch the LoadFile function in the EditionController
 
 |===
