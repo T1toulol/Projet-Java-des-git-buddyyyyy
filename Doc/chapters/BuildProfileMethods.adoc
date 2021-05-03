@@ -86,4 +86,4 @@ The StrictProfilBuilder class *inherits from ProfilBuilder* class. The goal of t
 |===
 
 
-_(*)_ *NB* : Currently, the StrictProfileBuilder class and ProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
+_(*)_ NB : Currently, the StrictProfileBuilder class and ProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
