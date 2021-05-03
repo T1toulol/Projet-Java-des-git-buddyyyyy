@@ -4721,6 +4721,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
 =======
 >>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
   <notation:Diagram xmi:id="_vk_JIKvxEeu8XbJrIF6N5w" type="PapyrusUMLSequenceDiagram" name="NewGUIDialogBoxDiagram" measurementUnit="Pixel">
@@ -4888,7 +4891,11 @@
       <element xmi:type="uml:Message" href="papyrus_diagram.uml#_H-AtAKvzEeu8XbJrIF6N5w"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H-E-cqvzEeu8XbJrIF6N5w" points="[-10, -5, -210, -60]$[200, 55, 0, 0]"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H-M6QKvzEeu8XbJrIF6N5w" id="(0.5,0.11764705882352941)"/>
+=======
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H-M6QKvzEeu8XbJrIF6N5w" id="(0.5,0.11764705882352942)"/>
+>>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
 =======
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H-M6QKvzEeu8XbJrIF6N5w" id="(0.5,0.11764705882352942)"/>
 >>>>>>> parent of ecf26f5 (ajout nouveau diagramme)

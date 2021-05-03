@@ -7110,6 +7110,9 @@ Voter's preferences : AntiSymmetric</body>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
 =======
 >>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
       <packagedElement xmi:type="uml:Interaction" xmi:id="_lh898KvxEeu8XbJrIF6N5w" name="NewGUIDialogBoxDiagram">
@@ -7198,6 +7201,7 @@ Voter's preferences : AntiSymmetric</body>
         <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_WcNNMKv5Eeu8XbJrIF6N5w" covered="_dF4UEKvyEeu8XbJrIF6N5w"/>
         <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_x1N_AKv0Eeu8XbJrIF6N5w" name="ActionExecutionSpecification12Finish" covered="_QcTkcKvyEeu8XbJrIF6N5w"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <message xmi:type="uml:Message" xmi:id="_t1RpkKvyEeu8XbJrIF6N5w" name="Message10" messageSort="asynchCall"/>
         <message xmi:type="uml:Message" xmi:id="_-e3SAKvyEeu8XbJrIF6N5w" name="centerOnScreen()" messageSort="asynchCall" sendEvent="_-e35EKvyEeu8XbJrIF6N5w"/>
         <message xmi:type="uml:Message" xmi:id="_H-AtAKvzEeu8XbJrIF6N5w" name="create(shell)" messageSort="asynchCall" sendEvent="_H-BUEKvzEeu8XbJrIF6N5w"/>
@@ -7229,6 +7233,8 @@ Voter's preferences : AntiSymmetric</body>
 =======
 >>>>>>> parent of 9c62ffa (ajout diagramme)
 =======
+=======
+>>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
         <message xmi:type="uml:Message" xmi:id="_t1RpkKvyEeu8XbJrIF6N5w" name="1 Launch SOC Profil Viewer" messageSort="asynchCall"/>
         <message xmi:type="uml:Message" xmi:id="_-e3SAKvyEeu8XbJrIF6N5w" name="2 centerOnScreen()" messageSort="asynchCall" sendEvent="_-e35EKvyEeu8XbJrIF6N5w"/>
         <message xmi:type="uml:Message" xmi:id="_H-AtAKvzEeu8XbJrIF6N5w" name="3 create(shell)" messageSort="asynchCall" sendEvent="_H-BUEKvzEeu8XbJrIF6N5w"/>
@@ -7255,6 +7261,9 @@ Voter's preferences : AntiSymmetric</body>
         <message xmi:type="uml:Message" xmi:id="_josqYKv-Eeu8XbJrIF6N5w"/>
         <message xmi:type="uml:Message" xmi:id="_npdxIKv-Eeu8XbJrIF6N5w" name="17.2.4 chargerFichier()" messageSort="asynchCall" receiveEvent="_npe_QKv-Eeu8XbJrIF6N5w" sendEvent="_npeYMKv-Eeu8XbJrIF6N5w"/>
       </packagedElement>
+<<<<<<< HEAD
+>>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
+=======
 >>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_O7lbMGbSEeqrtc6dy-mPpg">
