@@ -97,8 +97,11 @@
   <widgets xsi:type="model:Button" id="114" x="128" y="112" width="102" text="Open/Save as" measuredWidth="102" measuredHeight="25">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="115" x="319" y="113" width="241" text="Profile name" measuredWidth="241" measuredHeight="23" background="#f00">
+  <widgets xsi:type="model:TextField" id="115" x="319" y="113" width="241" text="Profile name (empty)" measuredWidth="241" measuredHeight="23" background="#f00">
     <font italic="true"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="116" x="544" y="28" width="41" text=" 2/5" measuredWidth="41" measuredHeight="29" textAlignment="Center">
+    <font size="16px"/>
   </widgets>
   <hRuler/>
   <vRuler/>
