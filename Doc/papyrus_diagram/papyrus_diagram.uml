@@ -7109,11 +7109,12 @@ Voter's preferences : AntiSymmetric</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Interaction" xmi:id="_0y0JMKxPEeu7TrH8MAeOlg" name="NewGUIDialogBoxDiagram">
         <lifeline xmi:type="uml:Lifeline" xmi:id="_DGWgQKxQEeu7TrH8MAeOlg" name=": User" coveredBy="_QGTvkKxQEeu7TrH8MAeOlg _T_IbQKxQEeu7TrH8MAeOlg _T_H0MKxQEeu7TrH8MAeOlg _T_IbQaxQEeu7TrH8MAeOlg"/>
-        <lifeline xmi:type="uml:Lifeline" xmi:id="_MBczAKxQEeu7TrH8MAeOlg" name=": Main" coveredBy="_QGTvkaxQEeu7TrH8MAeOlg _l-EGAKxQEeu7TrH8MAeOlg _l-EtEKxQEeu7TrH8MAeOlg _tJP6UaxQEeu7TrH8MAeOlg _FKo2waxREeu7TrH8MAeOlg _HFpx8axREeu7TrH8MAeOlg"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_MBczAKxQEeu7TrH8MAeOlg" name=": Main" coveredBy="_QGTvkaxQEeu7TrH8MAeOlg _l-EGAKxQEeu7TrH8MAeOlg _l-EtEKxQEeu7TrH8MAeOlg _tJP6UaxQEeu7TrH8MAeOlg _FKo2waxREeu7TrH8MAeOlg _HFpx8axREeu7TrH8MAeOlg _521KwKxREeu7TrH8MAeOlg _-few4axREeu7TrH8MAeOlg _HG89AaxSEeu7TrH8MAeOlg _Ra7HMaxSEeu7TrH8MAeOlg _a72q4axSEeu7TrH8MAeOlg _a73R8KxSEeu7TrH8MAeOlg"/>
         <lifeline xmi:type="uml:Lifeline" xmi:id="_gmm5IKxQEeu7TrH8MAeOlg" name=": View" coveredBy="_tJQhYKxQEeu7TrH8MAeOlg _16efYKxQEeu7TrH8MAeOlg _8quEIaxQEeu7TrH8MAeOlg _FKo2wqxREeu7TrH8MAeOlg _HFpx8KxREeu7TrH8MAeOlg"/>
         <lifeline xmi:type="uml:Lifeline" xmi:id="_wZdt4KxQEeu7TrH8MAeOlg" name=": EdtionView" coveredBy="_16efYaxQEeu7TrH8MAeOlg"/>
         <lifeline xmi:type="uml:Lifeline" xmi:id="_6mkbEKxQEeu7TrH8MAeOlg" name=": VisualizationView" coveredBy="_8qurMKxQEeu7TrH8MAeOlg"/>
-        <lifeline xmi:type="uml:Lifeline" xmi:id="_UBmD8KxREeu7TrH8MAeOlg" name="Lifeline30"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_UBmD8KxREeu7TrH8MAeOlg" name=": Controller" coveredBy="_521KwaxREeu7TrH8MAeOlg _-few4KxREeu7TrH8MAeOlg"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_Bs_OsKxSEeu7TrH8MAeOlg" name=": EditionController" coveredBy="_HG9kEKxSEeu7TrH8MAeOlg _Ra7HMKxSEeu7TrH8MAeOlg"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QGTvkKxQEeu7TrH8MAeOlg" name="Message3SendEvent" covered="_DGWgQKxQEeu7TrH8MAeOlg" message="_QGQFMKxQEeu7TrH8MAeOlg"/>
         <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_T_IbQKxQEeu7TrH8MAeOlg" name="ActionExecutionSpecification6Start" covered="_DGWgQKxQEeu7TrH8MAeOlg" execution="_T_H0MKxQEeu7TrH8MAeOlg"/>
         <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_T_H0MKxQEeu7TrH8MAeOlg" name="ActionExecutionSpecification6" covered="_DGWgQKxQEeu7TrH8MAeOlg" finish="_T_IbQaxQEeu7TrH8MAeOlg" start="_T_IbQKxQEeu7TrH8MAeOlg"/>
@@ -7131,6 +7132,16 @@ Voter's preferences : AntiSymmetric</body>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FKo2wqxREeu7TrH8MAeOlg" name="Message24ReceiveEvent" covered="_gmm5IKxQEeu7TrH8MAeOlg" message="_FKo2wKxREeu7TrH8MAeOlg"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HFpx8KxREeu7TrH8MAeOlg" name="Message27SendEvent" covered="_gmm5IKxQEeu7TrH8MAeOlg" message="_HFpK4KxREeu7TrH8MAeOlg"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HFpx8axREeu7TrH8MAeOlg" name="Message27ReceiveEvent" covered="_MBczAKxQEeu7TrH8MAeOlg" message="_HFpK4KxREeu7TrH8MAeOlg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_521KwKxREeu7TrH8MAeOlg" name="Message31SendEvent" covered="_MBczAKxQEeu7TrH8MAeOlg" message="_520jsKxREeu7TrH8MAeOlg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_521KwaxREeu7TrH8MAeOlg" name="Message31ReceiveEvent" covered="_UBmD8KxREeu7TrH8MAeOlg" message="_520jsKxREeu7TrH8MAeOlg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_-few4KxREeu7TrH8MAeOlg" name="Message34SendEvent" covered="_UBmD8KxREeu7TrH8MAeOlg" message="_-feJ0KxREeu7TrH8MAeOlg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_-few4axREeu7TrH8MAeOlg" name="Message34ReceiveEvent" covered="_MBczAKxQEeu7TrH8MAeOlg" message="_-feJ0KxREeu7TrH8MAeOlg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HG89AaxSEeu7TrH8MAeOlg" name="Message38SendEvent" covered="_MBczAKxQEeu7TrH8MAeOlg" message="_HG89AKxSEeu7TrH8MAeOlg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HG9kEKxSEeu7TrH8MAeOlg" name="Message38ReceiveEvent" covered="_Bs_OsKxSEeu7TrH8MAeOlg" message="_HG89AKxSEeu7TrH8MAeOlg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Ra7HMKxSEeu7TrH8MAeOlg" name="Message41SendEvent" covered="_Bs_OsKxSEeu7TrH8MAeOlg" message="_Ra6gIKxSEeu7TrH8MAeOlg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Ra7HMaxSEeu7TrH8MAeOlg" name="Message41ReceiveEvent" covered="_MBczAKxQEeu7TrH8MAeOlg" message="_Ra6gIKxSEeu7TrH8MAeOlg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_a72q4axSEeu7TrH8MAeOlg" name="Message44SendEvent" covered="_MBczAKxQEeu7TrH8MAeOlg" message="_a72q4KxSEeu7TrH8MAeOlg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_a73R8KxSEeu7TrH8MAeOlg" name="Message44ReceiveEvent" covered="_MBczAKxQEeu7TrH8MAeOlg" message="_a72q4KxSEeu7TrH8MAeOlg"/>
         <message xmi:type="uml:Message" xmi:id="_QGQFMKxQEeu7TrH8MAeOlg" name="Message3" messageSort="createMessage" receiveEvent="_QGTvkaxQEeu7TrH8MAeOlg" sendEvent="_QGTvkKxQEeu7TrH8MAeOlg"/>
         <message xmi:type="uml:Message" xmi:id="_l-De8KxQEeu7TrH8MAeOlg" name="centerOnScreen()" messageSort="asynchCall" receiveEvent="_l-EtEKxQEeu7TrH8MAeOlg" sendEvent="_l-EGAKxQEeu7TrH8MAeOlg"/>
         <message xmi:type="uml:Message" xmi:id="_tJP6UKxQEeu7TrH8MAeOlg" name="create(shell)" messageSort="createMessage" receiveEvent="_tJQhYKxQEeu7TrH8MAeOlg" sendEvent="_tJP6UaxQEeu7TrH8MAeOlg"/>
@@ -7138,6 +7149,11 @@ Voter's preferences : AntiSymmetric</body>
         <message xmi:type="uml:Message" xmi:id="_8quEIKxQEeu7TrH8MAeOlg" name="create(tabFolder)" messageSort="createMessage" receiveEvent="_8qurMKxQEeu7TrH8MAeOlg" sendEvent="_8quEIaxQEeu7TrH8MAeOlg"/>
         <message xmi:type="uml:Message" xmi:id="_FKo2wKxREeu7TrH8MAeOlg" name="getEditionView()" receiveEvent="_FKo2wqxREeu7TrH8MAeOlg" sendEvent="_FKo2waxREeu7TrH8MAeOlg"/>
         <message xmi:type="uml:Message" xmi:id="_HFpK4KxREeu7TrH8MAeOlg" name="EditionView" messageSort="reply" receiveEvent="_HFpx8axREeu7TrH8MAeOlg" sendEvent="_HFpx8KxREeu7TrH8MAeOlg"/>
+        <message xmi:type="uml:Message" xmi:id="_520jsKxREeu7TrH8MAeOlg" name="withDefaultModel()" messageSort="createMessage" receiveEvent="_521KwaxREeu7TrH8MAeOlg" sendEvent="_521KwKxREeu7TrH8MAeOlg"/>
+        <message xmi:type="uml:Message" xmi:id="_-feJ0KxREeu7TrH8MAeOlg" name="Controller" messageSort="reply" receiveEvent="_-few4axREeu7TrH8MAeOlg" sendEvent="_-few4KxREeu7TrH8MAeOlg"/>
+        <message xmi:type="uml:Message" xmi:id="_HG89AKxSEeu7TrH8MAeOlg" name="buildEditionController(EditionView)" messageSort="createMessage" receiveEvent="_HG9kEKxSEeu7TrH8MAeOlg" sendEvent="_HG89AaxSEeu7TrH8MAeOlg"/>
+        <message xmi:type="uml:Message" xmi:id="_Ra6gIKxSEeu7TrH8MAeOlg" name="EditionController" messageSort="reply" receiveEvent="_Ra7HMaxSEeu7TrH8MAeOlg" sendEvent="_Ra7HMKxSEeu7TrH8MAeOlg"/>
+        <message xmi:type="uml:Message" xmi:id="_a72q4KxSEeu7TrH8MAeOlg" name="shell.open()" messageSort="asynchCall" receiveEvent="_a73R8KxSEeu7TrH8MAeOlg" sendEvent="_a72q4axSEeu7TrH8MAeOlg"/>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_O7lbMGbSEeqrtc6dy-mPpg">
