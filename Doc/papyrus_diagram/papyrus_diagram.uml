@@ -7108,6 +7108,7 @@ Voter's preferences : AntiSymmetric</body>
         </packagedElement>
       </packagedElement>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <packagedElement xmi:type="uml:Interaction" xmi:id="_lh898KvxEeu8XbJrIF6N5w" name="NewGUIDialogBoxDiagram">
         <lifeline xmi:type="uml:Lifeline" xmi:id="_4QncgKvxEeu8XbJrIF6N5w" name=": User " coveredBy="_wli08Kv2Eeu8XbJrIF6N5w _qZzkEav5Eeu8XbJrIF6N5w _xvT8kKv6Eeu8XbJrIF6N5w _xvVKsKv6Eeu8XbJrIF6N5w _7hDcEKv9Eeu8XbJrIF6N5w _1X_6gKv6Eeu8XbJrIF6N5w _QbJQYKv-Eeu8XbJrIF6N5w _r7EmsavyEeu8XbJrIF6N5w"/>
         <lifeline xmi:type="uml:Lifeline" xmi:id="_QcTkcKvyEeu8XbJrIF6N5w" name=": Main" coveredBy="_-e35EKvyEeu8XbJrIF6N5w _H-BUEKvzEeu8XbJrIF6N5w _tKX18KvzEeu8XbJrIF6N5w _tKyFoKvzEeu8XbJrIF6N5w _Gsa3YKv1Eeu8XbJrIF6N5w _PL9Pgav1Eeu8XbJrIF6N5w _YdeeMav1Eeu8XbJrIF6N5w _hkiwYav1Eeu8XbJrIF6N5w _qK9Mkav1Eeu8XbJrIF6N5w _qK9zoKv1Eeu8XbJrIF6N5w _x1N_AKv0Eeu8XbJrIF6N5w"/>
@@ -7219,6 +7220,8 @@ Voter's preferences : AntiSymmetric</body>
         <message xmi:type="uml:Message" xmi:id="_josqYKv-Eeu8XbJrIF6N5w"/>
         <message xmi:type="uml:Message" xmi:id="_npdxIKv-Eeu8XbJrIF6N5w" name="chargerFichier()" messageSort="asynchCall" receiveEvent="_npe_QKv-Eeu8XbJrIF6N5w" sendEvent="_npeYMKv-Eeu8XbJrIF6N5w"/>
       </packagedElement>
+=======
+>>>>>>> parent of 9c62ffa (ajout diagramme)
 =======
 >>>>>>> parent of 9c62ffa (ajout diagramme)
     </packagedElement>

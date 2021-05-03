@@ -4719,6 +4719,7 @@
     </edges>
   </notation:Diagram>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <notation:Diagram xmi:id="_vk_JIKvxEeu8XbJrIF6N5w" type="PapyrusUMLSequenceDiagram" name="NewGUIDialogBoxDiagram" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_vk_wMKvxEeu8XbJrIF6N5w" type="Interaction_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_vk_wMavxEeu8XbJrIF6N5w" type="Interaction_NameLabel"/>
@@ -5171,6 +5172,8 @@
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_np7rMKv-Eeu8XbJrIF6N5w" id="(0.5,0.8904428904428905)"/>
     </edges>
   </notation:Diagram>
+=======
+>>>>>>> parent of 9c62ffa (ajout diagramme)
 =======
 >>>>>>> parent of 9c62ffa (ajout diagramme)
 </xmi:XMI>
