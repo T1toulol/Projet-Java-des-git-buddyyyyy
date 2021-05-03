@@ -1,9 +1,10 @@
 package io.github.oliviercailloux.j_voting.profile_gui;
 
-import java.util.*;
+import java.util.Set;
 
-import org.eclipse.swt.events.*;
-import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.widgets.Button;
 
 import io.github.oliviercailloux.j_voting.Alternative;
 

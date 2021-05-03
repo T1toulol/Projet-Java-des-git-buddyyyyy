@@ -121,6 +121,7 @@ public class MainGUI {
 					}
 					mainShell.setText("Profile editing - " + fileToRead);
 					profileToRead[0] = fileToRead;
+					System.out.println(fileChooser);
 				}
 			}
 		});
