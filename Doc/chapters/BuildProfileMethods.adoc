@@ -18,7 +18,7 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
 
 |castMapExtendsToRegularVoterPref(Map<Voter, ? extends OldCompletePreferenceImpl>)
-|This static method has a Map as argument which contains a Voter and an extends of OldcompletePreferenceImpl. It checks if this map is not null and then it return a map that not extends OldCompletePreference.
+|This static method has a Map as argument which contains a Voter and an extends of OldcompletePreferenceImpl. It checks if this map is not null and then it return a map which contains an OldcompletePreferenceImpl (that permit to cast a map with an OldLinearPreferenceImpl into a map with an OldcompletePreferenceImpl for example). 
 
 
 |createProfileBuilder()
