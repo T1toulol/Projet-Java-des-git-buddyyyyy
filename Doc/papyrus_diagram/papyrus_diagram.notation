@@ -4722,6 +4722,23 @@
     <children xmi:type="notation:Shape" xmi:id="_4fpnUaxPEeu7TrH8MAeOlg" type="Interaction_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_4fpnUqxPEeu7TrH8MAeOlg" type="Interaction_NameLabel"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_4fpnU6xPEeu7TrH8MAeOlg" type="Interaction_SubfragmentCompartment">
+        <children xmi:type="notation:Shape" xmi:id="_ksTJ4KxVEeu7TrH8MAeOlg" type="CombinedFragment_Shape">
+          <children xmi:type="notation:BasicCompartment" xmi:id="_ksTw8KxVEeu7TrH8MAeOlg" type="CombinedFragment_SubfragmentCompartment">
+            <children xmi:type="notation:Shape" xmi:id="_ksTw9KxVEeu7TrH8MAeOlg" type="InteractionOperand_Shape">
+              <children xmi:type="notation:DecorationNode" xmi:id="_ksTw9qxVEeu7TrH8MAeOlg" type="InteractionOperand_Guard">
+                <element xmi:type="uml:InteractionConstraint" href="papyrus_diagram.uml#_ksL1IaxVEeu7TrH8MAeOlg"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ksTw96xVEeu7TrH8MAeOlg" x="5" y="5"/>
+              </children>
+              <element xmi:type="uml:InteractionOperand" href="papyrus_diagram.uml#_ksL1IKxVEeu7TrH8MAeOlg"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ksTw9axVEeu7TrH8MAeOlg" width="1221" height="341"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_ksTw8axVEeu7TrH8MAeOlg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_ksTw8qxVEeu7TrH8MAeOlg"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ksTw86xVEeu7TrH8MAeOlg"/>
+          </children>
+          <element xmi:type="uml:CombinedFragment" href="papyrus_diagram.uml#_ksLOEKxVEeu7TrH8MAeOlg"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ksTJ4axVEeu7TrH8MAeOlg" x="54" y="916" width="1221" height="361"/>
+        </children>
         <children xmi:type="notation:Shape" xmi:id="_DGaKoKxQEeu7TrH8MAeOlg" type="Lifeline_Shape">
           <children xmi:type="notation:DecorationNode" xmi:id="_DGaxsKxQEeu7TrH8MAeOlg" type="Lifeline_NameLabel"/>
           <children xmi:type="notation:Shape" xmi:id="_T_MssKxQEeu7TrH8MAeOlg" type="ActionExecutionSpecification_Shape">
