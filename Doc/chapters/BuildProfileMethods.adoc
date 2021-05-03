@@ -5,7 +5,7 @@
 
 == ProfileBuilder
 
-The ProfileBuilder class allows to create a Profile (composed of Voters and their Preference). It is used by the import methods.
+The ProfileBuilder class allows to create a Profile (composed of Voters and their Preference _(*)_ ). It is used in particular by the import methods.
 
 image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
@@ -62,7 +62,6 @@ The StrictProfilBuilder class *inherits from ProfilBuilder* class. The goal of t
 
 A StrictProfile is composed by preferences _(*)_ whose alternatives can not be equally ranked.
 
-_(*)_ NB : Currently, the StrictProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
 
 [cols="1,2", options="header"] 
 |===
@@ -87,3 +86,6 @@ _(*)_ NB : Currently, the StrictProfileBuilder class still uses the old Preferen
 
 
 |===
+
+
+_(*)_ NB : Currently, the StrictProfileBuilder class and ProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
