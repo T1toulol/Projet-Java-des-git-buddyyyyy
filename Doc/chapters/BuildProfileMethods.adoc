@@ -58,9 +58,7 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Class Diagram] 
 
 
-The StrictProfilBuilder class *inherits from ProfilBuilder* class. The goal of this class is to build a StrictProfile.
-
-A StrictProfile is composed by preferences _(*)_ whose alternatives can not be equally ranked.
+The StrictProfilBuilder class *inherits from ProfilBuilder* class. The goal of this class is to build a StrictProfile. A StrictProfile is composed by preferences _(*)_ whose alternatives can not be equally ranked. It is used in particular by the import methods.
 
 
 [cols="1,2", options="header"] 
@@ -88,4 +86,4 @@ A StrictProfile is composed by preferences _(*)_ whose alternatives can not be e
 |===
 
 
-_(*)_ NB : Currently, the StrictProfileBuilder class and ProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
+_(*)_ *NB* : Currently, the StrictProfileBuilder class and ProfileBuilder class still uses the old Preference implementation (OldCompletePreferenceImpl) of the project. It should be changed to a CompletePreference.
