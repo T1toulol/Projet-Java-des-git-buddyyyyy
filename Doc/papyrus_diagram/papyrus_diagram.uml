@@ -7109,6 +7109,9 @@ Voter's preferences : AntiSymmetric</body>
       </packagedElement>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
       <packagedElement xmi:type="uml:Interaction" xmi:id="_lh898KvxEeu8XbJrIF6N5w" name="NewGUIDialogBoxDiagram">
         <lifeline xmi:type="uml:Lifeline" xmi:id="_4QncgKvxEeu8XbJrIF6N5w" name=": User " coveredBy="_wli08Kv2Eeu8XbJrIF6N5w _qZzkEav5Eeu8XbJrIF6N5w _xvT8kKv6Eeu8XbJrIF6N5w _xvVKsKv6Eeu8XbJrIF6N5w _7hDcEKv9Eeu8XbJrIF6N5w _1X_6gKv6Eeu8XbJrIF6N5w _QbJQYKv-Eeu8XbJrIF6N5w _r7EmsavyEeu8XbJrIF6N5w"/>
         <lifeline xmi:type="uml:Lifeline" xmi:id="_QcTkcKvyEeu8XbJrIF6N5w" name=": Main" coveredBy="_-e35EKvyEeu8XbJrIF6N5w _H-BUEKvzEeu8XbJrIF6N5w _tKX18KvzEeu8XbJrIF6N5w _tKyFoKvzEeu8XbJrIF6N5w _Gsa3YKv1Eeu8XbJrIF6N5w _PL9Pgav1Eeu8XbJrIF6N5w _YdeeMav1Eeu8XbJrIF6N5w _hkiwYav1Eeu8XbJrIF6N5w _qK9Mkav1Eeu8XbJrIF6N5w _qK9zoKv1Eeu8XbJrIF6N5w _x1N_AKv0Eeu8XbJrIF6N5w"/>
@@ -7194,6 +7197,7 @@ Voter's preferences : AntiSymmetric</body>
         <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_WcL_EKv5Eeu8XbJrIF6N5w" covered="_dF4UEKvyEeu8XbJrIF6N5w"/>
         <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_WcNNMKv5Eeu8XbJrIF6N5w" covered="_dF4UEKvyEeu8XbJrIF6N5w"/>
         <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_x1N_AKv0Eeu8XbJrIF6N5w" name="ActionExecutionSpecification12Finish" covered="_QcTkcKvyEeu8XbJrIF6N5w"/>
+<<<<<<< HEAD
         <message xmi:type="uml:Message" xmi:id="_t1RpkKvyEeu8XbJrIF6N5w" name="Message10" messageSort="asynchCall"/>
         <message xmi:type="uml:Message" xmi:id="_-e3SAKvyEeu8XbJrIF6N5w" name="centerOnScreen()" messageSort="asynchCall" sendEvent="_-e35EKvyEeu8XbJrIF6N5w"/>
         <message xmi:type="uml:Message" xmi:id="_H-AtAKvzEeu8XbJrIF6N5w" name="create(shell)" messageSort="asynchCall" sendEvent="_H-BUEKvzEeu8XbJrIF6N5w"/>
@@ -7224,6 +7228,34 @@ Voter's preferences : AntiSymmetric</body>
 >>>>>>> parent of 9c62ffa (ajout diagramme)
 =======
 >>>>>>> parent of 9c62ffa (ajout diagramme)
+=======
+        <message xmi:type="uml:Message" xmi:id="_t1RpkKvyEeu8XbJrIF6N5w" name="1 Launch SOC Profil Viewer" messageSort="asynchCall"/>
+        <message xmi:type="uml:Message" xmi:id="_-e3SAKvyEeu8XbJrIF6N5w" name="2 centerOnScreen()" messageSort="asynchCall" sendEvent="_-e35EKvyEeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_H-AtAKvzEeu8XbJrIF6N5w" name="3 create(shell)" messageSort="asynchCall" sendEvent="_H-BUEKvzEeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_MycFUKvzEeu8XbJrIF6N5w" name="4 create(tabFolder)" messageSort="asynchCall" receiveEvent="_MycsYavzEeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_aN_rgKvzEeu8XbJrIF6N5w" name="5 create(tabFolder)" messageSort="asynchCall" receiveEvent="_aOASkavzEeu8XbJrIF6N5w" sendEvent="_aOASkKvzEeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_tKXO4KvzEeu8XbJrIF6N5w" name="6 getEditionView()" receiveEvent="_tKX18avzEeu8XbJrIF6N5w" sendEvent="_tKX18KvzEeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_tKxekKvzEeu8XbJrIF6N5w" name="7 editionView" messageSort="reply" receiveEvent="_tKyFoKvzEeu8XbJrIF6N5w" sendEvent="_tKxekavzEeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_GsaQUKv1Eeu8XbJrIF6N5w" name="8 withDefaultModel()" receiveEvent="_GsbecKv1Eeu8XbJrIF6N5w" sendEvent="_Gsa3YKv1Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_PL8ocKv1Eeu8XbJrIF6N5w" name="9 controller" messageSort="reply" receiveEvent="_PL9Pgav1Eeu8XbJrIF6N5w" sendEvent="_PL9PgKv1Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_YdeeMKv1Eeu8XbJrIF6N5w" name="10 buildEditionController(EditionView)" receiveEvent="_YdfFQKv1Eeu8XbJrIF6N5w" sendEvent="_YdeeMav1Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_hkiJUKv1Eeu8XbJrIF6N5w" name="11 EditionController" messageSort="reply" receiveEvent="_hkiwYav1Eeu8XbJrIF6N5w" sendEvent="_hkiwYKv1Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_qK9MkKv1Eeu8XbJrIF6N5w" name="12 shell.open()" messageSort="asynchCall" receiveEvent="_qK9zoKv1Eeu8XbJrIF6N5w" sendEvent="_qK9Mkav1Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_wliN4Kv2Eeu8XbJrIF6N5w" name="13 entrerURL(url)" messageSort="asynchCall" receiveEvent="_wli08av2Eeu8XbJrIF6N5w" sendEvent="_wli08Kv2Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_MqjX0Kv3Eeu8XbJrIF6N5w" name="14 verificationURL(url)" receiveEvent="_Mqj-4av3Eeu8XbJrIF6N5w" sendEvent="_Mqj-4Kv3Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_XcsEsKv3Eeu8XbJrIF6N5w" name="15 True" messageSort="reply" receiveEvent="_XcsrwKv3Eeu8XbJrIF6N5w" sendEvent="_XcsEsav3Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_ShwmUKv4Eeu8XbJrIF6N5w" name="16 openDialog(&quot;charger fichier ou écraser profil&quot;)" receiveEvent="_qZzkEav5Eeu8XbJrIF6N5w" sendEvent="_qZzkEKv5Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_7hCN8Kv9Eeu8XbJrIF6N5w" name="17.1.1 ecraser Profil" messageSort="asynchCall" receiveEvent="_7hDcEav9Eeu8XbJrIF6N5w" sendEvent="_7hDcEKv9Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_-qvJ0Kv9Eeu8XbJrIF6N5w" name="17.1.2 ecraserProfil()" receiveEvent="_-qwX8Kv9Eeu8XbJrIF6N5w" sendEvent="_-qvw4Kv9Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_BjuwMKv-Eeu8XbJrIF6N5w" name="17.1.3 True" messageSort="reply" receiveEvent="_Bjv-UKv-Eeu8XbJrIF6N5w" sendEvent="_BjvXQKv-Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_FaqlgKv-Eeu8XbJrIF6N5w" name="17.1.4 saveProfilEnCours()" messageSort="asynchCall" receiveEvent="_FasasKv-Eeu8XbJrIF6N5w" sendEvent="_FarzoKv-Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_QbICQKv-Eeu8XbJrIF6N5w" name="17.2.1 charger Fichier" messageSort="asynchCall" receiveEvent="_QbJ3cKv-Eeu8XbJrIF6N5w" sendEvent="_QbJQYKv-Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_Uzg-0Kv-Eeu8XbJrIF6N5w" name="17.2.2 effacerModifications()" receiveEvent="_UziM8av-Eeu8XbJrIF6N5w" sendEvent="_UziM8Kv-Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_hfs9kKv-Eeu8XbJrIF6N5w" name="17.2.3 True" messageSort="reply" receiveEvent="_k4O_oav-Eeu8XbJrIF6N5w" sendEvent="_k4O_oKv-Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_josqYKv-Eeu8XbJrIF6N5w"/>
+        <message xmi:type="uml:Message" xmi:id="_npdxIKv-Eeu8XbJrIF6N5w" name="17.2.4 chargerFichier()" messageSort="asynchCall" receiveEvent="_npe_QKv-Eeu8XbJrIF6N5w" sendEvent="_npeYMKv-Eeu8XbJrIF6N5w"/>
+      </packagedElement>
+>>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_O7lbMGbSEeqrtc6dy-mPpg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_O7pFkGbSEeqrtc6dy-mPpg" source="http://www.eclipse.org/uml2/2.0.0/UML">

@@ -4720,6 +4720,9 @@
   </notation:Diagram>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
   <notation:Diagram xmi:id="_vk_JIKvxEeu8XbJrIF6N5w" type="PapyrusUMLSequenceDiagram" name="NewGUIDialogBoxDiagram" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_vk_wMKvxEeu8XbJrIF6N5w" type="Interaction_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_vk_wMavxEeu8XbJrIF6N5w" type="Interaction_NameLabel"/>
@@ -4884,7 +4887,11 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_H-E-cavzEeu8XbJrIF6N5w"/>
       <element xmi:type="uml:Message" href="papyrus_diagram.uml#_H-AtAKvzEeu8XbJrIF6N5w"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H-E-cqvzEeu8XbJrIF6N5w" points="[-10, -5, -210, -60]$[200, 55, 0, 0]"/>
+<<<<<<< HEAD
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H-M6QKvzEeu8XbJrIF6N5w" id="(0.5,0.11764705882352941)"/>
+=======
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H-M6QKvzEeu8XbJrIF6N5w" id="(0.5,0.11764705882352942)"/>
+>>>>>>> parent of ecf26f5 (ajout nouveau diagramme)
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H-M6QavzEeu8XbJrIF6N5w" id="(0.5,0.11764705882352941)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_Myg90KvzEeu8XbJrIF6N5w" type="Message_AsynchEdge" source="_Tif5UKvyEeu8XbJrIF6N5w" target="_dF6wUKvyEeu8XbJrIF6N5w">
