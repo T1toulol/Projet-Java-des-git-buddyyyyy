@@ -1,33 +1,22 @@
 package io.github.oliviercailloux.j_voting.profile_gui;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import io.github.oliviercailloux.j_voting.Alternative;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.*;
 
-import java.io.IOException;
+import org.eclipse.swt.*;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.SelectionListener;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.FileDialog;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.TabFolder;
-import org.eclipse.swt.widgets.TabItem;
-import org.eclipse.swt.widgets.Text;
-
-import io.github.oliviercailloux.j_voting.Alternative;
-
 public class EditionView {
 	private TabFolder tabfolder;
 	private TabItem editionTab;
-	private static Composite mainComposite;
+	private Composite mainComposite;
 	private GridLayout gridLayout;
 	private Map<Button, Text> addAlternativeControls;
 	private Map<Button, Alternative> deleteAlternativeControls;
@@ -65,55 +54,6 @@ public class EditionView {
 	private void initEditionTab() {
 		this.editionTab = new TabItem(this.tabfolder, SWT.NONE);
 		editionTab.setText("Edition");
-		this.addOpen();
-	}
-
-	private void addOpen() {
-		Button btn = new Button(mainComposite, SWT.NONE);
-		btn.setText("Open");
-		btn.addSelectionListener(new SelectionListener() {
-
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				try {
-					actionOpen();
-				} catch (IOException e1) {
-					throw new IllegalStateException();
-				}
-
-			}
-
-			@Override
-			public void widgetDefaultSelected(SelectionEvent e) {
-
-			}
-
-		});
-
-	}
-
-	public static void actionOpen() throws IOException {
-		/*
-		 * // Exemple numéro 2 // Boîte de sélection de fichier à partir du répertoire
-		 * courant File repertoireCourant = null; try { // obtention d'un objet File qui
-		 * désigne le répertoire courant. Le // "getCanonicalFile" n'est pas absolument
-		 * nécessaire mais permet // d'éviter les /Truc/./Chose/ ... repertoireCourant =
-		 * new File(".").getCanonicalFile(); System.out.println("Répertoire courant : "
-		 * + repertoireCourant); } catch (IOException e) { }
-		 * 
-		 * // création de la boîte de dialogue dans ce répertoire courant // (ou dans
-		 * "home" s'il y a eu une erreur d'entrée/sortie, auquel // cas
-		 * repertoireCourant vaut null) JFileChooser dialogue = new
-		 * JFileChooser(repertoireCourant);
-		 * 
-		 * // affichage dialogue.showOpenDialog(null);
-		 * 
-		 * // récupération du fichier sélectionné System.out.println("Fichier choisi : "
-		 * + dialogue.getSelectedFile());
-		 */
-		FileDialog fileChooser = new FileDialog((Shell) mainComposite, SWT.OPEN);
-		fileChooser.setFilterExtensions(new String[] { "*.soc", "*.soi" });
-
 	}
 
 	private void addUserIndication() {
