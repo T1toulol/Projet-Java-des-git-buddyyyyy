@@ -1,5 +1,6 @@
 package io.github.oliviercailloux.j_voting.profiles.management;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
@@ -13,8 +14,9 @@ import com.google.common.graph.Graph;
 
 public class ExportDOT {
 	
-	//private static final Logger LOGGER = LoggerFactory.getLogger(ExportDOT.class.getName());
-
+	@SuppressWarnings("unused")
+	private static final Logger logger = LoggerFactory.getLogger(ExportDOT.class);
+	
 	/**
 	 * Exports the graph from the parameters, converts it to DOT format and writes
 	 * it to the stream from the parameters.
@@ -25,35 +27,14 @@ public class ExportDOT {
 	 */
 	public static void export(Graph<String> graph, OutputStream stream) throws IOException {
 		if (graph == null) {
-			throw new IllegalArgumentException("The graph can't be null.");
-		}
-		if(stream==null) {
-			throw new IllegalArgumentException("The output stream can't be null");
-		}
-		String graphDotFormatString = convertToDot(graph);
-		//LOGGER.debug("export DOT - OutputStream :");
-		stream.write(graphDotFormatString.getBytes(StandardCharsets.UTF_8));
-	}
-
-	/**
-	 * Take the graph and convert it to a DOT format String.
-	 * For more informations about DOT format : http://www.graphviz.org/doc/info/lang.html
-	 * @param graph can't be null
-	 * @return the graph in DOT format
-	 */
-	public static String convertToDot(Graph<String> graph) {
-		//LOGGER.debug("Convert to DOT :");
-		if (graph == null) {
-			throw new IllegalArgumentException("The graph can't be null.");
+			throw new IllegalStateException("The graph can't be null.");
 		}
 		if (!checkFormatVertex(graph.nodes())) {
-			throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format.");
+			throw new IllegalStateException("The name of atleast one vertex can't be converted in DOT format.");
 		}
-		
 		String connector = "";
 		String header = "";
 		String indentation = "  ";
-
 		// Inspired from
 		// https://github.com/oliviercailloux/jmcda-utils/blob/master/src/main/java/org/decision_deck/utils/relation/graph/mess/DOTExporterTemp.java
 		if (graph.isDirected()) {
@@ -64,29 +45,57 @@ public class ExportDOT {
 			header = "graph G {";
 		}
 		// End of inspiration
-
-		StringBuilder graphDotString = new StringBuilder();
-		graphDotString.append(header + System.lineSeparator());
-
+		writeAndSeparateOnStream(header, stream);
+		
 		for(String node : graph.nodes()) {
-			graphDotString.append(indentation + node + ";"+ System.lineSeparator());
+			writeAndSeparateOnStream(indentation + node + ";", stream);
 		}
 		for (String parentNode : graph.nodes()) {
 			for (String successorNode : graph.successors(parentNode)) {
 				if (graph.isDirected()) {
-					graphDotString.append(
-							indentation + parentNode + connector + successorNode + ";" + System.lineSeparator());
+					writeAndSeparateOnStream(indentation + parentNode + connector + successorNode + ";", stream);
+					
 				} else {
-					if (!graphDotString.toString().contains(successorNode + connector + parentNode)) {
-						graphDotString.append(
-								indentation + parentNode + connector + successorNode + ";" + System.lineSeparator());
+					if(!stream.toString().contains(successorNode + connector + parentNode)) {
+						writeAndSeparateOnStream(indentation + parentNode + connector + successorNode + ";", stream);
 					}
 				}
 			}
 		}
-		graphDotString.append("}");
-		//LOGGER.debug("DOT graph : {}", graphDotString);
-		return graphDotString.toString();
+		writeOnStream("}", stream);
+		logger.debug("export DOT - OutputStream {}", stream.toString());
+		
+		
+	}
+	private static void writeOnStream(String str, OutputStream stream) throws IOException {
+		stream.write(str.getBytes(StandardCharsets.UTF_8));
+	}
+	private static void writeAndSeparateOnStream(String str, OutputStream stream) throws IOException {
+		stream.write(str.getBytes(StandardCharsets.UTF_8));
+		stream.write(System.lineSeparator().getBytes(StandardCharsets.UTF_8));
+	}
+
+	/**
+	 * Take the graph and convert it to a DOT format String.
+	 * For more informations about DOT format : http://www.graphviz.org/doc/info/lang.html
+	 * @param graph can't be null
+	 * @return the graph in DOT format
+	 * @throws IOException 
+	 */
+	public static String convertToDot(Graph<String> graph) throws IOException {
+		//LOGGER.debug("Convert to DOT :");
+		if (graph == null) {
+			throw new IllegalArgumentException("The graph can't be null.");
+		}
+		if (!checkFormatVertex(graph.nodes())) {
+			throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format.");
+		}
+
+		ByteArrayOutputStream stream = new ByteArrayOutputStream();
+		export(graph, stream);
+		final String graphDotString = new String(stream.toByteArray());
+		logger.debug("DOT graph : {}", graphDotString);
+		return graphDotString;
 	}
 
 	/**
