@@ -43,7 +43,7 @@ public interface ImmutablePreference extends Preference {
 	 * 
 	 * @param Object to test if it's equals or not
 	 * 
-	 * @return a boolean true if the object is equal or false otherwise
+	 * @return a boolean true if the object is equal or false otherwise.
 	 */
 	@Override
 	boolean equals(Object o);
