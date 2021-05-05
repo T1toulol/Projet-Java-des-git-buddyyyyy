@@ -18,19 +18,35 @@ public class ExportDOT {
 	private static final Logger logger = LoggerFactory.getLogger(ExportDOT.class);
 	
 	/**
-	 * Exports the graph from the parameters, converts it to DOT format and writes
-	 * it to the stream from the parameters.
+	 * Calls the export method with the parameter endLine null.
 	 * 
 	 * @param graph can't be null
 	 * @param stream can't be null
 	 * @throws IOException
 	 */
 	public static void export(Graph<String> graph, OutputStream stream) throws IOException {
+		export(graph, stream, null);
+	}
+	
+	/**
+	 * Exports the graph from the parameters, converts it to DOT format and writes
+	 * it to the stream from the parameters.
+	 * If the parameter endLine is null, it will take the value ";" by default.
+	 * 
+	 * @param graph can't be null
+	 * @param stream can't be null
+	 * @param endLine can be null
+	 * @throws IOException
+	 */
+	public static void export(Graph<String> graph, OutputStream stream, String endLine) throws IOException {
 		if (graph == null) {
 			throw new IllegalStateException("The graph can't be null.");
 		}
 		if (!checkFormatVertex(graph.nodes())) {
 			throw new IllegalStateException("The name of atleast one vertex can't be converted in DOT format.");
+		}
+		if (endLine == null) {
+			endLine = ";";
 		}
 		String connector = "";
 		String header = "";
@@ -48,16 +64,16 @@ public class ExportDOT {
 		writeAndSeparateOnStream(header, stream);
 		
 		for(String node : graph.nodes()) {
-			writeAndSeparateOnStream(indentation + node + ";", stream);
+			writeAndSeparateOnStream(indentation + node + endLine, stream);
 		}
 		for (String parentNode : graph.nodes()) {
 			for (String successorNode : graph.successors(parentNode)) {
 				if (graph.isDirected()) {
-					writeAndSeparateOnStream(indentation + parentNode + connector + successorNode + ";", stream);
+					writeAndSeparateOnStream(indentation + parentNode + connector + successorNode + endLine, stream);
 					
 				} else {
 					if(!stream.toString().contains(successorNode + connector + parentNode)) {
-						writeAndSeparateOnStream(indentation + parentNode + connector + successorNode + ";", stream);
+						writeAndSeparateOnStream(indentation + parentNode + connector + successorNode + endLine, stream);
 					}
 				}
 			}
