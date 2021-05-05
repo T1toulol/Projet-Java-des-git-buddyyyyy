@@ -12,7 +12,7 @@ public class ExportDOTTest {
 	@Test
 	public void testConvertToDotDirected() {
 
-		MutableGraph<String> graph = GraphBuilder.directed().allowsSelfLoops(true).build();
+		MutableGraph<String> graph = GraphBuilder.directed().build();
 		graph.putEdge("a1", "a2");
 		graph.putEdge("a1", "a4");
 		graph.putEdge("a2", "a3");
@@ -39,7 +39,7 @@ public class ExportDOTTest {
 	@Test
 	public void testConvertToDotUndirected() {
 
-		MutableGraph<String> graph = GraphBuilder.undirected().allowsSelfLoops(true).build();
+		MutableGraph<String> graph = GraphBuilder.undirected().build();
 		graph.putEdge("a1", "a2");
 		graph.putEdge("a1", "a4");
 		graph.putEdge("a2", "a3");
