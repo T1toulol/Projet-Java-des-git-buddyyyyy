@@ -26,7 +26,8 @@ public interface MutableLinearPreference extends Preference {
 	public boolean changeOrder(Alternative alternative, int rank);
 
 	/**
-	 * Removes the specified alternative from this preference if it is present. Update the Set<Alternative> and the MutableGraph<Alternative>.
+	 * Removes the specified alternative from this preference if it is present. 
+	 * Update the List<Alternative> and the MutableGraph<Alternative>.
 	 *
 	 * @param alternative to be removed from this preference, if present
 	 * @throws ExceptionType if alternative is not in the graph.
@@ -36,7 +37,7 @@ public interface MutableLinearPreference extends Preference {
 
 	/**
 	 * Adds the specified alternative at the last rank of this preference if it is
-	 * not already present. Update the Set<Alternative> and the MutableGraph<Alternative>.
+	 * not already present. Update the List<Alternative> and the MutableGraph<Alternative>.
 	 *
 	 * @param alternative to be added to this preference
 	 * @throws ExceptionType if alternative is already in the graph.
