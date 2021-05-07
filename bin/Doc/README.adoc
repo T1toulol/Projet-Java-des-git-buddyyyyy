@@ -1,0 +1,35 @@
+= Welcome in the J-Voting Documentation 
+
+== J-Voting basic vocabulary
+
+- *An alternative* is a possible choice among a set.
+- *A preference* is a ranking of alternatives.
+- *A voter* is someone who emitted a preference. 
+- *A profile* gathers all the voters linked to their preference. 
+
+=== Example of a simple J-Voting scenario 
+image:./assets/j-voting-example.png[InterfacesProfilesDiagram]
+
+
+==== Now there are many different types of preferences or profiles in J-Voting.
+
+== *Table of Contents of J-Voting documentation:*
+
+=== Basics
+==== link:chapters/preferenceInterfaces.adoc[1.1 The notion of Preferences]
+==== link:chapters/profileInterfaces.adoc[1.2 The notion of Profile]
+
+=== Graphical User Interface (GUI)
+==== link:chapters/NewGUI.adoc[2.1 Edition GUI implementation]
+==== link:chapters/GUIInputFiles.adoc[2.2 Input/Output Formats]
+==== link:chapters/ImportExportMethods.adoc[2.3 Import/Export Methods]
+
+=== Annexes
+==== link:chapters/OldGUI.adoc[Vizualisation GUI understanding]
+==== link:chapters/decorator.adoc[Decorator documentation]
+
+= Suggestions for the next groups 
+
+==== link:chapters/Sugestions.adoc[Sugestions of work]
+==== link:chapters/profileArchitecture.adoc[Profile architecture proposition]
+==== link:chapters/FromOldCompletePreferenceImplToCompletePreferenceImpl.adoc[OldCompletePreferenceImpl to CompletePreferenceImpl]

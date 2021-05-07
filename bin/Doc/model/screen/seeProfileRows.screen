@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" theme="clean">
+  <widgets xsi:type="model:Window" id="1" x="96" y="64" width="489" height="316" text="J-voting client" measuredWidth="489" measuredHeight="316" verticalScrollbar="true"/>
+  <widgets xsi:type="model:List" id="2" x="106" y="109" text="[x] rows&#xA;[] columns&#xA;[] wrapped&#xA;" measuredWidth="76" measuredHeight="70" border="false" alpha="0">
+    <font/>
+    <items x="0" y="2" width="76" height="22" text="[x] rows"/>
+    <items link="seeProfileColumns.screen" x="0" y="24" width="76" height="22" text="[] columns"/>
+    <items link="seeProfileWrapped.screen" x="0" y="46" width="76" height="22" text="[] wrapped"/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="3" x="112" y="184" width="441" text="Voter 1, 1,2,3,4,5,6&#xA;Voter 2,2,4,3,1,6,5&#xA;Voter 3,4,5,1,2,3,6&#xA;Voter 4,2,4,3,1,6,5&#xA;Voter 5,1,2,4,5,6,3&#xA;Voter 6,3,2,1,5,4,6" measuredWidth="441" measuredHeight="130" selection="0" rowHeight="20" horizontalLines="true" alternative="#eee" verticalLines="false" header="false">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Tabs" id="14" x="96" y="83" width="474" text="Edition,Visualization" measuredWidth="474" measuredHeight="27" selection="1">
+    <items link="createProfile.screen" x="1" y="0" width="58" height="27" text="Edition"/>
+    <items x="59" y="0" width="87" height="27" text="Visualization"/>
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

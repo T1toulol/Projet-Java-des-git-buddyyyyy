@@ -1,0 +1,34 @@
+= J-Voting
+:gitHubUserName: oliviercailloux
+:groupId: io.github.{gitHubUserName}
+:artifactId: j-voting
+:repository: J-Voting
+
+image:https://github.com/{gitHubUserName}/{repository}/workflows/J-Voting%20CI/badge.svg["Build Status", link="https://github.com/{gitHubUserName}/{repository}/actions"]
+image:https://maven-badges.herokuapp.com/maven-central/{groupId}/{artifactId}/badge.svg["Last release", link="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22{groupId}%22%20a%3A%22{artifactId}%22"]
+image:http://www.javadoc.io/badge/{groupId}/{artifactId}.svg["Javadoc", link="http://www.javadoc.io/doc/{groupId}/{artifactId}"]
+
+A Java project developed with students during the https://github.com/oliviercailloux/java-course[Java course] taught at Université Paris-Dauphine (in https://dauphine.psl.eu/formations/licences/informatique-des-organisations/l3-methodes-informatiques-appliquees-pour-la-gestion-des-entreprises[L3 MIAGE Alternance]).
+
+The code is hereby published under the MIT License, with the permission of the contributors.
+
+The project documentation is link:Doc/README.adoc[here].
+
+== Iteration 1
+
+=== Scrum-Master
+
+Maxime
+
+=== Duo 1 and task
+
+Firas ans Chahid => Documentation of bugs
+
+=== Duo 2 and task
+
+Hugo and Nicolas => Export in DOT format
+
+=== Duo 3 and task
+
+Lucas and Sylvain => Set URL preflib
+

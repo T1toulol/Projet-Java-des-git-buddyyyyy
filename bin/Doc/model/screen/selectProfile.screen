@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" theme="clean">
+  <widgets xsi:type="model:Window" id="1" x="96" y="80" width="489" text="File Explorer" measuredWidth="489" measuredHeight="300" verticalScrollbar="true" minimizeButton="true" maximizeButton="true"/>
+  <widgets xsi:type="model:Tree" id="3" x="224" y="152" width="346" height="193" text="Folder One&#xA;-Subfolder One &#xA;--File One&#xA;--profile.soc&#xA;-Subfolder Two&#xA;--File One&#xA;--File Two&#xA;Folder Two&#xA;-Subfolder One&#xA;--File One&#xA;--File Two&#xA;-Subfolder Two&#xA;--File One&#xA;--File Two" measuredWidth="346" measuredHeight="193">
+    <items x="0" y="5" width="346" height="21" text="Folder One"/>
+    <items x="0" y="26" width="346" height="21" text="-Subfolder One "/>
+    <items x="0" y="47" width="346" height="21" text="--File One"/>
+    <items x="0" y="68" width="346" height="21" text="--profile.soc"/>
+    <items x="0" y="89" width="346" height="21" text="-Subfolder Two"/>
+    <items x="0" y="110" width="346" height="21" text="--File One"/>
+    <items x="0" y="131" width="346" height="21" text="--File Two"/>
+    <items x="0" y="152" width="346" height="21" text="Folder Two"/>
+    <items x="0" y="173" width="346" height="21" text="-Subfolder One"/>
+    <items x="0" y="194" width="346" height="21" text="--File One"/>
+    <items x="0" y="215" width="346" height="21" text="--File Two"/>
+    <items x="0" y="236" width="346" height="21" text="-Subfolder Two"/>
+    <items x="0" y="257" width="346" height="21" text="--File One"/>
+    <items x="0" y="278" width="346" height="21" text="--File Two"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:List" id="5" x="96" y="152" width="129" height="193" text="Item One&#xA;Item Two&#xA;Item Three&#xA;Multiple&#xA;Selection&#xA;Works like this&#xA;Table and Tree" measuredWidth="129" measuredHeight="193">
+    <font/>
+    <items x="0" y="2" width="129" height="21" text="Item One"/>
+    <items x="0" y="23" width="129" height="21" text="Item Two"/>
+    <items x="0" y="44" width="129" height="21" text="Item Three"/>
+    <items x="0" y="65" width="129" height="21" text="Multiple"/>
+    <items x="0" y="86" width="129" height="21" text="Selection"/>
+    <items x="0" y="107" width="129" height="21" text="Works like this"/>
+    <items x="0" y="128" width="129" height="21" text="Table and Tree"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="7" x="192" y="351" width="225" text="profile.soc" measuredWidth="225" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="8" x="128" y="351" text="File name : " measuredWidth="66" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="9" x="440" y="350" text="Open" measuredWidth="49" measuredHeight="25" link="seeProfileColumns.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="10" x="496" y="350" text="Cancel" measuredWidth="56" measuredHeight="25" link="createProfile.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="11" x="96" y="124" width="474" measuredWidth="474" measuredHeight="6"/>
+  <widgets xsi:type="model:Label" id="12" x="192" y="129" text="New folder" measuredWidth="64" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="13" x="106" y="129" text="Organize" measuredWidth="53" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="15" x="551" y="129" text="?" measuredWidth="11" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="17" x="99" y="102" width="304" text="This PC > Documents" measuredWidth="304" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="18" x="403" y="102" width="160" text="Search" measuredWidth="160" measuredHeight="24">
+    <font/>
+  </widgets>
+  <hRuler>
+    <guides position="295"/>
+  </hRuler>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
