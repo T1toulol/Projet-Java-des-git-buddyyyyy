@@ -26,22 +26,22 @@ public interface MutableLinearPreference extends Preference {
 	public boolean changeOrder(Alternative alternative, int rank);
 
 	/**
-	 * Removes the specified alternative from this preference if it is present.
+	 * Removes the specified alternative from this preference if it is present. Update the Set<Alternative> and the MutableGraph<Alternative>.
 	 *
 	 * @param alternative to be removed from this preference, if present
-	 * @exception if alternative is not in the graph, it's like if a is not in list.
-	 * @return true if this set contained the specified alternative
+	 * @throws ExceptionType if alternative is not in the graph.
+	 * @return true if the alternative has been removed.
 	 */
 	public boolean removeAlternative(Alternative alternative);
 
 	/**
 	 * Adds the specified alternative at the last rank of this preference if it is
-	 * not already present.
+	 * not already present. Update the Set<Alternative> and the MutableGraph<Alternative>.
 	 *
 	 * @param alternative to be added to this preference
-	 * @exception if alternative is already in the graph. it like if alternative is in the list.
-	 * @return true if this preference did not already contain the specified
-	 *         alternative
+	 * @throws ExceptionType if alternative is already in the graph.
+	 * @return true if the specified alternative has been added to the preference.
+	 * 
 	 */
 	public boolean addAlternative(Alternative alternative);
 
@@ -52,11 +52,9 @@ public interface MutableLinearPreference extends Preference {
 	 * 
 	 * @param alternative1 that will change places with alternative2
 	 * @param alternative2 that will change places with alternative1
-	 * @exception if an alternative is not in the graph.
-	 * @return true if the preference has changed after this call (and, thus, the
-	 *         alternatives are contained in this preference). Or equivalently,
-	 *         false if the specified alternatives are equal and contained in this
-	 *         preference.
+	 * @throws ExceptionType if at least one of the two alternatives is not in the graph or if the alternatives are equal.
+	 * @return true if the preference has changed after this call. 
+	 *         
 	 */
 	public boolean swap(Alternative alternative1, Alternative alternative2);
 

@@ -102,13 +102,10 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 	public boolean removeAlternative(Alternative a) {
 		LOGGER.debug("MutableLinearPreferenceImpl deleteAlternative");
 		Preconditions.checkNotNull(a);
-		checkArgument(list.contains(a), "Impossible to delete an alternative that is not in the graph");
-		if (alternatives.contains(a)) {
-			graph.removeNode(a);
-			list.remove(a);
-			return true;
-		}
-		return false;
+		checkArgument(list.contains(a), "Impossible to delete an alternative which is not already in the graph");
+		graph.removeNode(a);
+		list.remove(a);
+		return true;
 	}
 
 	@Override
@@ -116,10 +113,6 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 		LOGGER.debug("MutablePreferenceImpl addAlternative");
 		Preconditions.checkNotNull(a);
 		checkArgument(!list.contains(a), "The alternative is already in the graph");
-		if (alternatives.contains(a)) {
-			return false;
-		}
-
 		list.add(a);
 		graph.addNode(a);
 
@@ -160,11 +153,8 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 		LOGGER.debug("MutablePreferenceImpl Swap");
 		Preconditions.checkNotNull(alternative1);
 		Preconditions.checkNotNull(alternative2);
-		checkArgument(list.contains(alternative1) && list.contains(alternative2), "Impossible to swap these two alternatives. One of them is not in the graph.");
-		if (alternative1.equals(alternative2) || !(alternatives.contains(alternative1))
-				|| !(alternatives.contains(alternative2))) {
-			return false;
-		}
+		checkArgument(list.contains(alternative1) && list.contains(alternative2), "Impossible to swap these two alternatives. At least one of them is not in the graph.");
+		checkArgument(!alternative1.equals(alternative2));
 
 		boolean op1, op2, op3, op4;
 
