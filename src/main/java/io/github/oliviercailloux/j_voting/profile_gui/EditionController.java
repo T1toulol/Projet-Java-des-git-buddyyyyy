@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.eclipse.swt.events.SelectionAdapter;
@@ -11,6 +12,7 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Button;
 
 import io.github.oliviercailloux.j_voting.Alternative;
+import io.github.oliviercailloux.j_voting.Voter;
 
 public class EditionController {
 	private EditionView editionView;
@@ -31,13 +33,31 @@ public class EditionController {
 	 * Initiate the edition view with the originally default or chosen startModel.
 	 */
 	private void initEditionView() {
-		String voterName = this.controller.getModel().getVoter().toString();
-		editionView.addVoter(voterName);
-
-		Set<Alternative> altSet = this.controller.getModel().getAlternatives();
-		editionView.addPreference(altSet);
+		// String voterName = this.controller.getModel().getVoter().toString();
+		// editionView.addVoter(voterName);
+		testAffichage();
+		// Set<Alternative> altSet = this.controller.getModel().getAlternatives();
+		// editionView.addPreference(altSet);
 		editionView.attachAddAlternativeListener(this.buildAddAlternativeBehavior());
 		editionView.attachDeleteAlternativeListener(this.buildDeleteAlternativeBehavior());
+	}
+
+	private void testAffichage() {
+		Voter voter = Voter.withId(0);
+		Alternative alt1 = Alternative.withId(4);
+		Alternative alt2 = Alternative.withId(5);
+		Alternative alt3 = Alternative.withId(6);
+		Set<Alternative> alternatives = new HashSet<Alternative>();
+
+		alternatives.add(alt1);
+		alternatives.add(alt2);
+		alternatives.add(alt3);
+
+		editionView.addVoter("0");
+		editionView.addPreference(alternatives);
+		editionView.addVoter("0");
+		editionView.addPreference(alternatives);
+
 	}
 
 	public void openFile(String fileToOpen) {
@@ -49,15 +69,15 @@ public class EditionController {
 			// Créer l'objet BufferedReader
 			BufferedReader br = new BufferedReader(fr);
 			this.sb = new StringBuffer();
-			String line;
-			while ((line = br.readLine()) != null) {
-				// ajoute la ligne au buffer
-				sb.append(line);
-				sb.append("\n");
-			}
-			fr.close();
-			System.out.println("Contenu du fichier: ");
-			System.out.println(sb.toString());
+			// String line;
+			// while ((line = br.readLine()) != null) {
+			// ajoute la ligne au
+			// buffer sb.append(line);
+			// sb.append("\n"); }
+			// fr.close();
+			// System.out.println("Contenu du fichier: ");
+			// System.out.println(sb.toString());
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
