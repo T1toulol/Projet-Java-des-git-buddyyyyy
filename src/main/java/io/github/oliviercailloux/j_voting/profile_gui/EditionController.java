@@ -1,15 +1,21 @@
 package io.github.oliviercailloux.j_voting.profile_gui;
 
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Set;
 
-import org.eclipse.swt.events.*;
-import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.widgets.Button;
 
 import io.github.oliviercailloux.j_voting.Alternative;
 
 public class EditionController {
 	private EditionView editionView;
 	private Controller controller;
+	private StringBuffer sb;
 
 	public static EditionController create(EditionView editionView, Controller mainController) {
 		return new EditionController(editionView, mainController);
@@ -32,6 +38,29 @@ public class EditionController {
 		editionView.addPreference(altSet);
 		editionView.attachAddAlternativeListener(this.buildAddAlternativeBehavior());
 		editionView.attachDeleteAlternativeListener(this.buildDeleteAlternativeBehavior());
+	}
+
+	public void openFile(String fileToOpen) {
+		try {
+			// Le fichier d'entrée
+			File file = new File(fileToOpen);
+			// Créer l'objet File Reader
+			FileReader fr = new FileReader(file);
+			// Créer l'objet BufferedReader
+			BufferedReader br = new BufferedReader(fr);
+			this.sb = new StringBuffer();
+			String line;
+			while ((line = br.readLine()) != null) {
+				// ajoute la ligne au buffer
+				sb.append(line);
+				sb.append("\n");
+			}
+			fr.close();
+			System.out.println("Contenu du fichier: ");
+			System.out.println(sb.toString());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
