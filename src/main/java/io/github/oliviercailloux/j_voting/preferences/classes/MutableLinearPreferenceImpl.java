@@ -32,7 +32,6 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 
 	private Voter voter;
 	private MutableGraph<Alternative> graph;
-	private Set<Alternative> alternatives;
 	private List<Alternative> list;
 
 	@SuppressWarnings("unused")
@@ -49,13 +48,11 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 				graph.putEdge(list.get(i), list.get(j));
 			}
 		}
-		this.alternatives = graph.nodes();
 	}
 
 	@Override
 	public String toString() {
-		return MoreObjects.toStringHelper(this).add("Voter", voter).add("Graph", graph).add("Set", alternatives)
-				.add("List", list).toString();
+		return MoreObjects.toStringHelper(this).add("Voter", voter).add("Graph", graph).add("List", list).toString();
 	}
 
 	/**
@@ -222,7 +219,7 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 
 		@Override
 		protected Set<Alternative> delegate() {
-			return delegate.alternatives;
+			return Set.copyOf(delegate.list);
 		}
 
 		@Override
