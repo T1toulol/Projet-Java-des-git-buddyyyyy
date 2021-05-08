@@ -46,7 +46,7 @@ public class ExportDOT {
 			throw new IllegalStateException("The name of atleast one vertex can't be converted in DOT format.");
 		}
 		if (endLine == null) {
-			endLine = ";";
+			endLine = ";"; 
 		}
 		String connector = "";
 		String header = "";
