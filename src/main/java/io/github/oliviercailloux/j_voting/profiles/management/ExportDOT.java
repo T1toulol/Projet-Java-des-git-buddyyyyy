@@ -99,7 +99,7 @@ public class ExportDOT {
 	 * @throws IOException 
 	 */
 	public static String convertToDot(Graph<String> graph) throws IOException {
-		//LOGGER.debug("Convert to DOT :");
+		logger.debug("Convert to DOT :");
 		if (graph == null) {
 			throw new IllegalArgumentException("The graph can't be null.");
 		}
