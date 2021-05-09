@@ -37,9 +37,11 @@ public class ExportDOT {
 	}
 	
 	/**
-	 * Exports the graph from the parameters, converts it to DOT format and writes
+	 * Exports the graph from the parameters, converts it to DOT format and writes (with UTF-8 character encoding)
 	 * it to the stream from the parameters.
-	 * If the parameter endLine is null, it will take the value ";" by default.
+	 * If the parameter endLine is null, it will take the value ";" by default followed by a System.lineSeparator().
+	 * This choice is based on René Nyffenegger examples (https://renenyffenegger.ch/notes/tools/Graphviz/examples/index)
+	 * referenced in the official website about DOT format (https://www.graphviz.org/resources/#simple-examples-and-tutorials).
 	 * 
 	 * @param graph can't be null
 	 * @param stream can't be null
