@@ -16,7 +16,7 @@ public class MainGUI {
 	 */
 	public void displayGUI() {
 		Display display = new Display();
-		Shell shell = new Shell(display, SWT.CLOSE | SWT.RESIZE);
+		Shell shell = new Shell(display, SWT.CLOSE | SWT.RESIZE | SWT.V_SCROLL);
 		shell.setText("J-Voting");
 		shell.setSize(600, 400);
 		centerOnScreen(display, shell);

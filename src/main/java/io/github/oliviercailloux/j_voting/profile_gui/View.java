@@ -1,7 +1,8 @@
 package io.github.oliviercailloux.j_voting.profile_gui;
 
-import org.eclipse.swt.widgets.*;
-import org.eclipse.swt.*;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.TabFolder;
 
 public class View {
 	private Shell mainShell;
@@ -30,8 +31,8 @@ public class View {
 	 * Initialization of the window
 	 */
 	private void initTabFolder() {
-		this.tabfolder = new TabFolder(this.mainShell, SWT.NONE);
-		tabfolder.setSize(600, 400);
+		this.tabfolder = new TabFolder(this.mainShell, SWT.NONE | SWT.V_SCROLL);
+		tabfolder.setSize(10000, 10000);
 	}
 
 	public EditionView getEditionView() {
