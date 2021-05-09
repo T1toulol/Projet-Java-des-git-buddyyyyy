@@ -46,17 +46,15 @@ public class ExportDOT {
 	 * @param endLine can be null
 	 * @throws IOException
 	 */
-	public static void export(Graph<String> graph, OutputStream stream, String endLine) throws IOException {
+	public static void export(Graph<String> graph, OutputStream stream, String endLineArg) throws IOException {
 		if (graph == null) {
-			throw new IllegalStateException("The graph can't be null.");
+			throw new NullPointerException("The graph can't be null.");
 		}
 		if (!checkFormatVertex(graph.nodes())) {
-			throw new IllegalStateException("The name of atleast one vertex can't be converted in DOT format.");
-		}
-		if (endLine == null) {
-			endLine = ";"; 
+			throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format.");
 		}
 
+		final String endLine = endLineArg==null ? ";" : endLineArg;
 		final String header = graph.isDirected() ? "digraph G {" : "graph G {";
 		final String connector = graph.isDirected() ? " -> " : " -- ";
 		final String indentation = "  ";
@@ -72,9 +70,8 @@ public class ExportDOT {
 		
 		writeOnStream("}", stream);
 		logger.debug("export DOT - OutputStream {}", stream.toString());
-		
-		
 	}
+	
 	private static void writeOnStream(String str, OutputStream stream) throws IOException {
 		stream.write(str.getBytes(StandardCharsets.UTF_8));
 	}
