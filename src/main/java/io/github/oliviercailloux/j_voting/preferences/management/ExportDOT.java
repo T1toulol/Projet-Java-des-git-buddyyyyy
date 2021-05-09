@@ -1,4 +1,4 @@
-package io.github.oliviercailloux.j_voting.profiles.management;
+package io.github.oliviercailloux.j_voting.preferences.management;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

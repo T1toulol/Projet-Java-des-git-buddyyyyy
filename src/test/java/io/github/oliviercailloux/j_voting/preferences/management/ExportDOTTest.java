@@ -1,4 +1,4 @@
-package io.github.oliviercailloux.j_voting.profiles.management;
+package io.github.oliviercailloux.j_voting.preferences.management;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 
 import com.google.common.graph.GraphBuilder;
 import com.google.common.graph.MutableGraph;
+
+import io.github.oliviercailloux.j_voting.preferences.management.ExportDOT;
+
 import java.io.IOException;
 
 public class ExportDOTTest {
