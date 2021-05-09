@@ -14,9 +14,9 @@ import com.google.common.graph.EndpointPair;
 import com.google.common.graph.Graph;
 
 /**
- * 
- * @author chat-
- *
+ * The goal of the ExportDOT class is to export Google Guava Graph in DOT Format
+ * The DOT format is a simple file format which describes graphs. This type of file is used by graph visualization applications. 
+ * For more details about DOT format: https://www.graphviz.org/doc/info/lang.html
  */
 
 
@@ -82,7 +82,7 @@ public class ExportDOT {
 
 	/**
 	 * Take the graph and convert it to a DOT format String.
-	 * For more informations about DOT format : http://www.graphviz.org/doc/info/lang.html
+	 * For more informations about DOT format: http://www.graphviz.org/doc/info/lang.html
 	 * @param graph can't be null
 	 * @return the graph in DOT format
 	 * @throws IOException 
@@ -104,9 +104,8 @@ public class ExportDOT {
 	}
 
 	/**
-	 * This method is greatly inspired from the method getVertexId made by M.
-	 * Olivier Cailloux at :
-	 * https://github.com/oliviercailloux/jmcda-utils/blob/master/src/main/java/org/decision_deck/utils/relation/graph/mess/DOTExporterTemp.java
+	 * This method is greatly inspired from the method getVertexId of the {@link org.jgrapht.ext.DOTExporter} class
+	 * For more informations:https://jgrapht.org/javadoc-1.1.0/org/jgrapht/ext/DOTExporter.html
 	 * 
 	 * Return if the nodes' ids respect the dot language described in
 	 * http://www.graphviz.org/doc/info/lang.html Quoted from above mentioned
