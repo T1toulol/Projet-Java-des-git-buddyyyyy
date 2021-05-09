@@ -31,8 +31,14 @@ public class View {
 	 * Initialization of the window
 	 */
 	private void initTabFolder() {
+		/*
+		 * final ScrolledComposite scrolledComposite = new ScrolledComposite(mainShell,
+		 * SWT.H_SCROLL | SWT.V_SCROLL); scrolledComposite.setLayout(new FillLayout());
+		 * this.tabfolder = new TabFolder(mainShell, SWT.BORDER);
+		 * scrolledComposite.setContent(tabfolder); tabfolder.setSize(1000, 1000);
+		 */
 		this.tabfolder = new TabFolder(this.mainShell, SWT.NONE | SWT.V_SCROLL);
-		tabfolder.setSize(10000, 10000);
+		tabfolder.setSize(1000, 1000);
 	}
 
 	public EditionView getEditionView() {

@@ -19,7 +19,6 @@ public class EditionController {
 	private File file;
 	private FileReader fr;
 	private BufferedReader br;
-	private StringBuffer sb;
 	private int voterIdx;
 
 	public static EditionController create(EditionView editionView, Controller mainController) {
@@ -46,26 +45,30 @@ public class EditionController {
 		editionView.attachDeleteAlternativeListener(this.buildDeleteAlternativeBehavior());
 	}
 
-	private void testAffichage() {
+	/**
+	 * Open the SOC profile file
+	 * 
+	 * @param fileToOpen local path to SOC profile files
+	 */
+	public void openFile(String fileToOpen) {
+		int idx;
+		try {
+			file = new File(fileToOpen);
+			fr = new FileReader(file);
+			br = new BufferedReader(fr);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		readFile();
+	}
+
+	/**
+	 * Read the content of SOC profile file
+	 */
+	private void readFile() {
 		try {
 			int idx = 0;
-
-			// Voter voter = Voter.withId(0);
-			// Alternative alt1 = Alternative.withId(5);
-			// Alternative alt2 = Alternative.withId(4);
-			// Alternative alt3 = Alternative.withId(6);
-			// Set<Alternative> alternatives = new LinkedHashSet<Alternative>();
-
-			// alternatives.add(alt1);
-			// alternatives.add(alt2);
-			// alternatives.add(alt3);
-
-			// editionView.addVoter("0");
-			// editionView.addPreference(alternatives);
-			// editionView.addVoter("0");
-			// editionView.addPreference(alternatives);
-			// editionView.addVoter("0");
-			// editionView.addPreference(alternatives);
 
 			String line;
 			while ((line = br.readLine()) != null) {
@@ -73,22 +76,23 @@ public class EditionController {
 					idx++;
 				} else {
 					idx++;
-					addLine(line);
-					sb.append(line);
-					sb.append("\n");
+					displayLine(line);
 				}
 			}
-		} catch (
-
-		IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
 	}
 
-	private void addLine(String line) {
+	/**
+	 * Displays the lines of the SOC profile in the correct format
+	 * 
+	 * @param line lines to displays send one by one by the readFile function
+	 */
+	private void displayLine(String line) {
 		int ind;
-		int vot = 0;
+		String vot;
 		Set<Alternative> alternatives = new LinkedHashSet<Alternative>();
 		for (int i = 1; i < line.length(); i++) {
 			if (line.charAt(i) != ',') {
@@ -99,37 +103,13 @@ public class EditionController {
 		char idx = line.charAt(0);
 		int idx_ = Character.getNumericValue(idx);
 		for (int i = 0; i < idx_; i++) {
-			editionView.addVoter(String.format("%d", voterIdx));
+			vot = "Voter : " + String.format("%d", voterIdx);
+			editionView.addVoter(String.format(vot));
 			editionView.addPreference(alternatives);
 			voterIdx++;
 
 		}
 
-	}
-
-	public void openFile(String fileToOpen) {
-		int idx;
-		try {
-			// Le fichier d'entrée
-			file = new File(fileToOpen);
-			// Créer l'objet File Reader
-			fr = new FileReader(file);
-			// Créer l'objet BufferedReader
-			br = new BufferedReader(fr);
-			this.sb = new StringBuffer();
-			// String line;
-			// while ((line = br.readLine()) != null) {
-			// ajoute la ligne au buffer
-			// sb.append(line);
-			// sb.append("\n"); }
-			// fr.close();
-			// System.out.println("Contenu du fichier: ");
-			// System.out.println(sb.toString());
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		testAffichage();
 	}
 
 	/**

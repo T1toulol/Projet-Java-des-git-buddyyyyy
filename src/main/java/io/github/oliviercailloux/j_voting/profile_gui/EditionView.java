@@ -58,7 +58,14 @@ public class EditionView {
 	 * Initialization of the editing tab window
 	 */
 	private void initEditionTab() {
+		// ScrolledComposite sc = new ScrolledComposite(this.tabfolder, SWT.V_SCROLL |
+		// SWT.H_SCROLL);
 		this.editionTab = new TabItem(this.tabfolder, SWT.NONE);
+		// sc.setExpandHorizontal(true);
+		// sc.setExpandVertical(true);
+		// sc.setContent(mainComposite);
+		// sc.setMinSize(mainComposite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+		// editionTab.setControl(sc);
 		editionTab.setText("Edition");
 	}
 

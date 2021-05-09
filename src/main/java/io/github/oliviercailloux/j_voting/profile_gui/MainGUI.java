@@ -16,7 +16,7 @@ public class MainGUI {
 	 */
 	public void displayGUI() {
 		Display display = new Display();
-		Shell shell = new Shell(display, SWT.CLOSE | SWT.RESIZE | SWT.V_SCROLL);
+		Shell shell = new Shell(display, SWT.CLOSE | SWT.RESIZE);
 		shell.setText("J-Voting");
 		shell.setSize(600, 400);
 		centerOnScreen(display, shell);
@@ -26,6 +26,8 @@ public class MainGUI {
 
 		Controller controller = Controller.withDefaultModel();
 		EditionController editionController = controller.buildEditionController(editionView);
+		// Please replace the path with your local path where you downloaded the SOC
+		// profile file
 		editionController.openFile(
 				"C:\\Users\\Firas\\eclipse-workspace\\projet-j-voting\\src\\main\\resources\\io\\github\\oliviercailloux\\j_voting\\profiles\\management\\profil.soc");
 
