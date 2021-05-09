@@ -123,7 +123,7 @@ public class ExportDOTTest {
 		result += "}";
 
 		assertEquals(result, resultDOTFile);
-	}
+	} 
 	
 	
 }
