@@ -56,19 +56,11 @@ public class ExportDOT {
 		if (endLine == null) {
 			endLine = ";"; 
 		}
-		String connector = "";
-		String header = "";
-		String indentation = "  ";
-		// Inspired from
-		// https://github.com/oliviercailloux/jmcda-utils/blob/master/src/main/java/org/decision_deck/utils/relation/graph/mess/DOTExporterTemp.java
-		if (graph.isDirected()) {
-			connector = " -> ";
-			header = "digraph G {";
-		} else {
-			connector = " -- ";
-			header = "graph G {";
-		}
-		// End of inspiration
+
+		final String header = graph.isDirected() ? "digraph G {" : "graph G {";
+		final String connector = graph.isDirected() ? " -> " : " -- ";
+		final String indentation = "  ";
+
 		writeAndSeparateOnStream(header, stream);
 		
 		for(String node : graph.nodes()) {
