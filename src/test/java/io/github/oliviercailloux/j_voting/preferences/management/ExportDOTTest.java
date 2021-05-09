@@ -7,10 +7,21 @@ import org.junit.jupiter.api.Test;
 
 import com.google.common.graph.GraphBuilder;
 import com.google.common.graph.MutableGraph;
+import com.google.common.io.CharStreams;
 
-import io.github.oliviercailloux.j_voting.preferences.management.ExportDOT;
-
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
 
 public class ExportDOTTest {
 
@@ -79,6 +90,39 @@ public class ExportDOTTest {
 		
 		assertTrue(graphDotFormat.equals(result1)||graphDotFormat.equals(result2));
 
+	}
+	
+	
+	@Test
+	public void testExportDotToFile() throws IOException {
+
+		MutableGraph<String> graph = GraphBuilder.directed().build();
+		graph.putEdge("a1", "a2");
+		graph.putEdge("a1", "a4");
+		graph.putEdge("a2", "a3");
+		graph.putEdge("a2", "a4");
+		graph.putEdge("a3", "a4");
+
+		File file = new File("./src/test/resources/io/github/oliviercailloux/j_voting/preferences/management/FileDOTtest.dot");
+		OutputStream fop = new FileOutputStream(file);
+		ExportDOT.export(graph, fop);
+		
+        FileInputStream in = new FileInputStream(file);
+        String resultDOTFile = CharStreams.toString(new InputStreamReader(in, "UTF-8"));
+
+		String result = "digraph G {" + System.lineSeparator();
+		result += "  a1;"+ System.lineSeparator();
+		result += "  a2;"+ System.lineSeparator();
+		result += "  a4;"+ System.lineSeparator();
+		result += "  a3;"+ System.lineSeparator();
+		result += "  a1 -> a2;" + System.lineSeparator();
+		result += "  a1 -> a4;" + System.lineSeparator();
+		result += "  a2 -> a3;" + System.lineSeparator();
+		result += "  a2 -> a4;" + System.lineSeparator();
+		result += "  a3 -> a4;" + System.lineSeparator();
+		result += "}";
+
+		assertEquals(result, resultDOTFile);
 	}
 	
 	
