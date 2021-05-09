@@ -87,6 +87,15 @@ image:../assets/NewGUIClassDiagram.png[NewGUIClassDiagram]
 |cleanAltContent(Set<Alternative> altList)
 | remove of the alternative related control in the view
 
+| openFile(String fileToOpen)
+| Open the SOC profile file
+
+| readFile()
+| Read the content of SOC profile file
+
+| displayLine(String line)
+| Displays the lines of the SOC profile in the correct format
+
 |===
 === *VisualisationController*
 [cols="1,1", options="header"] 
