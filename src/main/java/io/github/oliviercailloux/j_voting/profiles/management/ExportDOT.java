@@ -10,7 +10,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Objects;
+import com.google.common.graph.EndpointPair;
 import com.google.common.graph.Graph;
+
+/**
+ * 
+ * @author chat-
+ *
+ */
+
 
 public class ExportDOT {
 	
@@ -66,18 +74,10 @@ public class ExportDOT {
 		for(String node : graph.nodes()) {
 			writeAndSeparateOnStream(indentation + node + endLine, stream);
 		}
-		for (String parentNode : graph.nodes()) {
-			for (String successorNode : graph.successors(parentNode)) {
-				if (graph.isDirected()) {
-					writeAndSeparateOnStream(indentation + parentNode + connector + successorNode + endLine, stream);
-					
-				} else {
-					if(!stream.toString().contains(successorNode + connector + parentNode)) {
-						writeAndSeparateOnStream(indentation + parentNode + connector + successorNode + endLine, stream);
-					}
-				}
-			}
+		for(EndpointPair<String> edge : graph.edges()) {
+			writeAndSeparateOnStream(indentation + edge.nodeU() + connector + edge.nodeV() + endLine, stream);
 		}
+		
 		writeOnStream("}", stream);
 		logger.debug("export DOT - OutputStream {}", stream.toString());
 		
