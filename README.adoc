@@ -76,15 +76,15 @@ Lucas
 
 === Duo 1 and task
 
-Hugo and Sylvain => Decorator
+Hugo and Sylvain => Ils continuent le travail commencé dans cette PR #9 : https://github.com/oliviercailloux-org/projet-j-voting/pull/9#pullrequestreview-635973419 .Ils souhaitent corriger et compléter les diagrammes de classe et de séquence liés au decorator.
 
 === Duo 2 and task
 
-Chahid and Firas => Preflib and GUI
+Chahid and Firas => Preflib and GUI, leur travail fait suite à cette PR #11 : https://github.com/oliviercailloux-org/projet-j-voting/pull/11#pullrequestreview-635983537
 
 === Duo 3 and task
 
-Nicolas and Maxime => DOT export
+Nicolas and Maxime => DOT export,  enfin, Nicolas et Maxime souhaitent continuer le travail entamé dans cette PR #12 : https://github.com/oliviercailloux-org/projet-j-voting/pull/12#pullrequestreview-636054061
 
 == Iteration 1 JAVA
 
