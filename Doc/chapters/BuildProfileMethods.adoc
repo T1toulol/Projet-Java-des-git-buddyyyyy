@@ -7,7 +7,7 @@
 
 The ProfileBuilder class allows to create a Profile (composed of Voters and their Preference _(*)_ ). It is used in particular by the import methods.
 
-image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
+image:../assets/profilebuilder_diag_class.PNG[Profile Builder - Class Diagram]
 
 
 
@@ -55,7 +55,7 @@ image:../assets/profilebuilder_diag_class.png[Profile Builder - Class Diagram]
 
 == StrictProfileBuilder
 
-image:../assets/strictprofilebuilder_diag_class.png[Strict Profile Builder - Class Diagram] 
+image:../assets/strictprofilebuilder_diag_class.PNG[Strict Profile Builder - Class Diagram] 
 
 
 The StrictProfilBuilder class *inherits from ProfilBuilder* class. The goal of this class is to build a StrictProfile. A StrictProfile is composed by preferences _(*)_ whose alternatives can not be equally ranked. It is used in particular by the import methods.
