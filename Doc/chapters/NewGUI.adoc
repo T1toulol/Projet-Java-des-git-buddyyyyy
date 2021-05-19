@@ -95,6 +95,21 @@ image:../assets/NewGUIClassDiagram.png[NewGUIClassDiagram]
 |cleanAltContent(Set<Alternative> altList)
 | remove of the alternative related control in the view
 
+|exist(String url)
+| functions are the to verify that the file exists
+
+|isWrittable(String url)
+| functions are the to verify that we can write in the file
+
+|overWriteProfil(String url)
+| function that will remove the data that is in the URL file and launch teh function saveProfilInProgress(String url)
+
+|saveProfilInProgress(String url)
+| This is a function that will save the current profile in the URL file
+
+|loadFile(String url)
+| This is a function that will write the data from the URL profile instead of those in the current profile
+
 |===
 === *VisualisationController*
 [cols="1,1", options="header"] 
