@@ -107,9 +107,9 @@ Lucas and Maxime => Corrections demandées dans la PR #25 : https://github.com/o
 Pour être plus précis, ils vont effectuer les modifications suivantes :
 
 - Corriger les erreurs de convention de nommage.
-- Ne pas répéter les opérations dans les classes qui implémentent une interface
-- Corriger le fait que MLID n'est pas détenu par MLPI.
-- Pas de méthode verifyModification sur GraphView.
+- Ne pas répéter les opérations dans les classes qui implémentent une interface dans le diagramme de classe.
+- Corriger le fait que MLID n'est pas détenu par MLPI dans le diagramme de classe.
+- Pas de méthode verifyModification sur GraphView dans le diagramme de séquence.
 
 == Iteration 1 JAVA
 
