@@ -98,11 +98,11 @@ Nicolas and Firas => Modifier la page « Import/Export methods » depuis les
 
 Pour être plus précis, ils vont effectuer les modifications suivantes :
 
--Rendre moins « verbeuse » la documentation.
--Rajouter la méthode convertToDot() dans le diagramme d’ExportDOT.
--Retirer la méthode surchargée export() prenant une préférence en argument. 
--Documenter le plug-in d’Eclipse (https://github.com/eclipse/gef/wiki/DOT-User-Guide) et indiquer qu’il fonctionne bien avec les méthodes proposées. 
--Proposer un lien vers les exemples de René Nyffenegger (au bon endroit) que vous nous avez montré en Java. Ses exemples sont très explicites et très variés et pourraient être utiles à la compréhension du format DOT (…) aux groupes futurs. 
+- Rendre moins « verbeuse » la documentation.
+- Rajouter la méthode convertToDot() dans le diagramme d’ExportDOT.
+- Retirer la méthode surchargée export() prenant une préférence en argument. 
+- Documenter le plug-in d’Eclipse (https://github.com/eclipse/gef/wiki/DOT-User-Guide) et indiquer qu’il fonctionne bien avec les méthodes proposées. 
+- Proposer un lien vers les exemples de René Nyffenegger (au bon endroit) que vous nous avez montré en Java. Ses exemples sont très explicites et très variés et pourraient être utiles à la compréhension du format DOT (…) aux groupes futurs. 
 
 === Duo 2 and task
 
