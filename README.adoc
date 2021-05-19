@@ -14,7 +14,7 @@ The code is hereby published under the MIT License, with the permission of the c
 
 The project documentation is link:Doc/README.adoc[here].
 
-== Iteration 1
+== Iteration UML 1
 
 === Scrum-Master
 
@@ -32,22 +32,115 @@ Hugo and Nicolas => Export in DOT format
 
 Lucas and Sylvain => Set URL preflib
 
-
-
-== Iteration 2
+== Iteration UML 2
 
 === Scrum-Master
 
-Chahid 
+Chahid
 
-=== Duo 1 and tasks
+=== Duo 1 and task
 
-Firas and Hugo => Implementation of a class and sequence diagram (Decorator)
+Firas and Hugo  => Implementation of a class and sequence diagram (Decorator)
 
-=== Duo 2 and tasks
+=== Duo 2 and task
 
-Lucas and Nicolas => Export in DOT format
+Lucas and Nicolas => Adjustments and export in DOT format 
 
-=== Duo 3 and tasks
+=== Duo 3 and task
 
-Maxime and Sylvain => Gui modeling and implementation of the sequence diagram (preflib)
+Maxime and Sylvain => Import an external profile via an url (preflib)
+
+== Iteration UML 3
+
+=== Scrum-Master
+
+Firas
+
+=== Duo 1 and task
+
+Maxime and Hugo  => Complete the class diagram and correct the sequence diagram (Decorator)
+
+=== Duo 2 and task
+
+Nicloas and Sylvain => Documentation package management and MutableCompletePreference 
+
+=== Duo 3 and task
+
+Chahid and Lucas => Improvement of the new GUI and modification of the profile doc
+
+== Iteration UML 4
+
+=== Scrum-Master
+
+Lucas
+
+=== Duo 1 and task
+
+Hugo and Sylvain => Ils continuent le travail commencé dans cette PR #9 : https://github.com/oliviercailloux-org/projet-j-voting/pull/9#pullrequestreview-635973419 .Ils souhaitent corriger et compléter les diagrammes de classe et de séquence liés au decorator.
+
+=== Duo 2 and task
+
+Chahid and Firas => Preflib and GUI, leur travail fait suite à cette PR #11 : https://github.com/oliviercailloux-org/projet-j-voting/pull/11#pullrequestreview-635983537
+
+=== Duo 3 and task
+
+Nicolas and Maxime => DOT export,  enfin, Nicolas et Maxime souhaitent continuer le travail entamé dans cette PR #12 : https://github.com/oliviercailloux-org/projet-j-voting/pull/12#pullrequestreview-636054061
+
+== Iteration 1 JAVA
+
+=== Scrum-Master
+
+Firas
+
+=== Duo 1 and task
+
+Maxime and Hugo  => Implement the classes of the new profile architecture
+
+- Vérifier que toutes les méthodes de l’interface Preference sont correctement implémentées (comme cela est suggéré dans la documentation : https://github.com/oliviercailloux-org/projet-j-voting/blob/main/Doc/chapters/preferenceInterfaces.adoc)
+- Modifier les méthodes #addEquivalence et #setAsLeastAsGood de la classe MutablePreference
+- Ajouter #asStrictGraph dans Preference
+- Ajouter #equals dans ImmutablePreference
+- Dans les méthodes #addAlternative, #removeAlternative et #swap de la classe MutableLinearPreference, lever une exception si les alternatives sont déjà où ne sont pas déjà dans le graphe, empêchant la méthode d’effectuer l’action demandée.
+- Permettre de récupérer un NavigableSet d’alternatives depuis une ImmutableLinearPreference
+Ces dernières propositions proviennent de la section « à envisager » (https://github.com/oliviercailloux/projets/blob/master/J-Voting.adoc) et pourront faire l'objet d'une autre itération.
+
+=== Duo 2 and task
+
+Nicloas and Sylvain => Creating the ExportDOT class and its methods
+
+Ils ont décidé d'appliquer les suggestions données dans l'évaluation de la PR #6 voici le lien : https://github.com/oliviercailloux-org/projet-j-voting/pull/6
+
+=== Duo 3 and task
+
+Chahid and Lucas => improvement of the GUI and the profile_GUI and implementation of input box and the open/save as button
+
+- implémenter une boite d'entrée rouge
+- implémenter un bouton open/save as
+- Améliorer la GUI qui permettra de faire un fonctionnement basique 
+- Amélioration du package profile_GUI en particulier de editionView
+
+== Iteration 2 JAVA
+
+=== Scrum-Master
+
+Lucas
+
+=== Duo 1 and task
+
+Hugo et Sylvain => Modifications requested in the following PRs :
+
+- PR #15 : https://github.com/oliviercailloux-org/projet-j-voting/pull/15#pullrequestreview-640930502
+- PR #16 : https://github.com/oliviercailloux-org/projet-j-voting/pull/16#pullrequestreview-640972921
+- PR #17 : https://github.com/oliviercailloux-org/projet-j-voting/pull/17#pullrequestreview-641013709
+- PR #18 : https://github.com/oliviercailloux-org/projet-j-voting/pull/18#pullrequestreview-641037660
+
+And test the asGraph () method and implement the asStrictGraph () method.
+
+=== Duo 2 and task
+
+Chahid et Firas => Continue to work on the GUI, PR #20 : https://github.com/oliviercailloux-org/projet-j-voting/pull/20#pullrequestreview-641453976
+
+
+=== Duo 3 and task
+
+Nicolas et Maxime => ExportDOT, work requested in PR #19 : https://github.com/oliviercailloux-org/projet-j-voting/pull/19#pullrequestreview-641378958 
