@@ -86,6 +86,30 @@ Chahid and Firas => Preflib and GUI, leur travail fait suite à cette PR #11 : h
 
 Nicolas and Maxime => DOT export,  enfin, Nicolas et Maxime souhaitent continuer le travail entamé dans cette PR #12 : https://github.com/oliviercailloux-org/projet-j-voting/pull/12#pullrequestreview-636054061
 
+== Iteration UML 5
+
+=== Scrum-Master
+
+Sylvain
+
+=== Duo 1 and task
+
+Nicolas and Firas => 
+
+=== Duo 2 and task
+
+Hugo et Chahid => 
+
+=== Duo 3 and task
+
+Lucas and Maxime => Corrections demandées dans la PR #25 : https://github.com/oliviercailloux-org/projet-j-voting/pull/25#pullrequestreview-652408576
+
+Pour être plus précis, ils vont :
+- Corriger les erreurs de convention de nommage.
+- Ne pas répéter les opérations dans les classes qui implémentent une interface
+- Corriger le fait que MLID n'est pas détenu par MLPI.
+- Pas de méthode verifyModification sur GraphView.
+
 == Iteration 1 JAVA
 
 === Scrum-Master
