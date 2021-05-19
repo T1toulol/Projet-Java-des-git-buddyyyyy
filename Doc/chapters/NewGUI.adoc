@@ -8,6 +8,14 @@ image:../assets/GUIUseCaseDiagram.png[GUIUseCaseDiagram]
 
 Currently, the GUI enables the user to view a SOC profile (either in rows, columns or wrapped visualization). For the moment the GUI only accepts .soc files already filled.
 
+=== GUI Sequence Diagram
+
+image:../assets/NewGUIDialogBoxDiagram.png[GUISequenceDiagram]
+
+This diagram represents one of the scenario of the teacher's suggestion here is the scenario:
+Si l’utilisateur tape une URL qu’on peut écrire et que le fichier existe, alors une boite de dialogue s’ouvre pour demander s’il faut charger le fichier (et perdre les modifications en cours) ou l’écraser avec le profil en cours d’édition. Dans les deux cas, le nom reste dans la boite.
+All new functions of this diagram are explained in the tables below
+
 === GUI Modeling
 
 image:../assets/GUIMainMenu.png[GUIMainMenu]
@@ -86,15 +94,6 @@ image:../assets/NewGUIClassDiagram.png[NewGUIClassDiagram]
 
 |cleanAltContent(Set<Alternative> altList)
 | remove of the alternative related control in the view
-
-| openFile(String fileToOpen)
-| Open the SOC profile file
-
-| readFile()
-| Read the content of SOC profile file
-
-| displayLine(String line)
-| Displays the lines of the SOC profile in the correct format
 
 |===
 === *VisualisationController*
@@ -194,6 +193,12 @@ Creation and display of the add button.
 
 |removeControl(Event e)
 |Delete window control
+
+|enterURL(String url)
+|Enterurl which is a function that will be triggered when the user will write a URL in the input box and press the Enter key.
+
+|openDialog(String)
+|function that will open a dialog box to the user after the exist and iswrittable functions is sent a real bolean, in the dialog box the user will be able to load the file or overwrite the profile, if the User Clics to overwrite the listener of button will then launch the OverwriteProfil function in the EdtionController Otherwise if it clicks on Load File The listener of the button will launch the LoadFile function in the EditionController
 
 |===
 
