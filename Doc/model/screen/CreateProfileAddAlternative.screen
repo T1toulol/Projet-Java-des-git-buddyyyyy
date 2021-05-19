@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" theme="clean">
   <widgets xsi:type="model:Window" id="39" x="96" y="56" width="489" height="447" text="J-voting client" measuredWidth="489" measuredHeight="447" verticalScrollbar="true"/>
-  <widgets xsi:type="model:Label" id="40" x="256" y="152" measuredWidth="6" measuredHeight="59">
+  <widgets xsi:type="model:Label" id="40" x="256" y="152" measuredWidth="6" measuredHeight="67">
     <font size="43px"/>
-  </widgets>
-  <widgets xsi:type="model:TextField" id="41" x="176" y="118" width="213" text="Profile name" measuredWidth="213" measuredHeight="23">
-    <font italic="true"/>
   </widgets>
   <widgets xsi:type="model:TextField" id="42" x="112" y="157" width="361" text="Voter1 name" measuredWidth="361" measuredHeight="23">
     <font italic="true"/>
@@ -19,22 +16,19 @@
   <widgets xsi:type="model:TextField" id="45" x="144" y="245" width="273" text="Alternative 3" measuredWidth="273" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="46" x="128" y="190" text="1." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="46" x="128" y="190" text="1." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="47" x="128" y="218" text="2." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="47" x="128" y="218" text="2." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="48" x="128" y="245" text="3." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="48" x="128" y="245" text="3." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
   <widgets xsi:type="model:Icon" id="49" x="484" y="161" measuredWidth="16" measuredHeight="16" icon="minus (small)"/>
   <widgets xsi:type="model:Tabs" id="50" x="96" y="75" width="474" text="Edition,Visualization" measuredWidth="474" measuredHeight="27" selection="0">
-    <items x="1" y="0" width="60" height="27" text="Edition"/>
-    <items link="seeProfileColumns.screen" x="61" y="0" width="93" height="27" text="Visualization"/>
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:Button" id="51" x="423" y="117" text="Open existing profile" measuredWidth="137" measuredHeight="25" link="selectProfile.screen">
+    <items x="1" y="0" width="58" height="27" text="Edition"/>
+    <items link="seeProfileColumns.screen" x="59" y="0" width="87" height="27" text="Visualization"/>
     <font/>
   </widgets>
   <widgets xsi:type="model:Icon" id="53" x="422" y="194" measuredWidth="16" measuredHeight="16" icon="trash (small)"/>
@@ -43,17 +37,17 @@
   <widgets xsi:type="model:TextField" id="58" x="144" y="272" width="273" text="Alternative 4" measuredWidth="273" measuredHeight="23">
     <font italic="false"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="59" x="128" y="272" text="4." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="59" x="128" y="272" text="4." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
   <widgets xsi:type="model:Icon" id="78" x="422" y="276" measuredWidth="16" measuredHeight="16" icon="trash (small)" link="createProfile.screen"/>
   <widgets xsi:type="model:TextField" id="79" x="144" y="300" width="273" text="New alternative" measuredWidth="273" measuredHeight="23">
     <font italic="true"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="80" x="128" y="300" text="5." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="80" x="128" y="300" text="5." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="81" x="256" y="331" measuredWidth="6" measuredHeight="59">
+  <widgets xsi:type="model:Label" id="81" x="256" y="331" measuredWidth="6" measuredHeight="67">
     <font size="43px"/>
   </widgets>
   <widgets xsi:type="model:TextField" id="82" x="112" y="336" width="361" text="Voter2 name" measuredWidth="361" measuredHeight="23">
@@ -68,13 +62,13 @@
   <widgets xsi:type="model:TextField" id="85" x="144" y="424" width="273" text="Alternative 3" measuredWidth="273" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="86" x="128" y="369" text="1." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="86" x="128" y="369" text="1." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="87" x="128" y="397" text="2." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="87" x="128" y="397" text="2." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="88" x="128" y="424" text="3." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="88" x="128" y="424" text="3." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
   <widgets xsi:type="model:Icon" id="89" x="484" y="340" measuredWidth="16" measuredHeight="16" icon="minus (small)"/>
@@ -84,20 +78,18 @@
   <widgets xsi:type="model:TextField" id="96" x="144" y="451" width="273" text="Alternative 4" measuredWidth="273" measuredHeight="23">
     <font italic="false"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="97" x="128" y="451" text="4." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="97" x="128" y="451" text="4." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
   <widgets xsi:type="model:Icon" id="99" x="422" y="455" measuredWidth="16" measuredHeight="16" icon="trash (small)"/>
   <widgets xsi:type="model:TextField" id="100" x="144" y="479" width="273" text="New alternative" measuredWidth="273" measuredHeight="23">
     <font italic="true"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="101" x="128" y="479" text="5." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="101" x="128" y="479" text="5." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
   <widgets xsi:type="model:Icon" id="102" x="399" y="304" measuredWidth="16" measuredHeight="16" icon="squared-plus (small)"/>
   <widgets xsi:type="model:Icon" id="103" x="399" y="483" measuredWidth="16" measuredHeight="16" icon="squared-plus (small)"/>
-<<<<<<< HEAD
-=======
   <widgets xsi:type="model:Note" id="110" x="600" y="32" width="169" height="175" text="The alternatives are movable. To classify them, you have to drag and drop them at the good place. You can modify them by clicking in the box. If the user rename an alternative in a voter preference, the alternative is renamed in all the voters preferences.&#xD;&#xA; " measuredWidth="169" measuredHeight="175">
     <font/>
   </widgets>
@@ -111,7 +103,6 @@
   <widgets xsi:type="model:TextField" id="116" x="544" y="28" width="41" text=" 2/5" measuredWidth="41" measuredHeight="29" textAlignment="Center">
     <font size="16px"/>
   </widgets>
->>>>>>> 1dc5126db22150570ca304d8bea47a0d8720fa0d
   <hRuler/>
   <vRuler/>
   <font size="12px"/>
