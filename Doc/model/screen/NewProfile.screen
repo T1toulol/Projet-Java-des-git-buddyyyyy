@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" theme="clean">
-<<<<<<< HEAD
   <widgets xsi:type="model:Window" id="1" x="96" y="56" width="489" height="447" text="J-voting client" measuredWidth="489" measuredHeight="447" verticalScrollbar="true"/>
-  <widgets xsi:type="model:Arrow" id="45" x="280" y="17" width="205" height="174" measuredWidth="205" measuredHeight="174" left="false" right="true" direction="bottom"/>
-  <widgets xsi:type="model:Label" id="2" x="256" y="152" measuredWidth="6" measuredHeight="59">
-=======
-  <widgets xsi:type="model:Window" id="101" x="96" y="56" width="489" height="447" text="J-voting client" measuredWidth="489" measuredHeight="447" verticalScrollbar="true"/>
   <widgets xsi:type="model:Label" id="2" x="256" y="152" measuredWidth="6" measuredHeight="67">
->>>>>>> 1dc5126db22150570ca304d8bea47a0d8720fa0d
     <font size="43px"/>
-  </widgets>
-  <widgets xsi:type="model:TextField" id="7" x="176" y="118" width="213" text="Profile name" measuredWidth="213" measuredHeight="23">
-    <font italic="true"/>
   </widgets>
   <widgets xsi:type="model:TextField" id="18" x="112" y="157" width="361" text="Voter1 name" measuredWidth="361" measuredHeight="23">
     <font italic="true"/>
@@ -25,22 +16,19 @@
   <widgets xsi:type="model:TextField" id="27" x="144" y="245" width="273" text="Alternative 3" measuredWidth="273" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="38" x="128" y="190" text="1." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="38" x="128" y="190" text="1." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="39" x="128" y="218" text="2." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="39" x="128" y="218" text="2." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="40" x="128" y="245" text="3." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="40" x="128" y="245" text="3." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
   <widgets xsi:type="model:Icon" id="49" x="484" y="161" measuredWidth="16" measuredHeight="16" icon="minus (small)"/>
   <widgets xsi:type="model:Tabs" id="54" x="96" y="75" width="474" text="Edition,Visualization" measuredWidth="474" measuredHeight="27" selection="0">
-    <items x="1" y="0" width="60" height="27" text="Edition"/>
-    <items link="seeProfileColumns.screen" x="61" y="0" width="93" height="27" text="Visualization"/>
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:Button" id="55" x="423" y="117" text="Open existing profile" measuredWidth="137" measuredHeight="25" link="selectProfile.screen">
+    <items x="1" y="0" width="58" height="27" text="Edition"/>
+    <items link="seeProfileColumns.screen" x="59" y="0" width="87" height="27" text="Visualization"/>
     <font/>
   </widgets>
   <widgets xsi:type="model:Icon" id="58" x="423" y="194" measuredWidth="16" measuredHeight="16" icon="trash (small)"/>
@@ -49,7 +37,7 @@
   <widgets xsi:type="model:TextField" id="69" x="144" y="272" width="273" text="new alternative" measuredWidth="273" measuredHeight="23">
     <font italic="true"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="70" x="128" y="272" text="4." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="70" x="128" y="272" text="4." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
   <widgets xsi:type="model:TextField" id="71" x="112" y="309" width="361" text="Voter2 name" measuredWidth="361" measuredHeight="23">
@@ -64,13 +52,13 @@
   <widgets xsi:type="model:TextField" id="74" x="144" y="397" width="273" text="Alternative 3" measuredWidth="273" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="75" x="128" y="342" text="1." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="75" x="128" y="342" text="1." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="76" x="128" y="370" text="2." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="76" x="128" y="370" text="2." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="77" x="128" y="397" text="3." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="77" x="128" y="397" text="3." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
   <widgets xsi:type="model:Icon" id="78" x="484" y="313" measuredWidth="16" measuredHeight="16" icon="minus (small)"/>
@@ -80,7 +68,7 @@
   <widgets xsi:type="model:TextField" id="85" x="144" y="424" width="273" text="new alternative" measuredWidth="273" measuredHeight="23">
     <font italic="true"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="86" x="128" y="424" text="4." measuredWidth="18" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="86" x="128" y="424" text="4." measuredWidth="15" measuredHeight="23">
     <font/>
   </widgets>
   <widgets xsi:type="model:TextField" id="87" x="112" y="456" width="361" text="New voter" measuredWidth="361" measuredHeight="23">
@@ -89,35 +77,26 @@
   <widgets xsi:type="model:Icon" id="88" x="398" y="276" measuredWidth="16" measuredHeight="16" icon="squared-plus (small)" link="CreateProfileAddAlternative.screen"/>
   <widgets xsi:type="model:Icon" id="89" x="398" y="428" measuredWidth="16" measuredHeight="16" icon="squared-plus (small)"/>
   <widgets xsi:type="model:Icon" id="90" x="454" y="460" measuredWidth="16" measuredHeight="16" icon="squared-plus (small)" link="CreateScreenAddVoter.screen"/>
-<<<<<<< HEAD
-  <hRuler/>
-=======
-  <widgets xsi:type="model:Button" id="93" x="139" y="116" width="102" text="Open/Save as" measuredWidth="102" measuredHeight="25" link="selectProfile.screen">
+  <widgets xsi:type="model:Button" id="93" x="128" y="116" width="102" text="Open/Save as" measuredWidth="102" measuredHeight="25" link="selectProfile.screen">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="94" x="319" y="117" width="241" text="Profile name" measuredWidth="241" measuredHeight="23">
+  <widgets xsi:type="model:TextField" id="94" x="304" y="117" width="241" text="Profile name" measuredWidth="241" measuredHeight="23">
     <font italic="true"/>
   </widgets>
-  <widgets xsi:type="model:Arrow" id="95" x="368" y="128" width="305" height="215" measuredWidth="305" measuredHeight="215"/>
-  <widgets xsi:type="model:Note" id="97" x="672" y="328" width="209" height="101" text="If the user put an URL and the corresponding file does not exist,  the current profile is saved under that name in the current folder, and the name in the box is kept.&#xD;&#xA;" measuredWidth="209" measuredHeight="101">
+  <widgets xsi:type="model:Arrow" id="103" x="544" y="125" width="384" height="8" measuredWidth="384" measuredHeight="8"/>
+  <widgets xsi:type="model:Note" id="104" x="616" y="116" width="193" height="179" text="The file can be either saved in the url or overwrited by the url (you lose all the modifications)&#xD;&#xA;" measuredWidth="193" measuredHeight="179">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Arrow" id="98" x="368" y="139" width="285" height="8" measuredWidth="285" measuredHeight="8" left="false" right="true" direction="bottom"/>
-  <widgets xsi:type="model:Alert" id="99" x="652" y="85" width="497" height="119" text="Alert&#xA;Destination already contains file &quot;xxx.soc&quot;. Do you want to overwrite the file and lose the current modifications ?&#xA;&#xA;Yes,No, Cancel" measuredWidth="497" measuredHeight="119" icon="warning (large)">
-    <items x="212" y="82" width="80" height="22" text="Yes"/>
-    <items x="307" y="82" width="80" height="22" text="No"/>
-    <items x="402" y="82" width="80" height="22" text="Cancel"/>
-    <font size="11px"/>
-    <note> If the user types an URL and the file exists, a dialog box opens asking wether to load the fil or overwrite it with the current profile</note>
-  </widgets>
-  <widgets xsi:type="model:TextField" id="100" x="544" y="28" width="41" text=" 4/5" measuredWidth="41" measuredHeight="29" textAlignment="Center">
+  <widgets xsi:type="model:TextField" id="107" x="544" y="28" width="41" text=" 5/5" measuredWidth="41" measuredHeight="29" textAlignment="Center">
     <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:Tooltip" id="113" x="520" y="75" text="The file has been saved at &quot;url&quot;" measuredWidth="172" measuredHeight="40">
+    <font/>
   </widgets>
   <hRuler>
     <guides position="190"/>
     <guides position="214"/>
   </hRuler>
->>>>>>> 1dc5126db22150570ca304d8bea47a0d8720fa0d
   <vRuler/>
   <font size="12px"/>
 </model:Screen>

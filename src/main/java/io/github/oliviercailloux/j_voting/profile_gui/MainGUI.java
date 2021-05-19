@@ -1,9 +1,9 @@
 package io.github.oliviercailloux.j_voting.profile_gui;
 
-import org.eclipse.swt.widgets.*;
-
-import org.eclipse.swt.*;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Rectangle;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
 
 public class MainGUI {
 
@@ -25,7 +25,11 @@ public class MainGUI {
 		EditionView editionView = view.getEditionView();
 
 		Controller controller = Controller.withDefaultModel();
-		controller.buildEditionController(editionView);
+		EditionController editionController = controller.buildEditionController(editionView);
+		// Please replace the path with your local path where you downloaded the SOC
+		// profile file
+		editionController.openFile(
+				"C:\\Users\\Firas\\eclipse-workspace\\projet-j-voting\\src\\main\\resources\\io\\github\\oliviercailloux\\j_voting\\profiles\\management\\profil.soc");
 
 		shell.open();
 

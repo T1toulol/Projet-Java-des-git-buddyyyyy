@@ -1,17 +1,23 @@
 package io.github.oliviercailloux.j_voting.profile_gui;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import io.github.oliviercailloux.j_voting.Alternative;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.*;
-
-import org.eclipse.swt.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.TabFolder;
+import org.eclipse.swt.widgets.TabItem;
+import org.eclipse.swt.widgets.Text;
+
+import io.github.oliviercailloux.j_voting.Alternative;
 
 public class EditionView {
 	private TabFolder tabfolder;
@@ -52,7 +58,14 @@ public class EditionView {
 	 * Initialization of the editing tab window
 	 */
 	private void initEditionTab() {
+		// ScrolledComposite sc = new ScrolledComposite(this.tabfolder, SWT.V_SCROLL |
+		// SWT.H_SCROLL);
 		this.editionTab = new TabItem(this.tabfolder, SWT.NONE);
+		// sc.setExpandHorizontal(true);
+		// sc.setExpandVertical(true);
+		// sc.setContent(mainComposite);
+		// sc.setMinSize(mainComposite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+		// editionTab.setControl(sc);
 		editionTab.setText("Edition");
 	}
 
