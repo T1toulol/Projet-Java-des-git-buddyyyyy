@@ -104,7 +104,8 @@ Hugo et Chahid =>
 
 Lucas and Maxime => Corrections demandées dans la PR #25 : https://github.com/oliviercailloux-org/projet-j-voting/pull/25#pullrequestreview-652408576
 
-Pour être plus précis, ils vont :
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
 - Corriger les erreurs de convention de nommage.
 - Ne pas répéter les opérations dans les classes qui implémentent une interface
 - Corriger le fait que MLID n'est pas détenu par MLPI.
