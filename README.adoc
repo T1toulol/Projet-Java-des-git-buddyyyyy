@@ -106,7 +106,14 @@ Pour être plus précis, ils vont effectuer les modifications suivantes :
 
 === Duo 2 and task
 
-Hugo et Chahid => Corrections demandées dans la PR #28 : https://github.com/oliviercailloux-org/projet-j-voting/pull/28
+Hugo and Chahid => Corrections demandées dans la PR #28 : https://github.com/oliviercailloux-org/projet-j-voting/pull/28
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+- Corrections du diagramme de séquence.
+- Faire un message existsAndIsWriteable au lieu des méthodes exist et isWriteable.
+- Diviser le diagramme de séquence.
+- Corrections sur le storyboard.
 
 === Duo 3 and task
 
