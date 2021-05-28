@@ -4767,6 +4767,17 @@
           <element xmi:type="uml:Operation" href="papyrus_diagram.uml#_XHBxcKttEeug16qIWiSemQ"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_XHXvsattEeug16qIWiSemQ"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_9sNQIL_1EeuiOZamMvgchg" type="Operation_ClassOperationLabel">
+          <styles xmi:type="notation:StringListValueStyle" xmi:id="_hpU-wL_2EeuiOZamMvgchg" name="maskLabel">
+            <stringListValue>parametersName</stringListValue>
+            <stringListValue>visibility</stringListValue>
+            <stringListValue>name</stringListValue>
+            <stringListValue>parametersType</stringListValue>
+            <stringListValue>returnType</stringListValue>
+          </styles>
+          <element xmi:type="uml:Operation" href="papyrus_diagram.uml#_9ruvAL_1EeuiOZamMvgchg"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_9sNQIb_1EeuiOZamMvgchg"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_5eZs4W35EeuXEN3YjgEwOw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_5eZs4m35EeuXEN3YjgEwOw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_5eZs4235EeuXEN3YjgEwOw"/>
@@ -4779,7 +4790,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5eZs6W35EeuXEN3YjgEwOw"/>
       </children>
       <element xmi:type="uml:Class" href="papyrus_diagram.uml#_3rlrcG35EeuXEN3YjgEwOw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5eWCgW35EeuXEN3YjgEwOw" x="300" y="160" width="501" height="141"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5eWCgW35EeuXEN3YjgEwOw" x="300" y="160" width="621" height="141"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_XWS78W31EeuXEN3YjgEwOw" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_XWS78m31EeuXEN3YjgEwOw"/>
