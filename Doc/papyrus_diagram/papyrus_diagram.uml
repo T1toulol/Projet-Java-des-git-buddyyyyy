@@ -4112,6 +4112,39 @@ Voter's preferences : AntiSymmetric</body>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_S3ugoGbSEeqrtc6dy-mPpg" type="_SwzZQGbSEeqrtc6dy-mPpg" direction="return"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_S3vHsGbSEeqrtc6dy-mPpg" name="prof" type="_QrQpEGbSEeqrtc6dy-mPpg"/>
               </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_bmN5MLdYEeuQU5Hy1c4ZFw" name="addVote">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_50AtgLdYEeuQU5Hy1c4ZFw" name="v" type="_PIhD8GbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_IxojYLdZEeuQU5Hy1c4ZFw" name="pref" type="_O-JnAGbSEeqrtc6dy-mPpg"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_dyAbULdYEeuQU5Hy1c4ZFw" name="addVotes">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_ObyCwLdZEeuQU5Hy1c4ZFw" name="pref" type="_O-JnAGbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_SO69MLdZEeuQU5Hy1c4ZFw" name="nbVoters">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_gRumELdYEeuQU5Hy1c4ZFw" name="createProfileI">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jV18LdZEeuQU5Hy1c4ZFw" type="_fuReQLdZEeuQU5Hy1c4ZFw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_mFAMQLdYEeuQU5Hy1c4ZFw" name="createProfile">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_8OxDQLdZEeuQU5Hy1c4ZFw" type="_iBdB0LdZEeuQU5Hy1c4ZFw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_pcsg0LdYEeuQU5Hy1c4ZFw" name="createStrictProfileI">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_CDBg4LdaEeuQU5Hy1c4ZFw" type="_p_pAYLdZEeuQU5Hy1c4ZFw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_teXmgLdYEeuQU5Hy1c4ZFw" name="createStrictProfile">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_HdovcLdaEeuQU5Hy1c4ZFw" type="_n1O-ULdZEeuQU5Hy1c4ZFw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_IStWQLdaEeuQU5Hy1c4ZFw" name="castMapExtendsToRegularVoterPref" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_zSbk8LdaEeuQU5Hy1c4ZFw" name="map" type="_POESUGbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_14qAULdaEeuQU5Hy1c4ZFw" type="_POESUGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_Y4A7oLdaEeuQU5Hy1c4ZFw" name="createProfileBuilder" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_u0zjELdaEeuQU5Hy1c4ZFw" type="_SwzZQGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_aw5v4LdaEeuQU5Hy1c4ZFw" name="createProfileBuilder" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_hTq5ULdaEeuQU5Hy1c4ZFw" name="prof" type="_fuReQLdZEeuQU5Hy1c4ZFw"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_q8GMILdaEeuQU5Hy1c4ZFw" type="_SwzZQGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_Sx6MgGbSEeqrtc6dy-mPpg" name="ReadODS" visibility="public">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_Sx7aoGbSEeqrtc6dy-mPpg" name="LOGGER" visibility="private" isLeaf="true" isStatic="true" type="_O-SJ4GbSEeqrtc6dy-mPpg" isUnique="false">
@@ -4751,6 +4784,20 @@ Voter's preferences : AntiSymmetric</body>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_S2Fh4GbSEeqrtc6dy-mPpg" name="createOneAlternativeProfile" visibility="public" method="_S2H-IGbSEeqrtc6dy-mPpg">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_S2GwAGbSEeqrtc6dy-mPpg" type="_Qsf_MGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_vOicQLdbEeuQU5Hy1c4ZFw" name="createStrictProfileBuilder" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_IdW1ILdcEeuQU5Hy1c4ZFw" type="_S1YXQGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_0Q1RcLdbEeuQU5Hy1c4ZFw" name="createStrictProfileBuilder" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_OOjXsLdcEeuQU5Hy1c4ZFw" name="prof" type="_p_pAYLdZEeuQU5Hy1c4ZFw"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ra-3cLdcEeuQU5Hy1c4ZFw" type="_S1YXQGbSEeqrtc6dy-mPpg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_9TfkwLdbEeuQU5Hy1c4ZFw" name="addVote" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_VTNGMLdcEeuQU5Hy1c4ZFw" name="v" type="_PIhD8GbSEeqrtc6dy-mPpg"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_YoHzkLdcEeuQU5Hy1c4ZFw" name="pref" type="_O-JnAGbSEeqrtc6dy-mPpg"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_-4KcgLdbEeuQU5Hy1c4ZFw" name="createOneAlternativeProfile">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_ekzNYLdcEeuQU5Hy1c4ZFw" type="_Qsf_MGbSEeqrtc6dy-mPpg" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_S2M2oGbSEeqrtc6dy-mPpg" name="SWFCommander" visibility="public">
@@ -5875,6 +5922,10 @@ Voter's preferences : AntiSymmetric</body>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_MZ4wg526EeqyF8i-7JEYZQ" direction="return"/>
               </ownedOperation>
             </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_fuReQLdZEeuQU5Hy1c4ZFw" name="ProfileI"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_iBdB0LdZEeuQU5Hy1c4ZFw" name="Profile"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_n1O-ULdZEeuQU5Hy1c4ZFw" name="StrictProfile"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_p_pAYLdZEeuQU5Hy1c4ZFw" name="StrictProfileI"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="_a80MYGz8EeqXjdVQZO8c9Q" name="interfaces">
             <packagedElement xmi:type="uml:Interface" xmi:id="_QrQpEGbSEeqrtc6dy-mPpg" name="ProfileI" visibility="public">
@@ -6819,6 +6870,7 @@ Voter's preferences : AntiSymmetric</body>
           </packagedElement>
         </packagedElement>
       </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_fyVw0LdXEeuQU5Hy1c4ZFw" name="ProfileManagement"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_cIIGcHqFEeqm79lOJbMtXA" name="UseCaseDiagram" visibility="public">
       <packagedElement xmi:type="uml:Package" xmi:id="_wnPZgHqGEeqm79lOJbMtXA" name="GUI ">
