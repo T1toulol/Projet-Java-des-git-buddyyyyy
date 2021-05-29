@@ -1,7 +1,6 @@
 = Build Profile methods
 
-====== link:../README.adoc[Summary]
-====== link:./ImportExportMethods.adoc[Previous page - Import/Export Methods]
+link:../README.adoc[Summary]
 
 == ProfileBuilder
 
