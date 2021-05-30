@@ -25,12 +25,16 @@ The export() method of the ExportDOT class verify that the provided graph is a d
 |Relevance
 
 |export(Graph<String> pref, OutputStream stream)
-|This is a static void method which takes two argument : a string graph that represents a preference and a OutputStream (provides an output stream to a file) which export it in DOT format. It would be useful to verify that the export() method receives a directed graph or not. Then the graph is converted and sent as a string to the write() method of the OutputStream to write in the output file. 
+|The OutputStream provides an output stream to a file which export the string graph in DOT format. It would be useful to verify that the export() method receives a directed graph or not. Then the graph is converted and sent as strings to the write() method of the OutputStream to write in the output file. Each strings lines ends with the system default line endings.
 |In progress
 
-|export(Preference pref, OutputStream stream)
-|This is an overloaded version of the previous export() method which takes a preference as argument. The preference is transformed into a String Graph and computes its link:https://en.wikipedia.org/wiki/Transitive_reduction[transitive reduction]. From the obtained Graph, the method applies the same operations as the previous export() method.
-|To do
+|export(Preference pref, OutputStream stream, String endLine)
+|This is an overloaded version of the previous export() method which permits to redefine the end of lines of strings in DOT format.
+|In progress
+
+|convertToDot(Graph<String> pref)
+|The string graph given is returned as strings in DOT format thanks to the output of the export() method. 
+|In progress
 
 |===
 
@@ -57,7 +61,7 @@ It should be changed to a LinearPreference. +
 |Relevance
 
 |createProfileFromStream(InputStream in)
-|This method takes an input stream in argument which provides voting informations and it returns a link:./profileInterfaces.adoc[ProfileI] by using the buildProfile method.
+|The input stream provides voting informations and it returns a link:./profileInterfaces.adoc[ProfileI] by using the buildProfile method.
 |Ok
 
 |createProfileFromColumnsTable(Table table)
