@@ -33,7 +33,7 @@ The export() method of the ExportDOT class verify that the provided graph is a d
 |In progress
 
 |convertToDot(Graph<String> pref)
-|The string graph given is returned as strings in DOT format thanks to the output of the export() method. 
+|The string graph given is returned as strings in DOT format thanks to the output stream of the export() method. 
 |In progress
 
 |===
