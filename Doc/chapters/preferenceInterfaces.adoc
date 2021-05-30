@@ -1,7 +1,5 @@
 = 1.1 Preferences Interfaces Documentation
 
-====== link:../README.adoc[Summary]
-
 === Preferences Interfaces Diagram
 
 image:../assets/InterfacesPreferencesDiagram.png[InterfacesPreferencesDiagram]

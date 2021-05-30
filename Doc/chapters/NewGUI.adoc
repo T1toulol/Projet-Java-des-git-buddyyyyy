@@ -1,7 +1,5 @@
 = 2.1 GUI implementation (Group 2019-2020)
 
-====== link:../README.adoc[Summary]
-
 === GUI Usecase
 
 image:../assets/GUIUseCaseDiagram.png[GUIUseCaseDiagram]

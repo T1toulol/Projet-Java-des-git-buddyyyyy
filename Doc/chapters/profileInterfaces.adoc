@@ -1,7 +1,5 @@
 = 1.2 Profile Interfaces documentation
 
-====== link:../README.adoc[Summary]
-
 === Profile interfaces Diagram
 
 image:../assets/InterfacesProfilesDiagram.png[InterfacesProfilesDiagram]
