@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" theme="clean">
+  <widgets xsi:type="model:Window" id="1" x="96" y="80" width="489" text="J-voting client" measuredWidth="489" measuredHeight="300" verticalScrollbar="true"/>
+  <widgets xsi:type="model:Label" id="3" x="280" y="120" text="Add voters" measuredWidth="121" measuredHeight="40">
+    <font size="24px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="4" x="119" y="172" text="Voter(s)" measuredWidth="46" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="5" x="208" y="172" width="167" text="Voter name" measuredWidth="167" measuredHeight="23">
+    <font italic="true"/>
+  </widgets>
+  <widgets xsi:type="model:Icon" id="6" x="236" y="291" width="17" height="17" measuredWidth="17" measuredHeight="17" icon="add (large)"/>
+  <widgets xsi:type="model:Combo" id="7" x="144" y="204" text="Alternative 1&#xD;&#xA;Alternative 2&#xD;&#xA;Alternative 3" measuredWidth="93" measuredHeight="65">
+    <font/>
+    <items x="0" y="0" width="92" height="22" text="Alternative 1"/>
+    <items x="0" y="23" width="92" height="21" text="Alternative 2"/>
+    <items x="0" y="44" width="92" height="21" text="Alternative 3"/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="8" x="280" y="204" text="Alternative 2&#xD;&#xA;Alternative 1&#xD;&#xA;Alternative 3" measuredWidth="93" measuredHeight="65">
+    <font/>
+    <items x="0" y="0" width="92" height="22" text="Alternative 2"/>
+    <items x="0" y="23" width="92" height="21" text="Alternative 1"/>
+    <items x="0" y="44" width="92" height="21" text="Alternative 3"/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="9" x="424" y="204" text="Alternative 3&#xD;&#xA;Alternative 1&#xD;&#xA;Alternative 2" measuredWidth="93" measuredHeight="65">
+    <font/>
+    <items x="0" y="0" width="92" height="22" text="Alternative 3"/>
+    <items x="0" y="23" width="92" height="21" text="Alternative 1"/>
+    <items x="0" y="44" width="92" height="21" text="Alternative 2"/>
+  </widgets>
+  <widgets xsi:type="model:Icon" id="10" x="242" y="226" measuredWidth="24" measuredHeight="24" icon="submenu (medium)"/>
+  <widgets xsi:type="model:Icon" id="11" x="388" y="226" measuredWidth="24" measuredHeight="24" icon="submenu (medium)"/>
+  <widgets xsi:type="model:Label" id="12" x="128" y="288" text="Add an other voter" measuredWidth="105" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="13" x="502" y="345" text="Submit" measuredWidth="58" measuredHeight="25" link="../seeProfileColumns.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="14" x="106" y="345" text="Cancel" measuredWidth="56" measuredHeight="25" link="../seeProfileColumns.screen">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

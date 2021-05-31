@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" theme="clean">
+  <widgets xsi:type="model:Window" id="1" x="96" y="80" width="489" text="J-voting client" measuredWidth="489" measuredHeight="300" verticalScrollbar="true"/>
+  <widgets xsi:type="model:Label" id="2" x="256" y="152" measuredWidth="6" measuredHeight="67">
+    <font size="43px"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="5" x="515" y="345" text="Next" measuredWidth="45" measuredHeight="25" link="createProfile2.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="6" x="225" y="120" text="CREATE a new profile" measuredWidth="231" measuredHeight="40">
+    <font size="24px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="7" x="530" y="109" text="1/3" measuredWidth="30" measuredHeight="29">
+    <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="8" x="136" y="176" text="Name" measuredWidth="38" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="9" x="225" y="174" width="167" text="Profile name" measuredWidth="167" measuredHeight="23">
+    <font italic="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="10" x="136" y="207" text="Voter(s)" measuredWidth="46" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="11" x="225" y="207" width="167" text="Voter name" measuredWidth="167" measuredHeight="23">
+    <font italic="true"/>
+  </widgets>
+  <widgets xsi:type="model:Icon" id="13" x="401" y="210" width="17" height="17" measuredWidth="17" measuredHeight="17" icon="add (large)"/>
+  <widgets xsi:type="model:Label" id="14" x="136" y="240" text="Alternative(s)" measuredWidth="76" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="15" x="225" y="240" width="167" text="Alternative name" measuredWidth="167" measuredHeight="23">
+    <font italic="true"/>
+  </widgets>
+  <widgets xsi:type="model:Icon" id="16" x="400" y="243" width="17" height="17" measuredWidth="17" measuredHeight="17" icon="add (large)"/>
+  <widgets xsi:type="model:Label" id="17" x="136" y="272" text="Profile type" measuredWidth="66" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="18" x="225" y="272" width="167" text="Strict complete&#xD;&#xA;Strict incomplete&#xD;&#xA;Non strict complete&#xD;&#xA;Non strict incomplete" measuredWidth="167" measuredHeight="86">
+    <font/>
+    <items x="0" y="0" width="166" height="22" text="Strict complete"/>
+    <items x="0" y="23" width="166" height="21" text="Strict incomplete"/>
+    <items x="0" y="44" width="166" height="21" text="Non strict complete"/>
+    <items x="0" y="65" width="166" height="21" text="Non strict incomplete"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="19" x="106" y="345" text="Cancel" measuredWidth="56" measuredHeight="25" link="mainMenu.screen">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

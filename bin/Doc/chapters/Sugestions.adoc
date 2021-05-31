@@ -1,0 +1,19 @@
+= Sugestions :
+
+== Profile
+
+* Start creating profiles following our proposal for a link:profileArchitecture.adoc[new architecture]
+* To create the MutableLinearProfile, from the MutableStrictProfile is delete the methods related to the voters.
+
+== Preference
+
+* Add a delete methode to MutablePreference
+* Rename CompletePreference as ImmutableCompletePreference
+* Create the MutableCompletePreference implementing MutablePreference
+* Complete work on the transition from link:FromOldCompletePreferenceImplToCompletePreferenceImpl.adoc[old to newCompletePreference]
+* Perform encapsulation work on preference methods using link:decorator.adoc[decorators]
+* Correct the link:preferenceInterfaces.adoc[relevances]
+
+== GUI
+
+* Continue the work on the GUI by following the link:NewGUI.adoc[model]

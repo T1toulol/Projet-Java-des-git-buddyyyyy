@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" theme="clean">
+  <widgets xsi:type="model:Window" id="1" x="96" y="80" width="489" height="369" text="J-voting client" measuredWidth="489" measuredHeight="369" value="25" verticalScrollbar="true"/>
+  <widgets xsi:type="model:TextField" id="40" x="144" y="102" width="273" text="Alternative 2" measuredWidth="273" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="43" x="128" y="102" text="2." measuredWidth="18" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="41" x="144" y="129" width="273" text="Alternative 3" measuredWidth="273" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="44" x="128" y="129" text="3." measuredWidth="18" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="87" x="112" y="191" width="361" text="Voter3 name" measuredWidth="361" measuredHeight="23">
+    <font italic="true"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="88" x="144" y="224" width="273" text="Alternative 1" measuredWidth="273" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="89" x="144" y="252" width="273" text="Alternative 2" measuredWidth="273" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="90" x="144" y="279" width="273" text="Alternative 3" measuredWidth="273" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="91" x="128" y="224" text="1." measuredWidth="18" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="92" x="128" y="252" text="2." measuredWidth="18" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="93" x="128" y="279" text="3." measuredWidth="18" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Icon" id="94" x="484" y="195" measuredWidth="16" measuredHeight="16" icon="minus (small)" link="createProfile.screen"/>
+  <widgets xsi:type="model:Icon" id="96" x="421" y="228" measuredWidth="16" measuredHeight="16" icon="trash (small)"/>
+  <widgets xsi:type="model:Icon" id="98" x="421" y="256" measuredWidth="16" measuredHeight="16" icon="trash (small)"/>
+  <widgets xsi:type="model:Icon" id="100" x="421" y="283" measuredWidth="16" measuredHeight="16" icon="trash (small)"/>
+  <widgets xsi:type="model:TextField" id="101" x="144" y="306" width="273" text="new alternative" measuredWidth="273" measuredHeight="23">
+    <font italic="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="102" x="128" y="306" text="4." measuredWidth="18" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Icon" id="103" x="398" y="310" measuredWidth="16" measuredHeight="16" icon="squared-plus (small)"/>
+  <widgets xsi:type="model:TextField" id="104" x="144" y="156" width="273" text="new alternative" measuredWidth="273" measuredHeight="23">
+    <font italic="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="105" x="128" y="156" text="4." measuredWidth="18" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Icon" id="107" x="421" y="105" measuredWidth="16" measuredHeight="16" icon="trash (small)"/>
+  <widgets xsi:type="model:Icon" id="109" x="421" y="133" measuredWidth="16" measuredHeight="16" icon="trash (small)"/>
+  <widgets xsi:type="model:Icon" id="111" x="421" y="160" measuredWidth="16" measuredHeight="16" icon="trash (small)"/>
+  <widgets xsi:type="model:TextField" id="112" x="112" y="344" width="361" text="New voter" measuredWidth="361" measuredHeight="23">
+    <font italic="true"/>
+  </widgets>
+  <widgets xsi:type="model:Icon" id="113" x="454" y="348" measuredWidth="16" measuredHeight="16" icon="squared-plus (small)"/>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

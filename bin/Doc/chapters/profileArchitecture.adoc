@@ -1,0 +1,146 @@
+= Proposition of a better profile architecture 
+
+Be careful, this is not a picture of how profiles are currently implemented. We wanted to porpose here a suggestion of how better a profile architecture could be in J-Voting. 
+
+== Class diagram
+
+image:../assets/ProfilArchitectureClassDiagram.png[ProfilArchitectureClassDiagram]
+
+
+Go to link:chapters/profileInterfaces.adoc[The notion of Profile] if you want to learn more about what is an complete / Incomplete profile.
+
+== Notion of mutability 
+
+In the theory of social choice, a Profile (groupement of voters with their preference) can be mutable in two different ways : 
+
+- The population is fixed but the preferences aren't.
+In other words, preferences are modifiable which means that the  alternatives can be reordered, removed or new ones can be added. Nevertheless the voters always stay the same. 
+
+- The preferences are fixed but the population isn't.
+In other words, here we can add new voters, or remove an existing one. However once a preference is made it can not be changed.
+
+We decided to build this new architecture proposition around the first definition. Indeed, we can say that if the population needs to be somehow changed. Then, we can create a new profile duplicating the preferences but with other voters. 
+
+
+=== Ok, but why a MutableLinearProfile does not extend a MutableGeneralProfile ? 
+
+Because a MutableLinearProfile manipulates MutableLinearPreferences and a MutableGeneralProfile manipulates MutablePreferences. 
+
+Futhermore, a MutableLinearPreferences is not a more precise version of a MutablePreferences. Those two type of prefences have no relation link between them. The contrary would break their contract. 
+
+Here is the reason why, when a preference is mutable it can be openly modified. Whereas if the preference is mutable and linear, each modification must maintain the linearity. 
+
+
+
+=== We can wonder, why don't we have the same issue regarding the Immutable Profiles ?
+
+An Immutable Linear profile can extend an Immutable Complete profile without breaking its contract because the Linear Preferences manipulated are actually a more precise version of Complete Preferences. Indeed, because those two types of preferences are Immutable then we can deduce the Complete preference out of a Linear one. 
+
+Hint : Think about a person having a strict fixed opinion about something. Well, it is actually possible to deduce his opinon by asking him question using only ">=" or "<=" on the way he ranks alternatives. 
+
+
+=== Precision on the Profile Set of Alternatives
+
+Inside a profile the set of alternatives is common to all the voters. It is actually the union of all the alternatives present in every preferences.
+
+
+== Methods Contracts
+
+=== *GeneralProfile*
+
+[cols="1,2,2", options="header"] 
+|===
+|Method name
+|Contract
+|Hint
+
+| getPreference(Voter v)
+| Return the preference of a given Voter v not null. 
+|
+
+| getProfile()
+| Return the profile as a map mapping the voters to their preference.
+|
+
+|getAllVoters(int i)
+| Return a sorted set of all the voters in the profile. The voters are ordered by id.
+| If you want the profile total number of voters you can just take the size of this list.
+
+|getNbVoterForPreference(Preference p)
+| Return the number of voters that voted for a provided Preference not null.
+|
+
+|getDuplicates(Preference p)
+| Return a set of all the duplicates preferences in the profiles.
+| If a preference has at least an equivalent in the general profile set then it is added in the set returned by this function. 
+If you want to retrieve the number of unique preferences you can just substract the main set with this set of duplicates.
+
+|getAlternatives()
+| Return a set of all the alternatives in the profile.
+| If you want the total number of alternatives, take the size of this list. 
+
+|===
+
+
+=== *MutableLinearProfile*
+
+[cols="1,1", options="header"] 
+|===
+|Method name
+|Contract
+
+
+| getPreference(Voter v)
+| Return the MutableLinearPreference of a given Voter v not null. 
+
+
+| addAlternative(Alternative a)
+|  Adds the specified alternative at the last rank of every preferences in the profile if it is not already present.
+
+
+|deleteAlternative(Alternative a)
+| Removes the specified alternative from every preferences in the profile if it is present.
+
+|===
+
+=== *MutableGeneralProfile*
+
+[cols="1,2,1", options="header"] 
+|===
+|Method name
+|Contract
+|Hint
+
+| getPreference(Voter v)
+| Return the MutablePreference of a given Voter v not null. 
+|
+
+| getMaxSizeOfPreference()
+| Return the maximum size of a Preference.
+|
+
+| addAlternative(Alternative a)
+| Adds an alternative to every preferences in the profile. This alternative is not preferred to any other in each preference, it is being added isolated.
+| 
+
+|deleteAlternative(Alternative a)
+| Removes the specified alternative from every preferences in the profile if it is present.
+| This method is a proposition but not implemented yet.
+
+
+|===
+
+=== *MutableCompleteGeneralProfile*
+
+[cols="1,2,1", options="header"] 
+|===
+|Method name
+|Contract
+|Hint
+
+
+| getPreference(Voter v)
+| Return the MutableCompletePreference of a given Voter v not null. 
+| Be careful, this type of preference does not exit yet in project. 
+
+|===
