@@ -28,7 +28,7 @@ image:../assets/tutodlgraphviz_2.png[Download Graphviz]
 
 First, you must select the DOT editor instead of the basic one, for that you must right click in the editor of the DOT file > open with > Dot Editor Like this:
 
-image:../assets/tutographviz_3.PNG
+image:../assets/tutographviz_3.png[Editor]
 
 Now your editor recognizes the dot language
 
@@ -36,7 +36,7 @@ Now your editor recognizes the dot language
 
 Let's analyze the code below to know the most basic features
 
-image:../assets/tutographviz_4.PNG
+image:../assets/tutographviz_4.png[Basic code]
 
 First of all, you can that thanks to the editor the code is now highlighted, which will simplify the manipulation for us.
 
@@ -69,15 +69,15 @@ where you can discover them all.
 The second most interesting feature of graphviz is graph view which allows you to draw the graph you have coded to use it you have to do : 
 right click in the editor of the DOT file > show in > GEF DOT Graph:
 
-image:../assets/tutographviz_5.PNG
+image:../assets/tutographviz_5.png[Graph View]
 
 Unfortunately for us this feature does not work it displays the following error message :
 
-image:../assets/tutographviz_6.PNG
+image:../assets/tutographviz_6.PNG[Error]
 
 We have not found any solution on the internet for this error, but we are continuing our research. 
 But for the example he should have given us something that looks like this: 
 
-image:../assets/tutographviz_7.PNG
+image:../assets/tutographviz_7.PNG[Example]
 
 Source : https://github.com/eclipse/gef/wiki/DOT-User-Guide
