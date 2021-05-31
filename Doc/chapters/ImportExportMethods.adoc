@@ -7,7 +7,7 @@
 image:../assets/export_in_dotformat_diag_class.PNG[Export in DOT format - Class Diagram]
 
 
-=== What will do this class +
+=== What does this class do ? +
 
 The main goal of the ExportDOT class is to export all link:https://guava.dev/releases/23.0/api/docs/com/google/common/graph/Graph.html[Graph] in link:./GUIInputFiles.adoc[DOT format]. 
 
@@ -25,7 +25,7 @@ The export() method of the ExportDOT class verify that the provided graph is a d
 |Relevance
 
 |export(Graph<String> pref, OutputStream stream)
-|The OutputStream provides an output stream to a file which export the string graph in DOT format. It would be useful to verify that the export() method receives a directed graph or not. Then the graph is converted and sent as strings to the write() method of the OutputStream to write in the output file. Each strings lines ends with the system default line endings.
+|The OutputStream provides an output stream to a file which export the string graph in DOT format. Then the graph is converted and sent as strings to the write() method of the OutputStream to write in the output file. Each strings lines ends with the system default line endings.
 |In progress
 
 |export(Preference pref, OutputStream stream, String endLine)
