@@ -73,11 +73,11 @@ image:../assets/tutographviz_5.png[Graph View]
 
 Unfortunately for us this feature does not work it displays the following error message :
 
-image:../assets/tutographviz_6.PNG[Error]
+image:../assets/tutographviz_6.png[Error]
 
 We have not found any solution on the internet for this error, but we are continuing our research. 
 But for the example he should have given us something that looks like this: 
 
-image:../assets/tutographviz_7.PNG[Example]
+image:../assets/tutographviz_7.png[Example]
 
 Source : https://github.com/eclipse/gef/wiki/DOT-User-Guide
