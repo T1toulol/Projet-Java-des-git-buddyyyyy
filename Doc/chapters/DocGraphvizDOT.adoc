@@ -16,7 +16,7 @@ display the graph of the DOT file as well as a function to export .DOT formats i
 
 *4* Now you have to select GEF Dot and click on Next
 
-image:../assets/tutodlgraphviz_1.PNG
+image:../assets/tutodlgraphviz_1.PNG[Download Graphviz]
 
 *5* if the system shows you all the installation details for example as here you can click on Next
 
