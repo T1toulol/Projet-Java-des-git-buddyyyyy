@@ -33,7 +33,7 @@ The export() method of the ExportDOT class verify that the provided graph is a d
 |In progress
 
 |convertToDot(Graph<String> pref)
-|The string graph given is returned as strings in DOT format thanks to the output stream of the export() method. 
+|The string graph given is returned as string in DOT format thanks to the output stream of the export() method. 
 |In progress
 
 |===
@@ -65,11 +65,11 @@ It should be changed to a LinearPreference. +
 |Ok
 
 |createProfileFromColumnsTable(Table table)
-|This method takes a Table with Voters in columns: each rows contains an alternative in preference order for a Voter, and the Voter is identified by the column index (like link:./GUIInputFiles.adoc[VotersToRankings format] without the first row and column that lists the alternatives and identifies the Voters). Finally, the method returns a ProfileI providing by the ProfileBuilder class.
+|The Table contains Voters in columns: each rows contains an alternative in preference order for a Voter, and the Voter is identified by the column index (like link:./GUIInputFiles.adoc[VotersToRankings format] without the first row and column that lists the alternatives and identifies the Voters). Finally, the method returns a ProfileI providing by the ProfileBuilder class.
 |Ok
 
 |createProfileFromRowsTable(Table table)
-|This method takes a Table with Voters in rows: each columns contains an alternative in preference order for a Voter, and the Voter is identified by the row index (link:./GUIInputFiles.adoc[more information]). Finally, the method returns a ProfileI providing by the ProfileBuilder class.
+|The Table contains Voters in rows: each columns contains an alternative in preference order for a Voter, and the Voter is identified by the row index (link:./GUIInputFiles.adoc[more information]). Finally, the method returns a ProfileI providing by the ProfileBuilder class.
 |It looks like there's something wrong with the "if" in the second "for" loop. !altText.equals("") instead of altText.equals("")?
 
 |createProfileFromURL(URL url)
@@ -78,11 +78,11 @@ Finally the given link:https://docs.oracle.com/javaee/7/api/javax/ws/rs/core/Res
 |Ok
 
 |displayProfileFromstream(InputStream in)
-|This method takes an input stream in argument and print the input file by a link:http://www.slf4j.org/apidocs/org/slf4j/Logger.html[Logger].
+|This method print the input file by a link:http://www.slf4j.org/apidocs/org/slf4j/Logger.html[Logger].
 |Ok
 
 |getAlternatives(List<String> ListofStrings)
-|This method takes as argument a list of strings that represent alternatives. It returns a OldLinearPreferenceImpl. 
+|This method takes as argument a list of strings that represent alternatives. It returns an OldLinearPreferenceImpl. 
 |Ok
 
 |getStatsVoters(String s)
@@ -90,7 +90,7 @@ Finally the given link:https://docs.oracle.com/javaee/7/api/javax/ws/rs/core/Res
 |Ok
 
 |getPreferences(OldLinearPreferenceImpl alternative, String s)
-|This method takes an OldLinearPreferenceImpl and a string in argument and returns an OldLinearPreferenceImpl. The string represents alternatives separates by a comma, this alternatives are added to the OldLinearPreferenceImpl.
+|The string represents alternatives separates by a comma, this alternatives are added to the OldLinearPreferenceImpl given as argument.
 |Ok
 
 |createStrictPreferenceFrom(String stringPreference)
@@ -98,7 +98,7 @@ Finally the given link:https://docs.oracle.com/javaee/7/api/javax/ws/rs/core/Res
 |Ok
 
 |buildProfile(List<String> file, OldLinearPreferenceImpl listAlternative, int nbVoters)
-|This method takes a List which represents the number of votes for each preference, an OldLinearPreferenceImpl which represents a list of alternatives, and the number of Voters. By using the StrictProfileBuilder class, this method return a ProfileI. 
+|The List of strings which represents the number of votes for each preference, the OldLinearPreferenceImpl, and the number of Voters, are returned as ProfileI by using the StrictProfileBuilder class. 
 |Ok
 
 |===
@@ -119,7 +119,7 @@ image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagr
 |Contract
 
 |checkFormatandPrint(InputStream in)
-|This is a static method which check the data format of the input stream (RanksFormat or VotersToRanking or CountOfRanking). It returns a string with voting information by using the most suitable printFormat method (see next methods descriptions).
+|The data format of the input stream is checked (RanksFormat or VotersToRanking or CountOfRanking). It returns a string with voting information by using the most suitable printFormat method (see next methods descriptions).
 
 |printFormatCountOfRanking(Table table)
 |This is a string static method which takes an ods table containing voting information in CountOfRanking format in argument. And it returns a string with voting information. It is used to describe the information contained.
@@ -142,7 +142,7 @@ image:../assets/readods_diag_class.PNG[Read a profile with readODS - Class Diagr
 
 
 |checkFormatandReturnCompletePreference(InputStream in)
-|This is a static method which takes an input stream in argument. This method uses the following two methods (completeFormatRanksFormat() and completeFormatVotersToRankings()) after checking the input format (RanksFormat or VotersToRanking). And finally, it returns an ImmutableSet of ImmutableCompletePreference. 
+|This method uses the following two methods (completeFormatRanksFormat() and completeFormatVotersToRankings()) after checking the input format of the ImputStream (RanksFormat or VotersToRanking). And finally, it returns an ImmutableSet of ImmutableCompletePreference. 
 
 
 |completeFormatRanksFormat(Table table)
