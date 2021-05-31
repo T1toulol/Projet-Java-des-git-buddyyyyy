@@ -8,21 +8,21 @@ display the graph of the DOT file as well as a function to export .DOT formats i
 
 === How to install GraphViz with GEF on eclipse
 
-*1* First of all, you have to go to this link:https://www.eclipse.org/gef/downloads/index.php?showAll=1&showMax=5[here]
+*1.* First of all, you have to go to this link:https://www.eclipse.org/gef/downloads/index.php?showAll=1&showMax=5[here]
 
-*2* Then you have to download a version that is close to your Eclipse version, for example i have eclipse 2020-12, i will download GEF 5.3.2.
+*2.* Then you have to download a version that is close to your Eclipse version, for example i have eclipse 2020-12, i will download GEF 5.3.2.
 
-*3* Once the archive is downloaded, go to eclipse click on the help tab > Install new software > add > archives > *select the zip file we just downloaded* > click on add
+*3.* Once the archive is downloaded, go to eclipse click on the help tab > Install new software > add > archives > *select the zip file we just downloaded* > click on add
 
-*4* Now you have to select GEF Dot and click on Next
+*4.* Now you have to select GEF Dot and click on Next
 
 image:../assets/tutodlgraphviz_1.png[Download Graphviz]
 
-*5* If the system, shows you all the installation details, for example as here you can click on Next.
+*5.* If the system, shows you all the installation details, for example as here you can click on Next.
 
 image:../assets/tutodlgraphviz_2.png[Download Graphviz]
 
-*6* Finally, you must accept the general conditions, and press restart now.
+*6.* Finally, you must accept the general conditions, and press restart now.
 
 === DOT Editor
 
@@ -62,12 +62,12 @@ In our example a2 is the successor of a1. It is possible to put edge in the plac
 |===
 
 We have just seen the basic functionalities, but they are very important to be able to code in DOT. Of course there are many other interesting features 
-that allow you to add color, modify the style of the edge, add text etc ... I refer you to this link:https://github.com/eclipse/gef/wiki/DOT-User-Guide[link] 
+that allow you to add color, modify the style of the edge, add text etc.. I refer you to this link:https://github.com/eclipse/gef/wiki/DOT-User-Guide[link] 
 where you can discover them all. 
 
 === DOT Graph View
-The second most interesting feature of graphviz, is graph view which allows you to draw the graph you have coded to use it you have to do : 
-right click in the editor of the DOT file > show in > GEF DOT Graph:
+The second most interesting feature of graphviz, is graph view which allows you to draw the graph you have coded to use it you have to do: 
+right click in the editor of the DOT file > show in > GEF DOT Graph
 
 image:../assets/tutographviz_5.png[Graph View]
 
