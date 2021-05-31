@@ -43,7 +43,6 @@ A linear preference is an antisymmetric complete preference. A linear preference
 
 image:../assets/LinearPreferenceScheme.PNG[LinearPreferenceScheme]
 
-
 == Preferences methods analysis +
 
 === *Preference*
@@ -195,23 +194,19 @@ Graph is rearranged : a transitive closure is applied to it
 |===
 |Method name
 |Contract
-|Relevance
 
-|changeOrder(Alternative a, Int position)
+|public void changeOrder(Alternative a, Int position)
 |This method will reorder the Set<Alternative> and the MutableGraph<Alternative> according to parameters.
-|OK.
 
-|swap(Alternative a1, Alternative a2) 
+|public void reverse(Alternative a1, Alternative a2) 
 |This method will switch place between 2 alternatives in the Set<Alternative> and the MutableGraph<Alternative>.
-|OK.
 
-|deleteAlternative(Alternative a)
+|public void deleteAlternative(Alternative a)
 |Delete an alternative from the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
-|OK.
 
-|addAlternative(Alternative a)
+|public void addAlternative(Alternative a)
 |Add an alternative at the end of the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
-|OK.
+
+
 
 |===
-

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" theme="clean">
-  <widgets xsi:type="model:Window" id="101" x="96" y="56" width="489" height="447" text="J-voting client" measuredWidth="489" measuredHeight="447" verticalScrollbar="true"/>
+  <widgets xsi:type="model:Window" id="1" x="96" y="56" width="489" height="447" text="J-voting client" measuredWidth="489" measuredHeight="447" verticalScrollbar="true"/>
   <widgets xsi:type="model:Label" id="2" x="256" y="152" measuredWidth="6" measuredHeight="67">
     <font size="43px"/>
   </widgets>
@@ -77,27 +77,16 @@
   <widgets xsi:type="model:Icon" id="88" x="398" y="276" measuredWidth="16" measuredHeight="16" icon="squared-plus (small)" link="CreateProfileAddAlternative.screen"/>
   <widgets xsi:type="model:Icon" id="89" x="398" y="428" measuredWidth="16" measuredHeight="16" icon="squared-plus (small)"/>
   <widgets xsi:type="model:Icon" id="90" x="454" y="460" measuredWidth="16" measuredHeight="16" icon="squared-plus (small)" link="CreateScreenAddVoter.screen"/>
-  <widgets xsi:type="model:Button" id="93" x="139" y="116" width="102" text="Open/Save as" measuredWidth="102" measuredHeight="25" link="selectProfile.screen">
+  <widgets xsi:type="model:Button" id="93" x="128" y="116" width="102" text="Open/Save as" measuredWidth="102" measuredHeight="25" link="selectProfile.screen">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="94" x="319" y="117" width="241" text="Profile name" measuredWidth="241" measuredHeight="23">
+  <widgets xsi:type="model:TextField" id="94" x="304" y="117" width="241" text="Profile name" measuredWidth="241" measuredHeight="23">
     <font italic="true"/>
   </widgets>
-  <widgets xsi:type="model:Arrow" id="95" x="368" y="128" width="305" height="215" measuredWidth="305" measuredHeight="215"/>
-  <widgets xsi:type="model:Note" id="97" x="672" y="328" width="209" height="101" text="If the user put an URL and the corresponding file does not exist,  the current profile is saved under that name in the current folder, and the name in the box is kept.&#xD;&#xA;" measuredWidth="209" measuredHeight="101">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:Arrow" id="98" x="368" y="139" width="285" height="8" measuredWidth="285" measuredHeight="8" left="false" right="true" direction="bottom"/>
-  <widgets xsi:type="model:Alert" id="99" x="652" y="85" width="497" height="119" text="Alert&#xA;Destination already contains file &quot;xxx.soc&quot;. Do you want to overwrite the file and lose the current modifications ?&#xA;&#xA;Yes,No, Cancel" measuredWidth="497" measuredHeight="119" icon="warning (large)">
-    <items x="212" y="82" width="80" height="22" text="Yes"/>
-    <items x="307" y="82" width="80" height="22" text="No"/>
-    <items x="402" y="82" width="80" height="22" text="Cancel"/>
-    <font size="11px"/>
-    <note> If the user types an URL and the file exists, a dialog box opens asking wether to load the fil or overwrite it with the current profile</note>
-  </widgets>
-  <widgets xsi:type="model:TextField" id="100" x="544" y="28" width="41" text=" 4/5" measuredWidth="41" measuredHeight="29" textAlignment="Center">
+  <widgets xsi:type="model:TextField" id="107" x="8" y="8" width="689" text="You can have 3 type of views by clicking on the visualisation tab (Wrapped, Columns and Rows)" measuredWidth="689" measuredHeight="29" textAlignment="Center">
     <font size="16px"/>
   </widgets>
+  <widgets xsi:type="model:Arrow" id="108" x="224" y="36" width="17" height="50" measuredWidth="17" measuredHeight="50" direction="bottom"/>
   <hRuler>
     <guides position="190"/>
     <guides position="214"/>
