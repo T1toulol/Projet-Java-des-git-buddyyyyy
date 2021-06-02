@@ -221,9 +221,9 @@ Pour être plus précis, ils vont effectuer les modifications suivantes :
 === Duo 3 and task
 
 Lucas and Maxime => Poursuite des PR #29, #30, #31 : 
-- https://github.com/oliviercailloux-org/projet-j-voting/pull/29
-- https://github.com/oliviercailloux-org/projet-j-voting/pull/30
-- https://github.com/oliviercailloux-org/projet-j-voting/pull/31
+* https://github.com/oliviercailloux-org/projet-j-voting/pull/29
+* https://github.com/oliviercailloux-org/projet-j-voting/pull/30
+* https://github.com/oliviercailloux-org/projet-j-voting/pull/31
 
 Pour être plus précis, ils vont effectuer les modifications suivantes :
 
