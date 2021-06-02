@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" theme="clean">
+  <widgets xsi:type="model:Window" id="1" x="96" y="80" width="489" text="J-voting client" measuredWidth="489" measuredHeight="300"/>
+  <widgets xsi:type="model:Label" id="2" x="256" y="152" text="J-voting" measuredWidth="158" measuredHeight="67">
+    <font size="43px"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="3" x="136" y="312" width="160" height="41" text="CREATE a new profile" measuredWidth="160" measuredHeight="41" link="../createProfile.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="4" x="376" y="312" width="177" height="41" text="SELECT an existing profile" measuredWidth="177" measuredHeight="41" link="../selectProfile.screen">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
