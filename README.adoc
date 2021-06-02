@@ -206,16 +206,20 @@ Pour être plus précis, ils vont effectuer les modifications suivantes :
 
 === Duo 2 and task
 
-Hugo and Chahid => Corrections demandées dans la PR #33 : https://github.com/oliviercailloux-org/projet-j-voting/pull/33
+Hugo and Chahid => Poursuite de la PR #33 : https://github.com/oliviercailloux-org/projet-j-voting/pull/33
 
 Pour être plus précis, ils vont effectuer les modifications suivantes :
 
-- 
+- Corrections des différents bugs sur les boutons add et delete.
+- Ajout d'une scrollbar.
 
 === Duo 3 and task
 
-Lucas and Maxime => Corrections demandées dans la PR 
+Lucas and Maxime => Poursuite des PR #29 et #30 : https://github.com/oliviercailloux-org/projet-j-voting/pull/29
+https://github.com/oliviercailloux-org/projet-j-voting/pull/30
 
 Pour être plus précis, ils vont effectuer les modifications suivantes :
 
-- 
+- Corrections d'erreurs mineures
+- Permettre un swap d'une alternative avec elle-même
+- Corrections de commentaires
