@@ -210,22 +210,31 @@ Hugo and Chahid => Poursuite de la PR #33 : https://github.com/oliviercailloux-o
 
 Pour être plus précis, ils vont effectuer les modifications suivantes :
 
-- Corrections des différents bugs sur les boutons add et delete.
-- Ajout d'une scrollbar.
-- Adapter la lecture des fichiers comme vu en cours.
-- Corrections mineures.
+* Correction des bugs existant :
+** Corrections des différents bugs sur les boutons add et delete.
+
+* Suite de la PR #33:
+** Ajout d'une scrollbar.
+** Adapter la lecture des fichiers comme vu en cours.
+** Corrections mineures.
 
 === Duo 3 and task
 
-Lucas and Maxime => Poursuite des PR #29, #30, #31 : https://github.com/oliviercailloux-org/projet-j-voting/pull/29
-https://github.com/oliviercailloux-org/projet-j-voting/pull/30
-https://github.com/oliviercailloux-org/projet-j-voting/pull/31
+Lucas and Maxime => Poursuite des PR #29, #30, #31 : 
+- https://github.com/oliviercailloux-org/projet-j-voting/pull/29
+- https://github.com/oliviercailloux-org/projet-j-voting/pull/30
+- https://github.com/oliviercailloux-org/projet-j-voting/pull/31
 
 Pour être plus précis, ils vont effectuer les modifications suivantes :
 
-- Corrections d'erreurs mineures.
-- Permettre un swap d'une alternative avec elle-même.
-- Corrections de commentaires.
-- Correction du contrat de getAlternatives.
-- Modification de la méthode getAlternatives qui renvoie un NavigableSet.
-- Modification des tests unitaires concernant addEquivalence et setAtLeastGood.
+* Tâches de la PR #29:
+** Corrections d'erreurs mineures.
+
+* Tâches de la PR #30:
+** Permettre un swap d'une alternative avec elle-même.
+** Corrections de commentaires.
+
+* Tâches de la PR #31:
+** Correction du contrat de getAlternatives.
+** Modification de la méthode getAlternatives qui renvoie un NavigableSet.
+** Modification des tests unitaires concernant addEquivalence et setAtLeastGood.
