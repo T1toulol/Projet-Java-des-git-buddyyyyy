@@ -53,7 +53,9 @@ public interface MutableLinearPreference extends Preference {
 	 * @param alternative1 that will change places with alternative2. It must be not null.
 	 * @param alternative2 that will change places with alternative1. It must be not null.
 	 * @throws an IllegalArgumentException if at least one of the two alternatives is not in the graph or if the alternatives are equal.
-	 * @return true if the preference has changed after this call. 
+	 * @return true if the preference has changed after this call (and, thus, the
+	 *         alternatives are contained in this preference) or if alternatives are equals. 
+	 *         Or false if an alternative is not in the preference.         
 	 *         
 	 */
 	public boolean swap(Alternative alternative1, Alternative alternative2);
