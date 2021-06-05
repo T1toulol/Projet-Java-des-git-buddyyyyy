@@ -32,6 +32,7 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 
 	private Voter voter;
 	private MutableGraph<Alternative> graph;
+	private Set<Alternative> alternatives;
 	private List<Alternative> list;
 
 	@SuppressWarnings("unused")
@@ -48,11 +49,13 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 				graph.putEdge(list.get(i), list.get(j));
 			}
 		}
+		this.alternatives = graph.nodes();
 	}
 
 	@Override
 	public String toString() {
-		return MoreObjects.toStringHelper(this).add("Voter", voter).add("Graph", graph).add("List", list).toString();
+		return MoreObjects.toStringHelper(this).add("Voter", voter).add("Graph", graph).add("Set", alternatives)
+				.add("List", list).toString();	
 	}
 
 	/**
@@ -99,7 +102,7 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 	public boolean removeAlternative(Alternative a) {
 		LOGGER.debug("MutableLinearPreferenceImpl deleteAlternative");
 		Preconditions.checkNotNull(a);
-		checkArgument(list.contains(a), "Impossible to delete an alternative which is not already in the graph");
+		checkArgument(alternatives.contains(a), "Impossible to delete an alternative which is not already in the graph");
 		graph.removeNode(a);
 		list.remove(a);
 		return true;
@@ -109,7 +112,7 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 	public boolean addAlternative(Alternative a) {
 		LOGGER.debug("MutablePreferenceImpl addAlternative");
 		Preconditions.checkNotNull(a);
-		checkArgument(!list.contains(a), "The alternative is already in the graph");
+		checkArgument(!alternatives.contains(a), "The alternative is already in the graph");
 		list.add(a);
 		graph.addNode(a);
 
@@ -150,7 +153,7 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 		LOGGER.debug("MutablePreferenceImpl Swap");
 		Preconditions.checkNotNull(alternative1);
 		Preconditions.checkNotNull(alternative2);
-		checkArgument(list.contains(alternative1) && list.contains(alternative2), "Impossible to swap these two alternatives. At least one of them is not in the graph.");
+		checkArgument(alternatives.contains(alternative1) && alternatives.contains(alternative2), "Impossible to swap these two alternatives. At least one of them is not in the graph.");
 		if(alternative1.equals(alternative2) || list.indexOf(alternative2)==list.indexOf(alternative1)) {
 			return true;
 		}
@@ -221,7 +224,7 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 
 		@Override
 		protected Set<Alternative> delegate() {
-			return Set.copyOf(delegate.list);
+			return delegate.alternatives;
 		}
 
 		@Override
