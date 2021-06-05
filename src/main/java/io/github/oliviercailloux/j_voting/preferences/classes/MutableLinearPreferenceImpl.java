@@ -109,7 +109,7 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 	public boolean addAlternative(Alternative a) {
 		LOGGER.debug("MutablePreferenceImpl addAlternative");
 		Preconditions.checkNotNull(a);
-		checkArgument(!list.contains(a), "The alternative is already in the graph");
+		checkArgument(list.contains(a), "The alternative is already in the graph");
 		list.add(a);
 		graph.addNode(a);
 
