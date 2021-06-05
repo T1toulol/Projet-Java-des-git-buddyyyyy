@@ -17,9 +17,9 @@ public interface MutableLinearPreference extends Preference {
 	 * swapped with its neighbor until it reaches the given rank.
 	 * 
 	 * @param alternative that we're going to move in the preference. It must be not null.
-	 * @param rank        is the new rank where the alternative will be. The first. It must be not null.
+	 * @param rank        is the new rank where the alternative will be. The first.
 	 *                    alternative is at the rank 1. The rank must be less than 1
-	 *                    or greater than the rank of the last alternative.
+	 *                    or greater than the rank of the last alternative. It must be not null.
 	 * @return true if the preference has changed after this call. In other words,
 	 *         if the alternative was not already at this rank.
 	 */
