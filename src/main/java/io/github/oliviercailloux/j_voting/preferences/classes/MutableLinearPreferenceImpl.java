@@ -151,7 +151,9 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 		Preconditions.checkNotNull(alternative1);
 		Preconditions.checkNotNull(alternative2);
 		checkArgument(list.contains(alternative1) && list.contains(alternative2), "Impossible to swap these two alternatives. At least one of them is not in the graph.");
-		checkArgument(!alternative1.equals(alternative2));
+		if(alternative1.equals(alternative2) || list.indexOf(alternative2)==list.indexOf(alternative1)) {
+			return true;
+		}
 
 		boolean op1, op2, op3, op4;
 
