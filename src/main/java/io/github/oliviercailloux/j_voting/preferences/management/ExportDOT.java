@@ -50,9 +50,10 @@ public class ExportDOT {
 	/**
 	 * Exports the graph from the parameters, converts it to DOT format and writes (with UTF-8 character encoding)
 	 * it to the stream from the parameters (which is given to the streamExport attribute of ExportDOT class).
-	 * You can chose the end of line encoding (CR / CRLF / LF format) by the string lineSeparator given.
 	 * This choice is based on René Nyffenegger examples (https://renenyffenegger.ch/notes/tools/Graphviz/examples/index)
 	 * referenced in the official website about DOT format (https://www.graphviz.org/resources/#simple-examples-and-tutorials).
+	 * 
+	 * You can chose the end of line encoding (CR / CRLF / LF format) by the string lineSeparator given.
 	 * 
 	 * @param graph can't be null
 	 * @param stream can't be null
