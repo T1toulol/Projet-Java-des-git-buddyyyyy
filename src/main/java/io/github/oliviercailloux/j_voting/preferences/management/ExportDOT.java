@@ -90,7 +90,7 @@ public class ExportDOT {
 	}
 	
 	/**
-	 * This method allowed to write the string given to the output stream in attribute of the ExportDOT class.
+	 * This method allowed to write the string given to the output stream in the streamExport attribute of the ExportDOT class.
 	 * @param str
 	 * @throws IOException
 	 */
@@ -124,8 +124,8 @@ public class ExportDOT {
 	}
 
 	/**
-	 * Take the graph and convert it to a DOT format String with the end of line encoding chosen (in CR / CRLF / LF format).
-	 * For more informations about DOT format: http://www.graphviz.org/doc/info/lang.html
+	 * Takes the graph and convert it to a DOT format String with the end of line encoding chosen (in CR / CRLF / LF format).
+	 * For more informations about DOT format: <a href="http://www.graphviz.org/doc/info/lang.html">GraphViz website</a>.
 	 * @param graph can't be null
 	 * @return the graph in DOT format
 	 * @throws IOException 
