@@ -51,6 +51,34 @@ public class ExportDOTTest {
 
 		assertEquals(result, graphDotFormat);
 	}
+	
+	
+	@Test
+	public void testConvertToDotEndLine() throws IOException {
+
+		MutableGraph<String> graph = GraphBuilder.directed().build();
+		graph.putEdge("a1", "a2");
+		graph.putEdge("a1", "a4");
+		graph.putEdge("a2", "a3");
+		graph.putEdge("a2", "a4");
+		graph.putEdge("a3", "a4");
+
+		String graphDotFormat = ExportDOT.convertToDot(graph, "\r");
+
+		String result = "digraph G {\r";
+		result += "  a1;\r";
+		result += "  a2;\r";
+		result += "  a4;\r";
+		result += "  a3;\r";
+		result += "  a1 -> a2;\r";
+		result += "  a1 -> a4;\r";
+		result += "  a2 -> a3;\r";
+		result += "  a2 -> a4;\r";
+		result += "  a3 -> a4;\r";
+		result += "}";
+
+		assertEquals(result, graphDotFormat);
+	}
 
 	@Test
 	public void testConvertToDotUndirected() throws IOException {
@@ -107,9 +135,7 @@ public class ExportDOTTest {
 		OutputStream fop = new FileOutputStream(file);
 		ExportDOT.export(graph, fop);
 		
-        //FileInputStream in = new FileInputStream(file);
 		InputStream in =ExportDOT.class.getResourceAsStream("FileDOTtest.dot");
-        //String resultDOTFile = CharStreams.toString(new InputStreamReader(in, "UTF-8"));
 		String resultDOTFile =CharStreams.toString(new InputStreamReader(in, "UTF-8"));
 
 		String result = "digraph G {" + System.lineSeparator();

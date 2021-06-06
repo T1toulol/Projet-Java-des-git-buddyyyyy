@@ -36,7 +36,8 @@ public class ExportDOT {
 	
 	
 	/**
-	 * Calls the export method with the parameter endLine null.
+	 * Calls the export method with the parameter lineSeparator.
+	 * By default the end of line encoding is given by System.lineSeparator().
 	 * 
 	 * @param graph can't be null
 	 * @param stream can't be null
@@ -49,7 +50,7 @@ public class ExportDOT {
 	/**
 	 * Exports the graph from the parameters, converts it to DOT format and writes (with UTF-8 character encoding)
 	 * it to the stream from the parameters.
-	 * If the parameter endLine is null, it will take the value ";" by default followed by a System.lineSeparator().
+	 * You can chose the end of line encoding (CR / CRLF / LF format) by the string lineSeparator given.
 	 * This choice is based on René Nyffenegger examples (https://renenyffenegger.ch/notes/tools/Graphviz/examples/index)
 	 * referenced in the official website about DOT format (https://www.graphviz.org/resources/#simple-examples-and-tutorials).
 	 * 
@@ -84,7 +85,11 @@ public class ExportDOT {
 		LOGGER.debug("export DOT - OutputStream {}", streamExport.toString());
 	}
 	
-	
+	/**
+	 * This method allowed to write the string given to the output stream in attribute of the ExportDOT class.
+	 * @param str
+	 * @throws IOException
+	 */
 	
 	private static void writeOnStream(String str) throws IOException {
 		streamExport.write(str.getBytes(StandardCharsets.UTF_8));
@@ -95,27 +100,37 @@ public class ExportDOT {
 		}
 		String lineDot=INDENTATION+str+ENDLINE;
 		streamExport.write(lineDot.getBytes(StandardCharsets.UTF_8));
-		streamExport.write(System.lineSeparator().getBytes(StandardCharsets.UTF_8));
+		streamExport.write(lineSeparator.getBytes(StandardCharsets.UTF_8));
 	}
 	private static void writeAndSeparateOnStreamHeader(String headerDot, String lineSeparator) throws IOException {
 		if(!lineSeparator.equals("\n")&&!lineSeparator.equals("\r\n")&&!lineSeparator.equals("\r")) {
 			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
 		}
 		streamExport.write(headerDot.getBytes(StandardCharsets.UTF_8));
-		streamExport.write(System.lineSeparator().getBytes(StandardCharsets.UTF_8));
+		streamExport.write(lineSeparator.getBytes(StandardCharsets.UTF_8));
 	}
 	
 	
+	/**
+	 * Calls the convertToDot method with the parameter lineSeparator.
+	 * By default the end of line encoding is given by System.lineSeparator(). 
+	 * @param graph is not null
+	 * @return the graph in DOT format
+	 * @throws IOException
+	 */
 	
+	public static String convertToDot(Graph<String> graph) throws IOException {
+		return convertToDot(graph,System.lineSeparator());
+	}
 
 	/**
-	 * Take the graph and convert it to a DOT format String.
+	 * Take the graph and convert it to a DOT format String with the end of line encoding chosen (in CR / CRLF / LF format).
 	 * For more informations about DOT format: http://www.graphviz.org/doc/info/lang.html
 	 * @param graph can't be null
 	 * @return the graph in DOT format
 	 * @throws IOException 
 	 */
-	public static String convertToDot(Graph<String> graph) throws IOException {
+	public static String convertToDot(Graph<String> graph, String lineSeparator) throws IOException {
 		LOGGER.debug("Convert to DOT :");
 		checkNotNull(graph);
 		if (!checkFormatVertex(graph.nodes())) {
@@ -123,15 +138,16 @@ public class ExportDOT {
 		}
 
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
-		export(graph, stream);
+		export(graph, stream, lineSeparator);
 		final String graphDotString = new String(stream.toByteArray());
 		LOGGER.debug("DOT graph : {}", graphDotString);
 		return graphDotString;
 	}
+	
 
 	/**
-	 * This method is greatly inspired from the method getVertexId of the {@link org.jgrapht.ext.DOTExporter} class
-	 * For more informations:https://jgrapht.org/javadoc-1.1.0/org/jgrapht/ext/DOTExporter.html
+	 * This method is greatly inspired from the method getVertexId of the DOTExporter<V,E> class.
+	 * For more informations: <a href="https://jgrapht.org/javadoc-1.1.0/org/jgrapht/ext/DOTExporter.html">DOTExporter</a>.
 	 * 
 	 * Return if the nodes' ids respect the dot language described in
 	 * http://www.graphviz.org/doc/info/lang.html Quoted from above mentioned
