@@ -100,11 +100,30 @@ public class ExportDOT {
 		streamExport.write(str.getBytes(StandardCharsets.UTF_8));
 	}
 	
+	/**
+	 * This method allowed to write the string (UTF-8 character encoding) given to the output stream
+	 * in the streamExport attribute of the ExportDOT class.
+	 * We must to define the end of line encoding. An indentation and an end of line are added to match the DOT format,
+	 * for writing vertices and arcs/edges.
+	 * @param str
+	 * @param lineSeparator
+	 * @throws IOException
+	 */
+	
 	private static void writeAndSeparateOnStream(String str, String lineSeparator) throws IOException {
 		String lineDot=INDENTATION+str+ENDLINE;
 		streamExport.write(lineDot.getBytes(StandardCharsets.UTF_8));
 		streamExport.write(lineSeparator.getBytes(StandardCharsets.UTF_8));
 	}
+	
+	/**
+	 * This method allowed to write the string (UTF-8 character encoding) given to the output stream
+	 * in the streamExport attribute of the ExportDOT class.
+	 * We must to define the end of line encoding. The header in DOT format have no indentation & end of line.
+	 * @param headerDot
+	 * @param lineSeparator
+	 * @throws IOException
+	 */
 	
 	private static void writeAndSeparateOnStreamHeader(String headerDot, String lineSeparator) throws IOException {
 		streamExport.write(headerDot.getBytes(StandardCharsets.UTF_8));
