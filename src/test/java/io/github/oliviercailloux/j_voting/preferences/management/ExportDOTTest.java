@@ -128,13 +128,13 @@ public class ExportDOTTest {
 	
 	@Test
 	public void testExportDotToFile() throws IOException {
-
 		MutableGraph<String> graph = GraphBuilder.directed().build();
 		graph.putEdge("a1", "a2");
 		graph.putEdge("a1", "a4");
 		graph.putEdge("a2", "a3");
 		graph.putEdge("a2", "a4");
 		graph.putEdge("a3", "a4");
+		
 
 		File file = new File("./src/test/resources/io/github/oliviercailloux/j_voting/preferences/management/FileDOTtest.dot");
 		OutputStream fop = new FileOutputStream(file);
