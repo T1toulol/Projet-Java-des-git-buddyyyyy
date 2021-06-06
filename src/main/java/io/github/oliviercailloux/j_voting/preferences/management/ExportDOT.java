@@ -63,6 +63,9 @@ public class ExportDOT {
 		checkNotNull(graph);
 		checkNotNull(stream);
 		checkNotNull(lineSeparator);
+		if(!lineSeparator.equals("\n")&&!lineSeparator.equals("\r\n")&&!lineSeparator.equals("\r")) {
+			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
+		}		
 		if (!checkFormatVertex(graph.nodes())) {
 			throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format.");
 		}
@@ -96,18 +99,12 @@ public class ExportDOT {
 	}
 	
 	private static void writeAndSeparateOnStream(String str, String lineSeparator) throws IOException {
-		if(!lineSeparator.equals("\n")&&!lineSeparator.equals("\r\n")&&!lineSeparator.equals("\r")) {
-			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
-		}
 		String lineDot=INDENTATION+str+ENDLINE;
 		streamExport.write(lineDot.getBytes(StandardCharsets.UTF_8));
 		streamExport.write(lineSeparator.getBytes(StandardCharsets.UTF_8));
 	}
 	
 	private static void writeAndSeparateOnStreamHeader(String headerDot, String lineSeparator) throws IOException {
-		if(!lineSeparator.equals("\n")&&!lineSeparator.equals("\r\n")&&!lineSeparator.equals("\r")) {
-			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
-		}
 		streamExport.write(headerDot.getBytes(StandardCharsets.UTF_8));
 		streamExport.write(lineSeparator.getBytes(StandardCharsets.UTF_8));
 	}

@@ -1,6 +1,7 @@
 package io.github.oliviercailloux.j_voting.preferences.management;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -9,19 +10,12 @@ import com.google.common.graph.GraphBuilder;
 import com.google.common.graph.MutableGraph;
 import com.google.common.io.CharStreams;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
 
 public class ExportDOTTest {
 
@@ -79,6 +73,17 @@ public class ExportDOTTest {
 
 		assertEquals(result, graphDotFormat);
 	}
+	
+	
+	@Test
+	public void testConvertToDotException() throws IOException {
+
+		MutableGraph<String> graphEncodingLine = GraphBuilder.directed().build();
+		graphEncodingLine.putEdge("a1", "a2");
+		graphEncodingLine.putEdge("a1", "a4");
+		
+		assertThrows(IllegalArgumentException.class, () -> ExportDOT.convertToDot(graphEncodingLine, "\t"));
+	}
 
 	@Test
 	public void testConvertToDotUndirected() throws IOException {
@@ -135,8 +140,8 @@ public class ExportDOTTest {
 		OutputStream fop = new FileOutputStream(file);
 		ExportDOT.export(graph, fop);
 		
-		InputStream in =ExportDOT.class.getResourceAsStream("FileDOTtest.dot");
-		String resultDOTFile =CharStreams.toString(new InputStreamReader(in, "UTF-8"));
+		InputStream in = ExportDOT.class.getResourceAsStream("FileDOTtest.dot");
+		String resultDOTFile = CharStreams.toString(new InputStreamReader(in, "UTF-8"));
 
 		String result = "digraph G {" + System.lineSeparator();
 		result += "  a1;"+ System.lineSeparator();
