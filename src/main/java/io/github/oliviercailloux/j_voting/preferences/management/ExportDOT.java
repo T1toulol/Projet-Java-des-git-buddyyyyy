@@ -135,6 +135,9 @@ public class ExportDOT {
 		if (!checkFormatVertex(graph.nodes())) {
 			throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format.");
 		}
+		if(!lineSeparator.equals("\n")&&!lineSeparator.equals("\r\n")&&!lineSeparator.equals("\r")) {
+			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
+		}		
 
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
 		export(graph, stream, lineSeparator);
