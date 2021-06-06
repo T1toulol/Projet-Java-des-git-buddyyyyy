@@ -89,18 +89,18 @@ public class ExportDOT {
 	private static void writeOnStream(String str) throws IOException {
 		streamExport.write(str.getBytes(StandardCharsets.UTF_8));
 	}
-	private static void writeAndSeparateOnStream(String str, String lineSeparator) throws IOException {/*
-		if(lineSeparator!="\n"&&lineSeparator!="\r\n"&&lineSeparator!="\r") {
+	private static void writeAndSeparateOnStream(String str, String lineSeparator) throws IOException {
+		if(!lineSeparator.equals("\n")&&!lineSeparator.equals("\r\n")&&!lineSeparator.equals("\r")) {
 			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
-		}*/
+		}
 		String lineDot=INDENTATION+str+ENDLINE;
 		streamExport.write(lineDot.getBytes(StandardCharsets.UTF_8));
 		streamExport.write(System.lineSeparator().getBytes(StandardCharsets.UTF_8));
 	}
-	private static void writeAndSeparateOnStreamHeader(String headerDot, String lineSeparator) throws IOException {/*
-		if(lineSeparator!="\n"&&lineSeparator!="\r\n"&&lineSeparator!="\r") {
+	private static void writeAndSeparateOnStreamHeader(String headerDot, String lineSeparator) throws IOException {
+		if(!lineSeparator.equals("\n")&&!lineSeparator.equals("\r\n")&&!lineSeparator.equals("\r")) {
 			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
-		}*/
+		}
 		streamExport.write(headerDot.getBytes(StandardCharsets.UTF_8));
 		streamExport.write(System.lineSeparator().getBytes(StandardCharsets.UTF_8));
 	}
