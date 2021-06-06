@@ -49,7 +49,7 @@ public class ExportDOT {
 	
 	/**
 	 * Exports the graph from the parameters, converts it to DOT format and writes (with UTF-8 character encoding)
-	 * it to the stream from the parameters.
+	 * it to the stream from the parameters (which is given to the streamExport attribute of ExportDOT class).
 	 * You can chose the end of line encoding (CR / CRLF / LF format) by the string lineSeparator given.
 	 * This choice is based on René Nyffenegger examples (https://renenyffenegger.ch/notes/tools/Graphviz/examples/index)
 	 * referenced in the official website about DOT format (https://www.graphviz.org/resources/#simple-examples-and-tutorials).
@@ -94,6 +94,7 @@ public class ExportDOT {
 	private static void writeOnStream(String str) throws IOException {
 		streamExport.write(str.getBytes(StandardCharsets.UTF_8));
 	}
+	
 	private static void writeAndSeparateOnStream(String str, String lineSeparator) throws IOException {
 		if(!lineSeparator.equals("\n")&&!lineSeparator.equals("\r\n")&&!lineSeparator.equals("\r")) {
 			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
@@ -102,6 +103,7 @@ public class ExportDOT {
 		streamExport.write(lineDot.getBytes(StandardCharsets.UTF_8));
 		streamExport.write(lineSeparator.getBytes(StandardCharsets.UTF_8));
 	}
+	
 	private static void writeAndSeparateOnStreamHeader(String headerDot, String lineSeparator) throws IOException {
 		if(!lineSeparator.equals("\n")&&!lineSeparator.equals("\r\n")&&!lineSeparator.equals("\r")) {
 			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
