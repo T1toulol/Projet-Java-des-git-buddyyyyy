@@ -90,7 +90,8 @@ public class ExportDOT {
 	}
 	
 	/**
-	 * This method allowed to write the string given to the output stream in the streamExport attribute of the ExportDOT class.
+	 * This method allowed to write the string (UTF-8 character encoding) given to the output stream 
+	 * in the streamExport attribute of the ExportDOT class.
 	 * @param str
 	 * @throws IOException
 	 */

@@ -13,7 +13,6 @@ import com.google.common.io.CharStreams;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 
@@ -83,6 +82,7 @@ public class ExportDOTTest {
 		graphEncodingLine.putEdge("a1", "a4");
 		
 		assertThrows(IllegalArgumentException.class, () -> ExportDOT.convertToDot(graphEncodingLine, "\t"));
+		assertThrows(IllegalArgumentException.class, () -> ExportDOT.convertToDot(graphEncodingLine, "@"));
 	}
 
 	@Test
@@ -140,8 +140,8 @@ public class ExportDOTTest {
 		OutputStream fop = new FileOutputStream(file);
 		ExportDOT.export(graph, fop);
 		
-		InputStream in = ExportDOT.class.getResourceAsStream("FileDOTtest.dot");
-		String resultDOTFile = CharStreams.toString(new InputStreamReader(in, "UTF-8"));
+		String resultDOTFile = CharStreams.toString(new InputStreamReader(
+				ExportDOT.class.getResourceAsStream("FileDOTtest.dot"), "UTF-8"));
 
 		String result = "digraph G {" + System.lineSeparator();
 		result += "  a1;"+ System.lineSeparator();
