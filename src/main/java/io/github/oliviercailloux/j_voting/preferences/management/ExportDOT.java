@@ -9,9 +9,10 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Objects;
 import com.google.common.graph.EndpointPair;
 import com.google.common.graph.Graph;
+
+import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * The goal of the ExportDOT class is to export Google Guava Graph in DOT Format
@@ -23,7 +24,16 @@ import com.google.common.graph.Graph;
 public class ExportDOT {
 	
 	@SuppressWarnings("unused")
-	private static final Logger logger = LoggerFactory.getLogger(ExportDOT.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ExportDOT.class);
+	private final static String INDENTATION = "  ";
+	private final static String ENDLINE=";";
+	private final static String HEADER_DIGRAPH="digraph G {";
+	private final static String HEADER_GRAPH="graph G {";
+	private final static String CONNECTOR_DIGRAPH=" -> ";
+	private final static String CONNECTOR_GRAPH=" -- ";
+	
+	private static OutputStream streamExport;
+	
 	
 	/**
 	 * Calls the export method with the parameter endLine null.
@@ -33,7 +43,7 @@ public class ExportDOT {
 	 * @throws IOException
 	 */
 	public static void export(Graph<String> graph, OutputStream stream) throws IOException {
-		export(graph, stream, null);
+		export(graph, stream, System.lineSeparator());
 	}
 	
 	/**
@@ -45,42 +55,58 @@ public class ExportDOT {
 	 * 
 	 * @param graph can't be null
 	 * @param stream can't be null
-	 * @param endLine can be null
+	 * @param lineSeparator can't be null
 	 * @throws IOException
 	 */
-	public static void export(Graph<String> graph, OutputStream stream, String endLineArg) throws IOException {
-		if (graph == null) {
-			throw new NullPointerException("The graph can't be null.");
-		}
+	public static void export(Graph<String> graph, OutputStream stream, String lineSeparator) throws IOException {
+		checkNotNull(graph);
+		checkNotNull(stream);
+		checkNotNull(lineSeparator);
 		if (!checkFormatVertex(graph.nodes())) {
 			throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format.");
 		}
+		
+		streamExport=stream;
+		
+		final String header = graph.isDirected() ? HEADER_DIGRAPH : HEADER_GRAPH;
+		final String connector = graph.isDirected() ? CONNECTOR_DIGRAPH : CONNECTOR_GRAPH;
 
-		final String endLine = endLineArg==null ? ";" : endLineArg;
-		final String header = graph.isDirected() ? "digraph G {" : "graph G {";
-		final String connector = graph.isDirected() ? " -> " : " -- ";
-		final String indentation = "  ";
-
-		writeAndSeparateOnStream(header, stream);
+		writeAndSeparateOnStreamHeader(header, lineSeparator);
 		
 		for(String node : graph.nodes()) {
-			writeAndSeparateOnStream(indentation + node + endLine, stream);
+			writeAndSeparateOnStream(node, lineSeparator);
 		}
 		for(EndpointPair<String> edge : graph.edges()) {
-			writeAndSeparateOnStream(indentation + edge.nodeU() + connector + edge.nodeV() + endLine, stream);
+			writeAndSeparateOnStream(edge.nodeU() + connector + edge.nodeV(), lineSeparator);
 		}
 		
-		writeOnStream("}", stream);
-		logger.debug("export DOT - OutputStream {}", stream.toString());
+		writeOnStream("}");
+		LOGGER.debug("export DOT - OutputStream {}", streamExport.toString());
 	}
 	
-	private static void writeOnStream(String str, OutputStream stream) throws IOException {
-		stream.write(str.getBytes(StandardCharsets.UTF_8));
+	
+	
+	private static void writeOnStream(String str) throws IOException {
+		streamExport.write(str.getBytes(StandardCharsets.UTF_8));
 	}
-	private static void writeAndSeparateOnStream(String str, OutputStream stream) throws IOException {
-		stream.write(str.getBytes(StandardCharsets.UTF_8));
-		stream.write(System.lineSeparator().getBytes(StandardCharsets.UTF_8));
+	private static void writeAndSeparateOnStream(String str, String lineSeparator) throws IOException {/*
+		if(lineSeparator!="\n"&&lineSeparator!="\r\n"&&lineSeparator!="\r") {
+			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
+		}*/
+		String lineDot=INDENTATION+str+ENDLINE;
+		streamExport.write(lineDot.getBytes(StandardCharsets.UTF_8));
+		streamExport.write(System.lineSeparator().getBytes(StandardCharsets.UTF_8));
 	}
+	private static void writeAndSeparateOnStreamHeader(String headerDot, String lineSeparator) throws IOException {/*
+		if(lineSeparator!="\n"&&lineSeparator!="\r\n"&&lineSeparator!="\r") {
+			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
+		}*/
+		streamExport.write(headerDot.getBytes(StandardCharsets.UTF_8));
+		streamExport.write(System.lineSeparator().getBytes(StandardCharsets.UTF_8));
+	}
+	
+	
+	
 
 	/**
 	 * Take the graph and convert it to a DOT format String.
@@ -90,10 +116,8 @@ public class ExportDOT {
 	 * @throws IOException 
 	 */
 	public static String convertToDot(Graph<String> graph) throws IOException {
-		logger.debug("Convert to DOT :");
-		if (graph == null) {
-			throw new IllegalArgumentException("The graph can't be null.");
-		}
+		LOGGER.debug("Convert to DOT :");
+		checkNotNull(graph);
 		if (!checkFormatVertex(graph.nodes())) {
 			throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format.");
 		}
@@ -101,7 +125,7 @@ public class ExportDOT {
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
 		export(graph, stream);
 		final String graphDotString = new String(stream.toByteArray());
-		logger.debug("DOT graph : {}", graphDotString);
+		LOGGER.debug("DOT graph : {}", graphDotString);
 		return graphDotString;
 	}
 
@@ -131,6 +155,7 @@ public class ExportDOT {
 			boolean isDotNumber = aNode.matches("[-]?([.][0-9]+|[0-9]+([.][0-9]*)?)");
 			boolean isHTML = aNode.matches("<.*>");
 			if (!isAlphaDig && !isDotNumber && !isDoubleQuoted && !isHTML) {
+				LOGGER.debug("checkFormatVertex is bad: ", aNode);
 				return false;
 			}
 		}

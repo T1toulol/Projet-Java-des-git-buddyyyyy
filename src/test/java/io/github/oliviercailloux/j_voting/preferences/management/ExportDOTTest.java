@@ -107,8 +107,10 @@ public class ExportDOTTest {
 		OutputStream fop = new FileOutputStream(file);
 		ExportDOT.export(graph, fop);
 		
-        FileInputStream in = new FileInputStream(file);
-        String resultDOTFile = CharStreams.toString(new InputStreamReader(in, "UTF-8"));
+        //FileInputStream in = new FileInputStream(file);
+		InputStream in =ExportDOT.class.getResourceAsStream("FileDOTtest.dot");
+        //String resultDOTFile = CharStreams.toString(new InputStreamReader(in, "UTF-8"));
+		String resultDOTFile =CharStreams.toString(new InputStreamReader(in, "UTF-8"));
 
 		String result = "digraph G {" + System.lineSeparator();
 		result += "  a1;"+ System.lineSeparator();
