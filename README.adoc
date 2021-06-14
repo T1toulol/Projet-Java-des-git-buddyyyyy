@@ -184,3 +184,57 @@ Chahid et Firas => Continue to work on the GUI, PR #20 : https://github.com/oliv
 === Duo 3 and task
 
 Nicolas et Maxime => ExportDOT, work requested in PR #19 : https://github.com/oliviercailloux-org/projet-j-voting/pull/19#pullrequestreview-641378958 
+
+== Iteration JAVA 3
+
+=== Scrum-Master
+
+Sylvain
+
+=== Duo 1 and task
+
+Nicolas and Firas => Poursuivre l'implémentation de ExportDOT depuis les éléments proposés dans la PR #34 : https://github.com/oliviercailloux-org/projet-j-voting/pull/34
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+- Aller plus loin dans la vérificatin avec la méthode checkFormatVertex() pour accepter uniquement les syntaxes vraiment valides.
+- Modifier la surcharge de notre méthode export().
+- Utiliser checknotnull pour les exceptions. 
+- Faire des connecteurs DOT (etc...) des constantes. 
+- Modifier la possibilité de changer les fins de lignes (encodage).
+- Créer une instance d'ExportDOT contenant le stream. 
+
+=== Duo 2 and task
+
+Hugo and Chahid => Poursuite de la PR #33 : https://github.com/oliviercailloux-org/projet-j-voting/pull/33
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+* Correction des bugs existant :
+** Corrections des différents bugs sur les boutons add et delete.
+
+* Suite de la PR #33:
+** Ajout d'une scrollbar.
+** Adapter la lecture des fichiers comme vu en cours.
+** Corrections mineures.
+
+=== Duo 3 and task
+
+Lucas and Maxime => Poursuite des PR #29, #30, #31 : +
+
+* https://github.com/oliviercailloux-org/projet-j-voting/pull/29
+* https://github.com/oliviercailloux-org/projet-j-voting/pull/30
+* https://github.com/oliviercailloux-org/projet-j-voting/pull/31
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+* Tâches de la PR #29:
+** Corrections d'erreurs mineures.
+
+* Tâches de la PR #30:
+** Permettre un swap d'une alternative avec elle-même.
+** Corrections de commentaires.
+
+* Tâches de la PR #31:
+** Modification des tests unitaires concernant addEquivalence et setAtLeastGood.
+** Correction de la méthode getAlternatives() dans la classe MutablePreferenceImpl permettant de renvoyer un NavigableSet.
