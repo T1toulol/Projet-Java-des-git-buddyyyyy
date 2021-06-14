@@ -1,8 +1,6 @@
 = 2.2 Input/Output Formats 
 
-====== link:../README.adoc[Summary]
-
-====== In addition to this document, you can consult the link:http://www.preflib.org/data/format.php#soc[Preflib documentation].
+__In addition to this document, you can consult the link:http://www.preflib.org/data/format.php#soc[Preflib documentation].__
 
 
 
