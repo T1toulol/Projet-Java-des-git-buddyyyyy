@@ -175,6 +175,7 @@ Dans le diagramme de classes :
 - Corriger le problème de MLPD. 
 
 Dans un second temps :
+
 - Proposer des évolutions à nos successeurs. 
 - Clarifier l’état du projet.
 
