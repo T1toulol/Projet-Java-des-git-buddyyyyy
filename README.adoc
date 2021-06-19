@@ -164,12 +164,14 @@ Lucas and Sylvain => Suite de la PR#43 :
 https://github.com/oliviercailloux-org/projet-j-voting/pull/43
 
 Dans le diagramme de séquence :
+
 - Corriger les cardinalités. 
 - Corriger les conventions de notation. 
 - Enlever les types de retour des opérations. 
 - Corriger la méthode verifyModification. 
 
 Dans le diagramme de classes :
+
 - Corriger le problème de MLPD. 
 
 Dans un second temps :
