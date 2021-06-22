@@ -3,6 +3,7 @@ package io.github.oliviercailloux.j_voting.preferences.management;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Set;
 
@@ -21,10 +22,10 @@ import static com.google.common.base.Preconditions.checkNotNull;
  */
 
 
-public class ExportDOT {
+public class ExportDot {
 	
 	@SuppressWarnings("unused")
-	private static final Logger LOGGER = LoggerFactory.getLogger(ExportDOT.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ExportDot.class);
 	private final static String INDENTATION = "  ";
 	private final static String ENDLINE=";";
 	private final static String HEADER_DIGRAPH="digraph G {";
@@ -32,7 +33,8 @@ public class ExportDOT {
 	private final static String CONNECTOR_DIGRAPH=" -> ";
 	private final static String CONNECTOR_GRAPH=" -- ";
 	
-	private static OutputStream streamExport;
+	private OutputStreamWriter writerExport;
+	//private OutputStream writerExport;
 	
 	
 	/**
@@ -44,7 +46,7 @@ public class ExportDOT {
 	 * @throws IOException
 	 */
 	public static void export(Graph<String> graph, OutputStream stream) throws IOException {
-		export(graph, stream, System.lineSeparator());
+		export(graph, stream, LineSeparator.CRLF.getValue());
 	}
 	
 	/**
@@ -64,29 +66,34 @@ public class ExportDOT {
 		checkNotNull(graph);
 		checkNotNull(stream);
 		checkNotNull(lineSeparator);
+		checkFormatVertex(graph.nodes());
 		if(!lineSeparator.equals("\n")&&!lineSeparator.equals("\r\n")&&!lineSeparator.equals("\r")) {
 			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
 		}		
-		if (!checkFormatVertex(graph.nodes())) {
-			throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format.");
-		}
 		
-		streamExport=stream;
+		ExportDot exportInstance=new ExportDot();
+		//exportInstance.writerExport=new OutputStreamWriter(stream, StandardCharsets.UTF_8);
+		//writerExport=new OutputStreamWriter(stream, StandardCharsets.UTF_8);
+		OutputStreamWriter out=new OutputStreamWriter(stream, StandardCharsets.UTF_8);
+		exportInstance.writerExport=out;
 		
 		final String header = graph.isDirected() ? HEADER_DIGRAPH : HEADER_GRAPH;
 		final String connector = graph.isDirected() ? CONNECTOR_DIGRAPH : CONNECTOR_GRAPH;
-
-		writeAndSeparateOnStreamHeader(header, lineSeparator);
+		//exportInstance.writeAndSeparateOnStreamHeader(header, lineSeparator);
+		exportInstance.writeAndSeparateOnStreamHeader(header, lineSeparator);
 		
 		for(String node : graph.nodes()) {
-			writeAndSeparateOnStream(node, lineSeparator);
+			//exportInstance.writeAndSeparateOnStream(node, lineSeparator);
+			exportInstance.writeAndSeparateOnStream(node, lineSeparator);
 		}
 		for(EndpointPair<String> edge : graph.edges()) {
-			writeAndSeparateOnStream(edge.nodeU() + connector + edge.nodeV(), lineSeparator);
+			//exportInstance.writeAndSeparateOnStream(edge.nodeU() + connector + edge.nodeV(), lineSeparator);
+			exportInstance.writeAndSeparateOnStream(edge.nodeU() + connector + edge.nodeV(), lineSeparator);
 		}
-		
-		writeOnStream("}");
-		LOGGER.debug("export DOT - OutputStream {}", streamExport.toString());
+	
+		//exportInstance.writeOnStream("}");
+		exportInstance.writeOnStream("}");
+		LOGGER.debug("export DOT - OutputStream {}", exportInstance.writerExport.toString());
 	}
 	
 	/**
@@ -96,8 +103,9 @@ public class ExportDOT {
 	 * @throws IOException
 	 */
 	
-	private static void writeOnStream(String str) throws IOException {
-		streamExport.write(str.getBytes(StandardCharsets.UTF_8));
+	private void writeOnStream(String str) throws IOException {
+		writerExport.write(str);
+		writerExport.flush();
 	}
 	
 	/**
@@ -110,10 +118,12 @@ public class ExportDOT {
 	 * @throws IOException
 	 */
 	
-	private static void writeAndSeparateOnStream(String str, String lineSeparator) throws IOException {
+	private void writeAndSeparateOnStream(String str, String lineSeparator) throws IOException {
 		String lineDot=INDENTATION+str+ENDLINE;
-		streamExport.write(lineDot.getBytes(StandardCharsets.UTF_8));
-		streamExport.write(lineSeparator.getBytes(StandardCharsets.UTF_8));
+		writerExport.write(lineDot);
+		writerExport.write(lineSeparator);
+		writerExport.flush();
+		
 	}
 	
 	/**
@@ -125,41 +135,35 @@ public class ExportDOT {
 	 * @throws IOException
 	 */
 	
-	private static void writeAndSeparateOnStreamHeader(String headerDot, String lineSeparator) throws IOException {
-		streamExport.write(headerDot.getBytes(StandardCharsets.UTF_8));
-		streamExport.write(lineSeparator.getBytes(StandardCharsets.UTF_8));
+	private void writeAndSeparateOnStreamHeader(String headerDot, String lineSeparator) throws IOException {
+		writerExport.write(headerDot);
+		writerExport.write(lineSeparator);
+		writerExport.flush();
 	}
 	
 	
 	/**
 	 * Calls the convertToDot method with the parameter lineSeparator.
 	 * By default the end of line encoding is given by System.lineSeparator(). 
-	 * @param graph is not null
+	 * @param a string graph
 	 * @return the graph in DOT format
 	 * @throws IOException
 	 */
 	
 	public static String convertToDot(Graph<String> graph) throws IOException {
-		return convertToDot(graph,System.lineSeparator());
+		return convertToDot(graph,LineSeparator.CRLF.getValue());
 	}
 
 	/**
 	 * Takes the graph and convert it to a DOT format String with the end of line encoding chosen (in CR / CRLF / LF format).
 	 * For more informations about DOT format: <a href="http://www.graphviz.org/doc/info/lang.html">GraphViz website</a>.
-	 * @param graph can't be null
+	 * @param a string graph
 	 * @return the graph in DOT format
 	 * @throws IOException 
 	 */
 	public static String convertToDot(Graph<String> graph, String lineSeparator) throws IOException {
 		LOGGER.debug("Convert to DOT :");
 		checkNotNull(graph);
-		if (!checkFormatVertex(graph.nodes())) {
-			throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format.");
-		}
-		if(!lineSeparator.equals("\n")&&!lineSeparator.equals("\r\n")&&!lineSeparator.equals("\r")) {
-			throw new IllegalArgumentException("Line ends must be encoded in CR / CRLF / LF format.");
-		}		
-
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
 		export(graph, stream, lineSeparator);
 		final String graphDotString = new String(stream.toByteArray());
@@ -187,17 +191,28 @@ public class ExportDOT {
 	 * @param Set<String> myNodes
 	 * @return if the ids are in the good format or not
 	 */
-	private static boolean checkFormatVertex(Set<String> myNodes) {
+	private static void checkFormatVertex(Set<String> myNodes) {
 		for (String aNode : myNodes) {
 			boolean isAlphaDig = aNode.matches("[a-zA-Z]+([\\w_]*)?");
 			boolean isDoubleQuoted = aNode.matches("\".*\"");
 			boolean isDotNumber = aNode.matches("[-]?([.][0-9]+|[0-9]+([.][0-9]*)?)");
 			boolean isHTML = aNode.matches("<.*>");
 			if (!isAlphaDig && !isDotNumber && !isDoubleQuoted && !isHTML) {
-				LOGGER.debug("checkFormatVertex is bad: ", aNode);
-				return false;
+				throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format : " + aNode);
 			}
 		}
-		return true;
+	}
+	
+	private enum LineSeparator{
+		CRLF("\r\n"),CR("\r"),LF("\n");
+		private String value;
+		
+		LineSeparator(String LineSeparator){
+			this.value=LineSeparator;
+		}
+		
+		public String getValue() {
+			return this.value;
+		}
 	}
 }

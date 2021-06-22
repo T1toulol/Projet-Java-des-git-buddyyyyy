@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 
-public class ExportDOTTest {
+public class ExportDotTest {
 
 	@Test
 	public void testConvertToDotDirected() throws IOException {
@@ -28,7 +28,7 @@ public class ExportDOTTest {
 		graph.putEdge("a2", "a4");
 		graph.putEdge("a3", "a4");
 
-		String graphDotFormat = ExportDOT.convertToDot(graph);
+		String graphDotFormat = ExportDot.convertToDot(graph);
 
 		String result = "digraph G {" + System.lineSeparator();
 		result += "  a1;"+ System.lineSeparator();
@@ -56,7 +56,7 @@ public class ExportDOTTest {
 		graph.putEdge("a2", "a4");
 		graph.putEdge("a3", "a4");
 
-		String graphDotFormat = ExportDOT.convertToDot(graph, "\r");
+		String graphDotFormat = ExportDot.convertToDot(graph, "\r");
 
 		String result = "digraph G {\r";
 		result += "  a1;\r";
@@ -81,8 +81,8 @@ public class ExportDOTTest {
 		graphEncodingLine.putEdge("a1", "a2");
 		graphEncodingLine.putEdge("a1", "a4");
 		
-		assertThrows(IllegalArgumentException.class, () -> ExportDOT.convertToDot(graphEncodingLine, "\t"));
-		assertThrows(IllegalArgumentException.class, () -> ExportDOT.convertToDot(graphEncodingLine, "@"));
+		assertThrows(IllegalArgumentException.class, () -> ExportDot.convertToDot(graphEncodingLine, "\t"));
+		assertThrows(IllegalArgumentException.class, () -> ExportDot.convertToDot(graphEncodingLine, "@"));
 	}
 
 	@Test
@@ -95,7 +95,7 @@ public class ExportDOTTest {
 		graph.putEdge("a2", "a4");
 		graph.putEdge("a3", "a4");
 
-		String graphDotFormat = ExportDOT.convertToDot(graph);
+		String graphDotFormat = ExportDot.convertToDot(graph);
 
 		String result1 = "graph G {" + System.lineSeparator();
 		result1 += "  a1;"+ System.lineSeparator();;
@@ -138,10 +138,10 @@ public class ExportDOTTest {
 
 		File file = new File("./src/test/resources/io/github/oliviercailloux/j_voting/preferences/management/FileDOTtest.dot");
 		OutputStream fop = new FileOutputStream(file);
-		ExportDOT.export(graph, fop);
+		ExportDot.export(graph, fop);
 		
 		String resultDOTFile = CharStreams.toString(new InputStreamReader(
-				ExportDOT.class.getResourceAsStream("FileDOTtest.dot"), "UTF-8"));
+				ExportDot.class.getResourceAsStream("FileDOTtest.dot"), "UTF-8"));
 
 		String result = "digraph G {" + System.lineSeparator();
 		result += "  a1;"+ System.lineSeparator();
