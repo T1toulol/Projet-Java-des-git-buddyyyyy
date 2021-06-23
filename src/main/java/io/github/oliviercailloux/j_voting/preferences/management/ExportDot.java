@@ -203,6 +203,10 @@ public class ExportDot {
 		}
 	}
 	
+	
+	/**
+	 * This enum class gives all lines separators (CRLF, CR, LF) that can be accepted in DOT format.
+	 */
 	private enum LineSeparator{
 		CRLF("\r\n"),CR("\r"),LF("\n");
 		private String value;
