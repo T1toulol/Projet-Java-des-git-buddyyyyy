@@ -265,8 +265,8 @@ https://github.com/oliviercailloux-org/projet-j-voting/pull/49
 
 Pour être plus précis, ils vont effectuer les modifications suivantes :
 
-- Permettre de visualiser les fichiers soc avec plusieurs votes
-- Changement d'un texte en label et de l'affichage des alternatives
+- Première tâche: Permettre de visualiser les fichiers soc avec plusieurs votes
+- Deuxième tâche: Changement d'un texte en label et de l'affichage des alternatives
 
 === Duo 3 and tasks
 
@@ -278,8 +278,8 @@ https://github.com/oliviercailloux-org/projet-j-voting/pull/51
 
 Dans un premier temps, ils veulent poursuivre la PR #51 avec les tâches suivantes:
 
-- Modification de la méthode getAlternatives de MutablePreference pour renvoyer un NavigableSet.
-- Modifier les tests unitaires de addEquivalence et setAtLeastAsGood.
+- Première tâche: Modification de la méthode getAlternatives de MutablePreference pour renvoyer un NavigableSet.
+- Deuxième tâche: Modifier les tests unitaires de addEquivalence et setAtLeastAsGood.
 
 Dans un second temps, ils pousuivront la PR # 47 avec les tâches suivantes:
 
