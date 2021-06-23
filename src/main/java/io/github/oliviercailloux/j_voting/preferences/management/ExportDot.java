@@ -31,10 +31,8 @@ public class ExportDot {
 	private final static String HEADER_DIGRAPH="digraph G {";
 	private final static String HEADER_GRAPH="graph G {";
 	private final static String CONNECTOR_DIGRAPH=" -> ";
-	private final static String CONNECTOR_GRAPH=" -- ";
-	
+	private final static String CONNECTOR_GRAPH=" -- ";	
 	private OutputStreamWriter writerExport;
-	//private OutputStream writerExport;
 	
 	
 	/**
@@ -72,26 +70,19 @@ public class ExportDot {
 		}		
 		
 		ExportDot exportInstance=new ExportDot();
-		//exportInstance.writerExport=new OutputStreamWriter(stream, StandardCharsets.UTF_8);
-		//writerExport=new OutputStreamWriter(stream, StandardCharsets.UTF_8);
-		OutputStreamWriter out=new OutputStreamWriter(stream, StandardCharsets.UTF_8);
-		exportInstance.writerExport=out;
+		OutputStreamWriter outWriter=new OutputStreamWriter(stream, StandardCharsets.UTF_8);
+		exportInstance.writerExport=outWriter;
 		
 		final String header = graph.isDirected() ? HEADER_DIGRAPH : HEADER_GRAPH;
 		final String connector = graph.isDirected() ? CONNECTOR_DIGRAPH : CONNECTOR_GRAPH;
-		//exportInstance.writeAndSeparateOnStreamHeader(header, lineSeparator);
 		exportInstance.writeAndSeparateOnStreamHeader(header, lineSeparator);
 		
 		for(String node : graph.nodes()) {
-			//exportInstance.writeAndSeparateOnStream(node, lineSeparator);
 			exportInstance.writeAndSeparateOnStream(node, lineSeparator);
 		}
 		for(EndpointPair<String> edge : graph.edges()) {
-			//exportInstance.writeAndSeparateOnStream(edge.nodeU() + connector + edge.nodeV(), lineSeparator);
 			exportInstance.writeAndSeparateOnStream(edge.nodeU() + connector + edge.nodeV(), lineSeparator);
 		}
-	
-		//exportInstance.writeOnStream("}");
 		exportInstance.writeOnStream("}");
 		LOGGER.debug("export DOT - OutputStream {}", exportInstance.writerExport.toString());
 	}
@@ -166,7 +157,7 @@ public class ExportDot {
 		checkNotNull(graph);
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
 		export(graph, stream, lineSeparator);
-		final String graphDotString = new String(stream.toByteArray());
+		final String graphDotString = new String(stream.toByteArray(), StandardCharsets.UTF_8);
 		LOGGER.debug("DOT graph : {}", graphDotString);
 		return graphDotString;
 	}
