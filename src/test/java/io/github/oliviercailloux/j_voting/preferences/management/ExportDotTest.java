@@ -10,11 +10,13 @@ import com.google.common.graph.GraphBuilder;
 import com.google.common.graph.MutableGraph;
 import com.google.common.io.CharStreams;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 
 public class ExportDotTest {
 
@@ -135,14 +137,10 @@ public class ExportDotTest {
 		graph.putEdge("a2", "a4");
 		graph.putEdge("a3", "a4");
 		
-
-		File file = new File("./src/test/resources/io/github/oliviercailloux/j_voting/preferences/management/FileDOTtest.dot");
-		OutputStream fop = new FileOutputStream(file);
-		ExportDot.export(graph, fop);
+		ByteArrayOutputStream stream = new ByteArrayOutputStream();
+		ExportDot.export(graph, stream);
+		final String graphDotString = new String(stream.toByteArray(), StandardCharsets.UTF_8);
 		
-		String resultDOTFile = CharStreams.toString(new InputStreamReader(
-				ExportDot.class.getResourceAsStream("FileDOTtest.dot"), "UTF-8"));
-
 		String result = "digraph G {" + System.lineSeparator();
 		result += "  a1;"+ System.lineSeparator();
 		result += "  a2;"+ System.lineSeparator();
@@ -155,7 +153,7 @@ public class ExportDotTest {
 		result += "  a3 -> a4;" + System.lineSeparator();
 		result += "}";
 
-		assertEquals(result, resultDOTFile);
+		assertEquals(result, graphDotString);
 	} 
 	
 	
