@@ -24,7 +24,7 @@ public class ExportDotTest {
 		graph.putEdge("a2", "a4");
 		graph.putEdge("a3", "a4");
 
-		String graphDotFormat = ExportDot.convertToDot(graph);
+		String graphDotFormat = ExportDot.convertToDot(graph, System.lineSeparator());
 
 		String result = "digraph G {" + System.lineSeparator();
 		result += "  a1;"+ System.lineSeparator();
@@ -91,7 +91,7 @@ public class ExportDotTest {
 		graph.putEdge("a2", "a4");
 		graph.putEdge("a3", "a4");
 
-		String graphDotFormat = ExportDot.convertToDot(graph);
+		String graphDotFormat = ExportDot.convertToDot(graph, System.lineSeparator());
 
 		String result1 = "graph G {" + System.lineSeparator();
 		result1 += "  a1;"+ System.lineSeparator();;
@@ -132,7 +132,7 @@ public class ExportDotTest {
 		graph.putEdge("a3", "a4");
 		
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
-		ExportDot.export(graph, stream);
+		ExportDot.export(graph, stream, System.lineSeparator());
 		final String graphDotString = new String(stream.toByteArray(), StandardCharsets.UTF_8);
 		
 		String result = "digraph G {" + System.lineSeparator();
