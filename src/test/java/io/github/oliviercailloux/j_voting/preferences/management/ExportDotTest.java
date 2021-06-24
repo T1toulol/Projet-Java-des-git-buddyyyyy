@@ -43,7 +43,7 @@ public class ExportDotTest {
 		result += "  a2 -> a4;" + System.lineSeparator();
 		result += "  a3 -> a4;" + System.lineSeparator();
 		result += "}";
-
+		result=new String(result.getBytes(), StandardCharsets.UTF_8);
 		assertEquals(result, graphDotFormat);
 	}
 	
@@ -71,7 +71,7 @@ public class ExportDotTest {
 		result += "  a2 -> a4;\r";
 		result += "  a3 -> a4;\r";
 		result += "}";
-
+		result=new String(result.getBytes(), StandardCharsets.UTF_8);
 		assertEquals(result, graphDotFormat);
 	}
 	
@@ -110,7 +110,7 @@ public class ExportDotTest {
 		result1 += "  a2 -- a4;" + System.lineSeparator();
 		result1 += "  a4 -- a3;" + System.lineSeparator();
 		result1 += "}";
-		
+		result1=new String(result1.getBytes(), StandardCharsets.UTF_8);
 		String result2 = "graph G {" + System.lineSeparator();
 		result2 += "  a1;"+ System.lineSeparator();;
 		result2 += "  a2;"+ System.lineSeparator();;
@@ -122,7 +122,7 @@ public class ExportDotTest {
 		result2 += "  a4 -- a2;" + System.lineSeparator();
 		result2 += "  a3 -- a4;" + System.lineSeparator();
 		result2 += "}";
-		
+		result2=new String(result2.getBytes(), StandardCharsets.UTF_8);
 		assertTrue(graphDotFormat.equals(result1)||graphDotFormat.equals(result2));
 
 	}
@@ -152,7 +152,7 @@ public class ExportDotTest {
 		result += "  a2 -> a4;" + System.lineSeparator();
 		result += "  a3 -> a4;" + System.lineSeparator();
 		result += "}";
-
+		result=new String(result.getBytes(), StandardCharsets.UTF_8);
 		assertEquals(result, graphDotString);
 	} 
 	
