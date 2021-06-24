@@ -13,7 +13,6 @@
 	<url>https://github.com/oliviercailloux/J-Voting</url>
 
 	<build>
-	
 		<plugins>
 			<plugin>
 				<artifactId>maven-javadoc-plugin</artifactId>
@@ -24,7 +23,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
 	
 	<profiles>
 		<profile>
