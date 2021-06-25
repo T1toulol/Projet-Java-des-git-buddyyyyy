@@ -187,8 +187,8 @@ public class ExportDot {
 			boolean isAlphaDig = aNode.matches("[a-zA-Z]+([\\w_]*)?");
 			boolean isDoubleQuoted = aNode.matches("\".*\"");
 			boolean isDotNumber = aNode.matches("[-]?([.][0-9]+|[0-9]+([.][0-9]*)?)");
-			boolean isHTML = aNode.matches("<.*>");
-			if (!isAlphaDig && !isDotNumber && !isDoubleQuoted && !isHTML) {
+			boolean isHtml = aNode.matches("<.*>");
+			if (!isAlphaDig && !isDotNumber && !isDoubleQuoted && !isHtml) {
 				throw new IllegalArgumentException("The name of atleast one vertex can't be converted in DOT format : " + aNode);
 			}
 		}
@@ -202,8 +202,8 @@ public class ExportDot {
 		CRLF("\r\n"),CR("\r"),LF("\n");
 		private String value;
 		
-		LineSeparator(String LineSeparator){
-			this.value=LineSeparator;
+		LineSeparator(String lineSeparator){
+			this.value=lineSeparator;
 		}
 		
 		public String getValue() {
