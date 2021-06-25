@@ -44,7 +44,7 @@ public class ExportDot {
 	 * @throws IOException
 	 */
 	public static void export(Graph<String> graph, OutputStream stream) throws IOException {
-		export(graph, stream, LineSeparator.CRLF.getValue());
+		export(graph, stream, System.lineSeparator());
 	}
 	
 	/**
