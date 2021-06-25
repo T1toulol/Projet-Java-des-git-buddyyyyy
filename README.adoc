@@ -126,6 +126,59 @@ Pour être plus précis, ils vont effectuer les modifications suivantes :
 - Corriger le fait que MLID n'est pas détenu par MLPI dans le diagramme de classe.
 - Pas de méthode verifyModification sur GraphView dans le diagramme de séquence.
 
+== Iteration UML 6
+
+=== Scrum-Master
+
+Hugo
+
+=== Duo 1 and tasks
+
+Nicolas and Maxime => L’objectif principal de cette itération serait de finaliser les travaux initiés sur les formats et méthodes input/output, qu’on retrouve dans la PR précédente #40 : 
+https://github.com/oliviercailloux-org/projet-j-voting/pull/40
+
+- Pour cela, certains textes doivent être encore réduits (redondance).
+
+Ils souhaitent également terminer la documentation de GraphViz initiée dans la PR #41 :
+https://github.com/oliviercailloux-org/projet-j-voting/pull/41
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+- Revoir le rangement des images du tutoriel.
+- Etoffer la description du plugin.
+- Investiguer un peu plus le bug qu'ils avaient rencontré. 
+
+=== Duo 2 and tasks
+
+Firas and Chahid => Poursuite du storyboard et correction du diagramme de sequence du new GUI suite à la PR #44 :
+https://github.com/oliviercailloux-org/projet-j-voting/pull/44
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+- Storyboard: changement des boutons et amélioration de la cohérence des pages.
+- Diagramme de sequence: Conventions de nommage, correction des opérations et des classes et éventuel ajout d'autres scénarios.
+
+=== Duo 3 and tasks
+
+Lucas and Sylvain => Suite de la PR#43 : 
+https://github.com/oliviercailloux-org/projet-j-voting/pull/43
+
+Dans le diagramme de séquence :
+
+- Corriger les cardinalités. 
+- Corriger les conventions de notation. 
+- Enlever les types de retour des opérations. 
+- Corriger la méthode verifyModification. 
+
+Dans le diagramme de classes :
+
+- Corriger le problème de MLPD. 
+
+Dans un second temps :
+
+- Proposer des évolutions à nos successeurs. 
+- Clarifier l’état du projet.
+
 == Iteration 1 JAVA
 
 === Scrum-Master
