@@ -134,7 +134,7 @@ public class ExportDot {
 	
 	
 	/**
-	 * Calls the convertToDot method with the parameter lineSeparator.
+	 * Calls the convertToDot method only with the graph in parameter
 	 * By default the end of line encoding is given by System.lineSeparator(). 
 	 * @param a string graph
 	 * @return the graph in DOT format
@@ -142,7 +142,7 @@ public class ExportDot {
 	 */
 	
 	public static String convertToDot(Graph<String> graph) throws IOException {
-		return convertToDot(graph,LineSeparator.CRLF.getValue());
+		return convertToDot(graph, System.lineSeparator());
 	}
 
 	/**
@@ -198,7 +198,7 @@ public class ExportDot {
 	/**
 	 * This enum class gives all lines separators (CRLF, CR, LF) that can be accepted in DOT format.
 	 */
-	private enum LineSeparator{
+	public enum LineSeparator{
 		CRLF("\r\n"),CR("\r"),LF("\n");
 		private String value;
 		

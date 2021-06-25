@@ -8,8 +8,12 @@ import org.junit.jupiter.api.Test;
 
 import com.google.common.graph.GraphBuilder;
 import com.google.common.graph.MutableGraph;
+import com.google.common.io.CharStreams;
+import io.github.oliviercailloux.j_voting.profiles.management.ReadODS;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
 public class ExportDotTest {
@@ -24,21 +28,12 @@ public class ExportDotTest {
 		graph.putEdge("a2", "a4");
 		graph.putEdge("a3", "a4");
 
-		String graphDotFormat = ExportDot.convertToDot(graph, System.lineSeparator());
-
-		String result = "digraph G {" + System.lineSeparator();
-		result += "  a1;"+ System.lineSeparator();
-		result += "  a2;"+ System.lineSeparator();
-		result += "  a4;"+ System.lineSeparator();
-		result += "  a3;"+ System.lineSeparator();
-		result += "  a1 -> a2;" + System.lineSeparator();
-		result += "  a1 -> a4;" + System.lineSeparator();
-		result += "  a2 -> a3;" + System.lineSeparator();
-		result += "  a2 -> a4;" + System.lineSeparator();
-		result += "  a3 -> a4;" + System.lineSeparator();
-		result += "}";
-		result=new String(result.getBytes(), StandardCharsets.UTF_8);
-		assertEquals(result, graphDotFormat);
+		String graphDotFormat = ExportDot.convertToDot(graph);
+		
+		String resultDotFile = CharStreams.toString(new InputStreamReader(
+				ExportDot.class.getResourceAsStream("FileDotTest.dot"), "UTF-8"));
+		assertEquals(resultDotFile, graphDotFormat);
+		
 	}
 	
 	
@@ -52,21 +47,11 @@ public class ExportDotTest {
 		graph.putEdge("a2", "a4");
 		graph.putEdge("a3", "a4");
 
-		String graphDotFormat = ExportDot.convertToDot(graph, "\r");
-
-		String result = "digraph G {\r";
-		result += "  a1;\r";
-		result += "  a2;\r";
-		result += "  a4;\r";
-		result += "  a3;\r";
-		result += "  a1 -> a2;\r";
-		result += "  a1 -> a4;\r";
-		result += "  a2 -> a3;\r";
-		result += "  a2 -> a4;\r";
-		result += "  a3 -> a4;\r";
-		result += "}";
-		result=new String(result.getBytes(), StandardCharsets.UTF_8);
-		assertEquals(result, graphDotFormat);
+		String graphDotFormat = ExportDot.convertToDot(graph, System.lineSeparator());
+		
+		String resultDotFile = CharStreams.toString(new InputStreamReader(
+				ExportDot.class.getResourceAsStream("FileDotTest.dot"), "UTF-8"));
+		assertEquals(resultDotFile, graphDotFormat);
 	}
 	
 	
@@ -93,31 +78,12 @@ public class ExportDotTest {
 
 		String graphDotFormat = ExportDot.convertToDot(graph, System.lineSeparator());
 
-		String result1 = "graph G {" + System.lineSeparator();
-		result1 += "  a1;"+ System.lineSeparator();;
-		result1 += "  a2;"+ System.lineSeparator();;
-		result1 += "  a4;"+ System.lineSeparator();;
-		result1 += "  a3;"+ System.lineSeparator();;
-		result1 += "  a1 -- a2;" + System.lineSeparator();
-		result1 += "  a1 -- a4;" + System.lineSeparator();
-		result1 += "  a2 -- a3;" + System.lineSeparator();
-		result1 += "  a2 -- a4;" + System.lineSeparator();
-		result1 += "  a4 -- a3;" + System.lineSeparator();
-		result1 += "}";
-		result1=new String(result1.getBytes(), StandardCharsets.UTF_8);
-		String result2 = "graph G {" + System.lineSeparator();
-		result2 += "  a1;"+ System.lineSeparator();;
-		result2 += "  a2;"+ System.lineSeparator();;
-		result2 += "  a4;"+ System.lineSeparator();;
-		result2 += "  a3;"+ System.lineSeparator();;
-		result2 += "  a2 -- a1;" + System.lineSeparator();
-		result2 += "  a4 -- a1;" + System.lineSeparator();
-		result2 += "  a3 -- a2;" + System.lineSeparator();
-		result2 += "  a4 -- a2;" + System.lineSeparator();
-		result2 += "  a3 -- a4;" + System.lineSeparator();
-		result2 += "}";
-		result2=new String(result2.getBytes(), StandardCharsets.UTF_8);
-		assertTrue(graphDotFormat.equals(result1)||graphDotFormat.equals(result2));
+		String resultDotFile1 = CharStreams.toString(new InputStreamReader(
+				ExportDot.class.getResourceAsStream("FileDotTestUndirected1.dot"), "UTF-8"));
+		String resultDotFile2 = CharStreams.toString(new InputStreamReader(
+				ExportDot.class.getResourceAsStream("FileDotTestUndirected2.dot"), "UTF-8"));
+		assertTrue(graphDotFormat.equals(resultDotFile1)||graphDotFormat.equals(resultDotFile2));
+		
 
 	}
 	
@@ -135,19 +101,9 @@ public class ExportDotTest {
 		ExportDot.export(graph, stream, System.lineSeparator());
 		final String graphDotString = new String(stream.toByteArray(), StandardCharsets.UTF_8);
 		
-		String result = "digraph G {" + System.lineSeparator();
-		result += "  a1;"+ System.lineSeparator();
-		result += "  a2;"+ System.lineSeparator();
-		result += "  a4;"+ System.lineSeparator();
-		result += "  a3;"+ System.lineSeparator();
-		result += "  a1 -> a2;" + System.lineSeparator();
-		result += "  a1 -> a4;" + System.lineSeparator();
-		result += "  a2 -> a3;" + System.lineSeparator();
-		result += "  a2 -> a4;" + System.lineSeparator();
-		result += "  a3 -> a4;" + System.lineSeparator();
-		result += "}";
-		result=new String(result.getBytes(), StandardCharsets.UTF_8);
-		assertEquals(result, graphDotString);
+		String resultDotFile = CharStreams.toString(new InputStreamReader(
+				ExportDot.class.getResourceAsStream("FileDotTest.dot"), "UTF-8"));
+		assertEquals(resultDotFile, graphDotString);
 	} 
 	
 	
