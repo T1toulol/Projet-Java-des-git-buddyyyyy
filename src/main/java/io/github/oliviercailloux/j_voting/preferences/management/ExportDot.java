@@ -88,7 +88,7 @@ public class ExportDot {
 	}
 	
 	/**
-	 * This method allowed to write the string (UTF-8 character encoding) given to the output stream 
+	 * This method allowed to write the string given to the output stream 
 	 * in the streamExport attribute of the ExportDOT class.
 	 * @param str
 	 * @throws IOException
@@ -100,7 +100,7 @@ public class ExportDot {
 	}
 	
 	/**
-	 * This method allowed to write the string (UTF-8 character encoding) given to the output stream
+	 * This method allowed to write the string given to the output stream
 	 * in the streamExport attribute of the ExportDOT class.
 	 * We must to define the end of line encoding. An indentation and an end of line are added to match the DOT format,
 	 * for writing vertices and arcs/edges.
@@ -118,7 +118,7 @@ public class ExportDot {
 	}
 	
 	/**
-	 * This method allowed to write the string (UTF-8 character encoding) given to the output stream
+	 * This method allowed to write the string given to the output stream
 	 * in the streamExport attribute of the ExportDOT class.
 	 * We must to define the end of line encoding. The header in DOT format have no indentation & end of line.
 	 * @param headerDot
