@@ -29,14 +29,11 @@ public class ExportDotTest {
 		graph.putEdge("a3", "a4");
 
 		String graphDotFormat = ExportDot.convertToDot(graph);
-		
-		String resultDotFile = CharStreams.toString(new InputStreamReader(
-				ExportDot.class.getResourceAsStream("FileDotTest.dot"), "UTF-8"));
+		String resultDotFile = CharStreams
+				.toString(new InputStreamReader(ExportDot.class.getResourceAsStream("FileDotTest.dot"), "UTF-8"));
 		assertEquals(resultDotFile, graphDotFormat);
-		
 	}
-	
-	
+
 	@Test
 	public void testConvertToDotEndLine() throws IOException {
 
@@ -48,20 +45,17 @@ public class ExportDotTest {
 		graph.putEdge("a3", "a4");
 
 		String graphDotFormat = ExportDot.convertToDot(graph, System.lineSeparator());
-		
-		String resultDotFile = CharStreams.toString(new InputStreamReader(
-				ExportDot.class.getResourceAsStream("FileDotTest.dot"), "UTF-8"));
+		String resultDotFile = CharStreams
+				.toString(new InputStreamReader(ExportDot.class.getResourceAsStream("FileDotTest.dot"), "UTF-8"));
 		assertEquals(resultDotFile, graphDotFormat);
 	}
-	
-	
+
 	@Test
 	public void testConvertToDotException() throws IOException {
 
 		MutableGraph<String> graphEncodingLine = GraphBuilder.directed().build();
 		graphEncodingLine.putEdge("a1", "a2");
 		graphEncodingLine.putEdge("a1", "a4");
-		
 		assertThrows(IllegalArgumentException.class, () -> ExportDot.convertToDot(graphEncodingLine, "\t"));
 		assertThrows(IllegalArgumentException.class, () -> ExportDot.convertToDot(graphEncodingLine, "@"));
 	}
@@ -78,16 +72,14 @@ public class ExportDotTest {
 
 		String graphDotFormat = ExportDot.convertToDot(graph, System.lineSeparator());
 
-		String resultDotFile1 = CharStreams.toString(new InputStreamReader(
-				ExportDot.class.getResourceAsStream("FileDotTestUndirected1.dot"), "UTF-8"));
-		String resultDotFile2 = CharStreams.toString(new InputStreamReader(
-				ExportDot.class.getResourceAsStream("FileDotTestUndirected2.dot"), "UTF-8"));
-		assertTrue(graphDotFormat.equals(resultDotFile1)||graphDotFormat.equals(resultDotFile2));
-		
+		String resultDotFile1 = CharStreams.toString(
+				new InputStreamReader(ExportDot.class.getResourceAsStream("FileDotTestUndirected1.dot"), "UTF-8"));
+		String resultDotFile2 = CharStreams.toString(
+				new InputStreamReader(ExportDot.class.getResourceAsStream("FileDotTestUndirected2.dot"), "UTF-8"));
+		assertTrue(graphDotFormat.equals(resultDotFile1) || graphDotFormat.equals(resultDotFile2));
 
 	}
-	
-	
+
 	@Test
 	public void testExportDotToFile() throws IOException {
 		MutableGraph<String> graph = GraphBuilder.directed().build();
@@ -96,15 +88,11 @@ public class ExportDotTest {
 		graph.putEdge("a2", "a3");
 		graph.putEdge("a2", "a4");
 		graph.putEdge("a3", "a4");
-		
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
 		ExportDot.export(graph, stream, System.lineSeparator());
 		final String graphDotString = new String(stream.toByteArray(), StandardCharsets.UTF_8);
-		
-		String resultDotFile = CharStreams.toString(new InputStreamReader(
-				ExportDot.class.getResourceAsStream("FileDotTest.dot"), "UTF-8"));
+		String resultDotFile = CharStreams
+				.toString(new InputStreamReader(ExportDot.class.getResourceAsStream("FileDotTest.dot"), "UTF-8"));
 		assertEquals(resultDotFile, graphDotString);
-	} 
-	
-	
+	}
 }
