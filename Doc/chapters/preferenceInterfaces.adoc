@@ -187,31 +187,3 @@ Graph is rearranged : a transitive closure is applied to it
 | OK.				                                                     
 
 |===
-
-=== *MutableLinearPreference*
-
-[cols="1,1,2", options="header"] 
-|===
-|Method name
-|Contract
-|Relevance
-
-|changeOrder(Alternative a, Int position)
-|This method will reorder the List<Alternative> and the MutableGraph<Alternative> according to parameters.
-|OK.
-
-|swap(Alternative a1, Alternative a2) 
-|This method will switch place between 2 alternatives in the List<Alternative> and the MutableGraph<Alternative>.
-|OK.
-
-|removeAlternative(Alternative a)
-|Delete an alternative from the preference. Update the List<Alternative> and the MutableGraph<Alternative>.
-|OK.
-
-|addAlternative(Alternative a)
-|Add an alternative at the end of the preference. Update the List<Alternative> and the MutableGraph<Alternative>.
-|OK.
-
-
-
-|===

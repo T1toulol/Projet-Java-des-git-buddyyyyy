@@ -16,7 +16,7 @@ public interface MutableLinearPreference extends Preference {
 	 * intermediate alternatives shift. More precisely, the given alternative is
 	 * swapped with its neighbor until it reaches the given rank.
 	 * 
-	 * @param alternative that we're going to move in the preference. It must be not null.
+	 * @param alternative that we're going to move in the preference.
 	 * @param rank        is the new rank where the alternative will be. The first.
 	 *                    alternative is at the rank 1. The rank must be less than 1
 	 *                    or greater than the rank of the last alternative. It must be not null.
@@ -28,9 +28,9 @@ public interface MutableLinearPreference extends Preference {
 	/**
 	 * Removes the specified alternative from this preference if it is present.
 	 *
-	 * @param alternative to be removed from this preference. It must be not null.
+	 * @param alternative to be removed from this preference.
 	 * @throws an IllegalArgumentException if alternative is not in the graph.
-	 * @return true if the alternative has been removed.
+	 * @return true if the alternative has been removed and false if is not the case.
 	 */
 	public boolean removeAlternative(Alternative alternative);
 
@@ -38,9 +38,9 @@ public interface MutableLinearPreference extends Preference {
 	 * Adds the specified alternative at the last rank of this preference if it is
 	 * not already present.
 	 *
-	 * @param alternative to be added to this preference. It must be not null.
+	 * @param alternative to be added to this preference.
 	 * @throws an IllegalArgumentException if alternative is already in the graph.
-	 * @return true if the specified alternative has been added to the preference.
+	 * @return true if the specified alternative has been added to the preference and false if is not the case.
 	 * 
 	 */
 	public boolean addAlternative(Alternative alternative);
@@ -50,12 +50,11 @@ public interface MutableLinearPreference extends Preference {
 	 * specified alternatives are equal, invoking this method leaves the preference
 	 * unchanged.)
 	 * 
-	 * @param alternative1 that will change places with alternative2. It must be not null.
-	 * @param alternative2 that will change places with alternative1. It must be not null.
-	 * @throws an IllegalArgumentException if at least one of the two alternatives is not in the graph or if the alternatives are equal.
-	 * @return true if the preference has changed after this call (and, thus, the
-	 *         alternatives are contained in this preference) or if alternatives are equals. 
-	 *         Or false if an alternative is not in the preference.         
+	 * @param alternative1 that will change places with alternative2.
+	 * @param alternative2 that will change places with alternative1.
+	 * @throws an IllegalArgumentException if at least one of the two alternatives is not in the graph.
+	 * @return true if the preference has changed after this call or if alternatives are equals. 
+	 *         And false if an alternative is not in the preference.         
 	 *         
 	 */
 	public boolean swap(Alternative alternative1, Alternative alternative2);
