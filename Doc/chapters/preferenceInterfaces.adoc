@@ -1,7 +1,5 @@
 = 1.1 Preferences Interfaces Documentation
 
-====== link:../README.adoc[Summary]
-
 === Preferences Interfaces Diagram
 
 image:../assets/InterfacesPreferencesDiagram.png[InterfacesPreferencesDiagram]
@@ -42,6 +40,7 @@ image:../assets/CompletePreferenceScheme.PNG[CompletePreferenceScheme]
 A linear preference is an antisymmetric complete preference. A linear preference represents a linear order, or equivalently an antisymmetric complete order, or also equivalently, the reduction of a weak-order.
 
 image:../assets/LinearPreferenceScheme.PNG[LinearPreferenceScheme]
+
 
 == Preferences methods analysis +
 

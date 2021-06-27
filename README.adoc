@@ -14,7 +14,7 @@ The code is hereby published under the MIT License, with the permission of the c
 
 The project documentation is link:Doc/README.adoc[here].
 
-== Iteration 1
+== Iteration UML 1
 
 === Scrum-Master
 
@@ -32,3 +32,309 @@ Hugo and Nicolas => Export in DOT format
 
 Lucas and Sylvain => Set URL preflib
 
+== Iteration UML 2
+
+=== Scrum-Master
+
+Chahid
+
+=== Duo 1 and task
+
+Firas and Hugo  => Implementation of a class and sequence diagram (Decorator)
+
+=== Duo 2 and task
+
+Lucas and Nicolas => Adjustments and export in DOT format 
+
+=== Duo 3 and task
+
+Maxime and Sylvain => Import an external profile via an url (preflib)
+
+== Iteration UML 3
+
+=== Scrum-Master
+
+Firas
+
+=== Duo 1 and task
+
+Maxime and Hugo  => Complete the class diagram and correct the sequence diagram (Decorator)
+
+=== Duo 2 and task
+
+Nicloas and Sylvain => Documentation package management and MutableCompletePreference 
+
+=== Duo 3 and task
+
+Chahid and Lucas => Improvement of the new GUI and modification of the profile doc
+
+== Iteration UML 4
+
+=== Scrum-Master
+
+Lucas
+
+=== Duo 1 and task
+
+Hugo and Sylvain => Ils continuent le travail commencé dans cette PR #9 : https://github.com/oliviercailloux-org/projet-j-voting/pull/9#pullrequestreview-635973419 .Ils souhaitent corriger et compléter les diagrammes de classe et de séquence liés au decorator.
+
+=== Duo 2 and task
+
+Chahid and Firas => Preflib and GUI, leur travail fait suite à cette PR #11 : https://github.com/oliviercailloux-org/projet-j-voting/pull/11#pullrequestreview-635983537
+
+=== Duo 3 and task
+
+Nicolas and Maxime => DOT export,  enfin, Nicolas et Maxime souhaitent continuer le travail entamé dans cette PR #12 : https://github.com/oliviercailloux-org/projet-j-voting/pull/12#pullrequestreview-636054061
+
+== Iteration UML 5
+
+=== Scrum-Master
+
+Sylvain
+
+=== Duo 1 and task
+
+Nicolas and Firas => Modifier la page « Import/Export methods » depuis les éléments proposés dans la PR #26 : https://github.com/oliviercailloux-org/projet-j-voting/pull/26
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+- Rendre moins « verbeuse » la documentation.
+- Rajouter la méthode convertToDot() dans le diagramme d’ExportDOT.
+- Retirer la méthode surchargée export() prenant une préférence en argument. 
+- Documenter le plug-in d’Eclipse (https://github.com/eclipse/gef/wiki/DOT-User-Guide) et indiquer qu’il fonctionne bien avec les méthodes proposées. 
+- Proposer un lien vers les exemples de René Nyffenegger (au bon endroit) que vous nous avez montré en Java. Ses exemples sont très explicites et très variés et pourraient être utiles à la compréhension du format DOT (…) aux groupes futurs. 
+
+=== Duo 2 and task
+
+Hugo and Chahid => Corrections demandées dans la PR #28 : https://github.com/oliviercailloux-org/projet-j-voting/pull/28
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+- Corrections du diagramme de séquence.
+- Faire un message existsAndIsWriteable au lieu des méthodes exist et isWriteable.
+- Diviser le diagramme de séquence.
+- Corrections sur le storyboard.
+
+=== Duo 3 and task
+
+Lucas and Maxime => Corrections demandées dans la PR #25 : https://github.com/oliviercailloux-org/projet-j-voting/pull/25#pullrequestreview-652408576
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+- Corriger les erreurs de convention de nommage.
+- Ne pas répéter les opérations dans les classes qui implémentent une interface dans le diagramme de classe.
+- Corriger le fait que MLID n'est pas détenu par MLPI dans le diagramme de classe.
+- Pas de méthode verifyModification sur GraphView dans le diagramme de séquence.
+
+== Iteration UML 6
+
+=== Scrum-Master
+
+Hugo
+
+=== Duo 1 and tasks
+
+Nicolas and Maxime => L’objectif principal de cette itération serait de finaliser les travaux initiés sur les formats et méthodes input/output, qu’on retrouve dans la PR précédente #40 : 
+https://github.com/oliviercailloux-org/projet-j-voting/pull/40
+
+- Pour cela, certains textes doivent être encore réduits (redondance).
+
+Ils souhaitent également terminer la documentation de GraphViz initiée dans la PR #41 :
+https://github.com/oliviercailloux-org/projet-j-voting/pull/41
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+- Revoir le rangement des images du tutoriel.
+- Etoffer la description du plugin.
+- Investiguer un peu plus le bug qu'ils avaient rencontré. 
+
+=== Duo 2 and tasks
+
+Firas and Chahid => Poursuite du storyboard et correction du diagramme de sequence du new GUI suite à la PR #44 :
+https://github.com/oliviercailloux-org/projet-j-voting/pull/44
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+- Storyboard: changement des boutons et amélioration de la cohérence des pages.
+- Diagramme de sequence: Conventions de nommage, correction des opérations et des classes et éventuel ajout d'autres scénarios.
+
+=== Duo 3 and tasks
+
+Lucas and Sylvain => Suite de la PR#43 : 
+https://github.com/oliviercailloux-org/projet-j-voting/pull/43
+
+Dans le diagramme de séquence :
+
+- Corriger les cardinalités. 
+- Corriger les conventions de notation. 
+- Enlever les types de retour des opérations. 
+- Corriger la méthode verifyModification. 
+
+Dans le diagramme de classes :
+
+- Corriger le problème de MLPD. 
+
+Dans un second temps :
+
+- Proposer des évolutions à nos successeurs. 
+- Clarifier l’état du projet.
+
+== Iteration 1 JAVA
+
+=== Scrum-Master
+
+Firas
+
+=== Duo 1 and task
+
+Maxime and Hugo  => Implement the classes of the new profile architecture
+
+- Vérifier que toutes les méthodes de l’interface Preference sont correctement implémentées (comme cela est suggéré dans la documentation : https://github.com/oliviercailloux-org/projet-j-voting/blob/main/Doc/chapters/preferenceInterfaces.adoc)
+- Modifier les méthodes #addEquivalence et #setAsLeastAsGood de la classe MutablePreference
+- Ajouter #asStrictGraph dans Preference
+- Ajouter #equals dans ImmutablePreference
+- Dans les méthodes #addAlternative, #removeAlternative et #swap de la classe MutableLinearPreference, lever une exception si les alternatives sont déjà où ne sont pas déjà dans le graphe, empêchant la méthode d’effectuer l’action demandée.
+- Permettre de récupérer un NavigableSet d’alternatives depuis une ImmutableLinearPreference
+Ces dernières propositions proviennent de la section « à envisager » (https://github.com/oliviercailloux/projets/blob/master/J-Voting.adoc) et pourront faire l'objet d'une autre itération.
+
+=== Duo 2 and task
+
+Nicloas and Sylvain => Creating the ExportDOT class and its methods
+
+Ils ont décidé d'appliquer les suggestions données dans l'évaluation de la PR #6 voici le lien : https://github.com/oliviercailloux-org/projet-j-voting/pull/6
+
+=== Duo 3 and task
+
+Chahid and Lucas => improvement of the GUI and the profile_GUI and implementation of input box and the open/save as button
+
+- implémenter une boite d'entrée rouge
+- implémenter un bouton open/save as
+- Améliorer la GUI qui permettra de faire un fonctionnement basique 
+- Amélioration du package profile_GUI en particulier de editionView
+
+== Iteration 2 JAVA
+
+=== Scrum-Master
+
+Lucas
+
+=== Duo 1 and task
+
+Hugo et Sylvain => Modifications requested in the following PRs :
+
+- PR #15 : https://github.com/oliviercailloux-org/projet-j-voting/pull/15#pullrequestreview-640930502
+- PR #16 : https://github.com/oliviercailloux-org/projet-j-voting/pull/16#pullrequestreview-640972921
+- PR #17 : https://github.com/oliviercailloux-org/projet-j-voting/pull/17#pullrequestreview-641013709
+- PR #18 : https://github.com/oliviercailloux-org/projet-j-voting/pull/18#pullrequestreview-641037660
+
+And test the asGraph () method and implement the asStrictGraph () method.
+
+=== Duo 2 and task
+
+Chahid et Firas => Continue to work on the GUI, PR #20 : https://github.com/oliviercailloux-org/projet-j-voting/pull/20#pullrequestreview-641453976
+
+
+=== Duo 3 and task
+
+Nicolas et Maxime => ExportDOT, work requested in PR #19 : https://github.com/oliviercailloux-org/projet-j-voting/pull/19#pullrequestreview-641378958 
+
+== Iteration JAVA 3
+
+=== Scrum-Master
+
+Sylvain
+
+=== Duo 1 and task
+
+Nicolas and Firas => Poursuivre l'implémentation de ExportDOT depuis les éléments proposés dans la PR #34 : https://github.com/oliviercailloux-org/projet-j-voting/pull/34
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+- Aller plus loin dans la vérificatin avec la méthode checkFormatVertex() pour accepter uniquement les syntaxes vraiment valides.
+- Modifier la surcharge de notre méthode export().
+- Utiliser checknotnull pour les exceptions. 
+- Faire des connecteurs DOT (etc...) des constantes. 
+- Modifier la possibilité de changer les fins de lignes (encodage).
+- Créer une instance d'ExportDOT contenant le stream. 
+
+=== Duo 2 and task
+
+Hugo and Chahid => Poursuite de la PR #33 : https://github.com/oliviercailloux-org/projet-j-voting/pull/33
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+* Correction des bugs existant :
+** Corrections des différents bugs sur les boutons add et delete.
+
+* Suite de la PR #33:
+** Ajout d'une scrollbar.
+** Adapter la lecture des fichiers comme vu en cours.
+** Corrections mineures.
+
+=== Duo 3 and task
+
+Lucas and Maxime => Poursuite des PR #29, #30, #31 : +
+
+* https://github.com/oliviercailloux-org/projet-j-voting/pull/29
+* https://github.com/oliviercailloux-org/projet-j-voting/pull/30
+* https://github.com/oliviercailloux-org/projet-j-voting/pull/31
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+* Tâches de la PR #29:
+** Corrections d'erreurs mineures.
+
+* Tâches de la PR #30:
+** Permettre un swap d'une alternative avec elle-même.
+** Corrections de commentaires.
+
+* Tâches de la PR #31:
+** Modification des tests unitaires concernant addEquivalence et setAtLeastGood.
+** Correction de la méthode getAlternatives() dans la classe MutablePreferenceImpl permettant de renvoyer un NavigableSet.
+
+== Iteration JAVA 4
+
+=== Scrum-Master
+
+Hugo
+
+=== Duo 1 and tasks
+
+Nicolas and Maxime => L’objectif principal de cette itération est de corriger les éléments de correction mis en évidence dans la PR #50 : 
+
+https://github.com/oliviercailloux-org/projet-j-voting/pull/50
+
+Le but est d’intégrer la fonction d’exportation au format DOT. 
+
+Dans un second temps, ils souhaitent améliorer la méthode de vérification des ID d’ExportDot initiée dans la PR #52 :
+
+https://github.com/oliviercailloux-org/projet-j-voting/pull/52 
+
+=== Duo 2 and tasks
+
+Firas and Chahid => Mise en place d’un fonctionnement basique pour le GUI avec visualisation de voteurs multiples et correction des alternatives (suite de la PR # 49): 
+
+https://github.com/oliviercailloux-org/projet-j-voting/pull/49
+
+Pour être plus précis, ils vont effectuer les modifications suivantes :
+
+- Première tâche: Permettre de visualiser les fichiers soc avec plusieurs votes
+- Deuxième tâche: Changement d'un texte en label et de l'affichage des alternatives
+
+=== Duo 3 and tasks
+
+Lucas and Sylvain => Poursuite des PR #47 et #51 : 
+
+https://github.com/oliviercailloux-org/projet-j-voting/pull/47
+
+https://github.com/oliviercailloux-org/projet-j-voting/pull/51
+
+Dans un premier temps, ils veulent poursuivre la PR #51 avec les tâches suivantes:
+
+- Première tâche: Modification de la méthode getAlternatives de MutablePreference pour renvoyer un NavigableSet.
+- Deuxième tâche: Modifier les tests unitaires de addEquivalence et setAtLeastAsGood.
+
+Dans un second temps, ils pousuivront la PR # 47 avec les tâches suivantes:
+
+- Modifier la méthode swap
+- Effectuer les corrections demandées.
