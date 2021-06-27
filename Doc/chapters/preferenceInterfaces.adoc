@@ -150,3 +150,7 @@ Graph is rearranged : a transitive closure is applied to it
 | OK.				                                                     
 
 |===
+
+=== *MutableinearPreference*
+
+This class allows you to change the order of the alternatives in a class. It also allows you to add or remove alternatives.
