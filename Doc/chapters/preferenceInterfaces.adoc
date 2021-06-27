@@ -73,10 +73,6 @@ Reflexive and transitive.
 | Returns the Graph corresponding to the Preference. This graph is not necessarily transitive and not necessarily reflexive.
 | Need to add a decorator (check the problem with AsGraph)
 
-|addAlternative(Alternative a)
-| Adds an alternative to the Preference. This alternative is not preferred to any other of the preference, it is being added isolated.
-| OK.
-
 |addEquivalence(Alternative a1, Alternative a2)
 | Adds an edge from an alternative a1 to an alternative a2 and from a2 to a1. a1 and a2 are ex-aequo.
 | The method does not deal with the fact that when an alternative is not in the graph it must be added. 
