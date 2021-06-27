@@ -116,14 +116,6 @@ Graph is rearranged : a transitive closure is applied to it
 | Returns the Graph corresponding to the Preference. This graph is immutable, reflexive and transitive.
 | OK. However, the method doesn't check the transitivity and reflexivity.
 
-|getAlternatives()
-| Returns an alternatives's set which is immutable.
-| OK.
-
-|Equals(Object o)
-| This method is going to be implemented in the Java iteration, and so its contract.
-| /
-
 |===
 
 
