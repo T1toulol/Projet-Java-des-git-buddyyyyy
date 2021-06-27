@@ -78,7 +78,11 @@ Unfortunately, for us this feature does not work it displays the following error
 
 "Plug-in "org.eclipse.gef.dot.ui" was unable to instantiate class "org.eclipse.gef.dot.internal.ui.DotGraphView"."
 
-We have not found any solution on the Google for this error, but we are continuing our research. 
+With a research on google, we found these sites : 
+https://www.eclipse.org/forums/index.php/t/1106351/
+a comment redirects us to this other link:https://www.eclipse.org/forums/index.php?t=thread&frm_id=81[forum] where a discussion on the problem exists.
+
+
 But for the example he should have given us something that looks like this: 
 
 image:../assets/graphViz/exempleOfNormalView.png[Example]
