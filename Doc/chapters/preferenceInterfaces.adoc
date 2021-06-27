@@ -130,14 +130,6 @@ Graph is rearranged : a transitive closure is applied to it
 |Contract
 |Relevance
 
-|getRank(Alternative a)
-| Returns the rank of this alternative (a number between 1 and n) where n is the total number of Alternative instances.
-| OK.
-
-|getAlternatives(int rank)
-| Returns the Alternative set at this rank. Empty set id there is no alternative at this rank.
-| Need to add a decorator. However, the method does not handle the case of a rank bigger than the number of sets contained in equivalenceClasses.
-
 |asEquivalenceClasses()
 |Returns the same data but in an Immutable list object. A set of alternative is strictly prefered to next sets. All the alternatives in a set are considered ex-aequo.
 | OK.
