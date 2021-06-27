@@ -24,6 +24,9 @@ image:../assets/tutodlgraphviz_2.png[Download Graphviz]
 
 *6.* Finally, you must accept the general conditions, and press restart now.
 
+
+**Alternative of points 1. 2. and 3.**  Go to Eclipse click on the help tab > Install new software. Paste this http://download.eclipse.org/tools/gef/updates/releases link and click on add.
+
 === DOT Editor
 
 First, you must select the DOT editor instead of the basic one, for that you must right click in the editor of the DOT file > open with > Dot Editor Like this:
@@ -73,7 +76,7 @@ image:../assets/tutographviz_5.png[Graph View]
 
 Unfortunately, for us this feature does not work it displays the following error message :
 
-image:../assets/tutographviz_6.png[Error]
+"Plug-in "org.eclipse.gef.dot.ui" was unable to instantiate class "org.eclipse.gef.dot.internal.ui.DotGraphView"."
 
 We have not found any solution on the Google for this error, but we are continuing our research. 
 But for the example he should have given us something that looks like this: 
