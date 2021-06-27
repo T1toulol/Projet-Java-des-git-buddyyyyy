@@ -95,10 +95,6 @@ Reflexive and transitive.
 | This graph is not necessarily transitively closed and not necessarily reflexive. This method might refuse that an edge be added that would result in the transitive closure violating anti-symmetry, though it will not necessarily check.
 | The exception is not raised. Need to add a decorator (check the problem with AsGraph)
 
-|addAlternative(Alternative a)
-| Adds an alternative to the Preference. This alternative is not preferred to any other of the preference, it is being added isolated.
-| Ok.
-
 |addStrictPreference(Alternative a1, Alternative a2)
 | Adds an edge from a1 to a2, so that a1 is preferred to a2 (a1 > a2). If one of them is not in the graph, they are added.
 Graph is rearranged : a transitive closure is applied to it
