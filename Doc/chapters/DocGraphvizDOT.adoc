@@ -16,11 +16,11 @@ display the graph of the DOT file as well as a function to export .DOT formats i
 
 *4.* Now you have to select GEF Dot and click on Next
 
-image:../assets/tutodlgraphviz_1.png[Download Graphviz]
+image:../assets/graphViz/choixPackageGEFDOT.png.png[Download Graphviz]
 
 *5.* If the system, shows you all the installation details, for example as here you can click on Next.
 
-image:../assets/tutodlgraphviz_2.png[Download Graphviz]
+image:../assets/graphViz/installDetails.png[Download Graphviz]
 
 *6.* Finally, you must accept the general conditions, and press restart now.
 
@@ -31,7 +31,7 @@ image:../assets/tutodlgraphviz_2.png[Download Graphviz]
 
 First, you must select the DOT editor instead of the basic one, for that you must right click in the editor of the DOT file > open with > Dot Editor Like this:
 
-image:../assets/tutographviz_3.png[Editor]
+image:../assets/graphViz/openDotEditor.png[Editor]
 
 Now your editor recognizes, the dot language
 
@@ -39,7 +39,7 @@ Now your editor recognizes, the dot language
 
 Let's analyze the code below to know the most basic features
 
-image:../assets/tutographviz_4.png[Basic code]
+image:../assets/graphViz/exempleOfDotFormat.png[Basic code]
 
 First of all, you can that thanks to the editor the code is now highlighted, which will simplify the manipulation for us.
 
@@ -72,7 +72,7 @@ where you can discover them all.
 The second most interesting feature of graphviz, is graph view which allows you to draw the graph you have coded to use it you have to do: 
 right click in the editor of the DOT file > show in > GEF DOT Graph
 
-image:../assets/tutographviz_5.png[Graph View]
+image:../assets/graphViz/openDotGraphView.png[Graph View]
 
 Unfortunately, for us this feature does not work it displays the following error message :
 
@@ -81,7 +81,7 @@ Unfortunately, for us this feature does not work it displays the following error
 We have not found any solution on the Google for this error, but we are continuing our research. 
 But for the example he should have given us something that looks like this: 
 
-image:../assets/tutographviz_7.png[Example]
+image:../assets/graphViz/exempleOfNormalView.png[Example]
 
 Source : https://github.com/eclipse/gef/wiki/DOT-User-Guide
 
