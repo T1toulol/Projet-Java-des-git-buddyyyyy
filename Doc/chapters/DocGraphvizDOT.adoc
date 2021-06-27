@@ -84,3 +84,7 @@ But for the example he should have given us something that looks like this:
 image:../assets/tutographviz_7.png[Example]
 
 Source : https://github.com/eclipse/gef/wiki/DOT-User-Guide
+
+
+=== Suggestion
+Try installing graphViz by creating an environment as shown link:https://github.com/eclipse/gef#readme[here].
