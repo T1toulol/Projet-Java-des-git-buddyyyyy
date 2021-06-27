@@ -1,6 +1,5 @@
 = Import/Export methods
 
-====== link:../README.adoc[Summary]
 
 == Export Preference in DOT Format
 
