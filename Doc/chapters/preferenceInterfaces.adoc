@@ -50,26 +50,14 @@ image:../assets/LinearPreferenceScheme.PNG[LinearPreferenceScheme]
 |===
 |Method name
 |Contract
-|Relevance
 
 |asGraph()
 |In the graph : a relation from a to b means "a is at least as good as b". This graph can't be modified, but is not necessarily immutable.
 Reflexive and transitive.
 @return the Graph corresponding to the Preference
-|To do (check all overide of this methode)
-
-|getAlternatives()
-|The returned set reads through this object: if this object is mutable, any modification to this object modifies the returned set, and conversely.
-@return alternatives's set
-|To do (check all overide of this methode)
-
-|getVoter()
-|@return Voter instance of the preference, Returns the voter 0 if no specific voter is associated to this preference
-|To do (check all overide of this methode)
 
 |asStrictGraph()
 | This method is going to be implemented in the Java iteration, and so its contract.
-| /
 
 |===
 
