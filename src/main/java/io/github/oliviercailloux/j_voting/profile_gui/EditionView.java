@@ -20,7 +20,7 @@ public class EditionView {
 	private GridLayout gridLayout;
 	private Map<Button, Text> addAlternativeControls;
 	private Map<Button, Alternative> deleteAlternativeControls;
-	private Map<Alternative, Text> alternativeControls;
+	private Map<Alternative, Label> alternativeControls;
 	private Label userIndication;
 
 	/**
@@ -84,8 +84,8 @@ public class EditionView {
 	 */
 	public void addPreference(Set<Alternative> altSet) {
 		for (Alternative a : altSet) {
-			Text alt = new Text(mainComposite, SWT.BORDER);
-			alt.setText(a.toString());
+			Label alt = new Label(mainComposite, SWT.BORDER);
+			alt.setText(Integer.toString(a.getId()));
 
 			GridData data = new GridData(120, 15);
 			data.horizontalAlignment = GridData.BEGINNING;
@@ -162,7 +162,7 @@ public class EditionView {
 	public void deleteAlternative(Button btnClicked) {
 		checkNotNull(btnClicked);
 		Alternative alt = this.deleteAlternativeControls.get(btnClicked);
-		Text altCtr = this.alternativeControls.get(alt);
+		Label altCtr = this.alternativeControls.get(alt);
 
 		altCtr.dispose();
 		btnClicked.dispose();
@@ -186,7 +186,7 @@ public class EditionView {
 	}
 
 	private void cleanAltContent() {
-		for (Text ctr : alternativeControls.values()) {
+		for (Label ctr : alternativeControls.values()) {
 			ctr.dispose();
 		}
 		for (Button btn : addAlternativeControls.keySet()) {
