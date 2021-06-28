@@ -6,7 +6,14 @@ image:../assets/InterfacesPreferencesDiagram.png[InterfacesPreferencesDiagram]
 
 
 === Preference definition +
-A Preference is the ranking between Alternatives.
+A Preference is the ranking between Alternatives and it can be represented by a *directed* graph.
+
+A graph can be used to represent a classification between elements (link:https://hal.archives-ouvertes.fr/hal-01526540/document[here] for more informations : _Philippe Vincke, La modélisation des préférences, Institut de mathématiques économiques 1985, 24 p., figures, bibliographie. ffhal-01526540_).
+In the case of a preference, the graph will be necessarily directed, because a Preference is a ranking of Alternatives. Each vertex represents an alternative, and the direction of the edge indicates the direction of preference.
+
+*Example of element ranking with graph :*
+
+image:../assets/exempleGraphPref.png[width=35%, align="center"]
 
 
 === MutablePreference +
