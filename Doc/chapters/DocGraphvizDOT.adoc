@@ -4,9 +4,11 @@
 == Introduction
 
 Graphviz is one of the components provided by GEF in its DOT component, it is a very interesting plugin to handle files in DOT formats it provides us with an editor, a view to 
-display the graph of the DOT file as well as a function to export .DOT formats in other formats.
+display the graph of the DOT file as well as a function to export .DOT formats in other formats (PDF, JPG, SVG, etc..).
 
 === How to install GraphViz with GEF on eclipse
+
+Go to Eclipse click on the help tab > Install new software. Paste this http://download.eclipse.org/tools/gef/updates/releases link and click on add. Then go back to step 4. If this procedure does not work, please follow the next steps from the step 1.
 
 *1.* First of all, you have to go to this link:https://www.eclipse.org/gef/downloads/index.php?showAll=1&showMax=5[here]
 
@@ -16,29 +18,31 @@ display the graph of the DOT file as well as a function to export .DOT formats i
 
 *4.* Now you have to select GEF Dot and click on Next
 
-image:../assets/tutodlgraphviz_1.png[Download Graphviz]
+image:../assets/graphViz/choixPackageGEFDOT.png[Download Graphviz]
 
 *5.* If the system, shows you all the installation details, for example as here you can click on Next.
 
-image:../assets/tutodlgraphviz_2.png[Download Graphviz]
+image:../assets/graphViz/installDetails.png[Download Graphviz]
 
 *6.* Finally, you must accept the general conditions, and press restart now.
+
 
 === DOT Editor
 
 First, you must select the DOT editor instead of the basic one, for that you must right click in the editor of the DOT file > open with > Dot Editor Like this:
 
-image:../assets/tutographviz_3.png[Editor]
+image:../assets/graphViz/openDotEditor.png[Editor]
 
 Now your editor recognizes, the dot language
 
 === The basic functions of the DOT format
 
-Let's analyze the code below to know the most basic features
-
-image:../assets/tutographviz_4.png[Basic code]
-
 First of all, you can that thanks to the editor the code is now highlighted, which will simplify the manipulation for us.
+The editor also allows to warn the user in case of syntax error, it also includes an auto-corrector, and an auto-completion tool. The DOT language allows a wide customization (color and style of vertices, edges, text additions...) of the drawing of the output graph. Thus these tools greatly facilitate the verification, editing and customization of DOT files and therefore of the drawing of the output graph.   
+
+image:../assets/graphViz/exempleOfDotFormat.png[Basic code]
+
+Now, let's analyze the code above...
 
 [cols="1,1", options="header"] 
 |===
@@ -61,23 +65,32 @@ In our example a2 is the successor of a1. It is possible to put edge in the plac
 
 |===
 
-We have just seen the basic functionalities, but they are very important to be able to code in DOT. Of course there are many other interesting features 
-that allow you to add color, modify the style of the edge, add text etc.. I refer you to this link:https://github.com/eclipse/gef/wiki/DOT-User-Guide[link] 
-where you can discover them all. 
+For more information about the DOT Editor, I refer you to this link:https://github.com/eclipse/gef/wiki/DOT-User-Guide[link] 
+where you can discover all this interesting features.
 
 === DOT Graph View
-The second most interesting feature of graphviz, is graph view which allows you to draw the graph you have coded to use it you have to do: 
+The second most interesting feature of graphviz, is graph view which allows you to draw the output graph you have coded.
+Graph View also continuously updates the drawn graph according to the code. This again makes it easy to customize the output graph design.
+To use it you have to do: 
 right click in the editor of the DOT file > show in > GEF DOT Graph
 
-image:../assets/tutographviz_5.png[Graph View]
+image:../assets/graphViz/openDotGraphView.png[Graph View]
 
 Unfortunately, for us this feature does not work it displays the following error message :
 
-image:../assets/tutographviz_6.png[Error]
+"Plug-in "org.eclipse.gef.dot.ui" was unable to instantiate class "link:https://github.com/eclipse/gef/blob/master/org.eclipse.gef.dot.ui/src/org/eclipse/gef/dot/internal/ui/DotGraphView.java[org.eclipse.gef.dot.internal.ui.DotGraphView]".
 
-We have not found any solution on the Google for this error, but we are continuing our research. 
+With a research on google, we found these sites : 
+https://www.eclipse.org/forums/index.php/t/1106351/
+a comment redirects us to this other link:https://www.eclipse.org/forums/index.php?t=thread&frm_id=81[forum] where a discussion on the problem exists.
+
+
 But for the example he should have given us something that looks like this: 
 
-image:../assets/tutographviz_7.png[Example]
+image:../assets/graphViz/exempleOfNormalView.png[Example]
 
 Source : https://github.com/eclipse/gef/wiki/DOT-User-Guide
+
+
+=== Suggestion
+Try installing graphViz by creating an environment as shown link:https://github.com/eclipse/gef#readme[here].
