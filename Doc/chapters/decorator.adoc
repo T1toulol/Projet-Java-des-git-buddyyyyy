@@ -31,7 +31,7 @@ Thus, we implemented a decorator for the set extending  link:https://guava.dev/r
 image:../assets/decoratorClassDiagram.png[Decorator Class Diagram]
 
 
-This class diagram represents the relationships between the MutableLinearSetDecorator and MutableLinearIteratorDecorator classes with the MutableLinearPreferenceImpl and MutableLinearPreferenceDecorator classes through the MutableLinearPreference interface.
+This class diagram represents the relationships between the MutableLinearSetDecorator and MutableLinearIteratorDecorator classes with the MutableLinearPreferenceImpl class through the MutableLinearPreference interface.
 You can have an overview of the preferences documentation link:./preferenceInterfaces.adoc[here].
 
 === Decorator Sequence Diagram
