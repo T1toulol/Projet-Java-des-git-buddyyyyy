@@ -37,12 +37,12 @@ Now your editor recognizes, the dot language
 
 === The basic functions of the DOT format
 
-Let's analyze the code below to know the most basic features
+First of all, you can that thanks to the editor the code is now highlighted, which will simplify the manipulation for us.
+The editor also allows to warn the user in case of syntax error, it also includes an auto-corrector, and an auto-completion tool. The DOT language allows a wide customization (color and style of vertices, edges, text additions...) of the drawing of the output graph. Thus these tools greatly facilitate the verification, editing and customization of DOT files and therefore of the drawing of the output graph.   
 
 image:../assets/graphViz/exempleOfDotFormat.png[Basic code]
 
-First of all, you can that thanks to the editor the code is now highlighted, which will simplify the manipulation for us.
-The editor also allows to warn the user in case of syntax error, it also includes an auto-corrector, and an auto-completion tool. The DOT language allows a wide customization (color and style of vertices, edges, text additions...) of the drawing of the output graph. Thus these tools greatly facilitate the verification, editing and customization of DOT files and therefore of the drawing of the output graph.   
+Now, let's analyze the code above...
 
 [cols="1,1", options="header"] 
 |===
