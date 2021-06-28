@@ -1,7 +1,5 @@
 = Build Profile methods
 
-link:../README.adoc[Summary]
-
 == ProfileBuilder
 
 The ProfileBuilder class allows to create a Profile (composed of Voters and their Preference _(*)_ ). It is used in particular by the import methods.
