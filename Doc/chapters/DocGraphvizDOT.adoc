@@ -8,9 +8,7 @@ display the graph of the DOT file as well as a function to export .DOT formats i
 
 === How to install GraphViz with GEF on eclipse
 
-Go to Eclipse click on the help tab > Install new software. Paste this http://download.eclipse.org/tools/gef/updates/releases link and click on add. Then go back to step 4.
-
-If this procedure does not work, please follow the steps below.
+Go to Eclipse click on the help tab > Install new software. Paste this http://download.eclipse.org/tools/gef/updates/releases link and click on add. Then go back to step 4. If this procedure does not work, please follow the next steps from the step 1.
 
 *1.* First of all, you have to go to this link:https://www.eclipse.org/gef/downloads/index.php?showAll=1&showMax=5[here]
 
@@ -44,6 +42,7 @@ Let's analyze the code below to know the most basic features
 image:../assets/graphViz/exempleOfDotFormat.png[Basic code]
 
 First of all, you can that thanks to the editor the code is now highlighted, which will simplify the manipulation for us.
+The editor also allows to warn the user in case of syntax error, it also includes an auto-corrector, and an auto-completion tool. The DOT language allows a wide customization (color and style of vertices, edges, text additions...) of the drawing of the output graph. Thus these tools greatly facilitate the verification, editing and customization of DOT files and therefore of the drawing of the output graph.   
 
 [cols="1,1", options="header"] 
 |===
@@ -66,12 +65,13 @@ In our example a2 is the successor of a1. It is possible to put edge in the plac
 
 |===
 
-We have just seen the basic functionalities, but they are very important to be able to code in DOT. Of course there are many other interesting features 
-that allow you to add color, modify the style of the edge, add text etc.. I refer you to this link:https://github.com/eclipse/gef/wiki/DOT-User-Guide[link] 
-where you can discover them all. 
+For more information about the DOT Editor, I refer you to this link:https://github.com/eclipse/gef/wiki/DOT-User-Guide[link] 
+where you can discover all this interesting features.
 
 === DOT Graph View
-The second most interesting feature of graphviz, is graph view which allows you to draw the graph you have coded to use it you have to do: 
+The second most interesting feature of graphviz, is graph view which allows you to draw the output graph you have coded.
+Graph View also continuously updates the drawn graph according to the code. This again makes it easy to customize the output graph design.
+To use it you have to do: 
 right click in the editor of the DOT file > show in > GEF DOT Graph
 
 image:../assets/graphViz/openDotGraphView.png[Graph View]
