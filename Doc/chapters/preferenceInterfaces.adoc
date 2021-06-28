@@ -6,7 +6,14 @@ image:../assets/InterfacesPreferencesDiagram.png[InterfacesPreferencesDiagram]
 
 
 === Preference definition +
-A Preference is the ranking between Alternatives.
+A Preference is the ranking between Alternatives and it can be represented by a *directed* graph.
+
+A graph can be used to represent a classification between elements (link:https://hal.archives-ouvertes.fr/hal-01526540/document[here] for more informations : _Philippe Vincke, La modélisation des préférences, Institut de mathématiques économiques 1985, 24 p., figures, bibliographie. ffhal-01526540_).
+In the case of a preference, the graph will be necessarily directed, because a Preference is a ranking of Alternatives. Each vertex represents an alternative, and the direction of the edge indicates the direction of preference.
+
+*Example of element ranking with graph :*
+
+image:../assets/exempleGraphPref.png[width=35%, align="center"]
 
 
 === MutablePreference +
@@ -50,26 +57,14 @@ image:../assets/LinearPreferenceScheme.PNG[LinearPreferenceScheme]
 |===
 |Method name
 |Contract
-|Relevance
 
 |asGraph()
 |In the graph : a relation from a to b means "a is at least as good as b". This graph can't be modified, but is not necessarily immutable.
 Reflexive and transitive.
 @return the Graph corresponding to the Preference
-|To do (check all overide of this methode)
-
-|getAlternatives()
-|The returned set reads through this object: if this object is mutable, any modification to this object modifies the returned set, and conversely.
-@return alternatives's set
-|To do (check all overide of this methode)
-
-|getVoter()
-|@return Voter instance of the preference, Returns the voter 0 if no specific voter is associated to this preference
-|To do (check all overide of this methode)
 
 |asStrictGraph()
 | This method is going to be implemented in the Java iteration, and so its contract.
-| /
 
 |===
 
@@ -84,10 +79,6 @@ Reflexive and transitive.
 |asMutableGraph()
 | Returns the Graph corresponding to the Preference. This graph is not necessarily transitive and not necessarily reflexive.
 | Need to add a decorator (check the problem with AsGraph)
-
-|addAlternative(Alternative a)
-| Adds an alternative to the Preference. This alternative is not preferred to any other of the preference, it is being added isolated.
-| OK.
 
 |addEquivalence(Alternative a1, Alternative a2)
 | Adds an edge from an alternative a1 to an alternative a2 and from a2 to a1. a1 and a2 are ex-aequo.
@@ -111,10 +102,6 @@ Reflexive and transitive.
 | This graph is not necessarily transitively closed and not necessarily reflexive. This method might refuse that an edge be added that would result in the transitive closure violating anti-symmetry, though it will not necessarily check.
 | The exception is not raised. Need to add a decorator (check the problem with AsGraph)
 
-|addAlternative(Alternative a)
-| Adds an alternative to the Preference. This alternative is not preferred to any other of the preference, it is being added isolated.
-| Ok.
-
 |addStrictPreference(Alternative a1, Alternative a2)
 | Adds an edge from a1 to a2, so that a1 is preferred to a2 (a1 > a2). If one of them is not in the graph, they are added.
 Graph is rearranged : a transitive closure is applied to it
@@ -136,14 +123,6 @@ Graph is rearranged : a transitive closure is applied to it
 | Returns the Graph corresponding to the Preference. This graph is immutable, reflexive and transitive.
 | OK. However, the method doesn't check the transitivity and reflexivity.
 
-|getAlternatives()
-| Returns an alternatives's set which is immutable.
-| OK.
-
-|Equals(Object o)
-| This method is going to be implemented in the Java iteration, and so its contract.
-| /
-
 |===
 
 
@@ -157,14 +136,6 @@ Graph is rearranged : a transitive closure is applied to it
 |Method name
 |Contract
 |Relevance
-
-|getRank(Alternative a)
-| Returns the rank of this alternative (a number between 1 and n) where n is the total number of Alternative instances.
-| OK.
-
-|getAlternatives(int rank)
-| Returns the Alternative set at this rank. Empty set id there is no alternative at this rank.
-| Need to add a decorator. However, the method does not handle the case of a rank bigger than the number of sets contained in equivalenceClasses.
 
 |asEquivalenceClasses()
 |Returns the same data but in an Immutable list object. A set of alternative is strictly prefered to next sets. All the alternatives in a set are considered ex-aequo.
@@ -187,29 +158,6 @@ Graph is rearranged : a transitive closure is applied to it
 
 |===
 
-=== *MutableLinearPreference*
+=== *MutableinearPreference*
 
-[cols="1,1,2", options="header"] 
-|===
-|Method name
-|Contract
-|Relevance
-
-|changeOrder(Alternative a, Int position)
-|This method will reorder the Set<Alternative> and the MutableGraph<Alternative> according to parameters.
-|OK.
-
-|swap(Alternative a1, Alternative a2) 
-|This method will switch place between 2 alternatives in the Set<Alternative> and the MutableGraph<Alternative>.
-|OK.
-
-|deleteAlternative(Alternative a)
-|Delete an alternative from the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
-|OK.
-
-|addAlternative(Alternative a)
-|Add an alternative at the end of the preference. Update the Set<Alternative> and the MutableGraph<Alternative>.
-|OK.
-
-|===
-
+This class allows you to change the order of the alternatives in a class. It also allows you to add or remove alternatives.
