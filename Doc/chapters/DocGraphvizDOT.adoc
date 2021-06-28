@@ -78,7 +78,7 @@ image:../assets/graphViz/openDotGraphView.png[Graph View]
 
 Unfortunately, for us this feature does not work it displays the following error message :
 
-"Plug-in "org.eclipse.gef.dot.ui" was unable to instantiate class "org.eclipse.gef.dot.internal.ui.DotGraphView"."
+"Plug-in "org.eclipse.gef.dot.ui" was unable to instantiate class "link:https://github.com/eclipse/gef/blob/master/org.eclipse.gef.dot.ui/src/org/eclipse/gef/dot/internal/ui/DotGraphView.java[org.eclipse.gef.dot.internal.ui.DotGraphView]".
 
 With a research on google, we found these sites : 
 https://www.eclipse.org/forums/index.php/t/1106351/
