@@ -1,6 +1,8 @@
 = 1.2 Profile Interfaces documentation
 
-== Profile interfaces Diagram
+====== link:../README.adoc[Summary]
+
+=== Profile interfaces Diagram
 
 image:../assets/InterfacesProfilesDiagram.png[InterfacesProfilesDiagram]
 
@@ -141,8 +143,10 @@ An empty string in the list means that the voter doesn't have an alternative at 
 
 
 |writeToSOI(OutputStream output)
-| Writes the strict and incomplete profile into a new file with the link:./GUIInputFiles.adoc[SOI format].
-| Ok.
+| Contract not defined.
+| The contract is not specified and needs to be defined. 
+We assume that the aim of the method is to compute a profile report in the SOI format (again SOI term not defined) at a given destination. +
+Thus the name "destination" would be more approriate for the parameter.
 |===
 
 
@@ -168,8 +172,9 @@ Factorisation might be possible.
 
 
 | writeToSOC(OutputStream output)
-| Writes the strict and complete profile into a new file with the link:./GUIInputFiles.adoc[SOC format].
-| Again, for us, the name "destination" would be more appropriate for the parameter.
+| Writes the strict and complete profile into a new file with the SOC format.
+| SOC format needs to be defined in order to be sure that the computed report is indeed in this format. +
+Again, for us, the name "destination" would be more approriate for the parameter.
 
 
 |===

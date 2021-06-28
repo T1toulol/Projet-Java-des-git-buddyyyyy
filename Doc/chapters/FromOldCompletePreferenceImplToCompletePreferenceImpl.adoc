@@ -1,5 +1,7 @@
 = Annex 1. Transition from Old to new CompletePreferenceImpl Class
 
+====== link:../README.adoc[Summary]
+
 === Both current classes Diagram
 
 Currently, there are two classes representing a complete preference. To distinguish them, one is named 'Old'. Below are their class diagrams. 

@@ -1,5 +1,7 @@
 = Decorator documentation
 
+====== link:../README.adoc[Summary]
+
 === What is a decorator and how is it useful ?
 
 The link:https://en.wikipedia.org/wiki/Decorator_pattern[decorator pattern] is a design pattern that allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class. In other words, if your object structure can be broken by modifying one of its attributes (ex : set.add(_something_)), it is absolutely necessary to encapsulate the attribute(s) with a decorator to override the dangerous methods (ex : add).

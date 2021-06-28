@@ -1,5 +1,7 @@
 = Annexe. Vizualisation GUI understanding (Group 2018-2019)
 
+====== link:../README.adoc[Summary]
+
 === GUI Class Diagram
 
 image:../assets/GUIClassDiagram.png[GUIClassDiagram]

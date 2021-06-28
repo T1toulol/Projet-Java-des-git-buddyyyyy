@@ -21,14 +21,13 @@ image:./assets/j-voting-example.png[InterfacesProfilesDiagram]
 
 === Graphical User Interface (GUI)
 ==== link:chapters/NewGUI.adoc[2.1 Edition GUI implementation]
-==== link:chapters/GUIInputFiles.adoc[2.2 Input/Output Formats]
-==== link:chapters/ImportExportMethods.adoc[2.3 Import/Export Methods]
+==== link:chapters/GUIInputFiles.adoc[2.2 Input/Output Files]
+==== [Future] - 2.3 Import/Export Methods
 ==== link:chapters/BuildProfileMethods.adoc[2.4 Build Profile/Strict Profile Methods]
 
 === Annexes
 ==== link:chapters/OldGUI.adoc[Vizualisation GUI understanding]
 ==== link:chapters/decorator.adoc[Decorator documentation]
-==== link:chapters/DocGraphvizDOT.adoc[Graphviz Eclipse - DOT format]
 
 = Suggestions for the next groups 
 
