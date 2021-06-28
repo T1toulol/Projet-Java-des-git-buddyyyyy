@@ -4,7 +4,7 @@
 == Introduction
 
 Graphviz is one of the components provided by GEF in its DOT component, it is a very interesting plugin to handle files in DOT formats it provides us with an editor, a view to 
-display the graph of the DOT file as well as a function to export .DOT formats in other formats.
+display the graph of the DOT file as well as a function to export .DOT formats in other formats (PDF, JPG, SVG, etc..).
 
 === How to install GraphViz with GEF on eclipse
 
