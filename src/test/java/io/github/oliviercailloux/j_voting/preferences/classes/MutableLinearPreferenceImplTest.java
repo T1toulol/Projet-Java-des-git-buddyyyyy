@@ -37,6 +37,8 @@ import static io.github.oliviercailloux.j_voting.AlternativeHelper.a54321list;
 import static io.github.oliviercailloux.j_voting.AlternativeHelper.a56;
 import static io.github.oliviercailloux.j_voting.AlternativeHelper.a6;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -123,15 +125,17 @@ public class MutableLinearPreferenceImplTest {
 	void testAddAlternative() {
 		Voter v = Voter.withId(1);
 		MutableLinearPreference toTestPref = MutableLinearPreferenceImpl.given(v, a1234list);
-
+		assertThrows(Exception.class, () -> toTestPref.addAlternative(a4));
+		
 		List<Alternative> toTestList = new ArrayList<>();
 		toTestList.addAll(a12345);
 		MutableLinearPreference prefExpected1 = MutableLinearPreferenceImpl.given(v, toTestList);
 		toTestPref.addAlternative(a5);
 		assertEquals(prefExpected1, toTestPref);
+		assertThrows(Exception.class, () -> toTestPref.addAlternative(a5));
 
-		// Test if modifying the list after passing it to the constructor does not
-		// change the structure of the preference.
+		/* Test if modifying the list after passing it to the constructor does not
+		change the structure of the preference.*/
 		toTestList.add(a6);
 		assertEquals(prefExpected1, toTestPref);
 	}
@@ -154,18 +158,11 @@ public class MutableLinearPreferenceImplTest {
 	void testRemoveAlternative() {
 		Voter v = Voter.withId(1);
 		MutableLinearPreference toTestPref = MutableLinearPreferenceImpl.given(v, a12345list);
-
+		
 		MutableLinearPreference prefExpected1 = MutableLinearPreferenceImpl.given(v, a1345list);
 		toTestPref.removeAlternative(a2);
 		assertEquals(prefExpected1, toTestPref);
-
-		MutableLinearPreference prefExpected2 = MutableLinearPreferenceImpl.given(v, a345list);
-		toTestPref.removeAlternative(a1);
-		assertEquals(prefExpected2, toTestPref);
-
-		MutableLinearPreference prefExpected3 = MutableLinearPreferenceImpl.given(v, a34list);
-		toTestPref.removeAlternative(a5);
-		assertEquals(prefExpected3, toTestPref);
+		assertThrows(Exception.class, () -> toTestPref.removeAlternative(a2));
 	}
 
 	@Test
@@ -218,7 +215,8 @@ public class MutableLinearPreferenceImplTest {
 	 * head -> middle -> middle -> middle -> end <br/>
 	 * swap(head,end), swap(head,middle), swap(middle,middle), swap(middle,head),
 	 * swap(middle,end), swap(end,head), swap(end,middle) <br/>
-	 * We have to test 3 additional cases about the neighbours alternatives
+	 * We have to test 3 additional cases about the neighbours alternatives<br/>
+	 * And a final test if we try to swap an alternative who's not in the list.
 	 */
 	@Test
 	void testSwap() {
@@ -226,61 +224,69 @@ public class MutableLinearPreferenceImplTest {
 		MutableLinearPreference toTestPref = MutableLinearPreferenceImpl.given(v, a12345list);
 
 		MutableLinearPreference prefExpected1 = MutableLinearPreferenceImpl.given(v, a52341list);
-		toTestPref.swap(a1, a5); // swap(head,end)
+		/* swap(head,end) */
+		toTestPref.swap(a1, a5); 
 		assertEquals(prefExpected1, toTestPref);
 
 		MutableLinearPreference prefExpected2 = MutableLinearPreferenceImpl.given(v, a32541list);
-		toTestPref.swap(a5, a3); // swap(head,middle)
+		/* swap(head,middle) */
+		toTestPref.swap(a5, a3); 
 		assertEquals(prefExpected2, toTestPref);
 
 		MutableLinearPreference prefExpected3 = MutableLinearPreferenceImpl.given(v, a34521list);
-		toTestPref.swap(a2, a4); // swap(middle,middle)
+		/* swap(middle,middle) */
+		toTestPref.swap(a2, a4); 
 		assertEquals(prefExpected3, toTestPref);
 
 		MutableLinearPreference prefExpected4 = MutableLinearPreferenceImpl.given(v, a54321list);
-		toTestPref.swap(a5, a3); // swap(middle,head)
+		/* swap(middle, head) */
+		toTestPref.swap(a5, a3); 
 		assertEquals(prefExpected4, toTestPref);
 
 		MutableLinearPreference prefExpected5 = MutableLinearPreferenceImpl.given(v, a51324list);
-		toTestPref.swap(a4, a1); // swap(middle,end)
+		/* swap(middle,end) */
+		toTestPref.swap(a4, a1); 
 		assertEquals(prefExpected5, toTestPref);
 
 		MutableLinearPreference prefExpected6 = MutableLinearPreferenceImpl.given(v, a41325list);
-		toTestPref.swap(a4, a5); // swap(end,head)
+		/* swap(end,head) */
+		toTestPref.swap(a4, a5); 
 		assertEquals(prefExpected6, toTestPref);
 
 		MutableLinearPreference prefExpected7 = MutableLinearPreferenceImpl.given(v, a41523list);
-		toTestPref.swap(a5, a3); // swap(end,middle)
+		/* swap(end,middle) */
+		toTestPref.swap(a5, a3); 
 		assertEquals(prefExpected7, toTestPref);
 
 		MutableLinearPreference prefExpected8 = MutableLinearPreferenceImpl.given(v, a41253list);
-		toTestPref.swap(a5, a2); // swap(middle,middle) neighbour
+		/* swap(middle,middle) neighbor */
+		toTestPref.swap(a5, a2); 
 		assertEquals(prefExpected8, toTestPref);
 
 		MutableLinearPreference prefExpected9 = MutableLinearPreferenceImpl.given(v, a14253list);
-		toTestPref.swap(a4, a1); // swap(head,middle) neighbour
+		/* swap(head,middle) neighbor */
+		toTestPref.swap(a4, a1); 
 		assertEquals(prefExpected9, toTestPref);
 
 		MutableLinearPreference prefExpected10 = MutableLinearPreferenceImpl.given(v, a14235list);
-		toTestPref.swap(a5, a3); // swap(middle,end) neighbour
+		/* swap(middle,end) neighbor */
+		toTestPref.swap(a5, a3); 
 		assertEquals(prefExpected10, toTestPref);
 
 		MutableLinearPreference toTestPref1 = MutableLinearPreferenceImpl.given(v, a12list);
 		MutableLinearPreference prefExpected11 = MutableLinearPreferenceImpl.given(v, a21list);
-		toTestPref1.swap(a1, a2); // swap(head,end) neighbour
+		/* swap(head,end) neighbor */
+		toTestPref1.swap(a1, a2); 
 		assertEquals(prefExpected11, toTestPref1);
+		assertThrows(Exception.class, () -> toTestPref1.swap(a1, a3));
+		
 
 		Graph<Alternative> expected = toTestPref.asGraph();
 		toTestPref.addAlternative(a6);
 		toTestPref.swap(a3, a4);
 		toTestPref.removeAlternative(a1);
 		assertEquals(expected, toTestPref.asGraph());
-
-		Set<Alternative> set = toTestPref.getAlternatives();
-		set.add(a1);
-		set.remove(a6);
-		MutableLinearPreference prefExpected12 = MutableLinearPreferenceImpl.given(v, a32451list);
-		assertEquals(prefExpected12, toTestPref);
+		assertThrows(Exception.class, () -> toTestPref1.swap(a1, a3));
 
 	}
 }

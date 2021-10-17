@@ -11,6 +11,9 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
+
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
 import com.google.common.base.VerifyException;
@@ -52,7 +55,7 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this).add("Voter", voter).add("Graph", graph).add("Set", alternatives)
-				.add("List", list).toString();
+				.add("List", list).toString();	
 	}
 
 	/**
@@ -94,29 +97,22 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 		}
 		return true;
 	}
-
+	
 	@Override
 	public boolean removeAlternative(Alternative a) {
 		LOGGER.debug("MutableLinearPreferenceImpl deleteAlternative");
 		Preconditions.checkNotNull(a);
-
-		if (alternatives.contains(a)) {
-			graph.removeNode(a);
-			list.remove(a);
-			return true;
-		}
-		return false;
+		checkArgument(alternatives.contains(a), "Impossible to delete an alternative which is not already in the graph");
+		graph.removeNode(a);
+		list.remove(a);
+		return true;
 	}
 
 	@Override
 	public boolean addAlternative(Alternative a) {
 		LOGGER.debug("MutablePreferenceImpl addAlternative");
 		Preconditions.checkNotNull(a);
-
-		if (alternatives.contains(a)) {
-			return false;
-		}
-
+		checkArgument(!alternatives.contains(a), "The alternative is already in the graph");
 		list.add(a);
 		graph.addNode(a);
 
@@ -157,10 +153,9 @@ public class MutableLinearPreferenceImpl implements MutableLinearPreference {
 		LOGGER.debug("MutablePreferenceImpl Swap");
 		Preconditions.checkNotNull(alternative1);
 		Preconditions.checkNotNull(alternative2);
-
-		if (alternative1.equals(alternative2) || !(alternatives.contains(alternative1))
-				|| !(alternatives.contains(alternative2))) {
-			return false;
+		checkArgument(alternatives.contains(alternative1) && alternatives.contains(alternative2), "Impossible to swap these two alternatives. At least one of them is not in the graph.");
+		if(alternative1.equals(alternative2) || list.indexOf(alternative2)==list.indexOf(alternative1)) {
+			return true;
 		}
 
 		boolean op1, op2, op3, op4;
