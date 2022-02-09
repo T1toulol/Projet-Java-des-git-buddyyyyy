@@ -1,5 +1,20 @@
 = Welcome in the J-Voting Documentation 
 
+J-Voting is an application and a library to work with voting data.
+
+== Context (to be translated and adapted)
+La théorie du choix social étudie les propriétés et mises en œuvre de méthodes de vote variées. Une méthode de vote, dans ce contexte, est une façon d’agréger les préférences des électeurs de façon à en déduire une préférence de la société (un choix, ou un rangement, typiquement). Ce projet a pour but de permettre la visualisation de données d’élections, de les manipuler, et de tester des méthodes.
+
+Il s’agira d’améliorer et étendre un https://github.com/oliviercailloux/J-Voting[projet] actuellement utilisé https://github.com/oliviercailloux/j-rank-vectors[comme] https://github.com/oliviercailloux/minimax[base] pour des articles de recherche. Le projet permet la manipulation de préférences de base et l’édition de certaines formes de préférence, ainsi que l’import depuis une feuille de calcul et depuis des formats standards.
+
+Dans ce projet, un ensemble de candidats, d’objets, appelés _alternatives_, est envisagé pour un choix collectif. L’élection présidentielle en France en est un exemple, où les alternatives sont les candidats aux présidentielles. Le choix d’un restaurant entre un groupe d’amis est un autre exemple, où divers restaurants constitueront l’ensemble des alternatives. Un ensemble d’_électeurs_ (voters en anglais) expriment leurs préférences sur cet ensemble d’alternatives. Contrairement à l’élection présidentielle, on envisage ici qu’on connait le classement de chaque électeur sur les alternatives. Ainsi, on sait que l’électeur 1 classe le candidat C avant le candidat B, lui-même avant le candidat D, et le candidat A en dernier, par exemple. Une _règle de vote_ est une fonction associant à chaque ensemble de préférences (associées aux électeurs) un ou plusieurs gagnants ex-æquo.
+
+Le projet doit permettre la manipulation de telles préférences, et leur _aggrégation_ en vue de déterminer un vainqueur, en utilisant l’une des nombreuses règles de vote définies par les chercheurs en choix social.
+
+Diverses restrictions peuvent s’appliquer sur les préférences exprimées par les électeurs : elles peuvent être complètes (pour chaque paire de candidat, on sait que l’un est au moins aussi bon que l’autre), anti-symétriques (pas d’ex-æquo), …
+
+Pour représenter une préférence, on définit généralement une relation de préférence « au moins aussi bon que », considérée comme transitive (donc si A est au moins aussi bon que B, elle-même au moins aussi bonne que C, A est au moins aussi bon que C). Si un électeur juge le candidat A au moins aussi bon que B, et B au moins aussi bon que A, on dit que A et B sont ex-æquos (pour cet électeur). Si A est au moins aussi bon que B, et B n’est pas au moins aussi bon que A, on dit que A est strictement préféré à B (pour cet électeur, et dans le cas où la relation est entièrement connue). C’est ce genre de relation de préférence qu’on vise à manipuler ici.
+
 == J-Voting basic vocabulary
 
 - *An alternative* is a possible choice among a set.
@@ -35,3 +50,5 @@ image:./assets/j-voting-example.png[InterfacesProfilesDiagram]
 ==== link:chapters/Sugestions.adoc[Sugestions of work]
 ==== link:chapters/profileArchitecture.adoc[Profile architecture proposition]
 ==== link:chapters/FromOldCompletePreferenceImplToCompletePreferenceImpl.adoc[OldCompletePreferenceImpl to CompletePreferenceImpl]
+
+See: https://github.com/oliviercailloux/J-Voting/blob/master/Doc/TODO.adoc[TODO’s].

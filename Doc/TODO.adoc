@@ -1,0 +1,38 @@
+= TODO
+
+== À envisager
+* Améliorer si besoin la doc des formats de préférence pref lib supportés par ce projet, voir https://www.preflib.org/data/format.php#soc[SOC], https://www.preflib.org/data/format.php#election-data[doc], https://www.preflib.org/data/election/netflix/ED-00004-00000001.soc[exemple]. 
+* Export d’une préférence en ligne de commande : le programme lit `preference.soc` dans le répertoire courant (déplacer et améliorer méthode dans ReadProfile) et écrit la même préférence au format DOT (voir https://jgrapht.org/guide/UserOverview#guava-graph-adapter[JGraphT adapter] et éventuellement org.decision_deck.utils.relation.graph.GraphExporter et org.decision_deck.utils.relation.graph.mess.DOTExporterTemp<V, E>, dans https://github.com/oliviercailloux/jmcda-utils[J-MCDA utils])
+* Export similaire de DOT en SVG
+* Pouvoir indiquer une URL de PrefLib
+* Poursuivre l’implémentation du GUI d’édition d’un SOC, d’abord pour un seul électeur, comme planifié dans la doc
+* Permettre d’ouvrir le GUI en ligne de commande avec une URL d’un SOC ; le programme le télécharge et l’ouvre pour commencer l’édition
+* Préciser dans la doc : `MutablePreference` autorise toutes les modifications (ajout ou suppression d’arêtes et d’alternatives) ; `MutableLinearPreference` garantit que la préférence est linéaire
+* Javadoc warnings
+* Ajouter asStrictGraph() dans Preference, qui renvoie un graphe transitif, asymétrique, sous-graphe de asGraph, qui contient uniquement les paires _(a, b)_ telles que _a_ est strictement préféré à _b_ (c-à-d telles que _(a, b)_ est dans asGraph mais _(b, a)_ n’y est pas).
+* Ajouter `ImmutablePreference#equals`
+* Changer `MutableLinearPreference#addAlternative`, `removeAlternative` et `swap` : lever une exception si les alternatives sont déjà ou ne sont pas déjà dans le graphe, empêchant la méthode d’effectuer l’action demandée
+* Ajouter `MutableLinearEdges` qui permet de modifier les arêtes en conservant la linéarité (mais ne se prononce pas concernant les alternatives) ; faire hériter `MutableLinearPreference` de `MutableLinearEdges`.
+* Ajouter `MutableLinearPreferenceFixedAlternatives`, qui hérite de `MutableLinearEdges` et garantit l’immuabilité des alternatives
+* Permettre de récupérer un `NavigableSet` d’alternatives depuis une `ImmutableLinearPreference`, et réfléchir à l’extension à la version muable
+* Modifier la proposition d’interfaces de profils en ajoutant la simplification que l’ensemble d’alternatives ne bouge jamais, même dans le cas d’un profil muable : les préférences peuvent se compléter ou se modifier, mais dans cet ensemble fixé. Donc un profil a un ensemble d’électeurs ET d’alternatives fixe. Un profil ne peut pas être vide, donc doit contenir au moins un électeur et au moins une alternative. En outre, la notion de Complete profile semble mal définie actuellement : un profil complet devrait être un profil contenant uniquement des préférences complètes. `ImmutableCompleteProfile` devrait s’appeler `ImmutableProfile` (c’est le cas le plus courant). Les alternatives associées au profil sont identiques aux alternatives dans le graphe réflexif des préférences de chaque électeur (grâce aux boucles réflexives, toujours présentes).
+* Améliorer interface SocialWelfareFunction et créer d’autres interfaces : AntiSymmetricSocialWelfareFunction contient une méthode #aggregate qui envoie un AntiSymmetricCompleteProfile vers une CompletePreference; SocialWelfareFunction étend AntiSymmetricSocialWelfareFunction et envoie un CompleteProfile vers une CompletePreference.
+
+== Autres idées
+* GUI pour voir les résultats d’application d’une SWF sur un profil.
+* Le GUI permet d’afficher et d’éditer le nombre d’électeurs qui ont les mêmes préférences. Cela permet de travailler également avec de gros profils.
+* Implémenter d’autres règles de votes telles que celles proposées dans Whale4. Elles sont toutes disponibles dans le GUI proposé.
+* Étudier les différents formats JSON renvoyés par Whale, les comparer aux données dans les formats correspondants de PrefLib (qui sont le standard établi), et documenter un ou plusieurs formats JSON dans la documentation, permettant de représenter tout ce que vos formats PrefLib permettent de représenter, et aussi compatible que possible avec le format utilisé par Whale : vous pouvez proposer des améliorations par rapport au format de Whale, mais les différences éventuelles doivent être documentées et justifiées.
+* L’utilisateur peut visualiser un profil créé dans Whale4.
+* L’utilisateur peut visualiser les résultats d’une élection selon d’autres règles (cf. Whale4).
+* L’utilisateur peut accéder à un profil au format xmcda-modular.
+* Séparer la partie GUI dans un projet propre: J-Voting-GUI
+
+== Refs
+* http://www.preflib.org/about.php[{PrefLib}]
+* https://whale.imag.fr/[Whale4]
+* https://github.com/xmcda-modular[xmcda-modular]
+* http://www.spliddit.org/
+* http://centrality.mimuw.edu.pl/editor/[Editor4Centralities]
+* https://tikzit.github.io/[TikZiT]
+
