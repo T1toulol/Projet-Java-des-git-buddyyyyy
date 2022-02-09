@@ -1,6 +1,32 @@
 = TODO
 
-== À envisager
+We will start by correcting bugs in the implementation of preferences, so that they can serve as solid foundations for building profiles (which map voters to preferences). We will then work on efficiently permitting users to define and view such profiles with spreadsheets. We also want to allow for importing profiles from the web, and, on a longer term, to export them to the web.
+
+I use the abbreviations `MP` for `MutablePreference`, `IP` for `ImmutablePreference`, and so on, for the classes in the preference classes hierarchy (see the relevant diagrams).
+
+* Review the doc of the preference classes hierarchy, and make sure it is consistent with the Javadoc
+* Remove `MP#equals` (see doc of that class)
+* Change `MP#toString` so that every field is output, and similarly for other classes in the hierarchy
+* Make fields private unless some precise reason prevents it (document it)
+* Change test `IPImplTest#asGraph()`: create a graph that represents what is expected, and make sure it equals the graph contained in the preference (currently, the test only ensures that expected edges are there, but not that they are the only ones; and is inelegant).
+* Investigate whether similar changes can be made in other classes.
+* `MP#asGraph()` should maintain a graph representing the preference at all times, as documented. This is not currently the case. Make a test that show the problem (that fails): create a partial preference, call `asGraph()`, add an alternative to the structure (or anything), and check that the graph previously returned is up to date (observe that it is not).
+* Let’s correct that problem. `MP` should lazy initialize a graph the first time `asGraph()` is called. When it is modified, if the graph has been modified, `MP` should reflect the modification in that graph. Document how it works by updating (or creating) the relevant UML diagrams.
+* Implement and test the above behavior. (One part at a time.)
+* Review the other mutable structures for similar problems. Add tests that show the problem or show that the functionality is adequate.
+* Add a delete methode to MutablePreference
+* Correct `CPImplTest#createDuplicateException` so that it effectively tests the result of having a given alternative in two equivalence classes
+* Create the MutableCompletePreference implementing MutablePreference
+* Complete work on the transition from link:FromOldCompletePreferenceImplToCompletePreferenceImpl.adoc[old to newCompletePreference]
+* Perform encapsulation work on preference methods using link:decorator.adoc[decorators]
+* Correct the link:preferenceInterfaces.adoc[relevances]
+* Start creating profiles following student’s proposal for a link:profileArchitecture.adoc[new architecture]
+* To create the MutableLinearProfile, from the MutableStrictProfile is delete the methods related to the voters.
+* Review documentation about import and export of profiles to spreadsheet format.
+* Test what is currently available.
+* Implement easy ways of defining profiles when working with spreadsheets.
+
+== Older specifications (to be translated and adapted)
 * Améliorer si besoin la doc des formats de préférence pref lib supportés par ce projet, voir https://www.preflib.org/data/format.php#soc[SOC], https://www.preflib.org/data/format.php#election-data[doc], https://www.preflib.org/data/election/netflix/ED-00004-00000001.soc[exemple]. 
 * Export d’une préférence en ligne de commande : le programme lit `preference.soc` dans le répertoire courant (déplacer et améliorer méthode dans ReadProfile) et écrit la même préférence au format DOT (voir https://jgrapht.org/guide/UserOverview#guava-graph-adapter[JGraphT adapter] et éventuellement org.decision_deck.utils.relation.graph.GraphExporter et org.decision_deck.utils.relation.graph.mess.DOTExporterTemp<V, E>, dans https://github.com/oliviercailloux/jmcda-utils[J-MCDA utils])
 * Export similaire de DOT en SVG

@@ -47,7 +47,6 @@ image:./assets/j-voting-example.png[InterfacesProfilesDiagram]
 
 = Suggestions for the next groups 
 
-==== link:chapters/Sugestions.adoc[Sugestions of work]
 ==== link:chapters/profileArchitecture.adoc[Profile architecture proposition]
 ==== link:chapters/FromOldCompletePreferenceImplToCompletePreferenceImpl.adoc[OldCompletePreferenceImpl to CompletePreferenceImpl]
 
