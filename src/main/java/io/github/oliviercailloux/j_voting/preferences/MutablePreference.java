@@ -1,7 +1,6 @@
 package io.github.oliviercailloux.j_voting.preferences;
 
 import com.google.common.graph.MutableGraph;
-
 import io.github.oliviercailloux.j_voting.Alternative;
 
 /**
@@ -65,7 +64,7 @@ public interface MutablePreference extends Preference {
 
 	/**
 	 * Adds an edge from an alternative a1 to an alternative a2, so that a1 is as
-	 * least as good as a2 (a1 >= a2). If one of them is not in the graph, they are
+	 * least as good as a2 (a1 >= a2). Those that are not yet in the graph are
 	 * added.
 	 *
 	 * @param a1 preferred alternative to a2
