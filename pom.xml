@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>io.github.oliviercailloux</groupId>
 		<artifactId>pom</artifactId>
-		<version>0.0.8</version>
+		<version>0.0.14</version>
 	</parent>
 	<artifactId>j-voting</artifactId>
 	<version>0.0.6-SNAPSHOT</version>
