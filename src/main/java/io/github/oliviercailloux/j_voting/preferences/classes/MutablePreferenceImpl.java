@@ -140,4 +140,14 @@ public class MutablePreferenceImpl implements MutablePreference {
 		return MoreObjects.toStringHelper(this).add("voter", voter).add("graph", graph).toString();
 	}
 
+	@Override
+public boolean delete(Alternative alternative) {
+    LOGGER.debug("MutablePreferenceImpl delete");
+    Preconditions.checkNotNull(alternative);
+    if (!alternatives.contains(alternative)) {
+        return false;
+    }
+    return graph.removeNode(alternative);
+}
+
 }

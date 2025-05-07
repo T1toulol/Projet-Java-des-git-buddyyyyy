@@ -71,4 +71,12 @@ public interface MutablePreference extends Preference {
 	 * @param a2 "lower" alternative
 	 */
 	public void setAsLeastAsGood(Alternative a1, Alternative a2);
+
+	/**
+ * Removes the specified alternative from this preference if it is present.
+ *
+ * @param alternative to be removed from this preference.
+ * @return true if the alternative has been removed, false if it was not present in the preference.
+ */
+public boolean delete(Alternative alternative);
 }
