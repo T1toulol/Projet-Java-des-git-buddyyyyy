@@ -137,7 +137,11 @@ public class MutablePreferenceImpl implements MutablePreference {
 
 	@Override
 	public String toString() {
-		return MoreObjects.toStringHelper(this).add("voter", voter).add("graph", graph).toString();
+		return MoreObjects.toStringHelper(this)
+			.add("voter", voter)
+			.add("graph", graph)
+			.add("alternatives", alternatives)
+			.toString();
 	}
 
 	@Override
