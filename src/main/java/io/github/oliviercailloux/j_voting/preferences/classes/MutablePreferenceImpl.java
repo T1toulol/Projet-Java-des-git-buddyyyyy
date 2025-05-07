@@ -140,18 +140,4 @@ public class MutablePreferenceImpl implements MutablePreference {
 		return MoreObjects.toStringHelper(this).add("voter", voter).add("graph", graph).toString();
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (!(obj instanceof MutablePreferenceImpl)) {
-			return false;
-		}
-		MutablePreferenceImpl other = (MutablePreferenceImpl) obj;
-		return Objects.equals(voter, other.voter) && Objects.equals(graph, other.graph);
-	}
 }
