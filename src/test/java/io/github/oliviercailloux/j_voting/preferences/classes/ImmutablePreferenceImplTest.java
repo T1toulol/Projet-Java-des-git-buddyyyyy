@@ -1,14 +1,8 @@
 package io.github.oliviercailloux.j_voting.preferences.classes;
 
-import static io.github.oliviercailloux.j_voting.Generator.a1;
-import static io.github.oliviercailloux.j_voting.Generator.a2;
-import static io.github.oliviercailloux.j_voting.Generator.a3;
-import static io.github.oliviercailloux.j_voting.Generator.a4;
-import static io.github.oliviercailloux.j_voting.AlternativeHelper.a5;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
 
 import com.google.common.collect.ImmutableSet;
@@ -17,6 +11,11 @@ import com.google.common.graph.ImmutableGraph;
 import com.google.common.graph.MutableGraph;
 
 import io.github.oliviercailloux.j_voting.Alternative;
+import static io.github.oliviercailloux.j_voting.AlternativeHelper.a5;
+import static io.github.oliviercailloux.j_voting.Generator.a1;
+import static io.github.oliviercailloux.j_voting.Generator.a2;
+import static io.github.oliviercailloux.j_voting.Generator.a3;
+import static io.github.oliviercailloux.j_voting.Generator.a4;
 import io.github.oliviercailloux.j_voting.Voter;
 import io.github.oliviercailloux.j_voting.preferences.ImmutablePreference;
 
@@ -71,18 +70,28 @@ class ImmutablePreferenceImplTest {
 	}
 
 	@Test
-	void asGraph() {
-		ImmutableGraph<Alternative> toTestImmutableGraph = getApreference().asGraph();
-		assertTrue(toTestImmutableGraph.hasEdgeConnecting(a1, a4));
-		assertTrue(toTestImmutableGraph.hasEdgeConnecting(a4, a1));
-		assertTrue(toTestImmutableGraph.hasEdgeConnecting(a4, a3));
-		assertTrue(toTestImmutableGraph.hasEdgeConnecting(a5, a3));
-		assertTrue(toTestImmutableGraph.hasEdgeConnecting(a3, a2));
-		assertFalse(toTestImmutableGraph.hasEdgeConnecting(a1, a5));
-		assertTrue(toTestImmutableGraph.successors(a2).size() == 1);
-		assertTrue(toTestImmutableGraph.successors(a1).size() == 4);
-		assertTrue(toTestImmutableGraph.successors(a4).size() == 4);
-		assertTrue(toTestImmutableGraph.successors(a5).size() == 3);
-		assertTrue(toTestImmutableGraph.successors(a3).size() == 2);
-	}
+	void asGraph_shouldMatchExpectedGraphExactly() {
+		MutableGraph<Alternative> expected = GraphBuilder.directed().allowsSelfLoops(true).build();
+		expected.putEdge(a1, a1);
+		expected.putEdge(a2, a2);
+		expected.putEdge(a3, a3);
+		expected.putEdge(a4, a4);
+		expected.putEdge(a5, a5);
+		expected.putEdge(a1, a4);
+		expected.putEdge(a3, a2);
+		expected.putEdge(a4, a1);
+		expected.putEdge(a4, a3);
+		expected.putEdge(a5, a3);
+
+		// ajout automatique par fermeture transitive
+		expected.putEdge(a1, a1);
+		expected.putEdge(a1, a3);
+		expected.putEdge(a1, a2);
+		expected.putEdge(a3, a3);
+		expected.putEdge(a4, a2);
+		expected.putEdge(a4, a2);
+
+		ImmutableGraph<Alternative> actual = getApreference().asGraph();
+		assertEquals(ImmutableGraph.copyOf(expected), actual);
+}
 }
