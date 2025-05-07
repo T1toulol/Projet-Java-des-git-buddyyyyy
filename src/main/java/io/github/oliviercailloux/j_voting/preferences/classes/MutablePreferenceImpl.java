@@ -137,21 +137,21 @@ public class MutablePreferenceImpl implements MutablePreference {
 
 	@Override
 	public String toString() {
-		return MoreObjects.toStringHelper(this).add("voter", voter).add("graph", graph).toString();
+		return MoreObjects.toStringHelper(this)
+			.add("voter", voter)
+			.add("graph", graph)
+			.add("alternatives", alternatives)
+			.toString();
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (!(obj instanceof MutablePreferenceImpl)) {
-			return false;
-		}
-		MutablePreferenceImpl other = (MutablePreferenceImpl) obj;
-		return Objects.equals(voter, other.voter) && Objects.equals(graph, other.graph);
-	}
+public boolean delete(Alternative alternative) {
+    LOGGER.debug("MutablePreferenceImpl delete");
+    Preconditions.checkNotNull(alternative);
+    if (!alternatives.contains(alternative)) {
+        return false;
+    }
+    return graph.removeNode(alternative);
+}
+
 }
