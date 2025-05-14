@@ -1,12 +1,7 @@
 package io.github.oliviercailloux.j_voting.preferences.classes;
 
-import static io.github.oliviercailloux.j_voting.Generator.a1;
-import static io.github.oliviercailloux.j_voting.Generator.a2;
-import static io.github.oliviercailloux.j_voting.Generator.a3;
-import static io.github.oliviercailloux.j_voting.Generator.a4;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import org.junit.jupiter.api.Test;
 
 import com.google.common.graph.Graph;
@@ -15,6 +10,10 @@ import com.google.common.graph.Graphs;
 import com.google.common.graph.MutableGraph;
 
 import io.github.oliviercailloux.j_voting.Alternative;
+import static io.github.oliviercailloux.j_voting.Generator.a1;
+import static io.github.oliviercailloux.j_voting.Generator.a2;
+import static io.github.oliviercailloux.j_voting.Generator.a3;
+import static io.github.oliviercailloux.j_voting.Generator.a4;
 import io.github.oliviercailloux.j_voting.preferences.MutableAntiSymmetricPreference;
 
 class MutableAntiSymmetricPreferenceTests {
@@ -41,22 +40,17 @@ class MutableAntiSymmetricPreferenceTests {
 	}
 
 	@Test
+	
 	void testJustClose() {
 		final MutableGraph<Alternative> start = GraphBuilder.directed().build();
 		start.putEdge(a1, a2);
 		start.putEdge(a2, a3);
 		final MutableAntiSymmetricPreference pref = MutableAntiSymmetricPreferenceImpl.given(start);
 
-		final MutableGraph<Alternative> expected = GraphBuilder.directed().allowsSelfLoops(true).build();
-		expected.putEdge(a1, a2);
-		expected.putEdge(a2, a3);
-		expected.putEdge(a1, a3);
-		expected.putEdge(a1, a1);
-		expected.putEdge(a2, a2);
-		expected.putEdge(a3, a3);
-
+		final Graph<Alternative> expected = Graphs.transitiveClosure(start);
 		assertEquals(expected, pref.asGraph());
 	}
+
 
 	@Test
 	void testAddAlternative() {
