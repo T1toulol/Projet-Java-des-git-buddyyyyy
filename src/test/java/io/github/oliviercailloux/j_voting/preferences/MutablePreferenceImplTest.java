@@ -1,13 +1,6 @@
 package io.github.oliviercailloux.j_voting.preferences;
 
-import static io.github.oliviercailloux.j_voting.Generator.a1;
-import static io.github.oliviercailloux.j_voting.Generator.a2;
-import static io.github.oliviercailloux.j_voting.Generator.a3;
-import static io.github.oliviercailloux.j_voting.Generator.a4;
-import static io.github.oliviercailloux.j_voting.AlternativeHelper.a12345;
-import static io.github.oliviercailloux.j_voting.AlternativeHelper.a5;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
 
 import com.google.common.collect.ImmutableSet;
@@ -16,6 +9,12 @@ import com.google.common.graph.Graphs;
 import com.google.common.graph.MutableGraph;
 
 import io.github.oliviercailloux.j_voting.Alternative;
+import static io.github.oliviercailloux.j_voting.AlternativeHelper.a12345;
+import static io.github.oliviercailloux.j_voting.AlternativeHelper.a5;
+import static io.github.oliviercailloux.j_voting.Generator.a1;
+import static io.github.oliviercailloux.j_voting.Generator.a2;
+import static io.github.oliviercailloux.j_voting.Generator.a3;
+import static io.github.oliviercailloux.j_voting.Generator.a4;
 import io.github.oliviercailloux.j_voting.Voter;
 import io.github.oliviercailloux.j_voting.preferences.classes.MutablePreferenceImpl;
 
@@ -39,7 +38,9 @@ class MutablePreferenceImplTest {
 		MutableGraph<Alternative> graph = GraphBuilder.directed().allowsSelfLoops(true).build();
 		MutablePreference pref = MutablePreferenceImpl.given(Voter.withId(1), graph);
 		MutablePreferenceImpl pref1 = MutablePreferenceImpl.given(pref);
-		assertEquals(pref, pref1);
+		assertEquals(pref.getVoter(), pref1.getVoter());
+		assertEquals(pref.asGraph(), pref1.asGraph());
+
 	}
 
 	/**

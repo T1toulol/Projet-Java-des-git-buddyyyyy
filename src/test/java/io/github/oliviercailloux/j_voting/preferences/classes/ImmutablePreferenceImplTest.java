@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.graph.GraphBuilder;
+import com.google.common.graph.Graphs;
 import com.google.common.graph.ImmutableGraph;
 import com.google.common.graph.MutableGraph;
 
@@ -71,27 +72,15 @@ class ImmutablePreferenceImplTest {
 
 	@Test
 	void asGraph_shouldMatchExpectedGraphExactly() {
-		MutableGraph<Alternative> expected = GraphBuilder.directed().allowsSelfLoops(true).build();
-		expected.putEdge(a1, a1);
-		expected.putEdge(a2, a2);
-		expected.putEdge(a3, a3);
-		expected.putEdge(a4, a4);
-		expected.putEdge(a5, a5);
-		expected.putEdge(a1, a4);
-		expected.putEdge(a3, a2);
-		expected.putEdge(a4, a1);
-		expected.putEdge(a4, a3);
-		expected.putEdge(a5, a3);
+		ImmutablePreferenceImpl toTest = (ImmutablePreferenceImpl) getApreference();
 
-		// ajout automatique par fermeture transitive
-		expected.putEdge(a1, a1);
-		expected.putEdge(a1, a3);
-		expected.putEdge(a1, a2);
-		expected.putEdge(a3, a3);
-		expected.putEdge(a4, a2);
-		expected.putEdge(a4, a2);
+		ImmutableGraph<Alternative> expected = ImmutableGraph.copyOf(
+			Graphs.transitiveClosure(toTest.asIntransitiveGraph())
+		);
 
-		ImmutableGraph<Alternative> actual = getApreference().asGraph();
-		assertEquals(ImmutableGraph.copyOf(expected), actual);
+		ImmutableGraph<Alternative> actual = toTest.asGraph();
+
+		assertEquals(expected, actual);
 }
+
 }
